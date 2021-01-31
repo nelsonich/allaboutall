@@ -1,0 +1,14 @@
+/*  */
+
+@media screen and (max-width: 767px) {
+    div.leftBanner img:last-child,
+    div.rightBanner img:last-child {
+        display: block;
+    }
+
+    div.childCategories ul li div:first-child,
+    div.leftBanner img:first-child,
+    div.rightBanner img:first-child {
+        display: none;
+    }
+}

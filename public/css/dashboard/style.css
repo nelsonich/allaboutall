@@ -1,0 +1,209 @@
+.hide {
+    display: none !important;
+}
+
+div.leftBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #cccccc;
+    width: calc(100vw - 80%);
+    height: 100vh;
+    transition: width 45ms;
+}
+
+div.leftBar.hide {
+    width: calc(100vw - 95%);
+    display: block !important;
+}
+
+div.leftBar.hide div.header {
+    display: flex;
+    justify-content: center;
+}
+
+div.leftBar div.header a {
+    font-size: 25px;
+    margin: 10px;
+}
+
+div.leftBar.hide div.header a {
+    display: none;
+}
+
+div.leftBar.hide div.header span.leftMenuToggle {
+    position: relative;
+}
+
+div.leftBar div.header span.leftMenuToggle {
+    position: absolute;
+    right: 0;
+    margin: 5px;
+    top: -5px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 999999;
+}
+
+div.leftBar ul {
+    padding: 0;
+    background-color: black;
+}
+
+div.leftBar ul li {
+    display: flex;
+}
+
+div.leftBar ul li a {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+div.leftBar ul li a:hover {
+    background-color: #444141;
+}
+
+div.leftBar ul li a span.listIcon {
+    font-size: 15px;
+}
+
+/* Right Bar */
+
+div.rightBar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #cccccc;
+    width: calc(100vw - 80%);
+    height: 100vh;
+}
+
+div.rightBar.hide {
+    width: calc(100vw - 95%);
+    display: block !important;
+}
+
+div.rightBar.hide div.header {
+    display: flex;
+    justify-content: center;
+}
+
+div.rightBar.hide div.header h4 {
+    display: none;
+}
+
+div.rightBar.hide div.header span.rightMenuToggle {
+    position: relative;
+}
+
+div.rightBar div.header span.rightMenuToggle {
+    position: absolute;
+    left: 0;
+    margin: 5px;
+    top: -5px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+main {
+    width: calc(100vw - 40%);
+    height: 100vh;
+    position: absolute;
+    transform: translate(50%, 0px);
+    right: 50%;
+    z-index: 99999;
+}
+
+/* CkEditor */
+.cke_combopanel {
+    z-index: 99999 !important;
+}
+
+/* Carousel Items Modal */
+
+span.openCarouselModal {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    cursor: pointer;
+    display: flex;
+}
+
+span.openCarouselModal:hover {
+    color: #2fa360;
+}
+
+div.carouselItemsModal {
+    position: absolute;
+    width: 100%;
+    background-color: #dcdada;
+    height: 350px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+div.carouselItemsModal div.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.carouselItemsModal div.footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.carouselItemsModal span.closeCarouselModal {
+    cursor: pointer;
+}
+
+div.carouselItemsModal div.content ul li {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    list-style: none;
+    margin: 5px;
+    position: relative;
+}
+
+div.carouselItemsModal div.content ul li:hover span {
+    display: flex !important;
+}
+
+div.carouselItemsModal div.content ul li span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+table span.tableInfo {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+table span.tableInfo:hover > div.tableInfoContent {display: block;}
+
+table div.tableInfoContent {
+    position: absolute;
+    background-color: #3490dc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 225px;
+    display: none;
+}
+
+
