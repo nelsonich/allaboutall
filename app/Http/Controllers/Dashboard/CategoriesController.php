@@ -29,6 +29,10 @@ class CategoriesController extends Controller
 
         return view('dashboard.category.categories', [
             'categories' => $categories,
+            'is_view' => isView('child_categories'),
+            'is_add' => isAdd('categories'),
+            'is_edit' => isEdit('categories'),
+            'is_delete' => isDelete('categories'),
         ]);
     }
 
@@ -49,6 +53,9 @@ class CategoriesController extends Controller
         return view('dashboard.category.childCategories', [
             'category' => $category,
             'categoryChildes' => $categoryChildes,
+            'is_add' => isAdd('child_categories'),
+            'is_edit' => isEdit('child_categories'),
+            'is_delete' => isDelete('child_categories'),
         ]);
     }
 

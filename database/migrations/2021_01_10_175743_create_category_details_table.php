@@ -17,7 +17,7 @@ class CreateCategoryDetailsTable extends Migration
             $table->id();
             $table->bigInteger('category_id')->unsigned();
             $table->text('preview_text')->nullable();
-            $table->text('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('image')->default('noImage.png');
             $table->timestamps();
         });

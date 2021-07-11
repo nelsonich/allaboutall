@@ -25,8 +25,8 @@ div.rightBanner {
     align-items: center;
 }
 
-div.leftBanner img:last-child,
-div.rightBanner img:last-child {
+div.leftBanner a:last-child img,
+div.rightBanner a:last-child img {
     display: none;
 }
 
@@ -37,7 +37,7 @@ div.categories {
 }
 
 div.childCategories {
-    height: 500px;
+    height: 450px;
     overflow: auto;
 }
 

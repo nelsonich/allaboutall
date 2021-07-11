@@ -16,6 +16,8 @@
     <script src="{{ asset('js/dashboard/bootstrap-tagsinput.min.js') }}" defer></script>
     <script src="{{ asset('js/fontawesome/all.min.js') }}" defer></script>
 
+    @stack('script')
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -36,12 +38,18 @@
             </span>
         </div>
         <ul>
-            <li>
-                <a href="{{ url('dashboard/categories') }}">
-                    <span class="listName hide">Категории</span>
-                    <span class="listIcon"><i class="fab fa-cuttlefish"></i></span>
-                </a>
-            </li>
+            @forelse($permissions as $key => $permission)
+                @if($permission['actions']['is_view'])
+                    <li>
+                        <a href="{{ url('dashboard/' . $permission->slug . '?key=' . $permission->slug) }}">
+                            <span class="listName hide">{{ $permission->name }}</span>
+                            <span class="listIcon">{{ mb_substr($permission->name, 0, 1) }}</span>
+                        </a>
+                    </li>
+                @endif
+            @empty
+                Empty!
+            @endforelse
         </ul>
     </div>
     <main style="width: calc(100vw - 10%);transform: translate(50%, 0px);">
@@ -50,7 +58,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
-                            {{ __('Dashboard') }}
+                            Панель приборов
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

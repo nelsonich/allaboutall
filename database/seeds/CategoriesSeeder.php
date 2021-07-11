@@ -141,17 +141,6 @@ class CategoriesSeeder extends Seeder
         ]);
 
         $item = Category::create([
-            'name' => 'Самые лучшие футболисты в мире',
-            'parent_id' => $football->id,
-            'background' => '17494.jpg',
-        ]);
-
-        SearchTag::create([
-            'category_id' => $item->id,
-            'value' => 'Самые лучшие футболисты в мире',
-        ]);
-
-        $item = Category::create([
             'name' => 'Пеле',
             'parent_id' => $football->id,
             'background' => '17494.jpg',

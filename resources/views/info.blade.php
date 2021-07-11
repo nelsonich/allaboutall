@@ -3,12 +3,16 @@
 @section('description', $childCategories->categoryDetails->preview_text)
 
 @section('content')
-    <section data-bg="{{ $childCategories['categoryDetails']['image'] }}" data-path="category_details/images">
+    <section data-bg="background.png" data-path="">
         <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="leftBanner col-md-3 col-sm-12 text-center mb-3">
-                    <img src="https://dummyimage.com/200x500/000/fff.jpg&text=Ad" alt="Ad">
-                    <img src="https://dummyimage.com/350x200/000/fff.jpg&text=Ad" alt="Ad">
+                    <a href="http://drycode.loc/" target="_blank">
+                        <img src="{{ asset('storage/drycode_200_500.png') }}" alt="Ad">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{{ asset('storage/drycode_350_200.png') }}" alt="Ad">
+                    </a>
                 </div>
                 <div class="col-md-6 col-sm-12 centerBar">
 
@@ -44,8 +48,12 @@
                     </div>
                 </div>
                 <div class="rightBanner col-md-3 col-sm-12 text-center mt-3">
-                    <img src="https://dummyimage.com/200x500/000/fff.jpg&text=Ad" alt="Ad">
-                    <img src="https://dummyimage.com/350x200/000/fff.jpg&text=Ad" alt="Ad">
+                    <a href="http://drycode.loc/" target="_blank">
+                        <img src="{{ asset('storage/drycode_200_500.png') }}" alt="Ad">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="{{ asset('storage/drycode_350_200.png') }}" alt="Ad">
+                    </a>
                 </div>
             </div>
         </div>

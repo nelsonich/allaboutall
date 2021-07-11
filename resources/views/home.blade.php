@@ -1,5 +1,5 @@
 @extends('layouts.appDashboard')
-@section('title', 'Dashboard')
+@section('title', 'Панель приборов')
 
 @section('content')
     <div class="card-body">
@@ -8,7 +8,7 @@
                 {{ session('status') }}
             </div>
         @endif
-
-        {{ __('You are logged in!') }}
+        <h5 style="text-transform: capitalize">{{ implode(' ', explode('_', $user->role->name)) }}</h5>
+        <p>{{ $user->role->description }}</p>
     </div>
 @endsection

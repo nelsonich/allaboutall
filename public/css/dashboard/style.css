@@ -206,4 +206,20 @@ table div.tableInfoContent {
     display: none;
 }
 
+/* Roles */
+ol li.role {
+    background-color: #000000;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
 
+ol li.role a {
+    padding: 1px 14px;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+ol li.role.active {background-color: #cccccc}
+ol li.role.active a {color: #000000 !important}

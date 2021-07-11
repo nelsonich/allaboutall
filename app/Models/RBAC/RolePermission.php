@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models\RBAC;
+
+use Illuminate\Database\Eloquent\Model;
+
+class RolePermission extends Model
+{
+    protected $table = "role_permissions";
+    protected $fillable = [
+        'role_id',
+        'permission_id',
+        'is_view',
+        'is_add',
+        'is_edit',
+        'is_delete',
+    ];
+}

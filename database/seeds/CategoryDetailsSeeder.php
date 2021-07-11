@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\CategoryDetail;
 use Illuminate\Database\Seeder;
 
 class CategoryDetailsSeeder extends Seeder
@@ -12,161 +11,3636 @@ class CategoryDetailsSeeder extends Seeder
      */
     public function run()
     {
-        CategoryDetail::create([
-            'category_id' => 5,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_1.jpg',
-        ]);
+        \DB::table('category_details')->delete();
 
-        CategoryDetail::create([
-            'category_id' => 6,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_6.jpg',
-        ]);
+        \DB::table('category_details')->insert(array(
+            0 =>
+                array(
+                    'id' => 1,
+                    'category_id' => 5,
+                    'preview_text' => 'Греция государство в Южной Европе. Население — 10,8 млн чел, площадь территории — 131 957 км². Занимает 84-е место в мире по чис
+ленности населения и 95-е по площади территории. Унитарная, парламентская республика. Подразделяется на 13 периферий. Столица — город Афины. Государственный язык —
+ греческий.',
+                    'description' => '<p>Греция государство в Южной Европе. Население &mdash; 10,8 млн чел, площадь территории &mdash; 131 957 км&sup2;. Занимает 84-е
+место в мире по численности населения и 95-е по площади территории. Унитарная, парламентская республика. Подразделяется на 13 периферий. Столица &mdash; город Афин
+ы. Государственный язык &mdash; греческий.</p>
 
-        CategoryDetail::create([
-            'category_id' => 7,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_5.jpg',
-        ]);
+<p>Греция расположена на Балканском полуострове и многочисленных островах. Имеет сухопутную границу с Албанией на северо-западе, Северной Македонией и Болгарией на
+ севере, с Турцией на северо-востоке. Омывается Эгейским морем на востоке, Ионическим на западе, на юге &mdash; Средиземным и Критским морями.</p>
 
-        CategoryDetail::create([
-            'category_id' => 8,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_7.jpg',
-        ]);
+<p>Современная Греция &mdash; наследница культуры Древней Греции, считающейся колыбелью западной цивилизации, родиной демократии и западной философии, основных при
+нципов физико-математических наук, театра и современных Олимпийских игр. Богатое культурное наследие и географическое положение делают Грецию одной из самых посеща
+емых стран мира.</p>
 
-        CategoryDetail::create([
-            'category_id' => 9,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_4.jpg',
-        ]);
+<p>Независимость страны провозглашена 25 марта 1821 года. До этого она входила в состав Османской империи.</p>
 
-        CategoryDetail::create([
-            'category_id' => 10,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_17.jpg',
-        ]);
+<p>Отнесена к развитым странам. Является членом Европейского союза, НАТО, ООН, Совета Европы, ОБСЕ. В Греции демократия и всеобщее избирательное право.</p>
 
-        CategoryDetail::create([
-            'category_id' => 11,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_3.jpg',
-        ]);
+<p>Около 97 % населения исповедует православие.</p>
 
-        CategoryDetail::create([
-            'category_id' => 12,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_2.jpg',
-        ]);
+<p>В марте 2020 года пост президента заняла Катерина Сакелларопулу. Главой правительства является премьер-министр Кириакос Мицотакис.</p>
 
-        CategoryDetail::create([
-            'category_id' => 13,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_15.jpg',
-        ]);
+<p>&nbsp;</p>
 
-        CategoryDetail::create([
-            'category_id' => 14,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-        ]);
+<p><strong>Этимология (</strong>название Греции<strong>):</strong></p>
 
-        CategoryDetail::create([
-            'category_id' => 15,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_13.jpg',
-        ]);
+<p>Слово &laquo;Греция&raquo; имеет латинское происхождение и в греческом языке не используется. Самоназвание греками своей страны &mdash; Эллада. Изначально, согл
+асно &laquo;Илиаде&raquo; Гомера, Эллада &mdash; название области в южной Фессалии &mdash; Фтиотиды, постепенно распространилось на всю Грецию. С принятием термина
+ эллин общим для обозначения всех греков, Эллада стала собирательным именем для всей материковой Греции, а затем и всей Греции, включая архипелаги, острова и облас
+ти в Малой Азии. В настоящее время в Греции слово Эллада является официальным самоназванием, а слова грек&nbsp; или Греция не признаются населением и употребляются
+ только в общении с иностранцами. В других странах Эллада часто служит синонимом понятия Древняя Греция.</p>
 
-        CategoryDetail::create([
-            'category_id' => 16,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_16.jpg',
-        ]);
+<p>&nbsp;</p>
 
-        CategoryDetail::create([
-            'category_id' => 17,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_14.jpg',
-        ]);
+<p><strong>Государственные символы:</strong></p>
 
-        CategoryDetail::create([
-            'category_id' => 18,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_12.jpg',
-        ]);
+<p>Государственный флаг &mdash; 9 бело-голубых полос с крестом &mdash; соответствуют девяти слогам национального девиза &mdash; &laquo;Свобода или смерть&raquo;. П
+ервый национальный флаг был создан в 1821 году генералом Александром Ипсиланти &mdash; красный с белым крестом. С 1833 года красный цвет был заменён голубым.</p>
 
-        CategoryDetail::create([
-            'category_id' => 19,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_18.webp',
-        ]);
+<p>Государственный герб &mdash; голубой щит с белым крестом в обрамлении двух оливковых ветвей как символы ведущей религии в Греции &mdash; православия.</p>
 
-        CategoryDetail::create([
-            'category_id' => 20,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-        ]);
+<p>Гимн Греции с 1860 года &mdash; &laquo;Гимн свободе&raquo;, написанный основателем новогреческой поэзии Дионисиосом Соломосом в 1823 году и положенный на музыку
+ первым заметным новогреческим композитором Николаосом Мандзаросом.</p>
 
-        CategoryDetail::create([
-            'category_id' => 21,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-        ]);
+<p><strong>История (</strong>Древняя Греция<strong>):</strong></p>
 
-        CategoryDetail::create([
-            'category_id' => 22,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-        ]);
+<p>Греция считается колыбелью западной цивилизации. В период около 3 тысяч лет до нашей эры на острове Крит возникла высокоразвитая минойская цивилизация, культура
+ которой впоследствии распространилась и на материк. За ней последовала эпоха крито-микенской или эгейской цивилизации. Позже возникли греческие полисы, а также ан
+тичные колонии Северного Причерноморья, Великой Греции и Малой Азии. Культурный уровень развития распространялся на весь средиземноморский регион, что нашло отраже
+ние в архитектуре, театре, науке и философии.</p>
 
-        CategoryDetail::create([
-            'category_id' => 23,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_10.jpg',
-        ]);
+<p>&nbsp;</p>
 
-        CategoryDetail::create([
-            'category_id' => 24,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_8.jpg',
-        ]);
+<p><strong>Александр Македонский:</strong></p>
 
-        CategoryDetail::create([
-            'category_id' => 25,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_19.webp',
-        ]);
+<p>Полисы Афины и Спарта сыграли ведущую роль в победе над Персией, однако позже сами были побеждены Фивами, а впоследствии и Македонским царством. Последнее, под
+руководством Филиппа II Македонского и его сына Александра Великого, достигло чрезвычайной мощи, которая была предвестницей начала эпохи эллинизма. Однако Македони
+я была уничтожена римлянами в 146 году до нашей эры, и Эллада стала зависимой от Римской республики.</p>
 
-        CategoryDetail::create([
-            'category_id' => 26,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_11.png',
-        ]);
+<p>&nbsp;</p>
 
-        CategoryDetail::create([
-            'category_id' => 27,
-            'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            'description' => null,
-            'image' => 'image_9.jpg',
-        ]);
+<p>Дальнейшее взаимовлияние эллинской и римской культур формализуется в культуре Византийской империи. Она оставалась основным культурным центром на протяжении тыс
+ячи лет, до своего падения под натиском Османской империи 29 мая 1453 года. Во времена османского владычества существовала система османских миллетов, помогавшая п
+равославным грекам сохранять свои традиции на протяжении 4 веков и способствовавшая их сплочённости на основе религии, которая сыграла важную роль в формировании с
+овременного греческого самосознания.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Рельеф:</strong></p>
+
+<p>Греческий ландшафт &mdash; это чередование скалистых, обычно безлесных гор, густонаселённых долин, многочисленных островов, проливов и бухт. Живописные скалы, п
+ляжи, экзотические гроты предоставляют большие возможности для отдыха на море и горного туризма. Широкое распространение известняков, особенно в западной части стр
+аны, привело к формированию карстовых воронок, пещер, привлекающих любителей испытать свои силы в спелеологии. Горные массивы занимают почти четверть поверхности т
+ерритории страны. Это преимущественно средневысотные горы (до 1200&mdash;1800 м). Высшая точка Греции &mdash; гора Олимп (2917 м). Выше 2000 метров поднимаются так
+же Пинд, Парнас, горная цепь Центральной Греции и Тайгет. Равнин мало, сосредоточены они в восточной половине страны, за исключением Пелопоннеса, где равнины преоб
+ладают на западном побережье.</p>
+
+<p>В Греции бывают сильные землетрясения.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Климат:</strong></p>
+
+<p>Климат Греции можно разделить на три типа: средиземноморский, альпийский и умеренный, каждый из которых влияет на определённую территорию. Горный хребет Пинд си
+льно влияет на климат материковой части страны: регионы, расположенные западнее склонов Пинда (Эпир) получают большее количество осадков, чем регионы, расположенны
+е на восточной стороне хребта (Фессалия).</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Интересные факты о Греции:</strong></p>
+
+<ol>
+<li>В Греции действительно много солнца. Если посмотреть на города сверху, то крыши домов заставлены солнечными батареями и серебристыми баками. Хорошая экономия э
+лектроэнергии. При таком потоке ультрафиолета, греки не носят головные уборы.</li>
+<li>Море в Греции очень чистое и прозрачное. И наглые маленькие рыбки норовят ущипнуть за ногу.</li>
+<li>Морей, кстати, здесь аж три: Ионическое, Средиземное и Эгейское. Самое чистое из них &mdash; Средиземное.</li>
+<li>В Греции очень много исторических памятников. Даже в городах проводятся раскопки. Если Вам попадается какой-нибудь участок огороженный забором с непонятными на
+дписями &mdash; можете быть уверены что, это какая-нибудь очередная историческая достопримечательность. Церкви, часовни, церквушки &mdash; через каждые 100 метров.
+</li>
+<li>Дороги в Греции хорошие и в городах, и между ними. Есть как платные, так и бесплатные магистрали.</li>
+<li>Жилые и общественные здания внутри отделаны мрамором: подъезды, лестницы, полы &ndash; все мраморное.</li>
+<li>Бомжей в Греции нет. Встречаются попрошайки, но со слов греков, это цыгане или албанцы, и их не очень много.</li>
+<li>&nbsp;Больше половины населения заняты в туристическом бизнесе: промышленных предприятий в Греции мало.</li>
+<li>Здесь не принято повторно использовать учебники: в конце года хорошие еще книги летят в костер. Такая традиция.</li>
+<li>Греки любят кофе. Со льдом. И без. Сидят в кафе подолгу, обсуждают новости и не торопятся домой.</li>
+<li>Греки вообще редко торопятся. Это их философия &ndash; наслаждаться жизнью.</li>
+<li>99,9% греков &mdash; крещёные. Крещение считается большим событием в семье и среди близких друзей. Празднуют это событие обязательно.</li>
+<li>Любимая еда греков &ndash; сувлаки (наподобие шаурмы) с жареной картошкой фри. Едят ее и дети и взрослые, часто и в больших количествах. Это греческий фастфуд.
+ Запивают кока-колой.</li>
+<li>Для того, чтобы сказать &laquo;нет&raquo; грек, цокнув, мотнет головой вверх.</li>
+</ol>',
+                    'image' => 'image_1.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 18:43:29',
+                ),
+            1 =>
+                array(
+                    'id' => 2,
+                    'category_id' => 6,
+                    'preview_text' => 'Марк Эндрю Спитц, родился 10 февраля 1950 года в Модесто, Калифорния, США — американский пловец еврейского происхождения, был третьи
+м из четырёх 9-кратных олимпийских чемпионов в истории спорта. Первый человек, завоевавший 7 золотых олимпийских медалей на одних Играх (Мюнхен-1972). В 2008 на Ол
+импийских играх в Пекине его американский коллега по команде, Майкл Фелпс, превзошёл этот результат, став 23-кратным олимпийским чемпионом и завоевав 8 золотых оли
+мпийских медалей на одних Играх. Однако каждое золото Спитца в 1972 году было мировым рекордом.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Марк Эндрю Спитц, родился 10 февраля 1950 года в Модесто, Калифорния, США &mdash; американский пловец еврейского происхождения, был третьим из четырёх 9-кратных
+ олимпийских чемпионов в истории спорта. Первый человек, завоевавший 7 золотых олимпийских медалей на одних Играх (Мюнхен-1972). В 2008 на Олимпийских играх в Пеки
+не его американский коллега по команде, Майкл Фелпс, превзошёл этот результат, став 23-кратным олимпийским чемпионом и завоевав 8 золотых олимпийских медалей на од
+них Играх. Однако каждое золото Спитца в 1972 году было мировым рекордом.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Достижения Марка Спитца:</strong></p>
+
+<ul>
+<li>Установил 33 мировых рекорда. Ещё 2 не были учтены, поскольку ставились на тренировках.</li>
+<li>Признавался лучшим пловцом мира в 1969, 1971 и 1972</li>
+<li>Выиграл 5 золотых медалей на Панамериканских играх в 1967</li>
+<li>Выиграл 10 золотых медалей на Маккавейских играх в 1965 и 1969</li>
+<li>В 1985 открывал Маккавейские игры, а в 2005 был знаменосцем сборной США на этих Играх .</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>Ранние годы:</strong></p>
+
+<p>Марк родился первым из трёх детей в семье Арнольда и Леоноры Спитц. Семья отца когда-то выехала из Венгрии, а его мать была родом из России. Когда Марку было дв
+а года, семья переехала в Гонолулу, где он ежедневно плавал на местном пляже, Вайкики. &laquo;Вам надо было видеть его в те годы, когда он бросался в волны и заплы
+вал всё дальше, а мне казалось, что он просто хочет покончить с собой!&raquo;, &mdash; говорила его мать репортёру &laquo;Таймс&raquo; в 1968 году.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1956 родители переехали в Сакраменто. Здесь, в возрасте шести лет, Марк вступил в местную спортивную секцию по плаванию. Начались тренировки и соревнования. С
+ девяти лет Марк Спитц тренировался уже в лучшем спортивном клубе своего города, под руководством Sherm Chavoor, &mdash; тренера, воспитавшего, кроме Марка, ещё ше
+сть олимпийских чемпионов.</p>
+
+<p>&nbsp;</p>
+
+<p>В возрасте 10 лет Марк Спитц установил свой первый мировой рекорд в категории юниоров, поставив уже 17 рекордов национальных. Когда Марку исполнилось 14, семья
+переехала в Санта-Клару, где юноша продолжил тренировки под руководством опытного пловца и тренера семи олимпийских сборных США, George Haines. Через два года, в 1
+966, во время национального первенства Американского атлетического союза (AAU), 16-летний Марк Спитц выиграл заплыв среди взрослых на 100 метров баттерфляем; а в с
+ледующем году поставил мировой рекорд в заплыве на 400 м вольным стилем, показав 4:10:60, &mdash; и вышел на международную арену.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>На покое:</strong></p>
+
+<p>Спитц ушёл из спорта в 1972 году, в разгар Олимпийских игр 1972 года в Мюнхене в возрасте 22 лет, во время своего триумфального участия в которых смог завоевать
+ рекордное количество золотых медалей на одной Олимпиаде. Марк Спитц увёз с собой 7 медалей высшего достоинства (причём все золотые медали были выиграны с мировыми
+ рекордами). В будущем, его менеджеры хотели сделать из него звезду шоу-бизнеса, но после нескольких попыток выяснилось, что Марк не очень телегеничен и теряется п
+еред камерами.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1991 году американский кинорежиссёр и продюсер Бад Гринспен, прославившийся своими документальными фильмами о спорте, предложил Спитцу 1 миллион долларов США,
+ если тот сумеет отобраться в команду США на Олимпийские игры в Барселоне. Под объективами кинокамер Спитц приступил к усердным тренировкам и в возрасте 41 года су
+мел приблизиться к своим олимпийским результатам 20-летней давности, а на отдельных дистанциях даже превзойти их. Но спорт за 20 лет ушёл далеко вперёд, и Спитц не
+ сумел угнаться за ним.</p>
+
+<p>В 2006 году Спитц читал закадровый текст в документальном фильме &laquo;Неистовство свободы&raquo;.</p>',
+                    'image' => 'image_6.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 18:48:44',
+                ),
+            2 =>
+                array(
+                    'id' => 3,
+                    'category_id' => 7,
+                    'preview_text' => 'Майкл Фред Фелпс II родился. 30 июня 1985 года, Балтимор - американский пловец, 23-кратный олимпийский чемпион , 26-кратный чемп
+ион мира в 50-метровом бассейне, многократный рекордсмен мира. Абсолютный рекордсмен по количеству золотых наград  и наград в сумме  в истории Олимпийских игр, а т
+акже золотых наград  и наград в сумме  в истории чемпионатов мира по водным видам спорта.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Майкл Фред Фелпс II родился. 30 июня 1985 года, Балтимор &mdash; американский пловец, 23-кратный олимпийский чемпион , 26-кратный чемпион мира в 50-метровом бас
+сейне, многократный рекордсмен мира. Абсолютный рекордсмен по количеству золотых наград&nbsp; и наград в сумме &nbsp;в истории Олимпийских игр, а также золотых наг
+рад&nbsp; и наград в сумме &nbsp;в истории чемпионатов мира по водным видам спорта.</p>
+
+<p>Спортивные прозвища &mdash; &laquo;Балтиморская пуля&raquo;&nbsp; и &laquo;Летающая рыба&raquo;.</p>
+
+<p>Наиболее успешно выступал в плавании вольным стилем и баттерфляем, а также в комплексном плавании.</p>
+
+<p>Объявил о завершении карьеры в 2012 году в возрасте 27 лет после Олимпийских игр в Лондоне, но вновь начал участвовать в международных состязаниях с 2014 года,
+отобравшись на Олимпийские игры в Рио, где выиграл пять золотых и одну серебряную медаль. После Игр в Рио объявил об окончательном уходе из плавания.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Ранние Годы:</strong></p>
+
+<p>Фелпс родился и вырос в районе Тоусон, расположенном к северу от Балтимора. Майкл является младшим из трёх детей. Его мать, Дебора Сью &laquo;Дебби&raquo;, явля
+ется директором средней школы. Его отец, Майкл Фред Фелпс, играл в американский футбол в средней школе. Родители Фелпса развелись в 1994 году, и его отец вступил в
+ повторный брак в 2000 году. Фелпс окончил среднюю школу Тоусона в 2003 году.</p>
+
+<p>Фелпс начал заниматься плаванием в возрасте семи лет, отчасти под влиянием своей сестры. Когда Фелпс был в шестом классе, ему был поставлен диагноз дефицита вни
+мания и гиперактивности. В возрасте 10 лет, будучи обладателем национального рекорда для своей возрастной группы, Фелпс стал тренироваться под руководством тренера
+ Боба Боумана. Успехов в своей возрастной группе у Фелпса было всё больше, и в возрасте 15 лет он принял участие в Олимпийских играх 2000 года.</p>
+
+<p>30 марта 2001 года на чемпионате мира по водным видам спорта Фелпс побил мировой рекорд на дистанции 200 метров стилем баттерфляй. Таким образом, Майкл в возрас
+те 15 лет и 9 месяцев стал самым молодым человеком, когда-либо устанавливавшим мировой рекорд по плаванию.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Мировые рекорды Фелпса:</strong></p>
+
+<p>Является обладателем семи действующих мировых рекордов (50-метровый бассейн/&laquo;длинная вода&raquo;: 400 м комплекс, эстафета 4&times;100 м вольным стилем, э
+стафета 4&times;200 м вольным стилем, комбинированная эстафета 4&times;100 м; 25-метровый бассейн/&laquo;короткая вода&raquo;: эстафета 4&times;100 м вольным стиле
+м).</p>
+
+<p>Всего Фелпс установил 37 мировых рекордов на &laquo;длинной воде&raquo; &nbsp;и превзошёл высшее достижение Марка Спитца, который установил за карьеру 33 мировы
+х рекорда. Ещё два мировых рекорда в эстафете на счету Майкла в 25-метровом бассейне.</p>
+
+<p>24 из своих 37 рекордов в 50-метровом бассейне Фелпс установил на трёх дистанциях: 100 м баттерфляем (8 рекордов), 200 м (8 рекордов) и 400 м (8 рекордов) компл
+ексным плаванием. Мировым рекордом на дистанции 200 м баттерфляем владел непрерывно с марта 2001 года по 24 июля 2019 года, а на дистанции 400 м комплексом с авгус
+та 2002 года.</p>
+
+<p>Больше всего мировых рекордов Майкл установил в 2003 , 2007 , 2008&nbsp; и 2009 годах. После декабря 2009 года мировых рекордов не устанавливал.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Майкл Фелпс на Олимпийских играх:</strong></p>
+
+<p>На Олимпиаде в Сиднее в 2000 году 15-летний Фелпс стал самым молодым олимпийским пловцом из США за последние 68 лет. Он выступил только на дистанции 200 метров
+баттерфляем и занял пятое место в финале.</p>
+
+<p>На Олимпиаде в Афинах в 2004 году 19-летний Фелпс выиграл восемь медалей, из которых шесть были золотыми и две бронзовыми, установив при этом три олимпийских и
+один мировой рекорд. Кроме того, восемь медалей на одной Олимпиаде &mdash; повторение рекорда знаменитого советского гимнаста Александра Дитятина, который установи
+л своё достижение на Олимпиаде 1980 года в Москве.</p>
+
+<p>На Олимпиаде в Пекине в 2008 году Фелпс выиграл все дистанции, на которых стартовал, и завоевал восемь золотых наград, побив рекорд Марка Спитца , что также сде
+лало его 14-кратным олимпийским чемпионом. Таким образом, обойдя финского легкоатлета Пааво Нурми, американского легкоатлета Карла Льюиса и своего коллегу по амплу
+а американца Марка Спитца, он стал самым титулованным спортсменом в истории современных Олимпийских игр.</p>
+
+<p>На Олимпийских играх в Лондоне в 2012 году по общему числу олимпийских наград Майкл превзошёл всех атлетов во всех видах спорта &mdash; 22 медали, побив рекорд
+советской гимнастки Ларисы Латыниной , державшийся 48 лет.</p>
+
+<p>На Олимпийских играх в Рио-де-Жанейро в 2016 году Фелпс выиграл пять золотых медалей &mdash; в эстафетах 4&times;100 м и 4&times;200 м вольным стилем, 4&times;1
+00 м в комбинированной эстафете, а также на дистанциях 200 м стилем баттерфляй и 200 м комплексным плаванием. Победив в комплексном плавании на дистанции 200 м, он
+ стал первым пловцом, выигравшим золотую медаль на одной и той же дистанции на четырёх олимпиадах .</p>
+
+<p>Победив 13 раз на индивидуальных дистанциях, он побил рекорд древнегреческого легкоатлета Леонида Родосского, который выиграл свои последние 3 золотые медали из
+ 12 за 2168 лет до этого в 152 году до нашей эры.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Прочие достижения:</strong></p>
+
+<p>На чемпионате мира в Мельбурне в 2007 году Фелпс выиграл 7 золотых медалей, установив при этом 5 мировых рекордов. На чемпионате мира 2009 года в Риме Майкл выи
+грал 5 золотых наград и 1 серебряную, установив 4 мировых рекорда. В 2011 году на чемпионате мира в Шанхае выиграл 4 золота, 2 серебра и 1 бронзу.</p>
+
+<p>Фелпс является 50-кратным чемпионом США в индивидуальных видах и эстафетах в 2001&mdash;2010 годах. При этом он выиграл ещё и три чемпионата США, где расстояния
+ измеряются в ярдах.</p>
+
+<p>8 раз (2003, 2004, 2006&mdash;2009, 2012, 2016) признавался лучшим пловцом года в мире, являясь абсолютным рекордсменом по этому показателю.</p>
+
+<p>9 раз (2001&mdash;2004, 2006&mdash;2009, 2012) Фелпс был признан лучшим пловцом года в США.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Факты:</strong></p>
+
+<ol>
+<li>По состоянию на 2008 год соблюдает так называемую &laquo;диету Фелпса&raquo;. В ней в общей сложности 10 000 ккал. Впрочем, в интервью USA Today &nbsp;в 2012 г
+оду, Фелпс, отвечая на вопросы о своей диете, заявлял, что распространённая в СМИ информация о диете в 12 000 ккал это миф. &laquo;Я никогда не ел так много&raquo;
+, &mdash; отметил чемпион.</li>
+<li>В рейтинге &laquo;50 людей и явлений, которые сделали XXI век таким, какой он есть&raquo; журнала GQ расположился на 14 позиции.</li>
+<li>&nbsp;В 2004 году в родном городе Майкла Балтиморе его именем была названа улица (англ.Michael Phelps Way).</li>
+</ol>
+
+<p>Начиная с Олимпиады 2008 года в Пекине, одевался в купальный костюм LZR Racer, который фирма-производитель Speedo позиционирует как &laquo;самый быстрый хай-тек
+ купальник в мире&raquo;. Фелпс принимал участие в рекламной кампании этой фирмы.</p>',
+                    'image' => 'image_5.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 18:54:05',
+                ),
+            3 =>
+                array(
+                    'id' => 4,
+                    'category_id' => 8,
+                    'preview_text' => 'Ласло Чех-младший родился  3 декабря 1985 года, Халастелек - венгерский пловец, шестикратный призёр Олимпийских игр, двукратный
+чемпион мира, 32-кратный чемпион Европы в 2003—2016 годах, трёхкратный чемпион Универсиады 2011 года, 150-кратный чемпион Венгрии. Специализируется в комплексном п
+лавании на дистанции 200 и 400 метров, плавании баттерфляем, на спине и вольным стилем. Экс-рекордсмен мира на дистанциях 200 и 400 метров комплексным плаванием в
+25-метровых бассейнах, многократный рекордсмен Европы и Венгрии на длинной и короткой воде.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Ласло Чех-младший родился &nbsp;3 декабря 1985 года, Халастелек &mdash; венгерский пловец, шестикратный призёр Олимпийских игр, двукратный чемпион мира, 32-крат
+ный чемпион Европы в 2003&mdash;2016 годах, трёхкратный чемпион Универсиады 2011 года, 150-кратный чемпион Венгрии. Специализируется в комплексном плавании на дист
+анции 200 и 400 метров, плавании баттерфляем, на спине и вольным стилем. Экс-рекордсмен мира на дистанциях 200 и 400 метров комплексным плаванием в 25-метровых бас
+сейнах, многократный рекордсмен Европы и Венгрии на длинной и короткой воде.</p>
+
+<p>&nbsp;</p>
+
+<p>Один из самых титулованных пловцов в истории чемпионатов Европы: на длинной воде Чех выиграл 21 награду, 13 из которых золотые, а в 25-метровых бассейнах на сче
+ту венгра 25 медалей, в том числе 19 золотых. При этом в 50-метровых бассейнах Ласло выигрывал как минимум две медали и как минимум одно золото на семи чемпионатах
+ Европы подряд (2004, 2006, 2008, 2010, 2012, 2014 и 2016).</p>
+
+<p>&nbsp;</p>
+
+<p>На чемпионатах мира и Олимпийских играх Чеху несколько лет подряд приходилось соревноваться в комплексном плавании и баттерфляе с выдающимся американцем 23-крат
+ным олимпийским чемпионом Майклом Фелпсом. В результате на Олимпийских играх Чех выиграл в сумме шесть медалей в 2004, 2008, 2012 и 2016 годах, но ни одного золота
+, а на чемпионатах мира венгр лишь дважды выигрывал золото &mdash; в 2005 году на дистанции 400 метров комплексным плаванием и спустя 10 лет на дистанции 200 метро
+в баттерфляем. Серебряных и бронзовых наград чемпионатов мира (на длинной и короткой воде) на счету венгра более 10. При этом с семи чемпионатов мира подряд (2003&
+mdash;2015) Чех не уезжал без медалей.</p>
+
+<p>&nbsp;</p>
+
+<p>Лучший спортсмен Венгрии 2006 и 2015 годов, лучший пловец Европы 2005 и 2006 годов.</p>',
+                    'image' => 'image_7.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 18:56:10',
+                ),
+            4 =>
+                array(
+                    'id' => 5,
+                    'category_id' => 9,
+                    'preview_text' => 'Иан Джеймс Торп родился 13 октября 1982 года в Сиднее, Австралия в семье садовника и учительницы.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Иан Джеймс Торп родился 13 октября 1982 года в Сиднее, Австралия в семье садовника и учительницы.</p>
+
+<p>Иан рос обычным ребёнком. Он общался с друзьями, ездил на отдых с родителями, смотрел мультфильмы, играл в крикет, регби и футбол. Отец, в прошлом известный кри
+кетист, хотел, чтобы Иан пошел по его стопам. Но недостаточно развитая координация движений не принесла результатов в этом занятии. Старшая сестра Иана Кристина за
+нималась плаванием. Мальчик заинтересовался и в возрасте 8 лет решил составить ей компанию. Родители не были удивлены его решением, ведь в Австралии плавание являе
+тся одним из самых популярных видов спорта.</p>
+
+<p>В первое время Иану приходилось нелегко, так как у него была обнаружена аллергия на хлор и он плавал с зажимом на носу. В конечном счёте Иан преодолел это препя
+тствие и в 9 лет выиграл свою первую медаль.</p>
+
+<p>В 1997 году в возрасте 14 лет Торп был приглашён в национальную сборную. Его выбрали в качестве представителя Австралии на соревнованиях в японской Фукуоке в Ти
+хом океане. Иан улучшил своё личное время на 6 сек, показав 3:53:44 в заплыве на 400 м. Этот заплыв стал его первым главным достижением в плавании. Единственное, ч
+то сказал Иан после победы: &laquo;Я удивлён!&raquo;.</p>
+
+<p>В мае 1998 года на чемпионате мира в Перте он &laquo;достиг совершеннолетия&raquo; в бассейне, выиграв золото в заплыве на 400 м вольным стилем и в эстафете 4&t
+imes;200 м в команде с Майклом Климом, Грэнтом Хакеттом и Даниэлем Ковальски. Иан и Майкл Клим показали одинаковое время &mdash; 1:47:67, которое было на 3 секунды
+ короче, чем бывшее лучшее время Торпа. Таким образом, Иан стал самым молодым в истории пловцом, завоевавшем титул чемпиона мира. В честь этого события на дорожке
+чемпионов в Водном центре среди таких имён, как Кирен Перкинс и Сьюзи О&rsquo;Нилл, была заложена мемориальная доска с именем Торпа.</p>
+
+<p>В сентябре Иан выиграл 4 золотых медали в Играх Содружества Наций. Здесь, в Куала-Лумпуре (Малайзия) за Иана болел его друг &mdash; лечившийся от рака мальчик п
+о имени Майкл Уильямс. Для Иана храбрость Майкла была лучшим вдохновением в этих соревнованиях.</p>
+
+<p>В том же году Торп был назван &laquo;Австралийцем года&raquo; среди молодёжи. О нём писали: &laquo;Он уверен, умён, честолюбив и необычайно чётко формулирует св
+ои мысли&raquo;. Иан стал национальным героем Австралии.</p>
+
+<p>На XXVII Олимпийских играх 2000 года, в Сиднее, родном городе Иана, он определённо был фаворитом. Олимпийский комитет разрешил использовать специальные плавател
+ьные костюмы и для Иана такой костюм был сшит из материала &laquo;быстрая кожа&raquo;, разработанного специально для американского водного десанта. Иан оправдал ож
+идания своих болельщиков, пополнив копилку австралийской сборной тремя золотыми и двумя серебряными медалями.</p>
+
+<p>После Олимпиады популярность Иана стала ещё больше. Многие компании подписали с ним контракты. Иан рекламировал такие известные марки как &laquo;Adidas&raquo;,
+&laquo;Coca Cola&raquo;, &laquo;Omega&raquo;. Как и многие богатые люди, часть своих денег он переводил на благотворительность в &laquo;Thorpe Fountain for Youth T
+rust&raquo;, помогающий больным детям.</p>
+
+<p>На чемпионате Австралии в 2001 году в Хобарте Иан был первым на всех четырёх дистанциях, в которых участвовал &mdash; 100, 200, 400 и 800 м. Подобное удавалось
+лишь Джону Конрадсу в 1959 году. На двух дистанциях из четырёх &mdash; 200 м и 800 м &mdash; Торп установил новые мировые рекорды &mdash; 1.45,35 и 7.41,59. Таким
+образом, Иан имел на своём счёту уже 13 высших достижений планеты.</p>
+
+<p>В 2001 году на чемпионате мира по водным видам спорта в японской Фукуоке мир был потрясён успехами Торпа в очередной раз. Австралиец стал первым человеком, выиг
+равшем шесть золотых медалей &nbsp;на чемпионате такого рода.</p>
+
+<p>В 2004 году на Олимпийских играх в Афинах Торп выиграл 2 золотые, 1 серебряную и 1 бронзовую медаль, став, таким образом, вторым пловцом года после американца М
+айкла Фелпса.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Завершение карьеры:</strong></p>
+
+<p>После игр в Афинах Торп взял паузу в год. В 2006 году он квалифицировался на Игры Содружества, но пропустил их. Затем, после череды травм, болезней, наступила п
+отеря мотивации. В 2007 году спортсмен заявил об уходе из большого спорта, хотя в интервью он отмечал, что не представляет себе жизнь без регулярных тренировок.</p
+>
+
+<p>В начале февраля 2011 года, спустя почти 5 лет после ухода, Торп объявил о своём возвращении в спорт с тем, чтобы попытаться отобраться на Олимпийские игры 2012
+ года в Лондоне. При выборе тренера он остановился на кандидатуре Геннадия Турецкого. После чемпионата мира 2009 года пловцы-мужчины уже не имели права выступать в
+ полных плавательных костюмах, к которым привык Торп, - теперь ему пришлось выступать в плавках. В итоге, показав на отборе 1.49.93 на 200 м, Иэн занял только 12-е
+ время и не отобрался в команду.</p>
+
+<p>Награждён медалью ордена Австралии.</p>',
+                    'image' => 'image_4.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 18:58:55',
+                ),
+            5 =>
+                array(
+                    'id' => 6,
+                    'category_id' => 10,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'image_17.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 19:05:53',
+                ),
+            6 =>
+                array(
+                    'id' => 7,
+                    'category_id' => 11,
+                    'preview_text' => 'Юлия Ефимова родилась 3 апреля 1992 в Грозном. В 1994 году из-за Первой чеченской войны ей с семьёй пришлось переехать в Волгодо
+нск, где Юлия в шестилетнем возрасте начала тренироваться в СДЮШОР № 2 под руководством своего отца Андрея Михайловича Ефимова. Он решил записать Юлию официально в
+ секцию для занятий, потому что его дочь и так там проводила много времени — дома ее оставить было не с кем. По утрам они совершали спортивную прогулку. Тренер ста
+рался разнообразить спортивный режим для того, чтобы ребенок не утратил интерес к занятиям. Когда Юлия стала мастером спорта, ее отец решил, что ей необходимо зани
+маться у другого тренера.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Юлия Ефимова родилась 3 апреля 1992 в Грозном. В 1994 году из-за Первой чеченской войны ей с семьёй пришлось переехать в Волгодонск, где Юлия в шестилетнем возр
+асте начала тренироваться в СДЮШОР № 2 под руководством своего отца Андрея Михайловича Ефимова. Он решил записать Юлию официально в секцию для занятий, потому что
+его дочь и так там проводила много времени &mdash; дома ее оставить было не с кем. По утрам они совершали спортивную прогулку. Тренер старался разнообразить спорти
+вный режим для того, чтобы ребенок не утратил интерес к занятиям. Когда Юлия стала мастером спорта, ее отец решил, что ей необходимо заниматься у другого тренера.<
+/p>
+
+<p>В 2005 году Ефимова переехала в Таганрог, где до 2011 года тренировалась у заслуженного тренера России Ирины Вятчаниной; именно под руководством Вятчаниной Юлия
+ достигла первых серьезных успехов на международной арене.</p>
+
+<p>Отец оказывал моральную поддержку, когда тренировки проходили тяжело, и Юлия Ефимова хотела все бросить и вернуться домой. Он уговаривал потерпеть, и заниматься
+ дальше.</p>
+
+<p>С марта 2011 по 2016 годы спортсменка проживала в Калифорнии и тренировалась у Дэвида Сало. После Олимпиады в Рио-де-Жанейро из-за допингового скандала Ефимовой
+ пришлось расстаться с Сало. В настоящее время вновь тренируется под руководством отца.</p>
+
+<p>Трёхкратная чемпионка Европы 2007 года в плавании на короткой воде (50, 100 и 200 метров брассом), чемпионка (200 метров брассом) и серебряный призёр (50 метров
+) чемпионата Европы 2008 года. Была рекордсменкой Европы и чемпионатов Европы на дистанции 100 метров брассом.</p>
+
+<p>&nbsp;</p>
+
+<p>На чемпионате Европы в Будапеште в 2010 году.</p>
+
+<p>Участница Олимпийских игр 2008 года в Пекине, где заняла 4-е место на дистанции 100 метров и 5-е на 200 метров брассом.</p>
+
+<p>В 2008 году Всероссийская федерация плавания признала Юлию Ефимову лучшей пловчихой страны и &laquo;Открытием года&raquo;.</p>
+
+<p>В 2010 году она завоевала две медали высшей пробы на чемпионате Европы по водным видам спорта 2010 на дистанциях 50 и 100 метров брассом.</p>
+
+<p>На Олимпийских играх в Лондоне в 2012 году завоевала бронзовую медаль на дистанции 200 метров брассом с результатом 2.20,92 минуты.</p>
+
+<p>В 2013 году на чемпионате мира в Барселоне Юлия завоевала золотую медаль на дистанции 200 метров, обогнав Рикке Педерсен и Майку Лоуренс, попутно обновив рекорд
+ России, &mdash; 2.19,41 минуты. На дистанции 50 метров брассом обновила мировой рекорд в предварительном заплыве &mdash; 29,78 секунд. В полуфинале литовка Рута М
+ейлутите отобрала мировой рекорд у Ефимовой (29,48 секунд), но в финале россиянка показала время 29,52 секунд (новый рекорд России) и опередила литовку на 0,07 сек
+унды, став трёхкратной чемпионкой мира в 50-метровом бассейне.</p>
+
+<p>&nbsp;</p>
+
+<p>Перед финалом победного заплыва на 100 метров брассом на чемпионате мира 2015 года в Казани.</p>
+
+<p>В январе 2014 года стало известно, что тест на допинг, сданный во внесоревновательный период в октябре 2013 года, дал положительный результат на наличие стероид
+ного гормона дегидроэпиандростерона. Юлия Ефимова написала объяснительную, где признала употребление пищевой добавки, которая содержала запрещённые субстанции. Быв
+ший главный тренер национальной команды Андрей Воронцов предположил, что биодобавки, которые применяла Ефимова, помогали спортсменке в борьбе с лишним весом. В рез
+ультате, 13 мая 2014 года Ефимова была дисквалифицирована на 1,5 года с 31 октября 2013 года до 28 февраля 2015 года, а также была лишена пяти медалей чемпионата Е
+вропы на короткой воде 2013 года.</p>
+
+<p>В августе 2015 года, через пять месяцев после завершения срока дисквалификации, на чемпионате мира в Казани впервые в карьере выиграла золото на дистанции 100 м
+етров брассом, показав в финале результат 1.05,66 минуты (на 0,06 секунды медленнее, чем в полуфинале). Рекордсменка мира и чемпионка мира 2013 года на этой дистан
+ции Мейлутите отстала на 0,70 сек. На дистанции 50 метров брассом Юлия выиграла бронзу с результатом 30,13 секунд (на 0,08 секунды медленнее чемпионки), а на 200-м
+етровке брассом не смогла выйти в полуфинал, показав 17-й результат в предварительных заплывах при 16 квалифицирующихся в полуфинал. Юлия принесла России две из че
+тырёх медалей, выигранных в плавании на домашнем чемпионате мира, в том числе единственную золотую.</p>
+
+<p>С 17 марта по 12 июля 2016 года была временно отстранена от участия в соревнованиях в связи с возможным нарушением антидопинговых правил (употребление мельдония
+).</p>
+
+<p>В июле 2016 года заняла первое место на турнире в Лос-Анджелесе (Los Angeles Invitational) в заплыве на 200 метров брассом, показав лучший результат в сезоне. М
+еждународная федерация плавания отказалась допустить спортсменку к Олимпийским играм 2016 года, однако спортсменка подала иск в Спортивный арбитражный суд, который
+ отменил запрет на её участие в Олимпиаде.</p>
+
+<p>В настоящее время (апрель 2019) владеет всеми рекордами России в женском брассе.</p>
+
+<p>В 2019 году на чемпионате мира в Кванджу Юлия завоевала весь комплект медалей в брассе (золото на 200 м, серебро на 100 м и бронзу на 50).</p>',
+                    'image' => 'image_3.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 19:06:09',
+                ),
+            7 =>
+                array(
+                    'id' => 8,
+                    'category_id' => 12,
+                    'preview_text' => 'Оно не только увеличивает выносливость организма, но и развивает силу духа. Плавание, несомненно, полезно для детей, так как спо
+собствует и росту и правильному формированию осанки, потому что во время тренировок задействованы все группы мышц, что естественно сказывается очень благотворно.',
+                    'description' => '<p><strong>Плавание:</strong></p>
+
+<p>Оно не только увеличивает выносливость организма, но и развивает силу духа. Плавание, несомненно, полезно для детей, так как способствует и росту и правильному
+формированию осанки, потому что во время тренировок задействованы все группы мышц, что естественно сказывается очень благотворно.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Обучение плаванию детей с 2 до 5 лет:</strong></p>
+
+<p>Занятия в бассейне для маленьких детей до 3 лет проходят всегда индивидуально. Во время таких тренировок ребенок будет находиться в постоянном контакте с инстру
+ктором. С помощью таких занятий получится приучить ребенка к нахождению в бассейне, так как многие дети в этом возрасте, в разной степени, но боятся воды. В процес
+се тренировок пройдут страхи и значительно укрепится здоровье. Стоит помнить, что занятия, особенно в таком юном возрасте, должны быть регулярными, так как перерыв
+ы на месяц и более ведут к неизбежной потере навыков. Однако положительное отношение ребенка к воде будет уже сформировано, что важно уже само по себе.</p>
+
+<p>&nbsp;</p>
+
+<p>Большинство тренеров по плаванию считают, что ребенку необходимо начать заниматься этим видом спорта в раннем возрасте &ndash; с трех лет. В это время у малыша
+продолжает формироваться осанка и бассейн окажет позвоночнику неоценимую пользу. Стоит отметить, что бассейн для детей с 3 лет &ndash; лишь приятное времяпрепровож
+дение, так как в этом возрасте не получится начать заниматься плаванием профессионально. Поскольку плавание является интенсивным видом спорта, специалисты рекоменд
+уют посещать тренировки в этот период не чаще двух раз в неделю.</p>
+
+<p>&nbsp;</p>
+
+<p>В этом возрасте во время занятий в бассейне дети используют специальный спортивный инвентарь, который помогает им лучше держаться на воде и овладевать основные
+навыки.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Обучение плаванию детей дошкольного возраста от 5 лет:</strong></p>
+
+<p>Занятия по плаванию для детей 5 лет и старше помогут вырастить настоящего чемпиона, так как именно в этом возрасте детей принимают в профессиональные секции. Ре
+бенок сейчас как раз начинает понимать, что это не просто развлечение, а серьезный спорт. И если ребенок сам хочет заниматься в спортивной секции и участвовать в с
+оревнованиях, то самое время привести его в бассейн. Количество занятий в бассейне для детей 5 лет должно постепенно увеличиваться с двух раз в неделю до пяти. Что
+бы юный пловец был способен выполнять интенсивные физические упражнения, родители должны понимать, что его необходимо обеспечить полноценным сбалансированным питан
+ием.</p>
+
+<p>&nbsp;</p>
+
+<p>5 лет &ndash; это тот возраст, когда ребенка также можно отдать учиться плаванию с нуля. В школе плавания предусмотрены занятия как в группе (как правило, по ур
+овню подготовки), так и индивидуальные тренировки. Ребенок находится под постоянным контролем тренера &ndash; группы формируются небольшие, чтобы всем пловцам было
+ уделено достаточно времени и внимания. Дети, начавшие учиться плавать в этом возрасте, быстро догоняют тех, кто начал учиться в 2&ndash;3 года.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Обучение плаванию детей от 7 до 9 лет:</strong></p>
+
+<p>Вместе с первыми занятиями в общеобразовательной школе, ребенок запросто также можно начать заниматься плаванием. Соответственно, и со второго класса и более ст
+аршего возраста. В это время он становится более дисциплинированным, что облегчает его походы в бассейн. Если к этому качеству приложить еще и старание, то ребенок
+ легко сопоставляет задания тренера с заданиями школьных учителей и быстро продвигается к ощутимым результатам.</p>
+
+<p>&nbsp;</p>
+
+<p>Дополнительный инвентарь в это время обычно не предусматривается, но все зависит от уровня подготовки ребенка и решается индивидуально тренером.</p>
+
+<p>&nbsp;</p>
+
+<p>Преимущество плавания в бассейне с этого возраста заключается в том, что дети лучше начинают воспринимать информацию. Они могут более внимательно слушать теорет
+ическую часть занятий, не отвлекаясь от инструктора, благодаря чему повысится и качество тренировок, и прогрессирование в обучении.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Бассейн для детей от 9 до 12 лет:</strong></p>
+
+<p>Более профессиональные тренировки, которые подготавливают юных пловцов к спортивным соревнованиям, начинаются в среднем с 9&ndash;12 лет. Инструктор усложняет м
+етоды обучения, развивая выносливость ребенка и заостряя внимание на оттачивании техник стилей плавания, что способствует расширению и теоретических познаний молод
+ого пловца наряду с навыками в этом виде спорта.</p>
+
+<p>&nbsp;</p>
+
+<p>Подводя итоги, стоит отметить, что начать водить ребенка в бассейн можно в разном возрасте, в зависимости от желания ребенка и родителей &ndash; просто научитьс
+я плавать и укрепить здоровье или начать спортивную карьеру. Конечно, очень важно желание самого ребенка. На желание малыша заниматься плаванием может повлиять и е
+го тренер, поэтому к выбору инструктора необходимо подходить наиболее тщательно. Когда педагог любим, то и дети на его занятия идут с большим удовольствием. А это
+уже общий успех родителей и тренера.</p>',
+                    'image' => 'image_2.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-12 19:08:44',
+                ),
+            8 =>
+                array(
+                    'id' => 9,
+                    'category_id' => 13,
+                    'preview_text' => 'Англия - страна, являющаяся крупнейшей административно политической частью Соединённого Королевства Великобритании и Северной Ир
+ландии. Население Англии составляет 84 % от общего числа населения Великобритании. Столица — Лондон, крупнейший город Соединённого Королевства.',
+                    'description' => '<p><strong>Англия:</strong></p>
+
+<p>Англия &mdash; страна, являющаяся крупнейшей административно-политической частью Соединённого Королевства Великобритании и Северной Ирландии. Население Англии с
+оставляет 84 % от общего числа населения Великобритании. Столица &mdash; Лондон, крупнейший город Соединённого Королевства.</p>
+
+<p>Англия стала объединением семи некогда враждовавших королевств в 927 году и названа по имени древнегерманского племени англов, обосновавшегося на острове Велико
+британия в V&mdash;VI веках.</p>
+
+<p>Англия &mdash; место происхождения английского языка и Англиканской церкви, а английское законодательство формирует основу юридических систем многих стран мира;
+ кроме того, Лондон был центром Британской империи, а страна &mdash; местом возникновения Промышленной революции. Англия была первой промышленно развитой страной,
+а также страной с парламентской демократией, конституционные, правительственные и юридические новшества которой были переняты другими нациями и государствами.</p>
+
+<p>Королевство Англия, включая княжество Уэльс, являлось отдельным государством до 1 мая 1707 года, когда объединилось с Королевством Шотландия в Королевство Велик
+обритания.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Этимология:</strong></p>
+
+<p>Англия получила своё название в честь англов, германского племени, которое наряду с саксами и ютами мигрировали на остров Великобритания в V и VI веках н. э. Не
+которые историки полагают, что это племя было потомками выходцев тех, кто жил на полуострове Ангельн, части полуострова Ютландия, являющемся сегодня частью северно
+й Германии.</p>
+
+<p>Первые упоминания об англах находятся в труде под названием &laquo;Германия&raquo;, написанном в 98 году н. э. древнеримским историком Тацитом.</p>
+
+<p>Согласно Оксфордскому словарю английского языка, самое раннее известное упоминание названия &laquo;Англия&raquo; применительно к южной части острова Великобрита
+ния относится к 897 году.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>География:</strong></p>
+
+<p>Англия занимает две трети острова Великобритания. На севере граничит с Шотландией, на западе &mdash; с Уэльсом.</p>
+
+<p>Ландшафт Англии состоит в основном из покатых холмов, к северу местность становится более гористой. Горная и равнинная местность условно разделяются по линии, п
+роходящей между устьем реки Тис на северо-востоке и устьем реки Экс на юго-западе. На востоке располагается низменная болотистая местность, которая в основном была
+ осушена для сельскохозяйственного использования.</p>
+
+<p>Шесть крупнейших городов Англии: Лондон, Бирмингем, Лидс, Шеффилд, Ливерпуль и Манчестер.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Культура:</strong></p>
+
+<p>Хотя Королевство Англия и является страной с богатыми национальными традициями, она, строго говоря, не имеет чётко определённого национального костюма.</p>
+
+<p>Танец моррис</p>
+
+<p>В качестве примера английского народного костюма часто приводятся костюмы танцоров, исполняющих танец моррис. Его танцуют летом в деревнях. В прошлом он считалс
+я ритуальным танцем, и ему приписывалось магическое значение, связанное с пробуждением земли. Различные танцевальные группы допускают вариации в классическом костю
+ме, который состоит из чёрных бриджей с колокольчиками вокруг голени, белой рубашки, жилетки, и фетровой или соломенной шляпы, украшенной лентами и цветами. Колоко
+льчики, как и цветы на шляпе, призваны оградить от зла и принести плодородие. Первоначально этот танец исполняли только мужчины, но сейчас в нём участвуют и женщин
+ы.</p>
+
+<p>Помимо этого, существует точка зрения, согласно которой за основу национального английского костюма следует брать одеяние англосаксонских племён, населявших тер
+риторию современного графства Кент в VII&mdash;VIII веках н. э. Мужчины носили характерные перепоясанные светлые холщовые рубахи навыпуск и темные брюки. На поясе
+висел кинжал. Женщины носили светлые долгополые холщовые рубахи, поверх которых надевался подпоясанный незастёгивающийся женский кафтан.</p>
+
+<p>Однако в Великобритании существуют некоторые профессиональные различия в одежде, в её деталях. Например, рабочие носят кепи, а докеры портовых городов повязываю
+т на шею пёструю косынку; многие пожилые фермеры предпочитают носить давно вышедшие из моды костюмы-тройки и фетровые шляпы. Даже сейчас в деловых кварталах Сити м
+ожно увидеть клерков, одетых по давней традиции совершенно одинаково: узкие брюки в полоску, чёрный пиджак, высокий белый воротничок, шляпа-котелок на голове, а в
+руках неизменный чёрный зонтик.</p>',
+                    'image' => 'image_15.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-13 13:34:40',
+                ),
+            9 =>
+                array(
+                    'id' => 11,
+                    'category_id' => 14,
+                    'preview_text' => 'Пеле - единственный футболист в мире, три раза становившийся чемпионом мира как игрок (в 1958, 1962 и 1970 годах). Участник четырёх
+чемпионатов мира. Лучший игрок чемпионата мира 1970. Лучший молодой игрок чемпионата мира 1958. Футболист года в Южной Америке 1973 года. Дважды член символических
+ сборных чемпионатов мира. Двукратный обладатель Межконтинентального кубка и Кубка Либертадорес, победитель Суперкубка межконтинентальных чемпионов, десятикратный
+чемпион штата Сан-Паулу, четырёхкратный победитель турнира Рио-Сан-Паулу в составе «Сантоса».',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Э́дсон Ара́нтис ду Насиме́нту родился 21 октября или 23 октября 1940 года, Трес-Корасойнс, Минас-Жерайс, более известный как Пеле́ &mdash; бразильский футболист
+, нападающий (атакующий полузащитник). Играл за клубы &laquo;Сантос&raquo; и &laquo;Нью-Йорк Космос&raquo;. Провёл 92 матча и забил 77 голов в составе сборной Браз
+илии.</p>
+
+<p>Пеле &mdash; единственный футболист в мире, три раза становившийся чемпионом мира как игрок (в 1958, 1962 и 1970 годах). Участник четырёх чемпионатов мира. Лучш
+ий игрок чемпионата мира 1970. Лучший молодой игрок чемпионата мира 1958. Футболист года в Южной Америке 1973 года. Дважды член символических сборных чемпионатов м
+ира. Двукратный обладатель Межконтинентального кубка и Кубка Либертадорес, победитель Суперкубка межконтинентальных чемпионов, десятикратный чемпион штата Сан-Паул
+у, четырёхкратный победитель турнира Рио-Сан-Паулу в составе &laquo;Сантоса&raquo;.</p>
+
+<p>Лучший футболист XX века по версии футбольной Комиссии ФИФА; по голосованию на официальном сайте организации Пеле &mdash; второй футболист в XX веке. Является л
+учшим</p>
+
+<p>спортсменом XX века по версии Международного Олимпийского комитета.</p>
+
+<p>По опросу МФФИИС занимает первое место среди лучших футболистов мира XX века. Занимает первое место среди лучших игроков XX века по версии журнала World Soccer.
+ Занимает первое место среди лучших игроков XX века по версии France Football. Занимает первое место среди лучших игроков XX века по версии Guerin Sportivo. Занима
+ет первое место среди лучших игроков за всю историю футбола по версии Placer. Занимает второе место в истории чемпионатов мира по версии газеты The Times. Входит в
+ ФИФА 100.</p>
+
+<p>Член символической сборной лучших игроков в истории чемпионатов мира по версии ФИФА. Член символической сборной лучших игроков в истории Южной Америки. Является
+ одним из 100 наиболее влиятельных людей мира по версии журнала Time.</p>
+
+<p>В 1995&mdash;1998 годах занимал должность министра спорта Бразилии.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Ранние годы:</strong></p>
+
+<p>В 7 лет Эдсон начал выступать за местную детскую команду, где отличался очень зрелищной и результативной игрой в атаке. Одно время команду тренировал бывший игр
+ок сборной Бразилии Валдемар де Брито, что во многом предопределило дальнейшую судьбу Пеле. Наставник организовал ему просмотр в клубе &laquo;Сантос&raquo; (штат С
+ан-Паулу). И вскоре 15-летний Пеле вошёл в состав клуба, впоследствии ставшего всемирно известным.</p>
+
+<p>&nbsp;</p>
+
+<p>Эдсон Арантис ду Насименту родился 23 октября 1940 года в Трес-Корасойнс &mdash; небольшом городке бразильского штата Минас-Жерайс. Его семья была бедной. Отец
+семьи, Жуан Рамос ду Насименту, известный как Флуминенсе Дондиньо, сам в прошлом футболист, стал первым учителем сына и передал ему некоторые секреты спортивного м
+астерства. Мать звали Селеста Арантис. Он был старшим из двух братьев и сестёр. Он был назван в честь американского изобретателя Томаса Эдисона. Его родители решил
+и убрать &laquo;и&raquo; и назвать его &laquo;Эдсон&raquo;, но в свидетельстве о рождении была ошибка, в результате чего во многих документах было указано его имя
+&laquo;Эдисон&raquo;, а не &laquo;Эдсон&raquo;. В семье его первоначально называли &laquo;Дико&raquo;. В школьные годы ему дали прозвище &laquo;Пеле&raquo; в честь
+ его любимого игрока, местного вратаря Васко да Гамы Биле. В автобиографии Пеле заявил, что он и его старые друзья понятия не имели, что означает это имя. Помимо у
+тверждения, что название происходит от имени Биле, и что оно на иврите означает &laquo;чудо&raquo;, это слово не имеет известного значения на португальском языке.<
+/p>
+
+<p>&nbsp;</p>
+
+<p>Пеле вырос в бедности в Бауру в штате Сан-Паулу. Он заработал дополнительные деньги, работая в чайных магазинах в качестве официанта. Наученный играть отцом, он
+ не мог позволить себе нормальный тренировочный процесс и обычно играл либо с носком, набитым газетой и перевязанным ниткой, либо грейпфрутом. В молодости он играл
+ за несколько любительских команд, в том числе за команды State de Setembro, Canto do Rio, S&atilde;o Paulinho и Am&eacute;riquinha. Пеле привёл юношеский спортивн
+ый клуб Бауру (тренируемый Вальдемаром де Брито) на два молодёжных чемпионата штата Сан-Паулу. Подростком он играл за футбольную команду под названием Radium. Когд
+а Пеле начал играть в футбол в закрытых помещениях, он стал популярным в Бауру. Он принимал участие в первом в регионе соревновании по мини-футболу Futebol de Sal&
+atilde;o. Пеле и его команда выиграли первый чемпионат и несколько других чемпионатов.</p>
+
+<p>&nbsp;</p>
+
+<p>По словам Пеле, мини-футбол представлял сложность: мини-футбол был намного быстрее, чем футбол на траве, и игроки должны были думать быстрее, потому что все нах
+одятся рядом на поле. Мини-футбол также позволил ему играть со взрослыми, когда ему было около 14 лет. В одном из турниров, в которых он участвовал, его изначально
+ считали слишком молодым, чтобы играть, но в итоге он стал лучшим бомбардиром с четырнадцатью или пятнадцатью голами. &laquo;Это придало мне уверенности, &mdash; с
+казал Пеле, &mdash; тогда я знал, что не стоит бояться того, что может произойти&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Сантос&raquo;:</strong></p>
+
+<p>В 1956 году Брито привёл Пеле на просмотр в &laquo;Сантос&raquo;, сказав администрации клуба, что &laquo;этот мальчик станет лучшим футболистом планеты&raquo;.
+Пеле произвёл впечатление на тренера &laquo;Сантоса&raquo; Луиса Алонсо Переса и подписал контракт с клубом в июне 1956 года. В сентябре 1956 года, то есть когда П
+еле ещё не исполнилось и 16 лет, он впервые вышел на поле в официальном матче клуба (против &laquo;Коринтианса&raquo;) &mdash; и забил гол. Через 10 месяцев после
+подписания контракта его вызвали в сборную Бразилии.</p>
+
+<p>&nbsp;</p>
+
+<p>Дебют Пеле в национальной сборной &mdash; на чемпионате мира 1958 в Швеции &mdash; оказался не менее впечатляющим, чем первые выступления за &laquo;Сантос&raquo
+;, хотя на соревнования юноша приехал, будучи не совсем здоров. В игре против сборной СССР новичок вышел в стартовом составе своей команды. В четвертьфинальном мат
+че против Уэльса забил решающий гол. В полуфинальном поединке с командой Франции сделал хет-трик, а в финале забил два мяча в ворота хозяев турнира. 17-летний Пеле
+ получил единодушное признание со стороны специалистов, зрителей, соперников и стал самым молодым чемпионом в истории мировых первенств. После чемпионата мира 1962
+, на котором бразильцы стали победителями, Пеле хотели подписать &laquo;Реал&raquo;, &laquo;Ювентус&raquo; и &laquo;Манчестер Юнайтед&raquo;. Однако правительство
+Бразилии объявило футболиста &laquo;национальным достоянием Бразилии&raquo; во избежание возможного отъезда Пеле за границу.</p>
+
+<p>&nbsp;</p>
+
+<p>На чемпионатах мира 1962 и 1966 он не смог полностью проявить себя на поле из-за травм. Финальный турнир 1970 (четвёртый в спортивной биографии Пеле) стал триум
+фальным &mdash; лично для него, и для всей команды, состав которой на этом чемпионате многие эксперты считают сильнейшим за всю историю сборной Бразилии. Бразильск
+ие футболисты, в третий раз выигравшие приз Жюля Риме, получили право навечно оставить его у себя, а Пеле после победы сборной в Мексике стал единственным в истори
+и трижды чемпионом мира по футболу. Символично, что именно Пеле забил в Мексике сотый гол бразильской сборной за все время её участия в финальных турнирах чемпиона
+тов мира. Сам он сыграл на этих турнирах 14 матчей и забил 12 голов. В общей сложности в выступлениях за сборную (92 матча) он провёл в ворота соперников 77 мячей
+&mdash; достижение, которое до сих пор остаётся непревзойдённым. При этом он ни разу не выводил команду с капитанской повязкой.</p>
+
+<p>&nbsp;</p>
+
+<p>Первый титул с &laquo;Сантосом&raquo; Пеле завоевал в 1958 году, выиграв чемпионат страны. Закончил турнир в статусе лучшего бомбардира с 58 голами (что до сих
+пор является рекордом). В 1959 году выиграл Турнир Рио Сан-Паулу. В 1960 году Пеле забил 33 гола и вновь выиграл чемпионат. В том же году команда завоевала Кубок Б
+разилии (Пеле стал лучшим бомбардиром турнира с 9 голами), что позволило ей выступать в Кубке Либертадорес.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1962 году начались первые международные успехи &laquo;Сантоса&raquo;. В Кубке Либертадорес 1962 &laquo;рыбы&raquo; попали в группу с парагвайским &laquo;Серро
+ Портеньо&raquo; и перуанским &laquo;Депортиво Мунисипаль&raquo;, выиграл все матчи, кроме домашней ничьей против &laquo;Серро&raquo;. В полуфинале команда переигр
+ала чилийский &laquo;Универсидад Католика&raquo;. В финале и плей-офф &laquo;Сантос&raquo; одолел уругвайский &laquo;Пеньяроль&raquo; и стал обладателем Кубка Либе
+ртадорес. Как чемпион Южной Америки бразильская команда приняла участие в Межконтинентальном кубке. В финале &laquo;Сантос&raquo; сошёлся с &laquo;Бенфикой&raquo;.
+ В первом матче &laquo;рыбы&raquo; обыграли &laquo;орлов&raquo; со счётом 3:2 (Пеле забил 2 гола). А во второй игре &laquo;sant&aacute;stico&raquo; с 3 голами Пеле
+ разгромили соперника 2:5.</p>
+
+<p>&nbsp;</p>
+
+<p>Как победитель прошлого Кубка Либертадорес &laquo;Сантос&raquo; автоматически квалифицировались в 1/2 турнира следующего года. В первом полуфинальном матче прот
+ив &laquo;Ботафого&raquo; Пеле помог команде свести матч вничью 1:1. А во втором матче на легендарной &laquo;Маракане&raquo; &laquo;Сантос&raquo; разгромил соперни
+ка 0:4 (в том матче Пеле отметился 3 голами). В первом матче финала против &laquo;Бока Хуниорс&raquo; &laquo;рыбы&raquo; победили 3:2, во второй игре (в которой Пе
+ле отметился голом на 82-й минуте) &laquo;Сантос&raquo; также выиграл и второй раз подряд стал победителем турнира. В чемпионате того года команда заняла 3-е место
+, но выиграл Турнир Рио Сан-Паулу, обыграв в финале &laquo;Фламенго&raquo; (Пеле забил 1 гол), Кубок Бразилии и Межконтинентальный кубок(в финале обыграв &laquo;Ми
+лан&raquo; (в тех 3 финальных матчах против &laquo;россо-нерри&raquo; Пеле в сумме забил 4 гола).</p>
+
+<p>&nbsp;</p>
+
+<p>В Кубке Либертадорес 1964 &laquo;Сантос&raquo; дошёл до полуфинала, где уступил аргентинскому &laquo;Индепендьенте&raquo;. В течение следующих лет &laquo;sant&a
+acute;stico&raquo; 6 раз выигрывали чемпионат штата Сан-Паулу, 3 раза &mdash; Турнир Рио Сан Паулу и 3 раза &mdash; Кубок Бразилии.</p>
+
+<p>&nbsp;</p>
+
+<p>Всего за &laquo;Сантос&raquo; Пеле провёл 1116 матчей, в которых забил 1091 гол.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Нью-Йорк Космос&raquo;:</strong></p>
+
+<p>Закончив выступления за &laquo;Сантос&raquo; и национальную сборную, в 1975 году Пеле подписал контракт с американским профессиональным клубом &laquo;Космос&raq
+uo; (из Североамериканской футбольной лиги &mdash; NASL), что стало сенсацией в футбольном мире. Решение вернуться в большой спорт Пеле принял в связи с возникшими
+ у него серьёзными денежными проблемами (из-за недобросовестных финансовых советников), а также из-за​ стремления способствовать росту популярности в США &laquo;эт
+ой прекрасной игры&raquo; &mdash; как он нередко называет футбол. Столь же серьёзные финансовые проблемы возникли у Пеле и в середине 1960-х: после банкротства он
+даже был вынужден принять помощь руководства &laquo;Сантоса&raquo; на кабальных условиях. Согласно заключённому тогда трёхлетнему контракту, один год Пеле должен б
+ыл отыграть в команде совершенно бесплатно. Обе цели, поставленные до приезда в США, были успешно достигнуты. Подписав контракт с &laquo;Космосом&raquo;, Пеле стал
+ самым высокооплачиваемым на тот момент спортсменом в мире. А за время его выступлений в &laquo;Космосе&raquo; посещаемость матчей по &laquo;европейскому футболу&r
+aquo; возросла там почти в 10 раз.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1975 году, за неделю до начала Гражданской войны в Ливане, Пеле играл в товарищеском матче с командой звёзд Ливанской футбольной лиги, забив два гола, которые
+ не были включены в её официальный отчёт. В день игры, 40 тысяч зрителей пришли на стадион рано утром.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1977 году Пеле стал лучшим игроком NASL.</p>
+
+<p>&nbsp;</p>
+
+<p>С целью популяризации футбола в океанических государствах &laquo;Космос&raquo; вместе с Пеле провёл на Олимпийском стадионе в Санто-Доминго, столице Доминиканск
+ой Республики, товарищеский матч против гаитянской команды &laquo;Violette AC&raquo;, который закончился победой американской команды со счётом 1:2.</p>
+
+<p>&nbsp;</p>
+
+<p>В последний сезон игровой карьеры Пеле помог &laquo;Космосу&raquo; стать победителем NASL.</p>
+
+<p>&nbsp;</p>
+
+<p>1 октября 1977 года Пеле, добавивший в свою обширную коллекцию высших наград и титулов, звание чемпиона США, сыграл прощальный матч, в котором он по одному тайм
+у сыграл за &laquo;Космос&raquo; и &laquo;Сантос&raquo;, и завершил футбольную карьеру:</p>
+
+<p>&nbsp;</p>
+
+<p>Я счастлив быть с вами в этот величайший момент моей жизни&hellip; Я верю, что любовь&hellip; &mdash; слезы показались на его глазах, &mdash; любовь самое важно
+е, что есть в жизни. Если вы согласны со мной, повторите за мной это слово&hellip;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Личная жизнь:</strong></p>
+
+<p>Первый сексуальный опыт Пеле был гомосексуальным: это случилось с ним в четырнадцать лет и в то время не считалось в окружающем его обществе предосудительным; в
+ дальнейшем он придерживался гетеросексуальной ориентации.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1966 году Пеле женился на Роземери дос Рейс Шолби, с которой они произвели на свет троих детей: Келли Кристину (1967), Эдсона (1970) и Женнифер (1978). В 1982
+ году Пеле и Роземери развелись. В 1994 году Пеле женился во второй раз, его избранницей стала Ассирия Лемос Сейшас. Впоследствии у пары родились близнецы Жошуа и
+Селесте, но в 2008 году и этот брак кончился разводом. В июле 2016 года женился в третий раз, на 50-летней бразильской предпринимательнице японского происхождения
+Марсии Сибели Аоки.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Мастерство:</strong></p>
+
+<p>Секрет мастерства Пеле кроется в его феноменальных физических данных и огромном трудолюбии. Известно, что на пике своей спортивной карьеры он пробегал 100-метро
+вую дистанцию меньше, чем за 11 секунд, тем самым совсем немного уступая показателям профессиональных легкоатлетов-спринтеров. Проведённые в своё время специальные
+ исследования показали также, что у Пеле очень широкий угол зрения: это позволяло ему быстро оценивать постоянно меняющуюся ситуацию на поле &mdash; и принимать оп
+тимальное решение.</p>
+
+<p>&nbsp;</p>
+
+<p>Необычайно одарённый от природы, Пеле, тем не менее, немало времени уделял отработке отдельных компонентов футбольной техники, благодаря чему он, к примеру, оди
+наково хорошо бил по мячу с обеих ног. Ещё одно несомненное его достоинство &mdash; великолепный дриблинг и обводка. Свойственная Пеле филигранная техника владения
+ мячом сочеталась с большой скоростью передвижения, а многократно отработанные на тренировках приёмы &mdash; с мастерской импровизацией.</p>
+
+<p>&nbsp;</p>
+
+<p>Пеле отличало также голевое чутьё, исключительная интуиция и тонкое понимание игры. Несмотря на высокое индивидуальное мастерство, Пеле всегда оставался приверж
+енцем командной игры. &laquo;Без общих усилий победа в футболе невозможна, &mdash; говорит он. &mdash; Футбол &mdash; это команда, коллектив, а не один-два-три звё
+здных игрока&raquo;. Пеле известен как &laquo;гроссмейстер&raquo; паса, его передачи партнёрам были точны, своевременны &mdash; и нередко ставили в тупик сопернико
+в своей нестандартностью и неожиданностью.</p>
+
+<p>&nbsp;</p>
+
+<p>По мнению экспертов, в технике Пеле не было слабых мест, его специфическая манера игры во многом изменила представление о возможностях и самой сути футбола. Мно
+гие &laquo;чудеса&raquo;, которые он демонстрировал на поле, стали легендарными, а гол, забитый в 1961 году в ворота &laquo;Флуминенсе&raquo; на стадионе &laquo;Ма
+ракана&raquo;, &mdash; после того, как Пеле на пути от собственной штрафной в одиночку обыграл всю команду соперника, &mdash; назвали &laquo;голом столетия&raquo;
+и увековечили, установив на &laquo;Маракане&raquo; памятный знак.</p>
+
+<p>&nbsp;</p>
+
+<p>В течение карьеры Пеле забил 1281 гол в 1363 матчах, сыгранных за &laquo;Сантос&raquo;, &laquo;Космос&raquo; и национальную сборную (данная статистика учитывает
+, помимо официальных, также и товарищеские матчи). Самым результативным годом в его биографии стал 1959 &mdash; 126 голов. На счету Пеле 92 хет-трика, 30 матчей, г
+де он забил по четыре мяча, и не менее 6 игр, в ходе которых Пеле провёл по пять голов. Ещё одно своеобразное достижение Король футбола установил в 1964 году, заби
+в в одном матче 8 голов в ворота &laquo;Ботафого&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Свой юбилейный &mdash; тысячный &mdash; гол Пеле забил 19 ноября 1969 с пенальти в матче &laquo;Сантоса&raquo; против &laquo;Васко да Гама&raquo;. Министерство
+связи Бразилии выпустило в связи с этим почтовую марку &mdash; единственную в мире, посвящённую индивидуальному достижению отдельного футболиста. &laquo;Сантос&raq
+uo; 19 ноября ежегодно отмечает, как &laquo;День Пеле&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Популярность :</strong></p>
+
+<p>Популярность Пеле была (и остаётся) столь же феноменальной, как и его мастерство, и иногда проявлялась с необычной стороны. Так, по условиям контракта, который
+хозяева &laquo;Сантоса&raquo; заключали с организаторами международных матчей, в случае неучастия Пеле в игре &laquo;гонорар&raquo; клуба сокращался вдвое. В ходе
+междоусобной войны в Нигерии в 1969 году было специально объявлено двухдневное перемирие, &mdash; по случаю товарищеского матча &laquo;Сантоса&raquo; с участием Пе
+ле в Лагосе.</p>
+
+<p>&nbsp;</p>
+
+<p>Пеле и его бывший партнёр по сборной 1958 и 1962, а также тренер в 1970 Марио Загалло</p>
+
+<p>Когда Пеле написал автобиографическую книгу &laquo;Я &mdash; Пеле&raquo;, многие неграмотные бразильцы специально стали учиться грамоте, чтобы прочитать мемуары
+ знаменитого соотечественника. И Министерство просвещения Бразилии вручило футболисту памятную золотую медаль, которую он ценит наравне со своими спортивными награ
+дами. Пеле стал одним из символов страны, её подлинной &laquo;Чёрной жемчужиной&raquo; (Perola Negra &mdash; одно из прозвищ футболиста), и президент Бразилии даже
+ издал специальный указ, по которому знаменитый нападающий провозглашался &laquo;национальным достоянием&raquo;, &mdash; во избежание трансфера Пеле в какой-либо е
+вропейский клуб.</p>
+
+<p>&nbsp;</p>
+
+<p>Как показали специальные опросы, проведённые в 1970-е в разных регионах мира, 95 человек из 100 знали, кто такой Пеле. По некоторым данным, ему принадлежит реко
+рд по количеству данных интервью и фото. А имя и имидж Пеле в разное время использовались и используются в рекламе различной продукции: от спортинвентаря и кофе до
+ наручных часов.</p>
+
+<p>&nbsp;</p>
+
+<p>В городе Масейо есть 30-тысячный стадион, названный Король Пеле. Первый матч на нём состоялся в 1970 году, в нём играли местные звёзды штата Алагоас против &laq
+uo;Сантоса&raquo;. Гости без проблем выиграли 5:0.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1981 году снялся в фильме &laquo;Бегство к победе&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>С Президентом России Владимиром Путиным. Санкт-Петербург, 2017 год</p>
+
+<p>В 1999 МОК назвал Пеле величайшим спортсменом столетия (хотя тот ни разу не участвовал в Олимпийских Играх), а ФИФА признала его лучшим футболистом наравне с вы
+дающимся аргентинцем Диего Марадоной (Марадона победил в интернет-голосовании, а Пеле &mdash; в голосовании профессионального жюри, почётное звание поделили).</p>
+
+<p>&nbsp;</p>
+
+<p>Во второй половине 1990-х исполнял обязанности министра по делам молодёжи, туризма и спорта Бразилии. Немало времени уделяет общественной деятельности (Посол До
+брой воли ООН и ЮНИСЕФ), пропаганде футбола и вообще спорта в разных уголках мира. В рамках специальной образовательной программы принимал участие в создании учебн
+ого фильма для детей о футболе. Известен как киноактёр (в фильмографии Пеле есть и лента на футбольную тему &mdash; Побег к победе), телекомментатор, бизнесмен (во
+ всём мире известна марка кофе Cafe Pele), автор и исполнитель собственных песен.</p>
+
+<p>&nbsp;</p>
+
+<p>Дело Пеле продолжил его сын Эдиньо, тоже попавший в состав &laquo;Сантоса&raquo;. Но, в отличие от отца, он выбрал амплуа вратаря.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Шутки о футбольных прогнозах:</strong></p>
+
+<p>Среди футбольных болельщиков распространены шутки о том, что любые предсказания Пеле по поводу исхода футбольных матчей и турниров, а также прогнозы на чемпионс
+тво команд сбываются с точностью до наоборот (то есть фаворит терпит поражение, а аутсайдер выигрывает). Это констатировал одной фразой Луис Фелипе Сколари: &laquo
+;Если вы хотите выиграть титул, то послушайте его [Пеле] и сделайте всё наоборот&raquo;. В частности, Пеле предрекал победу на чемпионатах мира Колумбии в 1994 год
+у (не вышла из группы), Испании в 1998 году (не вышла из группы), а также финал Франция&mdash;Аргентина и невыход Бразилии из группы в 2002 году (Бразилия выиграла
+ чемпионат, а Аргентина и Франция из групп не вышли). В связи с этим в 2013 году Пеле не принял участие в жеребьёвке финального этапа чемпионата мира, опасаясь, чт
+о болельщики обвинят его в неудачной для Бразилии жеребьёвке.</p>',
+                    'image' => 'image_13.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-13 13:20:40',
+                ),
+            10 =>
+                array(
+                    'id' => 12,
+                    'category_id' => 15,
+                    'preview_text' => 'Лионе́ль Андре́с Ме́сси Куччитти́ни, (родился 24 июня 1987, Росарио, Аргентина) — аргентинский футболист, нападающий и капитан испан
+ского клуба «Барселона», а также национальной сборной Аргентины. Лучший бомбардир в истории «Барселоны» и сборной Аргентины. Признаётся одним из лучших футболистов
+ всех времён. Шестикратный обладатель «Золотого мяча» и «Золотой бутсы». Воспитанник футбольной академии «Барселоны», в составе первой команды выступает с 17 лет.
+С теx пор вместе с клубом выиграл десять титулов чемпиона Испании, четыре Лиги чемпионов УЕФА, шесть Кубков Испании, восемь Суперкубков Испании, три Суперкубка Евр
+опы и три чемпионата мира среди клубов.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Лионе́ль Андре́с Ме́сси Куччитти́ни, (родился 24 июня 1987, Росарио, Аргентина) &mdash; аргентинский футболист, нападающий и капитан испанского клуба &laquo;Бар
+селона&raquo;, а также национальной сборной Аргентины. Лучший бомбардир в истории &laquo;Барселоны&raquo; и сборной Аргентины. Признаётся одним из лучших футболист
+ов всех времён. Шестикратный обладатель &laquo;Золотого мяча&raquo; и &laquo;Золотой бутсы&raquo;. Воспитанник футбольной академии &laquo;Барселоны&raquo;, в соста
+ве первой команды выступает с 17 лет. С теx пор вместе с клубом выиграл десять титулов чемпиона Испании, четыре Лиги чемпионов УЕФА, шесть Кубков Испании, восемь С
+уперкубков Испании, три Суперкубка Европы и три чемпионата мира среди клубов.</p>
+
+<p>&nbsp;</p>
+
+<p>В возрасте 13 лет вместе с родителями переехал в Испанию, чтобы присоединиться к молодёжной команде &laquo;Барселоны&raquo;, в октябре 2004 года дебютировал за
+основную команду испанского клуба. В течение своих первых лет в клубе аргентинцу удалось стать неотъемлемым игроком стартового состава, а в сезоне 2008/09 Месси вм
+есте с &laquo;Барселоной&raquo; выиграл свой первый &laquo;требл&raquo; и &laquo;Золотой мяч&raquo;. В течение следующих трёх лет аргентинец аналогично становился
+обладателем &laquo;Золотого мяча&raquo;, он стал первым игроком, получившим эту награду четыре раза подряд. В сезоне 2011/12 Месси установил рекорд по количеству г
+олов, забитых за один сезон в чемпионате Испании, а также во всей Европе. В сезоне 2014/15 он стал лучшим бомбардиром чемпионата Испании за всю историю и во второй
+ раз выиграл &laquo;требл&raquo; со своим клубом, после чего вновь получил &laquo;Золотой мяч&raquo; после двухлетнего перерыва. В 2018 году стал капитаном &laquo;
+Барселоны&raquo;, а в 2019 году снова получил &laquo;Золотой мяч&raquo;, установив рекорд по их количеству у одного игрока.</p>
+
+<p>В составе молодёжной сборной Аргентины Месси стал чемпионом мира 2005 года и олимпийским чемпионом 2008 года. В 2005 году дебютировал за основную сборную Аргент
+ины. В 2007 году на Кубке Америки стал серебряным призёром турнира, а также был признан его лучшим молодым игроком. С 2011 года, уже в качестве капитана сборной, М
+есси принял участие в трёх финалах крупных турниров подряд: чемпионата мира 2014 года и Кубках Америки 2015 и 2016 годов, однако во всех случаях вместе со своей ко
+мандой потерпел поражение. В 2016 году объявил о завершении международной карьеры, однако позже вернулся в сборную и принял участие в чемпионате мира 2018 года, а
+также Кубке Америки 2019, где занял со своей сборной третье местоПерейти к разделу &laquo;#Карьера в сборной&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Считается одним из самых известных спортсменов в мире, с 2006 года является одним из главных рекламных лиц компании Adidas, выпускающей спортивную одежду. С 200
+8 года является одним из самых высокооплачиваемых футболистов. В 2019 году Forbes признал аргентинца самым высокооплачиваемым спортсменом в мире. Журнал Time включ
+ил его в список 100 самых влиятельных людей мира в 2011 и 2012 году. В 2020 году Месси вместе с Льюисом Хэмилтоном был признан лучшим спортсменом года по версии La
+ureus World Sports Award, он стал первым футболистом, получившим эту награду. В том же году Forbes назвал Месси вторым в истории футболистом, заработавшим за карье
+ру более одного миллиарда долларов.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Ранние годы:</strong></p>
+
+<p>Лионель Месси родился 24 июня 1987 года в аргентинском городе Росарио. Отец &mdash; Хорхе Орасио Месси, фабричный рабочий на сталелитейном комбинате, мать &mdas
+h; Селия Мария Месси, частично занятая уборщица. У него есть два старших брата Родриго и Матиас, а также сестра по имени Мария Соль. Двое его двоюродных братьев &m
+dash; Эмануэль и Максимилиано Бьянкуччи также являются футболистами.</p>
+
+<p>&nbsp;</p>
+
+<p>Семья его отца происходит из итальянского города Реканати, откуда его предок, Анджело Месси, эмигрировал в Аргентину в 1883 году. Другие его предки были родом и
+з Каталонии; в частности, его прапрадед Рамон Льобера Перес (родился в 1895 году в Эль-Поале). Брат Рамона, Гонсаль Льобера Перес (родился в 1904 году в Эль-Поале)
+, приходится прапрадедом другому футболисту, Бояну Кркичу. В школе Месси демонстрировал среднюю успеваемость, больше всего любил уроки физкультуры и музыки. Став п
+рофессиональным футболистом, он покупал для школы мебель, компьютеры и учебники. В школе, в которой обучался Месси, создан его музей.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Молодёжная карьера:</strong></p>
+
+<p>&laquo;Грандоли&raquo;</p>
+
+<p>Месси начал заниматься футболом в возрасте пяти лет, в детском клубе &laquo;Грандоли&raquo; (матчи проходили на мини-футбольном поле), где занимался его старший
+ брат Матиас. Футбольное поле команды находилось далеко от дома Месси, поэтому на первые занятия его отводила бабушка Селия. Она единственная из семьи хотела, чтоб
+ы внук стал футболистом. Бабушка умерла, когда Месси было 11 лет, впоследствии большинство своих голов Лионель посвящал ей. Первым тренером Месси стал Сальвадор До
+н Апа, также в клубе подрабатывал тренером отец Лионеля Хорхе. С приходом Лионеля &laquo;Грандоли&raquo; стал чаще побеждать. Месси получал мяч и на высокой скорос
+ти обходил соперников, он не отдавал пасы товарищам по команде, предпочитая забивать самостоятельно. Из-за этого тренер Дон Апа сравнивал его с Диего Марадоной. За
+ пределами поля игроки команд-соперников часто угрожали избить Месси, в итоге на игры его стали сопровождать двоюродные братья. В &laquo;Грандоли&raquo; Месси игра
+л два года, вплоть до семилетнего возраста.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Ньюэллс Олд Бойз&raquo;</p>
+
+<p>21 марта 1994 года отец Месси на правах законного представителя подписал первый контракт Лионеля с &laquo;Ньюэллс Олд Бойз&raquo;. В январе 1996 года команда юн
+ошей 1987 года рождения завоевала Кубок Дружбы Перу. Месси вышел на поле после серьёзного пищевого отравления, тем не менее ему удалось забить восемь голов, благод
+аря чему его команда победила 10:0. В 1999 году команда получила прозвище &laquo;непобедимые&raquo;, когда выиграла 45 матчей подряд. Зачастую соперники играли про
+тив Месси грубо, в одном из матчей его сбили с ног, в результате чего он сломал запястье. Всего с 1994 по 2000 год аргентинец забил более 500 голов за клуб. В возр
+асте 10 лет у Месси был диагностирован дефицит соматотропина (гормона роста). Рост Месси составлял 127 см, а вес &mdash; около 30 кг. Обследование растянулось на п
+олгода, в итоге ему назначили регулярные инъекции, которые нужно было вводить в квадрицепс. Лечение было дорогостоящим, сбережения семьи и страховые выплаты покрыв
+али только два года терапии, а нужно было, как минимум, три. На лечение Месси регулярно давал деньги его крёстный Клаудио. Отец Лионеля Хорхе обратился к клубу за
+займом, однако в итоге за несколько месяцев семья Месси получила от клуба лишь 400 песо.</p>
+
+<p>&nbsp;</p>
+
+<p>Во время выступлений Месси за &laquo;Ньюэллс&raquo; им интересовался &laquo;Ривер Плейт&raquo;. На просмотр пригласили Лионеля и его товарища по команде Леандро
+ Хименеса. В спарринговом матче Месси забил девять голов, его игра произвела впечатление на представителей &laquo;Ривера&raquo;. Однако из-за аргентинского экономи
+ческого кризиса клуб не имел достаточного количества денег, чтобы заплатить за лечение, поскольку это стоило 1000 песо в месяц. Также во время выступлений за &laqu
+o;Ньюэллс&raquo;, осенью 2000 года, Месси дал своё первое интервью в печатном СМИ. Одна из крупнейших газет Росарио La Capital написала о Лионеле на первой полосе
+статью под названием &laquo;Уникальный маленький &bdquo;Прокажённый&ldquo;&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Академия &laquo;Барселоны&raquo;</p>
+
+<p>Когда Лионелю было 13 лет, на него обратили внимание два футбольных агента из Росарио: Мартин Монтеро и Фабиан Сольдини &mdash; они утверждали, что имели связи
+с руководством &laquo;Барселоны&raquo; и пообещали отцу Месси организовать просмотр в клубе. 17 сентября 2000 года Месси с отцом прибыли в Каталонию, однако просмо
+тр прошёл лишь 3 октября, так как спортивный директор клуба, Карлес Решак, был на Олимпиаде в Сиднее. На просмотре Месси играл вместе с 15-летними. Решак был сильн
+о впечатлён талантом игрока, из-за чего убедил совет директоров &laquo;сине-гранатовых&raquo; оплатить лечение, а также переезд семьи Месси в Европу (Месси отказал
+ся жить в общежитии, также по правилам ФИФА несовершеннолетнего иностранца должен сопровождать кто-то из родителей). Отец Месси поставил Решаку ультиматум, что &la
+quo;Барселона&raquo; должна подтвердить свои намерения о покупке Лионеля. В итоге 14 декабря 2000 года он подписал согласие на заключение контракта с Лионелем на с
+алфетке, сидя в баре. В январе 2001 года &laquo;Барселона&raquo; пообещала семье Месси ссуду в 120 тысяч евро, чтобы покрыть все необходимые расходы. В середине фе
+враля вся семья Месси переехала в Барселону. 1 марта был подписан финальный контракт, Месси полагалась оплата в 100 млн песет в год, а также ряд дополнительных вып
+лат.</p>
+
+<p>&nbsp;</p>
+
+<p>Фасад молодёжной академии &laquo;Барселоны&raquo;, куда Месси попал в возрасте 13 лет</p>
+
+<p>В возрасте 13 лет Лионель оказался в молодёжной команде &laquo;Барселоны&raquo;, его первым тренером в клубе стал Родольфо Боррелль, с которым у Месси сложились
+ хорошие отношения. Однако он испытывал проблемы с адаптацией в Барселоне: люди говорили преимущественно на каталонском, к латиноамериканцам относились неуважитель
+но. Также после поездки домой в Росарио все, кроме отца Месси, выразили желание остаться на родине. Дополнительной сложностью стало то, что Месси не мог участвоват
+ь в национальных соревнованиях без разрешения Футбольной ассоциации Аргентины, обеспечить это должен был &laquo;Ньюэллс&raquo;, но клуб хотел получить финансовую в
+ыгоду. Тренер Альберт Бенайжес нашёл лазейку: Лионелю нужно было сыграть два матча в региональной федерации, что и было сделано. Однако во второй игре против &laqu
+o;Тортоса&raquo; Лионель получил перелом левой малой берцовой кости. Не успев восстановиться после травмы, он вдобавок растянул связки голеностопного сустава на то
+й же ноге, когда спускался по лестнице. В это же время в клуб пришёл новый генеральный директор Хавьер Фаргуэлл, который планировал уменьшить затраты &laquo;Барсел
+оны&raquo;. Он хотел сократить гонорар Месси в пять раз &mdash; до 20 млн песет. Отец Месси был решительно против и даже пригрозил организовать переход в &laquo;Ре
+ал Мадрид&raquo;, уже связавшись со спортивным директором столичного клуба Хорхе Вальдано. В итоге 5 декабря 2001 года Месси подписал новый контракт, который оказа
+лся даже несколько выгоднее первого. Также в 14 лет подошёл к концу курс лечения Месси.</p>
+
+<p>&nbsp;</p>
+
+<p>15 февраля 2002 года с согласия ФИФА Месси наконец был зарегистрирован в Королевской испанской футбольной федерации, таким образом были сняты все ограничения на
+ его участие в матчах. 17 февраля в своём первом же матче против клуба &laquo;Эсплугес-де-Льобрегат&raquo; он сделал хет-трик (итоговый счёт 14:1). Месси быстро на
+шёл свою игру и стал часто появляться в стартовом составе молодёжной команды, в среднем забивая мяч за игру, всего за сезон забил 36 голов в 30 матчах. В решающем
+матче лиги &laquo;Барселона&raquo; с минимальным счётом обыграла &laquo;Эспаньол&raquo;, в этом матче Месси столкнулся с защитником соперника и получил перелом пра
+вой скуловой кости. Через несколько дней &laquo;сине-гранатовым&raquo; предстояла повторная игра с &laquo;Эспаньолом&raquo; за молодёжный Кубок Каталонии. Месси вы
+шел на поле в пластиковой защитной маске и оформил дубль, чем помог своей команде одержать победу 4:1. В молодёжном составе &laquo;Барселоны&raquo; Месси познакоми
+лся с Жераром Пике и Сеском Фабрегасом. По окончании сезона всеми тремя заинтересовался лондонский &laquo;Арсенал&raquo;. Клуб предложил Месси более выгодный контр
+акт, но Лионель и его отец отказались, Пике же перешёл в &laquo;Манчестер Юнайтед&raquo;, в итоге из всех троих в &laquo;Арсенал&raquo; отправился только Фабрегас.
+</p>
+
+<p>&nbsp;</p>
+
+<p>В команде &laquo;Барселоны&raquo; до 16 лет Месси тренировал Анхель Гильермо Ойос, который разработал для Лионеля систему силовых тренировок для набора мышечной
+ массы, а также сделал капитаном команды. Вместе с командой Ойоса Месси принял участие в юношеском турнире в Японии под эгидой компании Toyota, он был признан лучш
+им игроком турнира.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Клубная карьера:</strong></p>
+
+<p>Фарм-клубы и первые матчи в основной команде</p>
+
+<p>После турнира в Японии на Месси обратил внимание тренер &laquo;Барселоны C&raquo; Перэ Граткос, он обратился с просьбой к директору футбольной академии перевест
+и Месси в его команду. Вскоре Лионеля перевели и в &laquo;Барселону B&raquo;. Месси параллельно выступал за оба фарм-клуба, но в сезоне 2003/04 больше играл за &la
+quo;Барселону C&raquo;, которой смог помочь избежать понижения в классе. 16 ноября 2003 года Месси дебютировал за основную команду &laquo;Барселоны&raquo; в товари
+щеской игре против &laquo;Порту&raquo;. Главный тренер команды Франк Райкард выпустил Лионеля на замену ближе к концу игры. У Месси было два голевых момента, однак
+о его команда проиграла со счётом 0:2.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Казалось, будто он всю жизнь играл с нами. В первый раз, когда мяч попал к нему, он создал голевой момент. Во второй раз чуть не забил. Если вам 15 или 1
+6 лет в такой игре на заполненном людьми стадионе, и вы делаете всё это, то это означает лишь что вы &mdash; особенный&raquo;</p>
+
+<p>&mdash; Ассистент Франка Райкарда Хенк тен Кате о дебюте Месси в 2003 году.</p>
+
+<p>Дебют Лионеля Месси в официальном матче состоялся 16 октября 2004 года, он вышел за восемь минут до конца матча против &laquo;Эспаньола&raquo;. &laquo;Барселона
+&raquo; одержала победу в &laquo;каталонском дерби&raquo; со счётом 1:0. 7 декабря 2004 года Месси дебютировал в Лиге чемпионов, это произошло в матче против донец
+кого &laquo;Шахтёра&raquo;, который завершился победой украинской команды со счётом 2:0. Первый мяч за &laquo;сине-гранатовых&raquo; аргентинец забил 1 мая 2005 го
+да в ворота &laquo;Альбасете&raquo;. Месси вышел на поле в самом конце матча и забил гол после паса Роналдиньо. Примечательно, что аргентинец мог оформить дубль, н
+о один из мячей не засчитали из-за офсайда. Таким образом Лионель стал самым молодым игроком в истории каталонского клуба, отличившимся в матче чемпионата Испании.
+ На тот момент ему было всего лишь 17 лет 10 месяцев и 7 дней.</p>
+
+<p>&nbsp;</p>
+
+<p>В том сезоне Месси построил хорошие отношения с тренером Франком Райкардом, а также завязал дружеские отношения с Роналдиньо. Бразилец даже заявил, что Месси пр
+евзойдёт его по мастерству. В том сезоне &laquo;Барселона&raquo; выиграла чемпионат впервые за шесть лет.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Путь в основной состав:</strong></p>
+
+<p>Перед началом сезона 2004/05 Месси вместе с &laquo;Барселоной&raquo; участвовал в Кубке Жоана Гампера. В матче против &laquo;Ювентуса&raquo; его игру заметил Фа
+био Капелло; он предложил Франку Райкарду взять Месси в аренду на сезон, но голландец отказался. В начале сезона Месси столкнулся с бюрократическими проблемами. Пр
+авила Федерации футбола Испании разрешали клубам иметь в составе не более трёх иностранцев не из Евросоюза, а на тот момент у Лионеля ещё не было испанского поддан
+ства. УЕФА признала натурализацию Месси и разрешила ему участвовать в еврокубках, однако вопрос участия во внутреннем первенстве оставался открытым. Руководство кл
+уба рассматривало возможность сдачи Месси в аренду. К нему проявляли интерес &laquo;Реал Сарагоса&raquo;, &laquo;Эспаньол&raquo; и миланский &laquo;Интернационале&
+raquo;. Последние предлагали футболисту более выгодные условия и готовы были заплатить 150 млн евро, чтобы выкупить Месси. 20 сентября 2005 года Профессиональная ф
+утбольная лига Испании всё-таки пересмотрела свою позицию, что давало Лионелю возможность играть за клуб во всех турнирах. 26 сентября Месси получил испанское подд
+анство, сохранив при этом гражданство Аргентины. Интерес со стороны других клубов побудил &laquo;Барселону&raquo; заключить новый контракт с Месси до 2014 года, ко
+торый также включал бонус на покупку дома, прежней осталась только сумма отступных (150 млн евро).</p>
+
+<p>&nbsp;</p>
+
+<p>Месси в матче против &laquo;Малаги&raquo; в октябре 2005 года</p>
+
+<p>2 ноября 2005 года он забил свой первый мяч в Лиге чемпионов в матче против &laquo;Панатинаикоса&raquo;, благодаря чему &laquo;Барселона&raquo; выиграла со счёт
+ом 5:0. 22 февраля 2006 года в выездном матче против &laquo;Челси&raquo; Месси сбил с ног Асьер дель Орно, арбитр удалил защитника. После матча тренер &laquo;Челси
+&raquo; Жозе Моуринью раскритиковал Месси за то, что он &laquo;устроил представление на поле&raquo;. 7 марта в ответном матче Лионель столкнулся с Вильямом Галласо
+м и получил разрыв в нижней части двуглавой мышцы. Позже на одной из тренировок у Месси случился повторный разрыв, в итоге он не смог принять участие в финальном м
+атче Лиги чемпионов, где &laquo;сине-гранатовые&raquo; обыграли &laquo;Арсенал&raquo; со счётом 2:1. Месси был сильно расстроен, из-за чего не вышел на церемонию н
+аграждения. В декабре итальянская газета Tuttosport наградила Лионеля премией Golden Boy как лучшего среди игроков моложе 21 года. Также в том сезоне Месси в соста
+ве своей команды выиграл чемпионат Испании. При Райкарде Месси играл в основном на левом фланге атаки.</p>
+
+<p>&nbsp;</p>
+
+<p>В сезоне 2006/07 Месси испытывал проблемы с травмами. 12 ноября 2006 года в матче с &laquo;Реал Сарагосой&raquo; полузащитники Сапатер и Селадес грубо сыграли п
+ротив Лионеля, из-за чего он сломал плюсневую кость. Месси выбыл на два с половиной месяца. 11 марта 2007 года в &laquo;Эль-Класико&raquo; против &laquo;Реала&raqu
+o; Месси сделал хет-трик, матч закончился вничью 3:3. Это был первый хет-трик аргентинца на профессиональном уровне. 18 апреля в полуфинале Кубка Испании против &l
+aquo;Хетафе&raquo; Месси получил мяч в центре поля, обошёл на скорости пятерых соперников и забил гол нерабочей правой. Этот гол журналисты сравнили с &laquo;голом
+ столетия&raquo; от Диего Марадоны. Благодаря своим успехам, Месси был впервые номинирован на &laquo;Золотой мяч&raquo; и занял третье место, уступив только Кака и
+ Криштиану Роналду. Также он был номинирован на награду &laquo;Игрок года ФИФА&raquo;, однако по итогам голосования Месси занял второе место, после того же Кака. Д
+ля клуба сезон 2006/07 был менее успешным: &laquo;Барселона&raquo; заняла второе место в чемпионате, не вышла в финал Кубка Испании, а в Лиге чемпионов не смогла д
+ойти даже до четвертьфинала.</p>
+
+<p>&nbsp;</p>
+
+<p>Лионель Месси в конце марта 2007 года</p>
+
+<p>Сезон 2007/08 для Месси был также омрачён травмами. 14 сентября 2007 года он получил контрактуру правого бедренного бицепса в игре за сборную Аргентины против А
+встралии. 15 декабря в матче против &laquo;Валенсии&raquo; Лионель получил разрыв левого бедренного бицепса. 20 февраля 2008 года после возвращения в игре Лиги чем
+пионов против &laquo;Селтика&raquo; Месси сделал дубль, чем помог своей команде победить 3:2. Однако 4 марта в ответном матче у Месси случился рецедив травмы бедре
+нного бицепса. Руководство &laquo;Барселоны&raquo; созвало специальную комиссию, чтобы выяснить причину частных травм футболиста. Причиной была названа особенность
+ строения мышц Месси, однако врач сборной Аргентины в качестве причины назвал чрезмерные нагрузки на организм Лионеля. Несмотря на травмы, Месси был снова номиниро
+ван на &laquo;Золотой мяч&raquo; и награду &laquo;Игрок года ФИФА&raquo;, но в обоих рейтингах занял второе место, уступив Криштиану Роналду. Совокупно сезон 2007/
+08 для Месси и &laquo;Барселоны&raquo; сложился не очень удачно. &laquo;Барса&raquo; заняла третье место в чемпионате Испании, в Лиге чемпионов и Кубке Испании выб
+ыла на стадии полуфинала. После этого сезона с поста главного тренера ушёл Франк Райкард.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Первый &laquo;требл&raquo; и &laquo;Золотой мяч&raquo;:</strong></p>
+
+<p>Перед началом сезона 2008/09 Лионель Месси сменил свой старый номер &laquo;19&raquo; на новый &mdash; &laquo;10&raquo;, который достался ему от Роналдиньо, браз
+илец ушёл в итальянский &laquo;Милан&raquo;. Также в команде сменился тренер: на место Райкарда пришёл Пеп Гвардиола. 1 октября 2008 года в матче группового этапа
+Лиги чемпионов против донецкого &laquo;Шахтёра&raquo; Месси на последних минутах сделал дубль и принёс команде победу 2:1. В четвертьфинальном матче Лиги чемпионов
+ против &laquo;Баварии&raquo; Месси сделал дубль и отдал два голевых паса (4:0). 2 мая 2009 года в матче против &laquo;Реала&raquo; Лионель сделал дубль, а его ком
+анда победила со счётом 6:2. Месси забил решающий мяч в финале Кубка Испании, в котором &laquo;сине-гранатовые&raquo; обыграли баскский &laquo;Атлетик Бильбао&raqu
+o; со счётом 4:1. 27 мая 2009 года в Риме состоялся финальный матч Лиги чемпионов с участием &laquo;Барселоны&raquo; и английского &laquo;Манчестер Юнайтед&raquo;.
+ В этом матче Гвардиола использовал тактику &laquo;ложной девятки&raquo;: он переместил Месси с правого фланга в полузащиту, ему нужно было создавать свободные зон
+ы на флангах и принимать активное участие в атаках. Матч закончился со счётом 2:0 в пользу клуба из Каталонии, Лионель забил второй гол ударом головой. Месси был п
+ризнан лучшим игроком финала. Также он забил свой девятый мяч в этом розыгрыше Лиги чемпионов, и он стал лучшим бомбардиром турнира. По окончании сезона Месси выиг
+рал с &laquo;Барселоной&raquo; три турнира: чемпионат Испании, Кубок Испании и Лигу чемпионов УЕФА. В чемпионате Испании Месси забил 23 мяча и отдал 12 голевых пер
+едач в 31 встрече, всего за сезон он забил 47 голов.</p>
+
+<p>&nbsp;</p>
+
+<p>В начале сезона 2009/10 &laquo;Барселона&raquo; подписала с Месси новый контракт. Соглашение с 22-летним аргентинским футболистом было продлено до 2016 года, а
+сумма отступных составила 250 млн евро. Впоследствии &laquo;Барселона&raquo; выиграла Суперкубок УЕФА и Суперкубок Испании. В матче за Суперкубок Испании &laquo;си
+не-гранатовые&raquo; обыграли &laquo;Атлетик&raquo; (2:1 в гостях и 3:0 дома), в домашней встрече Месси сделал дубль. Несколькими днями позже &laquo;Барса&raquo; в
+ матче за Суперкубок УЕФА обыграла донецкий &laquo;Шахтёр&raquo; со счётом 1:0. 1 декабря Лионель Месси впервые в карьере получил &laquo;Золотой мяч&raquo;. Месси
+набрал 473 очка из 480 возможных, а также стал первым аргентинцем, который удостоился этой награды. 21 декабря Месси получил звание лучшего игрока 2009 года по вер
+сии ФИФА.</p>
+
+<p>&nbsp;</p>
+
+<p>Месси в матче против &laquo;Нумансии&raquo;, 24 января 2009 года</p>
+
+<p>На Клубном чемпионате мира в 2009 году Месси внёс свой вклад в успех &laquo;Барселоны&raquo;. В полуфинальном матче с мексиканским &laquo;Атланте&raquo; он заби
+л победный гол. В финальной встрече против аргентинского &laquo;Эстудиантеса&raquo; Месси аналогично забил победный мяч в дополнительном времени. 16 января в матче
+ против &laquo;Севильи&raquo; Месси забил свой 100-й гол в составе &laquo;Барселоны&raquo;. 6 апреля в ответном четвертьфинальном матче Лиги чемпионов против &laqu
+o;Арсенала&raquo; Месси впервые сделал &laquo;покер&raquo;, забив четыре мяча и став лучшим бомбардиром розыгрыша турнира. Однако &laquo;Барселона&raquo; выбыла в
+следующей стадии турнира, уступив миланскому &laquo;Интеру&raquo;. По итогам сезона 2009/10 Месси получил первую в своей карьере &laquo;Золотую бутсу&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Продолжение успехов:</strong></p>
+
+<p>Первым трофеем для Месси в сезоне 2010/11 стал Суперкубок Испании, который &laquo;Барселона&raquo; завоевала в противостоянии с &laquo;Севильей&raquo;. В первом
+ матче &laquo;сине-гранатовые&raquo; на чужом поле проиграли команде из Андалусии 1:3, однако в ответной встрече аргентинец забил три мяча и тем самым помог &laquo
+;Барсенлоне&raquo; победить 4:0 и выиграть этот трофей в девятый раз в своей истории. В первом туре группового этапа Лиги чемпионов Месси сделал дубль и помог клуб
+у обыграть греческий &laquo;Панатинаикос&raquo; со счётом 5:1. 21 ноября в матче против &laquo;Альмерии&raquo;, Месси забил три мяча, один из которых стал его соты
+м мячом в чемпионатах Испании, а матч завершился победой &laquo;Барселоны&raquo; со счётом 8:0.</p>
+
+<p>&nbsp;</p>
+
+<p>10 января 2011 года Месси получил очередной &laquo;Золотой мяч&raquo;, который впервые совместно вручали France Football и ФИФА. Месси опередил своих партнёров
+по &laquo;Барселоне&raquo; Андреса Иньесту и Хави, которые заняли вторую и третью строчку соответственно. 27 апреля в полуфинале Лиги чемпионов 2010/11 Месси забил
+ два мяча в ворота мадридского &laquo;Реала&raquo;. &laquo;Барселона&raquo; победила 2:0 и после ответного матча (1:1) вышла в финал. В финале Лиги чемпионов &laqu
+o;сине-гранатовые&raquo; обыграли &laquo;Манчестер Юнайтед&raquo; со счётом 3:1, а Месси забил второй мяч своей команды. Лионель был признан лучшим игроком финала.
+ Также он в третий раз подряд стал лучшим бомбардиром Лиги чемпионов, забив в этом розыгрыше 12 голов. Впоследствии Месси в третий раз подряд получил Приз ди Стефа
+но, как лучший футболист чемпионата.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2011/12 начался для аргентинца с очередного трофея &mdash; Суперкубка Испании. &laquo;Барселоне&raquo; противостоял принципиальный соперник &mdash; &laquo
+;Реал&raquo;. Встреча в Мадриде завершилась вничью &mdash; 2:2, однако в ответной игре сильнее были &laquo;сине-гранатовые&raquo;, одержавшие победу со счётом 3:2.
+ В этом матче аргентинец отличился дублем. Благодаря этим мячам Месси побил рекорд испанца Рауля по количеству голов в Суперкубке. У Месси стало восемь мячей, в то
+ время как у испанца их семь. 25 августа, в ходе церемонии жеребьёвки группового турнира Лиги чемпионов, Месси был вручён первый Приз лучшему футболисту года в Евр
+опе. 26 августа &laquo;Барселона&raquo; стала обладателем Суперкубка УЕФА, одолев со счётом 2:0 португальский &laquo;Порту&raquo;. Месси забил после ошибки Гуарина
+ и выхода один на один с Элтоном. В конце второго тайма аргентинец отдал голевую передачу на Фабрегаса. 1 ноября Месси забил три мяча в матче Лиги чемпионов с клуб
+ом &laquo;Виктория Пльзень&raquo;. Первый его мяч стал 200-м в составе &laquo;Барселоны&raquo;. 18 декабря Лионель сделал дубль в финальном матче Клубного чемпиона
+та мира против &laquo;Сантоса&raquo; (4:0), а также был признан лучшим игроком турнира.</p>
+
+<p>&nbsp;</p>
+
+<p>Месси в матче против мадридского &laquo;Реала&raquo;, 18 января 2012 года</p>
+
+<p>Месси повторил рекорд результативности своего одноклубника Педро, забивавшего мячи в шести турнирах по ходу сезона: Примера, Кубок Испании, Суперкубок Испании,
+Лига чемпионов, Суперкубок УЕФА, Клубный чемпионат мира. По итогам голосования среди спортивных журналистов и болельщиков Аргентины, Лионель Месси впервые за свою
+карьеру был удостоен премии &laquo;Лучший спортсмен Аргентины&raquo;. 9 января Лионель в третий раз подряд получил &laquo;Золотой мяч&raquo;, опередив Криштиану Ро
+налду и Хави. До него три раза<strong> </strong>подряд этой награды удостаивался лишь француз Мишель Платини. 19 февраля Месси в матче с &laquo;Валенсией&raquo; сд
+елал покер. Это был второй покер Лионеля за &laquo;Барселону&raquo;. 8 марта в матче плей-офф Лиги чемпионов с &laquo;Байером&raquo;, окончившемся со счётом 7:1 в
+пользу &laquo;Барселоны&raquo;, Лионель забил пента-трик, он стал первым игроком, забившим пять голов в одной игре Лиги чемпионов. 20 марта 2012 года в матче испан
+ской Примеры против &laquo;Гранады&raquo; аргентинец забил три мяча, установив таким образом рекорд результативности во всех официальных матчах за &laquo;Барселону
+&raquo; &mdash; 234 гола. Прежний рекорд принадлежал Сесару Родригесу (232 гола). 5 мая в последней домашней игре чемпионата против &laquo;Эспаньола&raquo; Лионель
+ вновь забил четыре гола. После первого мяча он указал на сидящего на скамье Гвардиолу, который объявил о своём уходе из &laquo;Барселоны&raquo;[117]. Из Лиги чемп
+ионов &laquo;сине-гранатовые&raquo; выбыли в полуфинале, уступив &laquo;Челси&raquo;. По итогам чемпионата Месси был награждён &laquo;Золотой бутсой&raquo;, ему уд
+алось забить 50 голов. 25 мая в финальном матче Кубка Испании аргентинец забил один из трёх мячей в ворота &laquo;Атлетика&raquo;. В итоге &laquo;Барселона&raquo;
+победила 3:0 и завоевала четвёртый трофей за сезон.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Звание лучшего бомбардира в истории &laquo;Барселоны&raquo;</strong></p>
+
+<p>&laquo;Барселона&raquo; начала сезон 2012/13 под руководством нового тренера &mdash; Тито Вилановы, сменившего Пепа Гвардиолу. 23 августа в первом матче за Супе
+ркубок Испании Месси забил один из трёх мячей в ворота &laquo;Реала&raquo;, реализовав пенальти. Встреча завершилась победой &laquo;Барселоны&raquo; со счётом 3:2.
+ В ответном матче на &laquo;Сантьяго Бернабеу&raquo; &laquo;сине-гранатовые&raquo; уступили со счётом 2:1 и Суперкубок по правилу выездного гола выиграл &laquo;Реа
+л Мадрид&raquo;, в этой встрече Лионель забил единственный мяч в ворота &laquo;сливочных&raquo; ударом со штрафного. 27 октября Месси забил в ворота &laquo;Райо Ва
+льекано&raquo; 300-й мяч в карьере. 10 декабря матче против &laquo;Бетиса&raquo; Месси забил свои 85-й и 86-й мячи в году, побив рекорд Герда Мюллера. Также Месси
+побил рекорд Сесара Родригеса, бывшего лучшим бомбардиром в истории &laquo;сине-гранатовых&raquo; в чемпионате Испании со 190 голами.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Когда дела идут не очень хорошо, вы должны использовать его. Даже если он прихрамывает, его присутствия на поле достаточно, чтобы улучшить нашу игру&raqu
+o;</p>
+
+<p>&mdash; Защитник &laquo;Барселоны&raquo; Жерар Пике о Месси в 2013 году.</p>
+
+<p>7 января Лионель Месси в очередной раз получил награду &laquo;Золотой мяч&raquo;. Для аргентинца эта награда стала уже четвёртой, он стал первым в истории четыр
+ёхкратным обладателем &laquo;Золотого мяча&raquo;, причём все четыре награды он выиграл подряд. 27 января в матче чемпионата Испании Месси забил четыре мяча в воро
+та &laquo;Осасуны&raquo;, а &laquo;Барселона&raquo; добилась победы со счётом 5:1. После этих голов Лионель установил рекорд чемпионата, забив в 11 матчах подряд.
+7 февраля Месси продлил контракт с &laquo;Барселоной&raquo; до июня 2018 года. В контракте сохранилась сумма отступных, составляющая 250 млн евро. 16 февраля Лионе
+ль, забив два мяча в ворота &laquo;Гранады&raquo;, довёл до 300 количество мячей в футболке &laquo;Барселоны&raquo;. 2 марта в матче против &laquo;Реала&raquo; Мес
+си сравнялся с Альфредо Ди Стефано по количеству мячей, забитых в &laquo;Эль-Класико&raquo; (по 18 голов). Гол в матче чемпионата Испании против &laquo;Атлетика&ra
+quo; из Бильбао позволил Месси установить новый рекорд &mdash; забить в 15 гостевых матчаx в сезоне. Высокая результативность позволила Лионелю второй раз подряд п
+олучить &laquo;Золотую бутсу&raquo; с результатом в 46 голов. Несмотря на отсутствие Вилановы из-за проблем со здоровьем, &laquo;Барселона&raquo; выиграла чемпиона
+т Испании.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2013/14 Месси начал довольно успешно. В матче чемпионата Испании против &laquo;Валенсии&raquo; форвард сделал хет-трик. В матче Лиги чемпионов с &laquo;Ая
+ксом&raquo; он сделал ещё один хет-трик за &laquo;Барселону&raquo;. Однако в гостевом матче чемпионата против &laquo;Альмерии&raquo; Месси вновь получил травму: че
+рез несколько секунд после открытия счёта нападающий почувствовал боль в колене и попросил о замене. Он пропустил три недели из-за травмы подколенного сухожилия. П
+осле матча в Лиге чемпионов против &laquo;Милана&raquo;, где аргентинец сделал дубль, в выездном матче против &laquo;Бетиса&raquo; он опять получил травму &mdash;
+надрыв мышцы, в результате чего пропустил два месяца. В декабре 2013 года Месси уступил первое место в голосовании за лучшего игрока мира по версии журнала World S
+occer Криштиану Роналду.</p>
+
+<p>&nbsp;</p>
+
+<p>Лионель Месси перед матчем с &laquo;Альмерией&raquo; в марте 2014</p>
+
+<p>9 января 2014 года Месси впервые сыграл после полученной травмы, это произошло в первом матче 1/8 финала Кубка Испании против &laquo;Хетафе&raquo;, он появился
+на поле во втором тайме и забил два мяча. 13 января аргентинец занял второе место в голосовании за &laquo;Золотой мяч&raquo;. 16 марта Месси в матче чемпионата Исп
+ании против &laquo;Осасуны&raquo; сделал хет-трик, доведя счёт своих голов за &laquo;Барселону&raquo; до 371, что позволило ему побить рекорд Паулино Алькантары и
+стать лучшим бомбардиром в истории клуба во всех турнирах. 23 марта на стадионе &laquo;Сантьяго Бернабеу&raquo; Месси сделал хет-трик, чем помог &laquo;Барселоне&r
+aquo; победить в &laquo;Эль-Класико&raquo; со счётом 4:3. В этом матче аргентинец добился новых достижений: стал лучшим бомбардиром в истории &laquo;класико&raquo;
+ (21 гол) и лучшим иностранным бомбардиром за всю историю чемпионата Испании (236 голов). Клубный сезон Месси завершил с одним трофеем &mdash; в противостоянии с м
+адридским &laquo;Атлетико&raquo; по правилу выездного гола был завоёван Суперкубок Испании, в том матче Месси не реализовал пенальти. В Кубке Испании &laquo;Барсел
+она&raquo; уступила &laquo;Реалу&raquo;, в чемпионате &mdash; &laquo;Атлетико&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Второй &laquo;требл&raquo;, командные и личные успехи:</strong></p>
+
+<p>Перед началом сезона 2014/15 команду возглавил её бывший игрок и капитан Луис Энрике. 27 сентября в матче против &laquo;Гранады&raquo; (6:0) Месси забил два мяч
+а. Первый гол стал для него 400-м в карьере в официальных матчаx. 22 ноября, сделав xет-трик в матче против &laquo;Севильи&raquo;, аргентинец забил свой 253-й мяч,
+ тем самым побив рекорд Тельмо Сарры (251 гол) по результативности в чемпионате Испании. 7 декабря в матче 14-го тура против &laquo;Эспаньола&raquo; (5:1) Месси оп
+ять забил трижды и установил ещё два рекорда результативности: с 12 голами стал лучшим бомбардиром в истории &laquo;каталонского дерби&raquo; и преодолел планку в
+400 забитых мячей за &laquo;Барселону&raquo; с учётом товарищеских игр. 12 января 2015 года Месси вновь занял второе место в голосовании за &laquo;Золотой мяч&raqu
+o;. Тем не менее, он установил очередной рекорд, став единственным игроком, который попадал в финальную тройку претендентов на награду восемь раз подряд (2007&mdas
+h;2014). 24 января, благодаря дублю в матче против &laquo;Эльче&raquo;, Месси смог побить рекорд форварда &laquo;Реала&raquo; Ференца Пушкаша - он стал первым игро
+ком в истории чемпионата Испании, который забивал 20 и более мячей в семи сезонах подряд. В матче с &laquo;Райо Вальекано&raquo; в начале марта аргентинец сделал с
+вой 32-й хет-трик в карьере и 24-й &mdash; в чемпионате Испании, обойдя Криштиану Роналду по количеству хет-триков в испанском первенстве и Тельмо Сарру по количес
+тву хет-триков в карьере. Также Месси забил 40 и более голов в шести сезонах подряд, что тоже стало рекордом. 18 апреля в матче чемпионата Испании против &laquo;Ва
+ленсии&raquo; на &laquo;Камп Ноу&raquo; Месси забил свой 400-й гол за &laquo;Барселону&raquo; в официальныx играx.</p>
+
+<p>&nbsp;</p>
+
+<p>Месси празднует забитый мяч в сентябре 2014 года</p>
+
+<p>В начале 2015 года СМИ прогнозировали &laquo;Барселоне&raquo; разочаровывающее завершение сезона, возобновились слухи о том, что Месси в скором времени покинет
+клуб. Переломный момент наступил 11 января, в победном матче против &laquo;Атлетико Мадрид&raquo; (3:1). Вся атакующая тройка &laquo;сине-гранатовых&raquo; в виде
+Месси, Луиса Суареса и Неймара, прозванная &laquo;MSN&raquo;, забила по одному голу в этом матче, что ознаменовало начало успешного периода. После нескольких лет и
+гры в центре поля Месси вернулся на свою старую позицию на правом фланге, в то время как Суарес стал играть на острие атаки. С этого момента он восстановил свою вы
+сокую результативность, в то время как Суарес и Неймар положили конец зависимости атаки команды от одного игрока. В общей сложности они забили 122 гола во всех сор
+евнованиях в том сезоне, что стало новым рекордом в испанском футболе. 17 мая Месси забил единственный и победный гол в ворота мадридского &laquo;Атлетико&raquo; н
+а стадионе &laquo;Висенте Кальдерон&raquo;, который принёс &laquo;Барселоне&raquo; 23-й чемпионский титул. 30 мая аргентинец забил два мяча в ворота &laquo;Атлетик
+а&raquo; в финале Кубка Испании, что позволило &laquo;сине-гранатовым&raquo; выиграть и этот трофей. 6 июня Месси выиграл свою четвёртую Лигу чемпионов; в финале,
+который проходил в Берлине на Олимпийском стадионе, &laquo;Барселона&raquo; переиграла туринский &laquo;Ювентус&raquo; &mdash; 3:1 и стала пятикратным победителем
+турнира. Также Месси во второй раз в карьере получил Приз лучшему футболисту года в Европе.</p>
+
+<p>&nbsp;</p>
+
+<p>Перед началом сезона 2015/16 команду покинул Хави, таким образом Лионель Месси был назначен вице-капитаном &laquo;Барселоны&raquo;, в то время как капитаном ста
+л Андрес Иньеста. В первом же официальном матче нового сезона Месси выиграл очередной трофей: в матче за Суперкубок УЕФА &laquo;Барселона&raquo; со счётом 5:4 обыг
+рала &laquo;Севилью&raquo;. Месси забил два гола со штрафных, а также именно после его удара Педро забил победный гол. 16 сентября аргентинец вышел на поле в матче
+ против &laquo;Ромы&raquo; и стал самым молодым игроком, сыгравшим 100 матчей в Лиге чемпионов (28 лет и 2 месяца). 26 сентября в матче против &laquo;Лас-Пальмаса&
+raquo; Месси получил повреждение коленного сустава и выбыл из строя на восемь недель. 21 ноября он вернулся на поле, выйдя на замену Ивана Ракитича в матче чемпион
+ата Испании против мадридского &laquo;Реала&raquo;. 20 декабря Месси выиграл свой пятый трофей в 2015 году, обыграв &laquo;Ривер Плейт&raquo; в финале Клубного чем
+пионата мира. 30 декабря аргентинец сыграл свой 500-й официальный матч за &laquo;Барселону&raquo;, в котором был обыгран &laquo;Бетис&raquo; &mdash; 4:0.</p>
+
+<p>&nbsp;</p>
+
+<p>Лионель Месси обходит Эвера Банегу в матче за Суперкубок УЕФА, 2015 год</p>
+
+<p>11 января 2016 года аргентинец получил пятый в своей карьере &laquo;Золотой мяч&raquo;. В матче чемпионата Испании против &laquo;Сельты&raquo; (6:1) 14 февраля
+Месси разыграл пенальти с Луисом Суаресом, среди болельщиков возникли споры: одни считали этот момент &laquo;гениальным&raquo;, а другие назвали его неуважением к
+оппоненту. 17 февраля в выездном матче чемпионата Испании против &laquo;Спортинга&raquo; (3:1) он забил свои 300-й и 301-й голы в рамках Примеры и стал первым игро
+ком в истории, преодолевшим этот рубеж. Несколькими днями позже Месси сделал дубль в ворота лондонского &laquo;Арсенала&raquo; в 1/8 финала Лиги чемпионов. Второй
+гол аргентинца стал 10 000-м мячом &laquo;Барселоны&raquo; в официальных турнирах. 17 апреля в игре против &laquo;Валенсии&raquo; Месси прервал свою пятиматчевую с
+ерию без забитых мячей, забив свой 500-й гол в карьере и 450-й за клуб. Аргентинец завершил сезон 2015/16, сыграв в финале Кубка Испании против &laquo;Севильи&raqu
+o;, в котором &laquo;Барселона&raquo; одержала победу и, тем самым, сделала &laquo;золотой дубль&raquo; во второй раз подряд. В общей сложности Месси забил 41 гол
+и отдал 23 передачи, а вместе атакующее трио &laquo;Барселоны&raquo; сумело забить 131 мяч за сезон, побив рекорд, установленный ими же в предыдущем сезоне.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Трофеи в Испании и новые рекорды:</strong></p>
+
+<p>Сезон 2016/17 начался для аргентинца с побед над &laquo;Севильей&raquo; в двух матчах Суперкубка Испании, примечательно, что Месси в этих матчах вышел на поле с
+ капитанской повязкой в связи с отсутствием травмированного Иньесты. В матче первого тура группового этапа Лиги чемпионов УЕФА Месси забил три мяча в ворота шотлан
+дского &laquo;Селтика&raquo; (7:0) и стал первым игроком в истории турнира с шестью хет-триками. В конце сентября Месси получил травму паха в матче с &laquo;Атлети
+ко Мадрид&raquo; и выбыл на три недели. Уже спустя три минуты после возвращения на поле в матче против &laquo;Депортиво&raquo; 16 октября Месси отличился забитым м
+ячом. 1 ноября аргентинец забил свой 54-й гол в рамках группового этапа Лиги чемпионов в матче против &laquo;Манчестер Сити&raquo;, что позволило ему превзойти рек
+орд Рауля в 53 гола. Лионель Месси закончил 2016 год в качестве лучшего бомбардира Европы, на один мяч опередив Златана Ибрагимовича. В голосовании на &laquo;Золот
+ой мяч&raquo; и на награду The Best FIFA Men&rsquo;s Player Месси занял второе место, в обоих случаях уступив Криштиану Роналду.</p>
+
+<p>&nbsp;</p>
+
+<p>14 января 2017 года Месси забил гол в ворота &laquo;Лас-Пальмаса&raquo;, этот соперник стал 35-й командой, в ворота которой Месси забивал в рамках чемпионата Ис
+пании &mdash; Лионель сравнялся с рекордом Рауля. 4 февраля Месси забил свой 27-й гол со штрафного удара за &laquo;Барселону&raquo; в матче против &laquo;Атлетик Б
+ильбао&raquo;, что позволило аргентинцу обойти рекорд Рональда Кумана как самого результативного исполнителя штрафных ударов в клубе. 23 апреля в матче чемпионата
+Испании Месси забил два мяча в ворота мадридского &laquo;Реала&raquo;, благодаря чему &laquo;сине-гранатовые&raquo; победили со счётом 3:2. Победный гол Месси стал
+ для него 500-м за &laquo;Барселону&raquo; в официальных играх. Во время своего празднования аргентинец снял свою футболку и показал её разгневанным фанатам &laquo
+;Реала&raquo; &mdash; его фамилия и номер были обращены к трибунам. 27 мая Месси забил гол в финале Кубка Испании, что помогло &laquo;Барселоне&raquo; одержать поб
+еду над &laquo;Алавесом&raquo; со счетом 3:1. Лионель Месси завершил сезон 2016/17, имея в своём активе 54 гола и 16 голевых передач во всех турнирах, а его 37 гол
+ов в чемпионате Испании позволили аргентинцу в четвёртый раз в карьере получить &laquo;Золотую бутсу&raquo; и трофей Пичичи.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Месси в товарищеском матче против катарского &laquo;Аль-Ахли&raquo;, декабрь 2016 года:</strong></p>
+
+<p>Сезон 2017/18 начался для команды Месси с поражений в обоих матчах за Суперкубок Испании от мадридского &laquo;Реала&raquo;. 1 октября Месси превзошёл бывшего п
+артнёра по команде Карлеса Пуйоля и вышел на третье место по количеству матчей за &laquo;сине-гранатовых&raquo;, в этом матче аргентинец помог своей команде победи
+ть &laquo;Лас-Пальмас&raquo; со счётом 3:0. 18 октября, в матче против &laquo;Олимпиакоса&raquo;, который стал 122-й игрой Месси в европейских турнирах, он забил с
+вой 100-й гол во всех клубных турнирах УЕФА. Месси стал лишь вторым игроком после Криштиану Роналду, достигшим данной отметки, однако ему удалось сделать это за ме
+ньшее количество игр, нежели Роналду. 4 ноября аргентинец провел свой 600-й матч за &laquo;Барселону&raquo;. После получения четвёртой &laquo;Золотой бутсы&raquo;
+Месси продлил свой контракт с &laquo;Барселоной&raquo; до окончания сезона 2020/21. В новом контракте была прописана сумма отступных в размере 700 миллионов евро.<
+/p>
+
+<p>&nbsp;</p>
+
+<p>В начале января 2018 года в матче против Леванте (3:0) Месси провёл свой 400-й матч в чемпионате Испании. 4 марта аргентинец забил свой 600-й гол в карьере, это
+ произошло в матче против &laquo;Атлетико Мадрид&raquo;, который окончился победой &laquo;сине-гранатовых&raquo; с минимальным счётом. 14 марта в матче против &laq
+uo;Челси&raquo; Месси забил свои 99-й и 100-й голы в рамках Лиги чемпионов, вновь став вторым игроком после Криштиану Роналду, который достиг отметки в 100 голов,
+однако Лионелю удалось сделать это за меньшее количество игр и в более молодом возрасте. 7 апреля аргентинец сделал хет-трик в победном матче против &laquo;Леганес
+а&raquo;, один из мячей Месси стал шестым голом, который был забит со штрафного в этом сезоне, что позволило ему сравняться с командным рекордом &laquo;Барселоны&r
+aquo;, установленным Роналдиньо. Финал Кубка Испании против &laquo;Севильи&raquo; закончился победой &laquo;Барселоны&raquo; со счётом 5:0, что позволило Месси зав
+оевать данный трофей в четвёртый раз подряд. 29 апреля Месси сделал хет-трик в матче против &laquo;Депортиво&raquo;, в результате чего &laquo;Барселона&raquo; побе
+дила и завоевала свой 25-й титул чемпионов Испании. В итоге Месси вновь стал лучшим бомбардиром Ла Лиги, забив 34 гола, что принесло ему пятую &laquo;Золотую бутсу
+&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Капитанская повязка и шестая &laquo;Золотая бутса&raquo;:</strong></p>
+
+<p>Перед началом сезона 2018/19 Месси стал капитаном &laquo;Барселоны&raquo;. Первым его трофеем в новом сезоне стал Суперкубок Испании, который футболисты &laquo;
+Барселоны&raquo; получили благодаря победе над &laquo;Севильей&raquo; (2:1). Выиграв этот трофей, Месси стал самым титулованным игроком в истории клуба. 18 августа
+ аргентинец сделал дубль в ворота &laquo;Алавеса&raquo;, первый его гол стал 6000-м для &laquo;Барселоны&raquo; в истории Примеры. 18 сентября в первом матче групп
+ового этапа Лиги чемпионов Месси забил три мяча в ворота ПСВ (4:0) и стал первым игроком в истории турнира, который имеет на своём счету восемь хет-триков. 20 октя
+бря в матче против &laquo;Севильи&raquo; аргентинец был вынужден покинуть поле уже на 26-й минуте из-за перелома лучевой кости, в результате чего он выбыл из строя
+ на три недели. 8 декабря в игре против &laquo;Эспаньола&raquo; Месси впервые в карьере забил два гола со штрафных ударов в одном матче.</p>
+
+<p>&nbsp;</p>
+
+<p>13 января 2019 года в матче против &laquo;Эйбара&raquo; Месси забил свой 400-й гол в чемпионате Испании. 2 февраля аргентинец забил свой 50-й гол с пенальти в Л
+а Лиге, таким образом, он стал третьим игроком в истории соревнования после Криштиану Роналду и Уго Санчеса, которому удалось реализовать 50 пенальти. В этом же ме
+сяце президент клуба Жозеп Бартомеу заявил, что клуб готовится к будущему завершению игровой карьеры Месси. 23 февраля аргентинец сделал свой 50-й хет-трик в карье
+ре, а также отдал голевую передачу, что помогло &laquo;Барселоне&raquo; одержать выездную победу над &laquo;Севильей&raquo; со счётом 4:2. Также один из голов Лион
+еля в этом матче стал для него 650-м в профессиональной карьере. 16 апреля Месси сделал дубль в ответном матче четвертьфинала Лиги чемпионов против &laquo;Манчесте
+р Юнайтед&raquo; (3:0), благодаря чему &laquo;Барселона&raquo; вышла в полуфинал турнира. 27 апреля в матче против &laquo;Леванте&raquo; Месси появился на поле по
+ходу игры и забил единственный гол в ней, что позволило &laquo;Барселоне&raquo; завоевать чемпионский титул. Выигранное чемпионство стало первым для Месси в ранге
+капитана команды.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Месси с капитанской повязкой на руке исполняет штрафной удар в матче против &laquo;Реал Вальядолида&raquo;, август 2018 года:</strong></p>
+
+<p>1 мая Месси сделал дубль в ворота &laquo;Ливерпуля&raquo; в матче полуфинала Лиги чемпионов, его второй гол оказался 600-м за &laquo;Барселону&raquo; во всех ту
+рнирах. В ответном матче на &laquo;Энфилде&raquo; &laquo;Барселона&raquo; потерпела поражение со счётом 4:0, и по результатам двух матчей &laquo;Ливерпуль&raquo; в
+ышел в финал турнира. 19 мая в последнем туре чемпионата Испании Месси сделал дубль и выиграл свой шестой трофей Пичичи как лучший бомбардир лиги, имея в своём акт
+иве 36 голов в 34 матчах. Благодаря этому аргентинцу удалось сравняться с Тельмо Саррой по количеству данных наград. Также Месси в третий раз подряд стал обладател
+ем &laquo;Золотой бутсы&raquo;, которая стала шестой за всю его карьеру. 25 мая в финале Кубка Испании против &laquo;Валенсии&raquo; Месси отличился забитым мячом,
+ однако это не спасло его команду от поражения 1:2.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Шестой &laquo;Золотой мяч&raquo;:</strong></p>
+
+<p>5 августа 2019 года стало известно, что Месси не примет участие в матчах предсезонного турнира &laquo;Барселоны&raquo; в США из-за полученной травмы. В этом же
+месяце один из голов аргентинца, забитый им в прошлом сезоне, был номинирован на премию ФИФА имени Ференца Пушкаша, однако в итоге награду получил Даниэль Цсори. П
+оcле возврата к тренировкам аргентинец получил ещё одну травму, из-за которой не смог принять участия в первой игре сезона, а в итоге и вовсе выбыл до сентябрьской
+ паузы на игры сборных.</p>
+
+<p>&nbsp;</p>
+
+<p>23 сентября Месси выиграл награду The Best FIFA Men&rsquo;s Player. 23 октября он забил в ворота пражской &laquo;Славии&raquo;, став первым игроком в истории Ли
+ги чемпионов, которому удалось забить как минимум один раз в матчах этого турнира в 15 сезонах подряд. 29 октября Месси забил гол &laquo;Вальядолиду&raquo;, которы
+й стал для него 50-м голом со штрафного в карьере. 27 ноября Лионель провёл свой 700-й матч за &laquo;Барселону&raquo;, в нём он забил мяч дортмундской &laquo;Бору
+ссии&raquo; в Лиге чемпионов. &laquo;Боруссия&raquo; стала 34-м соперником, пропустившим гол от Месси в главном еврокубковом турнире, аргентинец побил тем самым ре
+корд Роналду и Рауля. 2 декабря Месси получил рекордный, шестой &laquo;Золотой мяч&raquo;. 7 декабря в матче против &laquo;Мальорки&raquo; аргентинец сделал свой 3
+5-й хет-трик в чемпионате Испании и, тем самым, установил новый рекорд лиги.</p>
+
+<p>&nbsp;</p>
+
+<p>22 февраля 2020 года в матче против &laquo;Эйбара&raquo; Месси забил четыре мяча. 14 июня в матче против &laquo;Мальорки&raquo; он забил гол, став первым игроко
+м в Ла Лиге, который забивал 20 и более голов в 12 сезонах подряд. 30 июня в матче против &laquo;Атлетико&raquo; Месси реализовал пенальти &laquo;паненкой&raquo;,
+этот гол стал для аргентинца 700-м в профессиональной карьере. 11 июля аргентинец сделал 20-ю голевую передачу в рамках одного сезона чемпионата Испании, благодаря
+ чему сравнялся с рекордным результатом Хави в сезоне 2008/09. В итоге Месси стал лучшим бомбардиром и лучшим ассистентом в чемпионате Испании, имея на своём счету
+ 25 голов и 21 голевую передачу, в результате чего выиграл седьмой трофей Пичичи. Месси установил новый рекорд, обойдя по их количеству Тельмо Сарру. Однако, несмо
+тря на индивидуальную результативность аргентинца, &laquo;Барселона&raquo; по итогам сезона уступила чемпионский титул мадридскому &laquo;Реалу&raquo;, а также пот
+ерпела поражение от мюнхенской &laquo;Баварии&raquo; в четвертьфинале Лиги чемпионов со счётом 8:2 и вновь выбыла из турнира. Этот матч стал самым крупным поражени
+ем Месси в карьере.</p>
+
+<p>&nbsp;</p>
+
+<p>Попытка ухода из команды и рекорд по голам за один клуб</p>
+
+<p>В конце августа 2020 года в СМИ начали появляться сообщения о растущем недовольстве Месси действиями руководства &laquo;Барселоны&raquo;. &laquo;Барселона&raquo
+; объявила, что аргентинец отправил клубу &laquo;документ, выражающий своё желание покинуть команду&raquo;. Данное заявление получило широкую общественную огласку
+и множество различных комментариев, в том числе от нынешних и бывших партнёров аргентинца по команде, поддержавших действия Месси. Руководство &laquo;Барселоны&raq
+uo; заявило, что Месси сможет уйти только в том случае, если потенциальный покупатель заплатит установленную опцию выкупа в контракте, размером в 700 миллионов евр
+о. В контракте также имелся пункт, который позволил бы аргентинцу покинуть клуб бесплатно, однако он мог быть использован только в том случае, если футболист сообщ
+ил бы о своём решении до 31 мая 2020 года. Однако представители Месси утверждали, что этот срок должен быть увеличен до 31 августа в связи с временной остановкой с
+езона 2019/20 из-за пандемии COVID-19. 30 августа Ла Лига опубликовала заявление, в котором говорится, что контракт Месси и пункт о сумме выкупа продолжают своё де
+йствие. Вскоре Месси объявил, что продолжит выступать в &laquo;Барселоне&raquo; в течение последнего года действия своего контракта. Также он утверждал, что неодно
+кратно информировал &laquo;Барселону&raquo; о своём желании уйти, однако отказался подавать в суд против &laquo;клуба всей жизни&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Я хотел уйти, потому что не чувствовал себя счастливым в клубе в последнее время. Однако вне зависимости от того, сколько раз я уйду или останусь, моя лю
+бовь к клубу никогда не изменится&raquo;</p>
+
+<p>&mdash; Лионель Месси о ситуации с возможным уходом, 4 сентября 2020 года.</p>
+
+<p>Сезон 2020/21 начался для аргентинца 27 сентября, когда он реализовал пенальти в победном матче чемпионата Испании против &laquo;Вильярреала&raquo; (4:0). За дв
+а дня до этой игры он снова раскритиковал действия клуба в ситуации с уходом Луиса Суареса, заявив, что его &laquo;больше ничего не удивляет&raquo;. 20 октября, за
+бив гол &laquo;Ференцварошу&raquo;, Месси стал первым футболистом в истории, который отличился в 16 сезонах Лиги чемпионов подряд. Позднее Месси был номинирован на
+ премию The Best FIFA Men&rsquo;s Player, которую в итоге выиграл Роберт Левандовский. 23 декабря Месси забил свой 644-й гол за &laquo;Барселону&raquo; в матче чем
+пионата Испании против &laquo;Вальядолида&raquo;, превзойдя Пеле по количеству голов за один клуб. 17 января 2021 года в матче за Суперкубок Испании против &laquo;
+Атлетика&raquo; из Бильбао Месси получил первую красную карточку на клубном уровне за удар Асьера Вильялибре по голове.</p>
+
+<p>&nbsp;</p>
+
+<h2><strong>Карьера в сборной</strong></h2>
+
+<p><strong>Молодёжная сборная:</strong></p>
+
+<p>До своего дебюта в молодёжной команде Аргентины Месси получил приглашение выступать за молодёжную сборную Испании, однако отклонил его. В июне 2004 года он полу
+чил официальное предложение молодёжной сборной Аргентины по инициативе тренера Уго Токалли. Он дебютировал в товарищеском матче против Парагвая, выйдя во втором та
+йме. Он сделал две голевые передачи и забил гол, его команда выиграла со счётом 8:0. Во втором матче против Уругвая Месси также вышел во втором тайме и оформил дуб
+ль.</p>
+
+<p>&nbsp;</p>
+
+<p>Со сборной Аргентины Месси принял участие в молодёжном чемпионате Южной Америки 2005 года. Он сыграл в первом матче против Венесуэлы 13 января и забил гол, его
+команда победила со счётом 3:0. 6 февраля в последнем матче против Бразилии Месси принёс своей команде победу 2:1, забив гол с паса Пабло Баррьентоса. Всего Лионел
+ь забил пять голов и попал в символическую сборную турнира, Аргентина заняла третье место (матчи плей-офф не предусмотрены).</p>
+
+<p>&nbsp;</p>
+
+<p>В июне 2005 Месси сыграл на молодёжном чемпионате мира, проходившем в Нидерландах. Лионель вышел на поле во втором матче против Египта и отметился голом, Аргент
+ина выиграла 2:0. В третьем матче против Германии Месси отдал голевой пас на Нери Рауля Кардосо, который забил единственный мяч в игре. В 1/8 финала против Колумби
+и Лионель забил гол, сравняв счёт. В итоге Аргентина смогла одержать победу со счётом 2:1. Эта игра стала первым полным матчем для Месси на уровне сборных. В четве
+ртьфинале против Испании Месси отдал голевой пас на Густаво Обермана, а затем забил и сам, итоговый счёт &mdash; 3:1. Перед полуфинальным матчем против Бразилии Ме
+сси исполнилось 18 лет. В Нидерланды специально приехал спортивный директор &laquo;Барселоны&raquo; Чики Бегиристайн, чтобы подписать контракт с футболистом. В пол
+уфинале Месси открыл счёт на восьмой минуте, а под конец матча отдал голевой пас на Пабло Сабалету, который принёс аргентинцам победу 2:1. В финальном матче против
+ Нигерии в конце первого тайма Месси заработал пенальти, который сам и реализовал. Во втором тайме он также с пенальти удвоил преимущество, на этот раз 11-метровый
+ заработал Серхио Агуэро. На этом турнире он стал лучшим бомбардиром, забив шесть голов, а также получил &laquo;Золотой мяч&raquo; в качестве лучшего игрока чемпио
+ната.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Основная сборная:</strong></p>
+
+<p>Дебют в национальной сборной и чемпионат мира 2006</p>
+
+<p>4 августа Хосе Пекерман вызвал Месси в национальную сборную Аргентины на товарищеский матч против Венгрии, запланированный на 17 августа. Лионель вышел на поле
+на 64-й минуте, однако через две минуты случился инцидент с защитником Вильмошем Ванцаком. Венгр, пытаясь остановить Месси, схватил его за футболку, Лионель отмахн
+улся и задел горло оппонента. Арбитр Маркус Мерк удалил Месси с поля, а Ванцаку дал жёлтую карточку. Первую свою официальную встречу Месси провёл 3 сентября 2005 г
+ода в матче отборочного турнира к чемпионату мира 2006 со сборной Парагвая, он вышел на замену ближе к концу второго тайма[260]. Первый свой мяч за Аргентину Месси
+ забил в товарищеском матче с Хорватией.</p>
+
+<p>&nbsp;</p>
+
+<p>Несмотря на травму, полученную в конце сезона 2005/06, Месси попал в заявку национальной сборной на чемпионат мира 2006 года. Лионель начал турнир со второго ма
+тча группы против сборной Сербии и Черногории, он вышел на замену на 74-й минуте и отметился голевым пасом, а также забитым мячом (6:0). Он стал самым молодым игро
+ком в истории сборной Аргентины, который забил гол на чемпионате мира (18 лет и 357 дней). Последний матч группы против Нидерландов Лионель отыграл от начала до ко
+нца, голов в игре не было, в итоге обе команды вышли в плей-офф. Также Месси сыграл в матче 1/8 финала против Мексики, выйдя в концовке игры при счёте 1:1. После г
+ола Макси Родригеса в дополнительном времени аргентинцы победили 2:1. В четвертьфинале Месси не играл, а Аргентина после ничьи 1:1 в основное время проиграла сборн
+ой Германии в серии послематчевых пенальти 4:2.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Лионель Месси уходит от Марсело на летних Олимпийских играх, 2008 год:</strong></p>
+
+<p>Второе место на Кубке Америки 2007 и победная Олимпиада</p>
+
+<p>Тренер Альфио Басиле вызвал Месси на Кубок Америки 2007 года. На турнире Лионель действовал в атакующем ключе, ближе к острию атаки, где играл Карлос Тевес. В м
+атче с Колумбией он заработал пенальти (победа 4:2). В 1/8 финала против Парагвая он отдал голевую передачу, а в следующих стадиях забивал Перу (4:0) и Мексике (3:
+0) соответственно. Четвертьфинальный гол команде Перу, когда Месси увидел опрометчивый рывок голкипера вперёд и технично перекинул вратаря с угла штрафной, признал
+и лучшим голом турнира. Учитывая временами неуверенное продвижение бразильцев по турнирной сетке, &laquo;альбиселесте&raquo; рассматривались в финале как фавориты.
+ Но сборная Бразилии, несмотря на отсутствие ключевых игроков, сыграла грамотно и дисциплинированно, одержав победу со счётом 3:0. Месси на турнире провёл все шест
+ь игр и забил два гола, а также был признан лучшим молодым игроком турнира.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2008 Месси отправился со сборной Аргентины на Олимпийские игры в Пекине. Руководство &laquo;Барселоны&raquo; не желало отпускать Месси на соревнования. Междун
+ародный спортивный арбитражный суд, куда обратилась Ассоциация футбола Аргентины, оставил решение вопроса участия Месси в турнире за клубом. Только после вмешатель
+ства главного тренера Гвардиолы клуб согласился отпустить игрока. В первом же матче с Кот-д&rsquo;Ивуаром Месси забил свой первый мяч на турнире (2:1). В 1/4 финал
+а он отличился второй раз, отправив мяч в ворота сборной Нидерландов (2:1). В полуфинале Месси принял участие в победном матче Аргентины против сборной Бразилии (0
+:3). В финальном матче Месси отдал голевой пас на Анхеля Ди Марию, который и забил единственный мяч в ворота Нигерии.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Общекомандный спад:</strong></p>
+
+<p>На чемпионате мира 2010 тренер Диего Марадона поставил Месси на позицию центрального полузащитника, он располагался на поле выше опорного полузащитника Хавьера
+Маскерано. В первом матче на чемпионате мира против сборной Нигерии, аргентинцы выиграли 1:0, а Лионель имел несколько хороших возможностей забить, но нигерийцев с
+пасал их вратарь Винсент Эньеама. Лионель начал в основном составе и матч против сборной Южной Кореи, который завершился победой сборной Аргентины со счётом 4:1, М
+есси был активен, однако результативных действий на свой счёт ему записать не удалось. На третий матч с Грецией, последний в группе, Месси вышел на поле с капитанс
+кой повязкой, став самым молодым капитаном в истории сборной Аргентины, матч закончился победой аргентинцев 2:0. Месси был признан лучшим игроком матча. В матче 1/
+8 финала Лионель, наконец, отметился результативной передачей, однако автор гола Карлос Тевес был в положении вне игры, чего не заметил итальянский арбитр Роберто
+Розетти. Затем Игуаин и Тевес забили ещё по мячу, итоговый счёт &mdash; 3:1. В матче четвертьфинала Аргентина уступила сборной Германии со счётом 4:0 и закончила в
+ыступление в турнире, а Месси так и не смог забить ни одного мяча на чемпионате мира 2010. Несмотря на отсутствие голов на мундиале, Месси всё равно был номинирова
+н на награду лучшему футболисту турнира, однако её в итоге получил уругваец Диего Форлан.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Месси в матче против Боливии на Кубке Америки, июль 2011:</strong></p>
+
+<p>В 2011 году Месси предстояло сыграть на &laquo;домашнем&raquo; для Аргентины Кубке Америки. Перед турниром тренер Алехандро Сабелья летал в Барселону на встречу
+ с Пепом Гвардиолой, чтобы обсудить место Лионеля в тактической схеме сборной. После второй игры с Колумбией у Лионеля случился конфликт с партнёром по команде Ник
+оласом Бурдиссо, а также во время игры он был впервые освистан собственными болельщиками. По итогам первенства Аргентина дошла до стадии четвертьфинала, где проигр
+ала в серии пенальти Уругваю (4:5), Месси свой пенальти реализовал. Лионель провёл на турнире все четыре матча, в которых сделал три голевые передачи, две из котор
+ых &mdash; в игре против сборной Коста-Рики. На момент окончания турнира, Месси не забивал в официальных матчах за сборную более двух лет.</p>
+
+<p>&nbsp;</p>
+
+<p>Месси в матче против Швейцарии в феврале 2012, в котором он забил свой первый хет-трик за сборную</p>
+
+<p>Своеобразным переломным моментом для Месси в сборной стал отборочный матч чемпионата мира 2014 против Колумбии, который состоялся 15 ноября 2011 года. После пер
+вого тайма соперник вёл 1:0. Однако на 61-й минуте Месси сильным ударом сравнял счёт, а под конец матча Агуэро принёс аргентинцам победу. 9 июня 2012 года в товари
+щеском матче против Бразилии Лионель оформил хет-трик, его команда победила со счётом 4:3. 23 марта 2013 года в отборочном матче на мундиаль против Венесуэлы Лионе
+ль забил с пенальти и отдал два голевых паса Игуаину (3:0). 10 сентября Месси сделал дубль в матче с Парагваем (победа 5:2).</p>
+
+<p>&nbsp;</p>
+
+<p>Два проигранных финала подряд</p>
+
+<p>В преддверии чемпионата мира в Бразилии в прессе публиковались негативные сообщения по поводу формы Месси, поскольку в сезоне перед турниром у аргентинца было б
+ольшое количество травм. Однако мундиаль Лионель начал хорошо, в первых четырёх матчах получив звание лучшего игрока встречи. В первом матче группового этапа проти
+в сборной Боснии и Герцеговины после подачи аргентинца защитник боснийцев Сеад Колашинац срезал мяч в собственные ворота, в этом же матче Месси забил и свой первый
+ гол на турнире, оказавшийся в итоге победным. Во втором групповом матче со сборной Ирана аргентинцы сумели открыть счёт лишь в добавленное время, а автором мяча в
+новь стал Месси. В заключительном матче группового этапа Лионель дважды поразил ворота нигерийцев, в итоге Аргентина выиграла со счётом 3:2 и вышла в плей-офф с пе
+рвого места.</p>
+
+<p>&nbsp;</p>
+
+<p>В матче 1/8 финала соперником Аргентины стала сборная Швейцарии, в основное время командам не удалось открыть счёт и лишь за несколько минут до конца дополнител
+ьного времени Ди Мария сумел забить победный гол, автором голевой передачи стал Лионель Месси. В четвертьфинале аргентинцы обыграли бельгийцев (1:0) и впервые с 19
+90 года вышли в полуфинал, где им противостояла сборная Нидерландов. В упорном матче с небольшим количеством голевых моментов не было забито ни одного мяча ни в ос
+новное, ни в дополнительное время. Победителя пришлось выявлять в серии пенальти, где вновь сильнее оказались аргентинцы, первый удар реализовал Лионель Месси. Фин
+ал турнира против сборной Германии был ознаменован в СМИ как матч лучшего игрока мира против лучшей команды мира, что являлось неким оммажем на финал чемпионата ми
+ра 1990 года с участием Диего Марадоны. В течение всего матча аргентинская сборная и сам Месси упустили несколько возможностей забить мяч, а вышедший на замену Мар
+ио Гётце забил гол в дополнительное время, в результате чего немецкая сборная выиграла чемпионат мира. Месси был признан лучшим игроком турнира. Однако выбор арген
+тинца в качестве лучшего игрока турнира вызвал удивление у некоторых людей, в частности у президента ФИФА Зеппа Блаттера и Диего Марадоны, который заявил, что Месс
+и вручили награду в маркетинговых целях.</p>
+
+<p>&nbsp;</p>
+
+<p>Еще одним турниром, в финале которого сыграл Месси, стал Кубок Америки 2015, который проходил в Чили. Под руководством нового тренера Херардо Мартино Аргентина
+считалась одним из претендентов на победу в турнире. Первый матч с Парагваем закончился ничейным счётом 2:2, а Месси забил с пенальти. Этот мяч стал единственным г
+олом Лионеля на турнире. После минимальной победы над сборной Уругвая Месси провёл свой 100-й матч за сборную в поединке с Ямайкой, который аргентинцы также выигра
+ли. Он стал пятым аргентинцем, достигшим отметки в 100 матчей за основную национальную сборную. На турнире Месси проявил себя как настоящий лидер команды, преврати
+вшись из &laquo;символического капитана&raquo; в человека, ведущего команду за собой. В четвертьфинальном матче со сборной Колумбии аргентинцы после нулевой ничьи
+в основном и дополнительном времени смогли победить по итогу серии пенальти, Месси реализовал свой удар. В полуфинале со сборной Парагвая (6:1) Месси отличился как
+ плеймейкер, сделав три голевые передачи.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Лионель Месси обходит Матса Хуммельса в финале ЧМ-2014:</strong></p>
+
+<p>В финале турнира против сборной Чили основное и дополнительное время вновь не увенчались забитыми мячами, а в серии пенальти победу со счётом 4:1 одержали чилий
+цы. Столкнувшись с агрессией со стороны игроков соперника, Месси провёл невыразительный матч, однако он стал единственным аргентинцем, успешно реализовавшим пеналь
+ти. По сообщениям СМИ, Лионель был признан лучшим игроком турнира, однако он отказался от этой награды, из-за чего она официально не была вручена никому. Продолжав
+шиеся неудачи на уровне сборной вызвали резкую критику в адрес Месси.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Очередной проигрыш в финале и уход из сборной:</strong></p>
+
+<p>Участие Месси на внеочередном турнире южноамериканского Кубка изначально было поставлено под сомнение, так как в конце мая 2016 года он получил травму в товарищ
+еском матче против сборной Гондураса. В стартовом матче турнира против сборной Чили из-за опасений по поводу физической формы Месси остался на скамейке запасных, а
+ргентинская сборная же одержала победу со счётом 2:1. Во втором матче группового этапа против Панамы Лионель появился на поле во втором тайме, заменив Аугусто Ферн
+андеса и впоследствии сделал хет-трик, благодаря чему Аргентина победила 5:0 и обеспечила себе место в плей-офф. 18 июня в четвертьфинальном матче Кубка Америки пр
+отив сборной Венесуэлы Месси вновь забил, что позволило ему сравняться с рекордом Габриэля Батистуты по количеству голов за сборную в официальных матчах (54), а ар
+гентинцы выиграли со счётом 4:1. Три дня спустя он побил этот рекорд, забив ещё один мяч в ворота сборной США, аргентинская сборная же смогла одержать победу со сч
+ётом 4:0 и во второй раз подряд выйти в финал соревнования.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Раздражает ли меня, что рекорд забрал Месси? Немного, да. Однако я, по крайней мере, второй после инопланетянина&raquo;</p>
+
+<p>&mdash; Габриэль Батистута об установленном рекорде результативности.</p>
+
+<p>26 июня, по аналогии с прошлогодним финалом, Аргентина вновь проиграла сборной Чили по результатам серии пенальти после безголевого окончания основного и дополн
+ительного времени, в результате чего Месси потерпел третье поражение подряд в финале крупного турнира и четвёртое за всю карьеру. После этого разочарованный Месси,
+ не реализовавший свой удар в серии пенальти, объявил об уходе из международного футбола. Он стал вторым по результативности на турнире после Эдуардо Варгаса, а та
+кже попал в символическую сборную из лучших его игроков.</p>
+
+<p>&nbsp;</p>
+
+<p>После заявления Месси об уходе в Аргентине началась кампания, направленная на его возвращение в сборную. Когда команда приземлилась в Буэнос-Айресе, болельщики
+приветствовали игроков с табличками, на которых были размещены надписи &laquo;Не уходи, Лео&raquo; (англ. Don&#39;t go, Leo). Президент Аргентины Маурисио Макри та
+кже призвал Месси не уходить, заявив: &laquo;Нам повезло, это одна из радостей жизни, это дар от Бога &mdash; иметь лучшего игрока в мире в такой футбольной стране
+, как наша&raquo;. Глава правительства Буэнос-Айреса Орасио Родригес Ларрета открыл памятник Месси в городе, чтобы убедить его пересмотреть решение об уходе из ком
+анды. Помимо этого, различные просьбы о возвращении в сборную от болельщиков публиковались и в социальных сетях. Около 50 тысяч человек пришли к обелиску Буэнос-Ай
+реса 2 июля с похожими лозунгами.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Возвращение в команду и ЧМ-2018:</strong></p>
+
+<p>Через неделю после того, как Месси объявил об уходе из команды, аргентинская газета La Naci&oacute;n сообщила, что он рассматривает возможность вернуться в сбор
+ную, чтобы выступить на отборочном этапе чемпионата мира 2018 года. 12 августа стало известно, что Месси вернётся в сборную. Он был включён в состав национальной с
+борной на предстоящие отборочные матчи чемпионата мира. 1 сентября 2016 года, в своей первой игре после возвращения, он забил победный и единственный мяч в матче п
+ротив Уругвая, чем принёс своей команде победу.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;В ночь перед финалом мою голову посетило множество различных мыслей, я серьёзно раздумывал об уходе, однако моя любовь к стране и этой футболке слишком в
+елика&raquo;</p>
+
+<p>&mdash; Месси о своём возвращении в сборную, 12 августа 2016 года.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Лионель Месси в товарищеском матче со сборной России, 2017 год:</strong></p>
+
+<p>28 марта 2017 года Месси был дисквалифицирован на четыре международных матча за оскорбление помощника судьи в игре против Чили 23 марта. Он также был оштрафован
+ на 8 тысяч фунтов. После обжалования 5 мая ФИФА отменила дисквалификацию и штраф. Перед последним матчем отбора Аргентина рисковала впервые с 1970 года не попасть
+ на чемпионат мира, однако Месси в этой игре сделал хет-трик и позволил своей команде обыграть Эквадор со счётом 3:1 и квалифицироваться на турнир.</p>
+
+<p>&nbsp;</p>
+
+<p>Вслед за неубедительно проведённой квалификационной частью турнира ожидания от финальной части ЧМ-2018 были невысокими: в марте команда без травмированного Месс
+и проиграла сборной Испании со счётом 6:1. Первый матч против сборной Исландии аргентинцы сыграли вничью 1:1. Во второй игре сборная Аргентины потерпела поражение,
+ пропустив три безответных мяча от Хорватии. После этого матча тренер сборной Аргентины Хорхе Сампаоли заявил, что Месси окружает некачественная команда. Полузащит
+ник хорватской сборной Лука Модрич также заявил после этого матча: &laquo;Месси &mdash; невероятный игрок, но он не может делать всё в одиночку&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>В финальном матче группового этапа против Нигерии на стадионе &laquo;Газпром Арена&raquo; Месси забил первый гол своей команды, он стал третьим аргентинцем посл
+е Марадоны и Батистуты, который забивал на трёх разных чемпионатах мира. Благодаря голу Маркоса Рохо Аргентина победила в этом матче и вышла в раунд плей-офф, заня
+в второе место в своей группе после Хорватии. В матче 1/8 финала против будущего победителя турнира &mdash; сборной Франции Месси отдал две голевые передачи, однак
+о аргентинцы проиграли со счётом 4:3 и завершили своё выступление на турнире. Лионель Месси стал единственным игроком, который отдавал голевые передачи на последни
+х четырёх чемпионатах мира, а также вторым после Марадоны отдал две голевые передачи в одной игре чемпионата мира. После турнира Месси заявил, что не будет участво
+вать в товарищеских матчах Аргентины против Гватемалы и Колумбии в сентябре 2018 года, а также сообщил, что, вероятно, не будет выступать за сборную до конца года.
+ В марте 2019 года аргентинец был вновь вызван в сборную на товарищеские матчи против Венесуэлы и Марокко.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Бронза на Кубке Америки 2019:</strong></p>
+
+<p>21 мая 2019 года главный тренер сборной Лионель Скалони включил Месси в состав сборной Аргентины на Кубок Америки 2019 года. Во втором матче группового этапа пр
+отив Парагвая Месси забил гол с пенальти, что позволило завершить матч со счётом 1:1. После победного для аргентинцев матча 1/4 финала против сборной Венесуэлы Мес
+си был раскритикован со стороны СМИ, а впоследствии и сам заявил, что показал на турнире неудовлетворительную игру, а также пожаловался на низкое качество игровых
+полей. После поражения Аргентины от сборной Бразилии в полуфинале Месси раскритиковал судейские решения во время этого матча. В матче за третье место против Чили 6
+ июля Месси отдал голевую передачу на Серхио Агуэро, в результате аргентинцы выиграли и завоевали бронзовые медали, однако сам Месси был удалён вместе с Гари Медел
+ем уже в первом тайме после стычки между игроками. После матча Месси пропустил церемонию награждения и в послематчевом интервью заявил, что его комментарии после п
+олуфинала с Бразилией, возможно, поспособствовали удалению. Позже он извинился за свои слова, однако всё равно был оштрафован на 1500 долларов и получил дисквалифи
+кацию на один матч. 2 августа Месси был отстранён от участия в международный матчах на три месяца и был оштрафован на 50 тысяч долларов за комментарии в отношении
+решений судьи. 18 сентября 2020 года Месси получил вызов в сборную Аргентины на отборочные матчи чемпионата мира 2022 против Эквадора и Боливии в октябре.</p>
+
+<p>&nbsp;</p>
+
+<h2><strong>Характеристика игрока</strong></h2>
+
+<p><strong>Стиль игры:</strong></p>
+
+<p>&nbsp;</p>
+
+<p>Месси бьёт по мячу своей &laquo;рабочей&raquo; левой ногой</p>
+
+<p>Благодаря невысокому росту у Месси более низкий центр тяжести, чем у более высоких игроков, что придаёт ему большую манёвренность, позволяя быстрее менять напра
+вление и уклоняться от противников. Короткие ноги позволяют аргентинцу молниеносно ускоряться, а также сохранять контроль мяча при дриблинге на скорости. Несмотря
+на то, что аргентинец улучшил игру своей более слабой правой ногой в течение карьеры, он остаётся преимущественно левоногим игроком.</p>
+
+<p>&nbsp;</p>
+
+<p>Месси &mdash; результативный бомбардир, известный своими точными ударами, выбором позиции, быстрой реакцией и способностью прорывать оборонительную линию соперн
+ика. Однако он способен играть и в роли плеймейкера, благодаря своему видению поля. Аргентинец способен создавать моменты для своей команды в самых неожиданных сит
+уациях. Является основным исполнителем пенальти и штрафных ударов как в клубе, так и в сборной, однако в последние годы аргентинец стал менее результативен при исп
+олнении пенальти. Признаётся одним из лучших исполнителей штрафных ударов во всём мире. Скорость и технические навыки Месси позволяют ему легко обходить противнико
+в. Помимо индивидуальных качеств, Месси также работает и с партнёрами по команде, разыгрывая с ними различные комбинации, в частности он делал это с Хави и Андресо
+м Иньестой.</p>
+
+<p>&nbsp;</p>
+
+<p>Являясь универсальным игроком, он способен атаковать как на флангах, так в центре поля. После дебюта в основной команде главный тренер команды Франк Райкард ста
+л использовать Месси преимущественно на правом фланге &mdash; с этой позиции ему было легче наносить удары по воротам левой ногой. При Гвардиоле и последующих мене
+джерах он стал играть роль &laquo;ложной девятки&raquo;. Под руководством Луиса Энрике и после покупки &laquo;сине-гранатовыми&raquo; Луиса Суареса Месси вернулся
+к игре на правом фланге. Под руководством Эрнесто Вальверде Месси был задействован в разных ролях, и в глубине поля, и на правом фланге, и как &laquo;ложная девятк
+а&raquo;, а также в качестве атакующего полузащитника в схеме 4-2-3-1 и в качестве второго нападающего в схеме 4-4-2.</p>
+
+<p>&nbsp;</p>
+
+<p>C возрастом количество обводок от Месси постепенно уменьшалось, он начал диктовать игру на более глубоких участках поля и превратился в одного из лучших распасо
+вщиков и плеймейкеров в истории футбола. Темп его игры без мяча и обязанности при оборонительных действиях команды также уменьшались с течением времени, это позвол
+яло аргентинцу сохранить силы для участия в атаках команды и избежать риска получения мышечных травм. Травмы преследовали Месси в начале карьеры, однако благодаря
+подобному стилю игры, а также более строгой диете, режиму тренировок и сна ему удалось снизить их количество.</p>
+
+<p>&nbsp;</p>
+
+<h2><strong>Баннер от аргентинских болельщиков с лицом Лионеля Месси на ЧМ-2018:</strong></h2>
+
+<p><strong>Имидж:</strong></p>
+
+<p>Лионель Месси с ранних лет получил широкую известность как один из лучших игроков в мире. Марадона считал Месси лучшим игроком в мире наряду с Роналдиньо уже в
+18 лет, а сам бразилец заявлял, что не является лучшим даже в самой &laquo;Барселоне&raquo;, относя это звание к Месси. После того, как Месси выиграл свой первый &
+laquo;Золотой мяч&raquo;, многие люди стали считать аргентинца не только одним из лучших игроков современности, но и всей истории в целом. Одним из первых сторонни
+ков подобного мнения был на тот момент главный тренер &laquo;сине-гранатовых&raquo; Пеп Гвардиола, который за несколько месяцев до получения этой награды назвал Ме
+сси лучшим игроком, которого он когда-либо видел. В последующие годы похожие мысли высказывали и другие тренеры, журналисты и футболисты. Тем не менее, неудачи Мес
+си в составе аргентинской национальной сборной являлись аргументом от критиков в сторону того, что он не является лучшим футболистом в истории.</p>
+
+<p>&nbsp;</p>
+
+<p>На протяжении всей карьеры Лионеля Месси сравнивали с его соотечественником Диего Марадоной из-за похожей манеры игры. Изначально он был лишь одним из многих мо
+лодых аргентинских игроков, включая кумира его детства Пабло Аймара, которые получали прозвище &laquo;новый Марадона&raquo;, однако в течение своей карьеры Месси с
+мог доказать, что является лучшим аргентинским игроком со времён Марадоны. В аргентинском обществе Месси, как правило, менее уважаем, чем Марадона, что объясняется
+ не только его неудачами в национальной команде, но и различиями в характере. Месси в некотором смысле является противоположностью своего предшественника: Марадона
+ был вызывающим и противоречивым персонажем, в то время как Месси сдержан и скромен, ничем не примечателен вне футбола. Несмотря на то, что Месси живёт в Испании с
+ 13 лет, он однажды сказал: &laquo;Аргентина &mdash; это моя страна, моя семья. Я бы обменял все свои рекорды на то, чтобы сделать людей в моей стране счастливыми&
+raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Личная жизнь:</strong></p>
+
+<p>С 2008 года Месси состоит в отношениях с Антонеллой Рокуццо. Они вместе выросли в Росарио и знают друг друга с пяти лет, Рокуццо &mdash; двоюродная сестра лучше
+го друга детства Месси, Лукаса Скальи, который также является футболистом. 2 ноября 2012 года у Лионеля и Антонеллы родился сын Тьяго. Лионель вытатуировал на лево
+й голени имя первенца. 11 сентября 2015 года у пары родился второй сын &mdash; Матео. 10 марта 2018 года родился третий сын &mdash; Чиро. Долгое время Месси и Року
+ццо жили в неформальном браке, официальная свадьба состоялась лишь 30 июня 2017 года в отеле Росарио.</p>
+
+<p>&nbsp;</p>
+
+<p>Обычно Месси празднует забитые мячи поднятием обеих рук вверх, указывая пальцами на небо. Он делает это в честь умершей бабушки, посвящая ей свои голы.</p>
+
+<p>В 2009 году Месси стал крёстным отцом сына Серхио Агуэро Бенхамина. По словам самого Месси, все его близкие друзья также футболисты. Помимо Лукаса Скальи, это з
+ащитник Леандро Бенитес и вратарь Хуан Крус Легисамон. Также Месси поддерживает связь со школьной подругой Синтией Арельяно. Он поддерживает тесные отношения со св
+оими ближайшими родственниками, особенно со своей матерью Селией, лицо которой Лионель вытатуировал на левом плече. Члены семьи также принимают участие и в карьере
+ самого Месси: его отец, Хорхе, с 14 лет является агентом игрока, а его старший брат Родриго отвечает за распорядок дня и рекламу. Его мать и другой брат Матиас уп
+равляют благотворительной организацией Лионеля, а также ведут его дела в Росарио.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Благотворительность:</strong></p>
+
+<p>На протяжении всей своей карьеры Лионель Месси принимал участие в благотворительных мероприятиях, направленных на помощь детям, что отчасти объясняется трудност
+ями, с которыми он сам столкнулся в детстве. С 2004 года Месси вкладывает деньги в Детский фонд Организации Объединённых Наций (ЮНИСЕФ). C марта 2010 года является
+ послом доброй воли ЮНИСЕФ, в том же году он выполнил свою первую работу в этом амплуа &mdash; отправился на Гаити, чтобы привлечь внимание общественности к тяжёло
+му положению детей в стране после землетрясения. С тех пор Месси участвовал в кампаниях ЮНИСЕФ, направленных на профилактику ВИЧ, а также образование и социальную
+интеграцию детей-инвалидов. В 2012 году Месси полностью оплатил лечение 12-летнего марокканца, который хотел стать футболистом, но не мог этого сделать из-за дефиц
+ита гормона роста. В ноябре 2013 года Месси в честь первого дня рождения своего сына Тьяго принял участие в рекламной кампании, направленной на повышение осведомлё
+нности об уровне смертности среди детей из неблагополучных семей. В ноябре 2016 года Месси из личных средств выплатил зарплату трём сотрудникам службы безопасности
+ национальной сборной Аргентины, которые не получали зарплату в течение шести месяцев.</p>
+
+<p>&nbsp;</p>
+
+<p>Помимо работы с ЮНИСЕФ, Лионель основал и свою собственную благотворительную организацию &mdash; &laquo;Фонд Лео Месси&raquo;, который помогает детям получить м
+едицинскую помощь и образование. Месси основал его в 2007 году после посещения клиники для неизлечимо больных детей в Бостоне, именно тогда Месси решил отдать част
+ь своих доходов на благотворительность. Через свой фонд Месси предоставил гранты на исследования, профинансировал обучение медиков и инвестировал в развитие медици
+нских центров в Аргентине, Испании и других странах мира. В дополнение к собственной деятельности по сбору средств, фонд аргентинца получает финансовую поддержку о
+т различных компаний, которые сотрудничают с самим футболистом, в частности от главного спонсора &mdash; Adidas.</p>
+
+<p>&nbsp;</p>
+
+<p>Также Месси инвестирует средства в футбол на своей родине: он поддерживает футбольный клуб &laquo;Сармьенто&raquo;, который базируется в районе Росарио, где род
+ился сам Лионель. Он поддерживает молодёжные команды &laquo;Ньюэллс Олд Бойз&raquo;, &laquo;Росарио Сентраль&raquo;, &laquo;Ривер Плейта&raquo; и &laquo;Боки Хунио
+рс&raquo;. 7 июня 2016 года Месси выиграл дело о клевете против газеты La Raz&oacute;n и получил компенсацию в размере 65 тысяч евро, которые он пожертвовал благот
+ворительной организации &laquo;Врачи без границ&raquo;. Весной 2020 года Месси сделал пожертвование в размере одного миллиона евро на борьбу с распространением COV
+ID-19. В дополнение к этому, Месси вместе со своими партнёрами по команде объявил, что во время пандемии откажется от 70 % своей зарплаты. В конце 2020 года аргент
+инец получил награду Champion for Peace of the Year, вручаемую за приверженность делу мира, решение социальных проблем и служение обществу.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Проблемы с законом:</strong></p>
+
+<p>В 2013 году в отношении Месси было открыто расследование по подозрению в уклонении от уплаты налогов. По версии испанских властей, Лионель скрывал информацию о
+своих доходах для ухода от уплаты налогов с 2007 по 2009 годы. В свою очередь аргентинец заявил, что они с отцом никогда не нарушали закон. В 2013 году Месси запла
+тил 5 миллионов налоговой службе на покрытие ущерба. Однако летом 2016 года Месси и его отец всё же были признаны виновными в мошенничестве и приговорены к 21 меся
+цу тюремного заключения условно, тем не менее в соответствии с испанским законодательством они должны были заплатить 1,7 и 1,4 миллиона евро соответственно в качес
+тве штрафа, чтобы избежать заключения.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Доходы и популярность:</strong></p>
+
+<p>Месси с 2008 года является одним из самых высокооплачиваемых футболистов в мире. В 2015 и 2016 году Месси занял второе место по доходам среди всех спортсменов п
+о версии журнала Forbes, обойти аргентинца смог лишь Криштиану Роналду. В 2018 году, по версии France Football, Лионель Месси в сумме заработал более 100 миллионов
+ евро. В 2019 году он стал самым высокооплачиваемым спортсменом в мире по версии Forbes. Подписав новый контракт с &laquo;Барселоной&raquo; в 2017 году, Месси зара
+батывает 667 тысяч долларов в неделю, &laquo;Барселона&raquo; также выплатила ему чуть более 59 миллионов долларов в качестве бонуса за его продление. В 2020 году
+Месси стал вторым футболистом и вторым спортсменом в командном виде спорта после Криштиану Роналду, который за свою карьеру заработал более одного миллиарда доллар
+ов.</p>
+
+<p>&nbsp;</p>
+
+<p>Рекламный баннер Turkish Airlines с лицом Месси в Тайбэе</p>
+
+<p>Помимо зарплаты и премиальных, весомая часть дохода Месси &mdash; от большого количества рекламных контрактов. Английский журнал SportsPro ежегодно называет про
+дукты, в рекламе которых участвует Месси, одними из самых продаваемых в мире. С 2006 года Месси является рекламным лицом немецкой компании Adidas. Со временем он с
+тал одним из главных рекламных лиц этого бренда. С 2008 года Месси играл в бутсах Adidas F50 с персонализированным дизайном, с 2015 года он стал играть в бутсах со
+бственной линейки от Adidas &mdash; Adidas Messi. С 2017 года Месси играет в бутсах Adidas Nemeziz. В 2015 году футболка &laquo;Барселоны&raquo; с фамилией и игров
+ым номером Лионеля Месси стала самой продаваемой среди всех футболистов во всём мире.</p>
+
+<p>&nbsp;</p>
+
+<p>Подпись Лионеля Месси</p>
+
+<p>Помимо Adidas, Месси сотрудничает с множеством других компаний, в их числе Pepsi, Dolce &amp; Gabbana, Gillette, Turkish Airlines и прочие. Кроме того, Месси из
+ображён на обложке серии видеоигр от Konami &mdash; Pro Evolution Soccer, а конкретно &mdash; в 2009, 2010, 2011 и 2020 годах. В отрезке между PES 2011 и PES 2020
+Лионель стал лицом конкурирующей серии игр FIFA от EA Sports, его изобразили на обложке трёх частей серии: с FIFA 13 до FIFA 16.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2011 и 2012 году Месси вошёл в список 100 самых влиятельных людей мира по версии журнала Time. Аргентинец является одним из самых популярных людей в социально
+й сети Facebook, в течение семи часов с момента его регистрации в ней в апреле 2011 года на аккаунт Месси подписалось почти семь миллионов человек, а к концу 2020
+года на аккаунте насчитывалось более 100 миллионов подписчиков. В Instagram у Месси более 175 миллионов подписчиков, что также делает его одним из самых популярных
+ людей в этой социальной сети.</p>
+
+<p>&nbsp;</p>
+
+<p>Аргентинский футболист оставил след и в массовой культуре. Точная копия его левой стопы из золота, весом в 25 килограмм и стоимостью более чем в пять миллионов
+долларов поступила в продажу в Японии в марте 2013 года. В 2013 году рекламный ролик от компании Turkish Airlines с Месси и Коби Брайантом в главных ролях стал сам
+ым просматриваемым рекламным роликом на YouTube в год выпуска, получив 137 миллионов просмотров. Организация World Press Photo выбрала фотографию Месси, смотрящего
+ на Кубок мира ФИФА, лучшей фотографией 2014 года. В том же году был выпущен документальный фильм под названием &laquo;Месси&raquo;, повествующий о жизни Лионеля.
+В 2015 году в зоопарке города Саранск родилась пума, которую назвали в честь Лионеля Месси, и впоследствии она стала популярной в социальных сетях. В 2017 году был
+ выпущен ещё один фильм под названием &laquo;Месси&raquo;, названный в честь аргентинского футболиста, однако к нему самому он отношения не имеет.</p>',
+                    'image' => 'image_16.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-13 13:17:30',
+                ),
+            11 =>
+                array(
+                    'id' => 13,
+                    'category_id' => 16,
+                    'preview_text' => 'Криштиа́ну Рона́лду душ Са́нтуш Аве́йру  родился 5 февраля 1985, Фуншал - португальский футболист, выступающий за итальянский кл
+уб «Ювентус» и сборную Португалии. Лучший бомбардир в истории клуба «Реал Мадрид» и сборной Португалии. Признаётся специалистами одним из лучших футболистов всех в
+ремён. Признан Португальской футбольной федерацией лучшим игроком в истории португальского футбола. Первый футболист в истории, которому удалось выиграть английску
+ю Премьер-лигу, испанскую Примеру и итальянскую Серию А. Также Роналду признавался лучшим игроком сезона в каждом из этих турниров и игроком года в каждой из стран
+, которые они представляют: «Игрок сезона английской Премьер-лиги», «Игрок года по версии ПФА», «Игрок года по версии АФЖ»; «Игрок сезона Примеры», «Приз Ди Стефан
+о»; «Самый ценный игрок сезона Серии А», «Футболист года в Италии».',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Криштиа́ну Рона́лду душ Са́нтуш Аве́йру&nbsp; родился 5 февраля 1985, Фуншал &mdash; португальский футболист, выступающий за итальянский клуб &laquo;Ювентус&raq
+uo; и сборную Португалии. Лучший бомбардир в истории клуба &laquo;Реал Мадрид&raquo; и сборной Португалии. Признаётся специалистами одним из лучших футболистов все
+х времён. Признан Португальской футбольной федерацией лучшим игроком в истории португальского футбола. Первый футболист в истории, которому удалось выиграть англий
+скую Премьер-лигу, испанскую Примеру и итальянскую Серию А. Также Роналду признавался лучшим игроком сезона в каждом из этих турниров и игроком года в каждой из ст
+ран, которые они представляют: &laquo;Игрок сезона английской Премьер-лиги&raquo;, &laquo;Игрок года по версии ПФА&raquo;, &laquo;Игрок года по версии АФЖ&raquo;;
+&laquo;Игрок сезона Примеры&raquo;, &laquo;Приз Ди Стефано&raquo;; &laquo;Самый ценный игрок сезона Серии А&raquo;, &laquo;Футболист года в Италии&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Начал профессиональную карьеру в португальском клубе, в 2003 году перешёл в английский &laquo;Манчестер Юнайтед&raquo;, в 2009 году &mdash; в испанский &laquo;Р
+еал Мадрид&raquo;, в 2018 году &mdash; в итальянский &laquo;Ювентус&raquo;. Неоднократно становился обладателем &laquo;Золотого мяча&raquo; France Football (2008,
+2016, 2017), &laquo;Золотого мяча&raquo; ФИФА (2013, 2014) и &laquo;Золотой бутсы&raquo; (2008, 2011, 2014, 2015). Является лучшим бомбардиром европейских турниров
+ за всё время, лучшим ассистентом в истории Лиги чемпионов УЕФА и рекордные семь раз становился лучшим бомбардиром Лиги чемпионов УЕФА в сезоне, шесть из которых &
+mdash; подряд: в 2008, а также в 2013, 2014, 2015, 2016, 2017 и 2018 годах. После третьей подряд победы в Лиге чемпионов в составе &laquo;Реал Мадрид&raquo; Кришти
+ану Роналду стал первым игроком, выигравшим этот трофей и &laquo;Золотой мяч&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>За национальную сборную Португалии Роналду провёл более 150 матчей, сыграв на восьми крупных турнирах и отличившись на них всех. С 2008 года является капитаном
+своей национальной сборной, а также рекордсменом по количеству сыгранных за неё матчей. В составе сборной Роналду стал чемпионом Европы 2016 и победителем Лиги нац
+ий УЕФА 2019. Является самым результативным европейским футболистом на уровне сборных за всю историю. Первый европеец, который смог забить 100 или больше мячей в с
+оставе национальной сборной.</p>
+
+<p>Является одним из самых узнаваемых спортсменов в мире, был признан самым высокооплачиваемым спортсменом мира по версии журнала Forbes в 2016 и 2017 годах, а так
+же самым известным спортсменом мира по версии ESPN в 2016, 2017, 2018 и 2019 годах. Time включил Роналду в список ста самых влиятельных людей в мире в 2014 году. C
+ 2010 по 2019, заработав, по оценкам журнала Forbes, 800 млн долларов, занял второе место в списке самых высокооплачиваемых спортсменов десятилетия, уступив лишь Ф
+лойду Мейвезеру. В январе 2021 года Криштиану Роналду стал первым в истории человеком, набравшим 250 млн подписчиков в Instagram.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Ранние годы:</strong></p>
+
+<p>Криштиану родился 5 февраля 1985 года в городе Фуншал на острове Мадейра. Он был четвёртым ребёнком в семье повара Марии Долореш душ Сантуш Авейру (род. 1954) и
+ садовника Жозе Диниша Авейру (1954&mdash;2005). Также у Криштиану есть старший брат Угу (род. 1975), сестры Эльма (род. 1974) и Лилиана Катя (исп.)русск. (род. 19
+76). Последняя стала певицей, выступает в Португалии под сценическим именем &laquo;Ronalda&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Назвать мальчика Криштиану предложила сестра матери. Второе имя, данное ему при рождении &mdash; Роналду &mdash; родители выбрали в честь Рональда Рейгана, так
+как отец Криштиану был поклонником тогдашнего американского президента. Играть в футбол Криштиану начал в возрасте 2-3 лет. В шесть лет пошёл в местную начальную ш
+колу, а средние классы посещал в школе &laquo;Баррейруш&raquo;, преимущественно получал хорошие оценки, любил естествознание, но не любил английский. В 14 лет Рона
+лду исключили из школы за то, что он бросил стулом в учителя.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Молодёжная карьера:</strong></p>
+
+<p><strong>&laquo;Андоринья&raquo;</strong></p>
+
+<p>В шесть лет Криштиану получил приглашение сыграть за &laquo;Андоринью&raquo;, где его отец подрабатывал, изготовляя клубную футбольную форму. В сезоне 1993/94 в
+ матче против &laquo;Камачи&raquo; при счёте 0:2 в пользу соперника Роналду вышел во втором тайме, забил два гола и помог &laquo;Андоринье&raquo; одержать победу 3
+:2. В &laquo;Андоринье&raquo; Роналду получил прозвище &laquo;пчёлка&raquo;, так как всегда был в движении на поле.</p>
+
+<p>&nbsp;</p>
+
+<p>Вскоре на Криштиану обратили внимание два самых сильных клуба острова: &laquo;Насьонал&raquo; и &laquo;Маритиму&raquo;. Крёстный Роналду тренировал юношеский со
+став &laquo;Насьонала&raquo; и хотел видеть юного футболиста в клубе. Однако отец хотел, чтобы его сын перешёл в &laquo;Маритиму&raquo;. Было решено организовать в
+стречу представителей обоих клубов с президентом &laquo;Андориньи&raquo;, однако тренер юношеской команды &laquo;Маритиму&raquo; не явился. В итоге Криштиану переш
+ёл в &laquo;Насьонал&raquo; в обмен на 20 мячей и два комплекта юниорской формы.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Насьонал&raquo;</strong></p>
+
+<p>Когда Роналду присоединился к &laquo;Насьоналу&raquo;, ему было десять лет. Тренеры &laquo;Насьонала&raquo; обратили внимание на худощавое телосложение футболис
+та и порекомендовали ему больше есть, чтобы набрать мышечную массу. Уже на том этапе Роналду демонстрировал хорошую технику, высокую скорость, точные пасы и владен
+ие мячом, однако наставники Криштиану столкнулись с проблемой излишнего индивидуализма и гордыни футболиста. В сезоне 1995/96 Роналду выиграл с &laquo;Насьоналом&r
+aquo; чемпионат среди 10-12-летних. На молодого футболиста обратили внимание &laquo;Порту&raquo; и &laquo;Боавишта&raquo;. Крёстный отец Роналду связался с предста
+вителем столичного &laquo;Спортинга&raquo;. Вскоре клуб отправил своего скаута на просмотр футболиста.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Академия &laquo;Спортинга&raquo;</strong></p>
+
+<p>В апреле 1997 года Криштиану отправился на просмотр в &laquo;Спортинг&raquo;. Тренеры клуба были впечатлены игрой Роналду и пригласили посмотреть на него директ
+ора молодёжного клуба Аурелиу Перейру. 17 апреля было принято окончательное решение пригласить Криштиану в &laquo;Спортинг&raquo;. &laquo;Насьонал&raquo; был долже
+н &laquo;Спортингу&raquo; 4,5 млн португальских эскудо (22,5 тысячи евро) за переход молодого игрока Франку. Трансфер Роналду позволил списать долг. В конце август
+а Криштиану окончательно переселился в Лиссабон. По выходным он подрабатывал, подавая мячи на матчах &laquo;Спортинга&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>В 15 лет у Роналду диагностировали тахикардию вследствие врождённого порока сердца. Необходимо было хирургическое вмешательство, в результате которого Криштиану
+ лазером восстановили повреждённый участок сердца, через несколько дней выписав его. Операция не отразилась на спортивных показателях футболиста. В 16 лет он стал
+единственным футболистом в истории клуба, сыгравшим за все составы &laquo;Спортинга&raquo; (до 16, до 17, до 18 лет и резервную команду) в течение одного сезона. В
+ августе 2001 года Роналду подписал свой первый профессиональный контракт на четыре года с зарплатой 2000 евро в месяц.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Клубная карьера:</strong></p>
+
+<p><strong>&laquo;Спортинг&raquo;</strong></p>
+
+<p>В июле 2002 года тренер Ласло Бёлёни, будучи впечатлённым дриблингом Роналду, пригласил его принять участие в предсезонных спаррингах первой команды. &laquo;Спо
+ртинг&raquo; обыграл &laquo;Риу-Майор&raquo; со счётом 5:0. После этого матча Бёлёни решил переместить Роналду с центра поля на фланг, чтобы лучше использовать его
+ скорость. 3 августа в контрольном матче против &laquo;Реал Бетис&raquo; Криштиану вышел на замену и забил гол, чем помог своей команде выиграть 3:2. В это же врем
+я он сыграл за сборную Португалии на молодёжном чемпионате Европы для футболистов до 17 лет.</p>
+
+<p>&nbsp;</p>
+
+<p>14 августа Криштиану в матче против &laquo;Интернационале&raquo; дебютировал в официальных матчах за клуб в квалификации Лиги чемпионов. 18 августа 2002 года Ро
+налду стал обладателем первого трофея в своей профессиональной клубной карьере &mdash; Суперкубка Португалии, однако принять участие в матче ему не удалось. 7 октя
+бря Роналду дебютировал в чемпионате Португалии в матче с &laquo;Морейренсе&raquo;. Криштиану сделал дубль и помог клубу победить со счётом 3:0. В возрасте 17 лет
+8 месяцев и 2 дня он стал самым молодым автором гола в истории &laquo;Спортинга&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>По ходу сезона 17-летнего Роналду заметил тогдашний главный тренер &laquo;Ливерпуля&raquo; Жерар Улье, но &laquo;мерсисайдцы&raquo; не решились заключить контра
+кт с португальцем, посчитав, что он ещё слишком молод и ему нужно время для развития своих навыков. Аналогичное решение приняли и в &laquo;Интере&raquo;. Футболист
+ом интересовался тренер лондонского &laquo;Арсенала&raquo; Арсен Венгер, который даже отправил ему личное приглашение в Лондон. Также Роналду интересовались испанс
+кие &laquo;Валенсия&raquo; и &laquo;Атлетико Мадрид&raquo;, а итальянские &laquo;Парма&raquo; и &laquo;Ювентус&raquo; направляли конкретные предложения с суммой бо
+лее 10 млн евро. К концу сезона Криштиану сыграл 25 матчей чемпионата, из которых 11 &mdash; в стартовом составе. Он забил три гола в лиге и два &mdash; в Кубке По
+ртугалии.</p>
+
+<p>&nbsp;</p>
+
+<p>Однако уже летом 2003 года его заметил главный тренер &laquo;Манчестер Юнайтед&raquo; Алекс Фергюсон, ему порекомендовал футболиста помощник Карлуш Кейрош. На 6
+ августа был запланирован товарищеский матч со &laquo;Спортингом&raquo; в честь открытия стадиона &laquo;Жозе Алваладе&raquo; в Лиссабоне. За день до матча был сог
+ласован трансфер за 12,24 млн фунтов и зарплатой футболиста в 2 млн евро в год. О переходе объявили 12 августа. В самом матче &laquo;Спортинг&raquo; победил &laquo
+;Юнайтед&raquo; со счётом 3:1, а Роналду отдал голевой пас на Луиша Фелипе.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Манчестер Юнайтед&raquo;</strong></p>
+
+<p><strong>Дебют и первые достижения:</strong></p>
+
+<p>13 августа 2003 года Роналду официально представили на &laquo;Олд Траффорд&raquo;. Он стал первым португальским игроком в истории &laquo;Манчестер Юнайтед&raquo
+;. Футболист попросил для себя номер &laquo;28&raquo; (свой номер в &laquo;Спортинге&raquo;), так как не хотел дополнительного давления, связанного с номером &laqu
+o;7&raquo;, который ранее принадлежал таким игрокам &laquo;Юнайтед&raquo;, как Джордж Бест, Брайан Робсон, Эрик Кантона и Дэвид Бекхэм.</p>
+
+<p>&nbsp;</p>
+
+<p>После того как я перешёл в клуб, тренер спросил меня, под каким номером я хочу играть. Я сказал, что под номером &laquo;28&raquo;. Но Фергюсон сказал: &laquo;Не
+т, ты получишь номер 7&raquo;. Эта знаменитая футболка стала для меня дополнительным источником мотивации. Я был вынужден оправдать ожидания после такой чести в мо
+й адрес.</p>
+
+<p>&mdash; Криштиану Роналду о своём трансфере в &laquo;Манчестер Юнайтед&raquo;.</p>
+
+<p>Роналду дебютировал за &laquo;Манчестер Юнайтед&raquo; в матче с &laquo;Болтон Уондерерс&raquo; на &laquo;Олд Траффорд&raquo; 16 августа 2003 года. Встреча заве
+ршилась победой хозяев со счётом 4:0. В первое время Роналду было трудно привыкнуть к более контактному стилю игры в Англии, где защитникам давали большую свободу
+действий, нежели в Португалии. Первый гол за &laquo;красных&raquo; португалец забил 1 ноября 2003 года со штрафного удара в матче с &laquo;Портсмутом&raquo;, завер
+шившегося со счётом 3:0. 25 февраля 2004 года Криштиану в матче с &laquo;Порту&raquo; впервые вышел в составе &laquo;Юнайтед&raquo; в Лиге чемпионов. &laquo;Манчес
+тер Юнайтед&raquo; завершил сезон на третьем месте. Тем не менее, у клуба оставался шанс выиграть Кубок Англии. В финале против &laquo;Милуолла&raquo; Роналду заби
+л гол, в итоге его команда выиграла со счётом 3:0 и получила трофей. Роналду завершил сезон, забив восемь голов в 40 матчах во всех турнирах. По итогам голосования
+ болельщиков &laquo;Юнайтед&raquo; ему достался приз сэра Мэтта Басби.</p>
+
+<p>&nbsp;</p>
+
+<p>В новом сезоне &laquo;красные&raquo; вновь стали третьими. Роналду помог своей команде дойти до финала Кубка Англии, он забивал по голу каждому сопернику, кроме
+ &laquo;Мидлсбро&raquo; в 1/16 финала. 29 октября 2005 года Роналду забил 1000-й гол &laquo;Манчестер Юнайтед&raquo; в Премьер-лиге &mdash; в матче с &laquo;Мидлсб
+ро&raquo;, который завершился поражением &laquo;Юнайтед&raquo; со счётом 1:4. В 2006 году Роналду выиграл свой второй трофей в английском футболе, Кубок лиги, заби
+в гол в финале, где &laquo;Юнайтед&raquo; победил &laquo;Уиган Атлетик&raquo; со счётом 4:0. По итогам сезонов 2004/05 и 2005/06 Роналду выиграл специальный приз л
+учшему молодому футболисту года FIFPro по версии болельщиков.</p>
+
+<p>&nbsp;</p>
+
+<p>Криштиану Роналду в составе &laquo;Манчестер Юнайтед&raquo;, 29 апреля 2006 года</p>
+
+<p>После скандала на чемпионате мира 2006 года с удалением Уэйна Роналду выразил желание покинуть клуб. Тем не менее, Фергюсон уговорил игрока остаться.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Коллективный и индивидуальный успех:</strong></p>
+
+<p>В конце декабря 2006 года он сделал три дубля подряд в матчах против &laquo;Астон Виллы&raquo;, &laquo;Уиган Атлетик&raquo; и &laquo;Рединга&raquo;. В ноябре и
+декабре 2006 года Роналду получил звание игрока месяца Премьер-лиги, став третьим в истории этого турнира футболистом, которому удалось взять две награды подряд (п
+осле Денниса Бергкампа в 1997 году и Робби Фаулера в 1996 году).</p>
+
+<p>&nbsp;</p>
+
+<p>4 февраля 2007 года Роналду обвинили в симуляции &mdash; в матче с &laquo;Тоттенхэм Хотспур&raquo;, когда он заработал спорный пенальти в столкновении со Стидом
+ Мальбранком. 13 апреля португалец подписал 5-летний контракт с клубом, предусматривавший также увеличение зарплаты до 120 тысяч фунтов в неделю, что на тот момент
+ сделало его самым высокооплачиваемым футболистом в истории &laquo;Манчестер Юнайтед&raquo;. В конце сезона Роналду получил звания &laquo;футболист года&raquo; и &
+laquo;молодой футболист года&raquo; по версии Профессиональной футбольной ассоциации, повторив тем самым достижение Энди Грея в сезоне 1976/77. Также он выиграл пр
+из &laquo;футболист года&raquo; по версии болельщиков ПФА и вошёл в &laquo;команду года&raquo; по версии ассоциации. Важным фактором в успехе того сезона стали пер
+сональные тренировки с Рене Мёленстеном, который научил Роналду играть более непредсказуемо, помог улучшить командную работу, приучил использовать любые возможност
+и забить гол, а не ждать шанса отметиться зрелищно.</p>
+
+<p>&nbsp;</p>
+
+<p>10 апреля 2007 года Роналду забил свой первый гол в плей-офф Лиги чемпионов, сделав дубль в матче с &laquo;Ромой&raquo; (7:1). Криштиану помог клубу дойти до фи
+нала Кубка Англии, но там &laquo;Юнайтед&raquo; уступил &laquo;Челси&raquo; (0:1). 5 мая 2007 года в дерби с &laquo;Манчестер Сити&raquo; Роналду на 33-й минуте за
+работал пенальти и сам же его реализовал, этот гол стал единственным в матче и 50-м для португальца в футболке &laquo;Юнайтед&raquo;. После этого тура &laquo;красн
+ые дьяволы&raquo; завоевали титул чемпионов Премьер-лиги сезона 2006/07.</p>
+
+<p><strong>Победа в Лиге чемпионов:</strong></p>
+
+<p>19 сентября 2007 года Криштиану в рамках группового этапа Лиги чемпионов впервые вышел против своей бывшей команды, &laquo;Спортинга&raquo; и забил мяч, который
+ не стал праздновать.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналду сделал свой единственный хет-трик за &laquo;красных&raquo; 12 января 2008 года в матче с &laquo;Ньюкасл Юнайтед&raquo; на &laquo;Олд Траффорд&raquo;, за
+вершившемся победой хозяев со счётом 6:0. Во встрече с &laquo;Редингом&raquo; 19 января он забил свой 23-й гол в чемпионате &mdash; столько же голов он забил во вс
+ех турнирах в сезоне 2006/07. В матче 1/8 финала Лиги чемпионов против &laquo;Лиона&raquo; Роналду забил единственный гол, по сумме двух матчей счёт был 2:1, и &la
+quo;красные&raquo; прошли дальше. 19 марта 2008 года Роналду впервые в своей карьере в &laquo;Юнайтед&raquo; вышел на поле с капитанской повязкой и забил оба гола
+за свой клуб во встрече с &laquo;Болтоном&raquo;, завершившейся со счётом 2:0. Второй из его голов в этом матче стал 33-м в сезоне, что стало новым клубным рекордо
+м по количеству голов, забитых полузащитником (всего в том сезоне Роналду забил 42 гола). Таким образом, Роналду побил рекорд Джорджа Беста, который в сезоне 1967/
+68 забил 32 гола.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналду и Андрей Шевченко в матче &laquo;Манчестер Юнайтед&raquo; &mdash; &laquo;Челси&raquo;, 23 сентября 2007 года</p>
+
+<p>1 апреля в матче 1/4 финала Лиги чемпионов против &laquo;Ромы&raquo; Криштиану открыл счёт ударом головой после подачи Пола Скоулза. &laquo;Юнайтед&raquo; выигр
+ал матч 2:0, а в ответной игре закрепил преимущество (1:0). В полуфинале &laquo;Манчестер Юнайтед&raquo; встретился с &laquo;Барселоной&raquo;, а Роналду впервые с
+ыграл против Лионеля Месси. В матче на &laquo;Камп Ноу&raquo; Криштиану заработал пенальти, когда его удар головой блокировал рукой Габриэль Милито. Пенальти взялс
+я бить сам Роналду, но пробил выше ворот. Игра завершилась без голов, а в ответном матче &laquo;Юнайтед&raquo; победил с минимальным счётом.</p>
+
+<p>&nbsp;</p>
+
+<p>21 мая 2008 года в финале Лиги чемпионов 2007/08 в Москве против &laquo;Челси&raquo; Роналду открыл счёт. &laquo;Челси&raquo; удалось отыграться, а основное и д
+ополнительное время победителя не выявили. В серии пенальти Роналду пытался переиграть Петра Чеха, резко остановившись перед ударом, но Чех отбил его. Тем не менее
+, Джон Терри не смог реализовать свой пенальти, в итоге &laquo;Юнайтед&raquo; выиграл со счётом 6:5 в серии послематчевых пенальти. Роналду был выбран &laquo;игрок
+ом матча&raquo; по версии УЕФА.</p>
+
+<p>&nbsp;</p>
+
+<p>За этот сезон Роналду сохранил зрелищность своей игры, но также расширил свой репертуар новыми навыками: он научился пробивать левой ногой, улучшил исполнение ш
+трафных ударов и ударов головой, а также стал больше работать на команду. Голевые показатели Роналду сделали его не только лучшим бомбардиром Премьер-лиги в сезоне
+ (31 гол), но и первым вингером в истории, завоевавшим &laquo;Золотую бутсу&raquo;. Также Криштиану во второй раз подряд стал лучшим футболистом Англии и по версии
+ журналистов, и по версии футболистов.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Золотой мяч&raquo; и последний сезон в &laquo;Юнайтед&raquo;:</strong></p>
+
+<p>5 июня 2008 года телеканал Sky Sports сообщил, что Роналду заинтересован в переходе в &laquo;Реал Мадрид&raquo;. &laquo;Манчестер Юнайтед&raquo; составил официа
+льную жалобу на незаконные попытки &laquo;Реала&raquo; переманить португальца и 9 июня направил её в ФИФА, но организация отказалась применять какие-либо санкции к
+ мадридскому клубу. На протяжении большей части лета продолжались спекуляции о будущем Роналду, пока 6 августа португалец не объявил, что он остаётся в &laquo;Юнай
+тед&raquo; ещё минимум на один сезон.</p>
+
+<p>&nbsp;</p>
+
+<p>Из-за травмы лодыжки Роналду пропустил десять недель и вернулся в игру 17 сентября в матче группового этапа Лиги чемпионов 2008/09 против &laquo;Вильярреала&raq
+uo;. 15 ноября 2008 года португалец забил свой 100-й и 101-й гол за &laquo;Манчестер Юнайтед&raquo; в матче против &laquo;Сток Сити&raquo;, оба &mdash; ударами со
+штрафного (матч завершился победой &laquo;Юнайтед&raquo; со счётом 5:0). После этих двух голов Роналду имел на своём счету голы в ворота всех остальных 19 команд П
+ремьер-лиги. По итогам 2008 года Роналду получил &laquo;Золотой мяч&raquo;, став третьим португальцем &mdash; обладателем награды после Эйсебио и Луиша Фигу. В ход
+е голосования португалец опередил Лионеля Месси. Уже в статусе лучшего игрока Европы Роналду выиграл Клубный чемпионат мира. В финале против победителя Кубка Либер
+тадорес &laquo;ЛДУ Кито&raquo; Криштиану отдал голевую передачу на Уэйна Руни, который забил единственный мяч встречи. По итогам турнира Роналду получил &laquo;сер
+ебряный мяч&raquo;. 12 января 2009 года Криштиану Роналду получил награду &laquo;Игрок года ФИФА&raquo; как лучший футболист мира 2008 года.</p>
+
+<p>&nbsp;</p>
+
+<p>15 апреля 2009 года в ответном матче 1/4 финала Лиги чемпионов против &laquo;Порту&raquo; Роналду открыл счёт ударом с 40 метров. Этот гол стал единственным в м
+атче и в конце года принёс Криштиану премию имени Ференца Пушкаша за лучший гол года. В финале Лиги чемпионов &laquo;Манчестер Юнайтед&raquo; встретился с &laquo;Б
+арселоной&raquo;. В прессе акцентировалось внимание на противостоянии Роналду и Месси, в том числе за &laquo;Золотой мяч&raquo; 2009 года. Победу в матче со счётом
+ 2:0 одержала &laquo;Барселона&raquo;, в котором Месси забил второй гол.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Переход в &laquo;Реал&raquo;:</strong></p>
+
+<p>11 июня 2009 года &laquo;Манчестер Юнайтед&raquo; принял предложение &laquo;Реала&raquo; о продаже Роналду в испанский клуб за 80 млн фунтов стерлингов. Окончат
+ельное соглашение было подписано 26 июня. Португальский полузащитник стал самым дорогим игроком в истории мирового футбола, побив рекорд Зинедина Зидана. Длительно
+сть контракта Роналду с &laquo;Реалом&raquo; была рассчитана до 2015 года, игрок должен был получать 11 млн евро в год, помимо этого в контракте была прописана сум
+ма отступных &mdash; 1 миллиард евро.</p>
+
+<p>&nbsp;</p>
+
+<p>Представители семьи Глейзеров заявили, что трансфер был полностью согласован с Фергюсоном. После завершения своего трансфера в &laquo;Реал&raquo; Роналду вырази
+л благодарность Фергюсону за помощь в развитии его как футболиста, сказав: &laquo;Он был моим отцом в спортивном плане, одним из самых важных и самых определяющих
+факторов, повлиявших на мою карьеру&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Реал Мадрид&raquo;:</strong></p>
+
+<p><strong>Начало и сезон без титулов:</strong></p>
+
+<p>6 июля 2009 года состоялась презентация Роналду в новом клубе на &laquo;Сантьяго Бернабеу&raquo;, которую посетило около 80 тысяч человек. Поскольку капитан мад
+ридского клуба Рауль уже носил номер &laquo;7&raquo;, использовавшийся португальцем в &laquo;Манчестер Юнайтед&raquo;, Роналду выбрал номер &laquo;9&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналду в составе мадридского &laquo;Реала&raquo;, 2010 год</p>
+
+<p>Первый матч за &laquo;Реал&raquo; Роналду сыграл 20 июля в Ирландии против &laquo;Шемрок Роверс&raquo; в рамках предсезонной подготовки. Дебют Криштиану Роналду
+ в официальном матче за &laquo;Реал Мадрид&raquo; состоялся 29 августа 2009 года во встрече с &laquo;Депортиво&raquo; (3:2), в этом матче он забил и первый мяч, ре
+ализовав пенальти. В первых четырёх матчах за клуб Роналду неуклонно отличался забитым голом. В первом матче Лиги чемпионов после перехода Роналду забил два гола в
+ ворота &laquo;Цюриха&raquo;, причём оба &mdash; со штрафных ударов. 30 сентября во втором матче группы Лиги чемпионов против &laquo;Олимпик Марсель&raquo; Криштиа
+ну открыл счёт, однако позже защитник Сулейман Дьявара сбил его в штрафной площади и наступил на лодыжку. Роналду попытался продолжить матч и забил третий гол &laq
+uo;Реала&raquo;, но по его ходу был заменён. Травма сказалась в играх за сборную. В матче против Венгрии Роналду ещё в первом тайме покинул поле, после чего был вы
+нужден вернуться в клуб. Диагноз &mdash; растяжение латеральной связки с воспалением и отёком лодыжки. Совокупно Криштиану пропустил 55 дней. 29 ноября Роналду сыг
+рал свой первый &laquo;Эль-Класико&raquo; против &laquo;Барселоны&raquo;. В декабре Роналду проиграл борьбу за &laquo;Золотой мяч&raquo; и приз &laquo;Игрока года
+ФИФА&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Несмотря на двухмесячное отсутствие из-за травмы, Криштиану удалось закрепить за собой место на левом фланге полузащиты. В дебютном сезоне он забил 33 гола в 35
+ матчах, став лучшим бомбардиром команды.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Рекорды результативности:</strong></p>
+
+<p>После ухода Рауля в преддверии сезона 2010/11 Роналду всё же взял номер &laquo;7&raquo;. С этого сезона командой руководил новый главный тренер Жозе Моуринью, к
+оторый сменил Мануэля Пеллегрини. Португальский специалист не видел Роналду на позиции центрфорварда и редко отводил ему эту позицию. 23 октября 2010 года Роналду
+забил четыре гола в ворота &laquo;Расинга&raquo;. Несмотря на высокие голевые показатели, Криштиану в борьбе за &laquo;Золотой мяч&raquo; 2010 года не вошёл в трой
+ку призёров, которую составили исключительно игроки &laquo;Барселоны&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>6 февраля, забив два мяча в ворота клуба &laquo;Реал Сосьедад&raquo;, Роналду установил рекорд &laquo;Реала&raquo; &mdash; ему понадобился 51 матч, чтобы забить
+ 50 мячей в чемпионате. Предыдущий рекорд принадлежал Ференцу Пушкашу &mdash; 54 матча. 21 мая Роналду установил новый рекорд результативности в одном сезоне чемпи
+оната Испании, полузащитник мадридского клуба отличился 40 раз, обогнав предыдущий рекорд Уго Санчеса и Тельмо Сарры на два мяча, это достижение позволило ему полу
+чить &laquo;Золотую бутсу&raquo;. Единственным трофеем для Роналду в этом сезоне стал Кубок Испании. В дополнительное время Криштиану забил головой единственный мя
+ч в ворота &laquo;Барселоны&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2011/12 стал для Роналду самым результативным за всю его предыдущую карьеру: он забил 60 голов во всех соревнованиях. 100-й гол за &laquo;Реал Мадрид&raqu
+o; был забит на &laquo;Камп Ноу&raquo; в матче Суперкубка Испании. В Лиге чемпионов &laquo;Реал&raquo; дошёл до полуфинала, где встретился с &laquo;Баварией&raquo;
+. В ответном матче дубль Роналду перевёл игру в овертайм, но команда проиграла в серии пенальти, при этом португалец не реализовал свой удар. 5 мая Роналду сыграл
+матч с &laquo;Гранадой&raquo;, ставший для португальца 100-м в чемпионате Испании; в этой встрече он забил гол, который оказался 300-м, забитым Криштиану в професс
+иональной карьере. По итогам сезона &laquo;Реалу&raquo; удалось выиграть свой первый титул чемпионата Испании за последние четыре года, набрав рекордные для Испани
+и 100 очков. Сам Роналду же в 2011 году занял второе место в голосовании на &laquo;Золотой мяч&raquo; и в рейтинге &laquo;Золотой бутсы&raquo;, впереди него в обои
+х случаях был только Лионель Месси.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Два &laquo;Золотых мяча&raquo; и победа в Лиге чемпионов:</strong></p>
+
+<p>В матчах за Суперкубок Испании 2012 против &laquo;Барселоны&raquo; Роналду забил по голу в обоих матчах, что помогло &laquo;Реалу&raquo; стать обладателем трофе
+я. 4 октября 2012 года в матче против нидерландского &laquo;Аякса&raquo; Роналду удалось отличиться своим первым хет-триком в Лиге чемпионов. 7 октября Роналду заб
+ил два гола в матче против &laquo;Барселоны&raquo; и вошёл в историю как первый футболист, забивший в ворота &laquo;сине-гранатовых&raquo; в шести матчах подряд. Б
+лагодаря своим выступлениям в 2012 году Роналду вновь удалось занять второе место в голосовании на &laquo;Золотой мяч&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>После зимнего перерыва сезона 2012/13 Роналду впервые был удостоен звания капитана &laquo;Реала&raquo; в официальном матче. 27 января 2013 года португалец забил
+ свой 300-й гол в клубной карьере, сделав хет-трик в матче против &laquo;Хетафе&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1/8 финала Лиги чемпионов Роналду впервые сыграл против &laquo;Манчестер Юнайтед&raquo; &mdash; своего бывшего клуба. В первом матче на &laquo;Сантьяго Бернаб
+еу&raquo; португалец сравнял счёт, исход поединка решался во втором матче на &laquo;Олд Траффорд&raquo;. Роналду, как и в первом матче, отличился забитым мячом, но
+ на этот раз он стал победным &mdash; дальше прошёл &laquo;Реал&raquo;. В знак уважения Криштиану не стал праздновать забитый мяч в ворота бывшего клуба. 8 мая Рон
+алду достиг отметки в 200 голов в составе &laquo;Реала&raquo;, которые ему удалось забить в 197 играх за клуб. Забив 12 мячей на протяжении Лиги чемпионов, Роналду
+ стал лучшим бомбардиром турнира во второй раз на протяжении карьеры. Во всех соревнованиях португалец отличился 55 раз.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналду забил 17 мячей в матчах Лиги чемпионов 2013/14, установив тем самым новый рекорд турнира</p>
+
+<p>В начале сезона 2013/14 Роналду подписал новый пятилетний контракт с &laquo;Реалом&raquo;. Вместе с нападающими Каримом Бензема и Гаретом Бейлом он сформировал
+атакующее трио, получившее популярное среди болельщиков и журналистов название &laquo;Би-би-си&raquo; (англ. BBC), что являлось акронимом от &laquo;Бейл, Бензема,
+Криштиану&raquo;, а также некой отсылкой на название британской вещательной корпорации. К концу ноября Роналду забил 32 мяча в 22 матчах в сумме за клуб и сборную,
+ в том числе пять хет-триков. 2013 год Роналду закончил, имея в активе 69 голов, что стало его самым высоким результатом в календарном году. Благодаря своим усилия
+м Роналду во второй раз в карьере стал обладателем &laquo;Золотого мяча&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Параллельно с индивидуальными достижениями Роналду успеха достигал и &laquo;Реал&raquo;, который смог выиграть свой десятый трофей Лиги чемпионов. В четвертьфин
+але против дортмундской &laquo;Боруссии&raquo; футболист провёл свой 100-й матч в Лиге чемпионов. Гол, забитый Роналду в этой игре, стал его 14-м в данном розыгрыш
+е, что позволило португальцу повторить рекорд Месси, установленный два года назад. Уже во втором матче следующей стадии турнира Роналду побил этот рекорд, забив дв
+а мяча в ворота мюнхенской &laquo;Баварии&raquo; (4:0). Несмотря на проблемы с коленом и советы медицинского штаба воздержаться от участия в финале Лиги чемпионов,
+ Роналду принял решение сыграть в матче. В финале против &laquo;Атлетико Мадрид&raquo; Роналду стал первым игроком, который забивал в двух финалах Лиги чемпионов в
+ составах разных команд-победителей. Роналду завершил сезон как лучший бомбардир Лиги чемпионов в третий раз в своей карьере, имея на счету 17 голов, установив тем
+ самым новый рекорд турнира. Португалец получил приз лучшему футболисту года в Европе.</p>
+
+<p>&nbsp;</p>
+
+<p>В сезоне 2014/15 Криштиану Роналду установил личный рекорд, забив 61 гол во всех турнирах</p>
+
+<p>Несмотря на то, что &laquo;Реал Мадрид&raquo; не смог одержать победу в чемпионате Испании, заняв лишь третье место, Роналду стал лучшим бомбардиром данного пер
+венства. Он забил 31 гол в 30 матчах лиги, что принесло ему трофей Пичичи и &laquo;Золотую бутсу&raquo;, последнюю награду Криштиану разделил с нападающим &laquo;Л
+иверпуля&raquo; Луисом Суаресом. 6 января в матче против &laquo;Сельты&raquo; Роналду забил 400-й гол в карьере и посвятил забитый мяч своему соотечественнику Эйсе
+био, умершему за два дня до этого. По итогам сезона Роналду был признан лучшим игроком чемпионата Испании и автором лучшего гола сезона. В течение сезона 2014/15 Р
+оналду установил новый личный рекорд, забив 61 гол в сезоне во всех соревнованиях. 6 декабря в поединке с &laquo;Сельтой&raquo; Криштиану быстрее всех достиг отмет
+ки в 200 голов в чемпионате &mdash; за 178 игр. Зимой Роналду получил второй подряд &laquo;Золотой мяч&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Лучший бомбардир в истории &laquo;Реала&raquo;:</strong></p>
+
+<p>Мадридcкий &laquo;Реал&raquo; финишировал вторым по итогам сезона 2014/15, а также достиг полуфинальной стадии Лиги чемпионов. Криштиану забил в обоих матчах пр
+отив &laquo;Ювентуса&raquo;, но мадридская команда всё равно не смогла выйти в финал. По итогу, забив десять голов, Роналду стал лучшим бомбардиром в третьем розыг
+рыше Лиги чемпионов подряд, разделив в этот раз титул с Месси и Неймаром.</p>
+
+<p>&nbsp;</p>
+
+<p>5 апреля Криштиану Роналду впервые в своей карьере забил пять мячей в одной игре (три из них были забиты за 8 минут), по итогу чего &laquo;Гранада&raquo; потерп
+ела поражение со счётом 9:1. Три дня спустя, в матче против &laquo;Райо Вальекано&raquo;, Роналду забил свой 300-й мяч за &laquo;Реал&raquo;. Хет-трик против &laqu
+o;Эспаньола&raquo; позволил Роналду превзойти Альфредо Ди Стефано в списке бомбардиров &laquo;Реала&raquo;. Криштиану завершил сезон с 48 голами, выиграв во второй
+ раз подряд трофей Пичичи и четвёртую &laquo;Золотую бутсу&raquo; (рекорд на тот момент).</p>
+
+<p>&nbsp;</p>
+
+<p>В начале своего седьмого сезона в мадридском &laquo;Реале&raquo; Роналду стал лучшим бомбардиром в истории своего клуба. Пента-трик в матче против &laquo;Эспань
+ола&raquo; 12 сентября позволил Роналду достигнуть результата в 230 голов за &laquo;Реал Мадрид&raquo; в чемпионате Испании и обойти по этому показателю предыдущег
+о рекордсмена клуба &mdash; Рауля. Дубль в матче против &laquo;Мальмё&raquo;, оформленный 30 сентября, позволил Роналду перейти рубеж в 500 забитых мячей в карьере
+, как за клуб, так и за национальную сборную. 17 октября Роналду официально превзошёл Рауля: результативный матч против &laquo;Леванте&raquo; (3:0) увеличил количе
+ство забитых мячей португальца в составе &laquo;сливочных&raquo; до 324. Во втором матче против &laquo;Мальмё&raquo; Роналду принял участие в шести голах своей ком
+анды, забив четыре мяча и отдав две голевые передачи.</p>
+
+<p>&nbsp;</p>
+
+<p>В марте 2016 года Роналду забил свой 252 гол в чемпионате Испании и стал вторым в списке его бомбардиров за всю историю</p>
+
+<p>Один из четырёх голов в матче против &laquo;Сельты&raquo; 5 марта 2016 года стал 252-м мячом Роналду в рамках чемпионата Испании, в результате чего португалец с
+тал вторым бомбардиром в его истории. На первом месте был Лионель Месси. Хет-трик в матче против &laquo;Вольфсбурга&raquo; позволил &laquo;Реалу&raquo; отыграться
+после поражения со счётом 2:0 и пройти в полуфинал Лиги чемпионов. Высокая результативность позволила Роналду достигнуть отметки в 16 голов за турнир, что сделало
+его лучшим бомбардиром Лиги чемпионов в четвёртый раз подряд и пятый раз в целом. Из-за проблем со здоровьем в финале турнира против &laquo;Атлетико Мадрид&raquo;
+Роналду провёл невыразительный матч, но тем не менее португальцу удалось реализовать свой удар в серии послематчевых пенальти, благодаря чему &laquo;Реал Мадрид&ra
+quo; смог выиграть свой 11-й кубок Лиги чемпионов. Роналду в шестой раз подряд заканчивал сезон, забив более 50 голов во всех соревнованиях. За свою игру в течение
+ сезона Криштиану Роналду во второй раз получил приз лучшему футболисту года в Европе.</p>
+
+<p>&nbsp;</p>
+
+<p>Первые три матча &laquo;Реала&raquo; в сезоне 2016/17, включая Суперкубок УЕФА 2016, Роналду был вынужден пропустить, продолжая восстанавливаться после травмы к
+олена, полученной в матче против сборной Франции в финале Евро-2016. 19 ноября сделал хет-трик в матче против &laquo;Атлетико Мадрид&raquo;, став лучшим бомбардиро
+м в истории мадридского дерби. 15 декабря в полуфинале Клубного чемпионата мира 2016 года против мексиканской &laquo;Америки&raquo; Роналду забил свой 500-й гол в
+карьере. &laquo;Реал Мадрид&raquo; выиграл данный турнир, а Криштиану, имея на своём счету четыре гола, завершил его со званием лучшего бомбардира. По итогам сезон
+а Роналду в четвёртый раз выиграл &laquo;Золотой мяч&raquo;, а также награду The Best FIFA Men&rsquo;s Player.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Пятый кубок Лиги чемпионов и пятый &laquo;Золотой мяч&raquo;:</strong></p>
+
+<p>В первом матче четвертьфинала Лиги чемпионов 2016/17 против &laquo;Баварии&raquo; (2:1) Роналду забил оба гола своей команды, что позволило ему стать первым игр
+оком, который забил 100 голов в еврокубках. Во втором матче четвертьфинальной стадии турнира Роналду сделал хет-трик и достиг отметки в 100 забитых мячей уже в сам
+ой Лиге чемпионов, аналогично сделав это первым. Мадридскому &laquo;Реалу&raquo; же удалось обыграть немецкую команду и пройти дальше. 2 мая, в полуфинале данного
+розыгрыша Лиги чемпионов, Роналду забил ещё один хет-трик, что позволило &laquo;сливочным&raquo; победить мадридский &laquo;Атлетико&raquo; со счётом 3:0. По итога
+м сезона на счету Роналду было 42 гола во всех соревнованиях, а мадридский &laquo;Реал&raquo; смог выиграть свой первый чемпионский титул Ла Лиги с 2012 года. В фи
+нале Лиги чемпионов против &laquo;Ювентуса&raquo; Роналду забил два гола и стал первым игроком, который забивал в трёх финалах этого турнира, также он забил свой 6
+00-й мяч в карьере. &laquo;Реал Мадрид&raquo; стал победителем Лиги чемпионов второй раз подряд.</p>
+
+<p>&nbsp;</p>
+
+<p>23 октября 2017 года португалец во второй раз подряд получил награду The Best FIFA Men&rsquo;s Player. 6 декабря в матче против дортмундской &laquo;Боруссии&raq
+uo; Роналду забил мяч и стал первым игроком, который отметился как минимум одним голом во всех шести матчах группового этапа Лиги чемпионов. Днём позже Роналду выи
+грал &laquo;Золотой мяч&raquo; в пятый раз. 3 марта 2018 года португалец сделал дубль в домашнем матче против &laquo;Хетафе&raquo;; первый из его мячей стал 300-м
+по счёту голом в чемпионате Испании, забитым за 286 матчей, что закрепило за Роналду звание самого быстрого игрока, достигшего данного результата.</p>
+
+<p>&nbsp;</p>
+
+<p>3 апреля в четвертьфинале Лиги чемпионов 2017/18 Роналду сделал дубль в выездной игре с &laquo;Ювентусом&raquo;, свой второй мяч португалец забил ударом через с
+ебя. Во втором матче Роналду забил мяч, продвинувший &laquo;сливочных&raquo; в полуфинал: португалец реализовал пенальти в добавленное время. &laquo;Реал&raquo; пр
+оиграл этот матч со счётом 3:1, однако всё равно прошёл дальше по сумме двух матчей (4:3). В финале турнира &laquo;Реал Мадрид&raquo; победил английский &laquo;Лив
+ерпуль&raquo;, благодаря чему Роналду завоевал свой пятый титул Лиги чемпионов, а также стал первым пятикратным победителем турнира (без учёта Кубка европейских че
+мпионов). С 15 мячами Криштиану Роналду стал лучшим бомбардиром турнира в шестом сезоне подряд.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Ювентус&raquo;:</strong></p>
+
+<p><strong>Дебютный сезон и первые трофеи:</strong></p>
+
+<p>10 июля 2018 года Криштиану Роналду подписал четырёхлетний контракт с &laquo;Ювентусом&raquo;. Как отмечала пресс-служба &laquo;Реал Мадрид&raquo;, решение о тр
+ансфере было принято по просьбе самого футболиста. Заплаченная сумма в размере 112 миллионов евро стала самой большой тратой в истории на игрока, которому больше 3
+0 лет, а также самой большой трансферной суммой в истории итальянского футбола. После перехода Роналду заявил, что решился на него из-за необходимости нового вызов
+а, однако впоследствии рассказал о недостаточной поддержке, которую, по его мнению, продемонстрировал президент клуба Флорентино Перес.</p>
+
+<p>&nbsp;</p>
+
+<p>18 августа португалец дебютировал за &laquo;Ювентус&raquo;, сыграв против &laquo;Кьево&raquo; в первом туре Серии А. 16 сентября Роналду впервые отличился за но
+вую команду: он сделал дубль и принёс победу над &laquo;Сассуоло&raquo; (2:1). 19 сентября получил прямую красную карточку в матче Лиги чемпионов, которая стала пе
+рвой для него за всю карьеру в этом соревновании. Роналду стал первым игроком в истории, который выиграл 100 матчей в рамках Лиги чемпионов. В 2018 году португалец
+ впервые за два года занял второе место в голосовании на награды лучшему футболисту года в Европе, The Best FIFA Men&rsquo;s Player и &laquo;Золотой мяч&raquo;, ус
+тупив первое место во всех трёх случаях своему бывшему партнёру по команде Луке Модричу.</p>
+
+<p>&nbsp;</p>
+
+<p>Криштиану Роналду в составе &laquo;Ювентуса&raquo;, 2019 год</p>
+
+<p>В январе 2019 года Роналду завоевал свой первый трофей в составе &laquo;Ювентуса&raquo; &mdash; его гол принёс победу над &laquo;Миланом&raquo; в матче за Супер
+кубок Италии. 12 марта Роналду сделал хет-трик в матче против &laquo;Атлетико Мадрид&raquo; в Лиге чемпионов, что позволило &laquo;Ювентусу&raquo; выйти в четверть
+финал турнира. 10 апреля португалец открыл счёт в матче четвертьфинала против &laquo;Аякса&raquo; (1:1). В ответном матче Роналду вновь забил, но &laquo;Ювентус&ra
+quo; в итоге проиграл со счётом 2:1 и покинул соревнование. 20 апреля Роналду стал чемпионом Италии, когда &laquo;Ювентус&raquo; победил &laquo;Фиорентину&raquo;.
+Португалец стал первым игроком, который становился чемпионом в Англии, Испании и Италии. 27 апреля ему удалось забить свой 600-й мяч в клубной карьере, сравняв счё
+т в матче дерби Италии против &laquo;Интернационале&raquo; (1:1). В своём первом сезоне в стане &laquo;бьянконери&raquo; Роналду получил награду &laquo;Футболист г
+ода в Италии&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Вторая победа в Серии А и новые рекорды:</strong></p>
+
+<p>23 сентября Криштиану Роналду занял третье место в номинации на награду The Best FIFA Men&rsquo;s Player. 18 декабря португалец в борьбе за верховой мяч прыгнул
+ на 256 см (выше перекладины футбольных ворот), в этом эпизоде он забил победный мяч в ворота &laquo;Сампдории&raquo;. 6 января 2020 года Роналду сделал свой первы
+й хет-трик в Серии А, благодаря чему &laquo;старая синьора&raquo; смогла одержать победу над &laquo;Кальяри&raquo; (4:0). 22 февраля в матче против СПАЛ Роналду за
+бил гол в своей 11-й игре подряд в Серии А, повторив рекорд лиги, установленный Габриэлем Батистутой и Фабио Квальяреллой. Также этот матч стал 1000-м для португал
+ьца в профессиональном футболе.</p>
+
+<p>&nbsp;</p>
+
+<p>17 июня 2020 года Криштиану Роналду сыграл в финале Кубка Италии против &laquo;Наполи&raquo;, в котором &laquo;Ювентус&raquo; потерпел поражение по итогу серии
+пенальти. 22 июня Роналду реализовал пенальти в матче против &laquo;Болоньи&raquo; и обогнал Руя Кошту, став самым результативным португальским игроком в истории ч
+емпионата Италии. 4 июля он забил свой 25-й гол в сезоне, реализовав штрафной удар в матче против &laquo;Торино&raquo;. Роналду стал первым игроком &laquo;Ювентуса
+&raquo;, достигшим данного результата после Омара Сивори, данный гол также стал первым для Криштиану со штрафного удара за 43 попытки в составе &laquo;бьянконери&r
+aquo;. 20 июля Роналду забил два гола в матче против &laquo;Лацио&raquo;; один из его мячей стал 50-м в Серии А. Криштиану Роналду забил 50 голов за 61 матч чемпио
+ната Италии, из-за чего стал самым быстрым игроком, который достиг данного результата, а также первым игроком в истории, забившим 50 голов в чемпионатах Англии, Ис
+пании и Италии.</p>
+
+<p>&nbsp;</p>
+
+<p>По итогам сезона Роналду стал чемпионом Италии. Лигу чемпионов &laquo;Ювентус&raquo; покинул на стадии 1/4 финала, проиграв &laquo;Лиону&raquo; по правилу выезд
+ного гола. Роналду сделал дубль в ответном матче, но по сумме двух игр счёт был 2:2, что давало право пройти дальше французам.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Третий сезон в Италии:</strong></p>
+
+<p>20 сентября 2020 года Роналду отличился забитым мячом уже в первом матче чемпионата против &laquo;Сампдории&raquo;, чем помог своей команде победить со счётом 3
+:0. В октябре португалец заразился инфекцией COVID-19, в связи с чем ему пришлось провести три недели в самоизоляции. 1 ноября Роналду вновь появился на поле в мат
+че против &laquo;Специи&raquo;, он вышел со скамейки запасных во втором тайме и забил гол в течение первых трёх минут. Спустя некоторое время Роналду забил свой вт
+орой мяч с пенальти, чем помог своей команде одержать победу (4:1). 2 декабря Криштиану забил гол в ворота киевского &laquo;Динамо&raquo; в матче группового этапа
+Лиги чемпионов, который стал 750-м голом португальца в профессиональной карьере. 13 декабря португалец сыграл свой 100-й матч в составе &laquo;Ювентуса&raquo; во в
+сех соревнованиях, в этом матче он забил два гола, причём оба &mdash; с пенальти, чем помог своему клубу обыграть &laquo;Дженоа&raquo;. Впоследствии Роналду занял
+второе место в номинации на награду The Best FIFA Men&rsquo;s Player, уступив Роберту Левандовскому</p>
+
+<p>&nbsp;</p>
+
+<h2><strong>Карьера в сборной</strong>:</h2>
+
+<p><strong>Молодёжные сборные:</strong></p>
+
+<p>Первый опыт представления своей страны на международной арене Роналду получил в сборной до 15 лет. 24 февраля 2001 года Криштиану сыграл против ЮАР и отметился
+голом. В дальнейшем он играл за сборные до 17 и до 20 лет. Роналду выступил на Европейском юношеском Олимпийском фестивале 2001 года, где его команда проиграла сбо
+рной Финляндии. В следующем году он представлял свою страну на чемпионате Европы среди юношей до 17 лет, где Португалии не удалось пройти дальше группового этапа.
+В 2003 году Роналду сыграл на турнире в Тулоне, приняв участие во всех пяти матчах и забив один гол. Португалия стала в итоге победителем турнира, обыграв в финале
+ Италию. Роналду был одним из претендентов на звание лучшего игрока турнира, однако оно досталось аргентинцу Хавьеру Маскерано.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Основная сборная:</strong></p>
+
+<p><strong>Евро-2004 и Олимпийские игры:</strong></p>
+
+<p>В национальной сборной Португалии Криштиану Роналду дебютировал в возрасте 18 лет 20 августа 2003 года в товарищеском матче против сборной Казахстана (1:0), вый
+дя на замену во втором тайме. Роналду был признан лучшим игроком матча.</p>
+
+<p>&nbsp;</p>
+
+<p>Криштиану Роналду (номер 17) на чемпионате Европы в 2004 году</p>
+
+<p>В возрасте 19 лет Криштиану Роналду был включён в состав сборной на Евро-2004, проходивший в Португалии. В первом матче группового этапа хозяева встречались с г
+реками. Роналду вышел во втором тайме при счёте 0:2 в пользу соперника. В дополнительное время Роналду забил свой первый гол за сборную, однако этот гол стал лишь
+голом престижа (1:2). Впоследствии Португалия обыграла Россию и Испанию 2:0 и 1:0 соответственно. В матче с Россией Роналду вышел на замену во втором тайме и отдал
+ голевую передачу. В матче 1/4 финала против сборной Англии победитель определился в серии послематчевых пенальти. Роналду реализовал свой удар, Португалия выиграл
+а 6:5. В полуфинальной игре против Нидерландов Криштиану забил свой второй мяч на турнире. Португалия выиграла 2:1 и вышла в финал. В финале Евро-2004 португальцы
+снова встретились с греками и потерпели поражение с минимальным счётом. После матча Криштиану Роналду не скрывал слёз. По итогам чемпионата Роналду вошёл в символи
+ческую сборную из 23 лучших футболистов.</p>
+
+<p>&nbsp;</p>
+
+<p>В августе 2004 года Роналду вошёл в состав олимпийской сборной Португалии на летних Олимпийских играх в Афинах. Соперниками португальцев по группе стали сборные
+ Ирака, Марокко и Коста-Рики. В первом матче португальцы потерпели поражение от Ирака, Роналду отыграл весь матч и получил жёлтую карточку. Во втором матче против
+Марокко Роналду открыл счёт в первом тайме, матч завершился победой португальцев со счётом 2:1. В конце второго тайма Криштиану получил жёлтую карточку, из-за кото
+рой был вынужден пропустить заключительный матч группового этапа против Коста-Рики. Португальцы проиграли этот матч и вылетели из турнира.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Отбор и финальная часть ЧМ-2006:</strong></p>
+
+<p>В домашнем матче со сборной России в рамках отборочного турнира к чемпионату мира 2006 года Криштиану Роналду сделал дубль, который для него стал первым в соста
+ве сборной. Накануне ответного матча в Москве, состоявшегося 7 сентября 2005 года, пришла весть о смерти отца футболиста. Главный тренер Луис Сколари предложил Рон
+алду покинуть расположение сборной, однако Криштиану отказался, вышел на поле в стартовом составе и отыграл весь матч.</p>
+
+<p>&nbsp;</p>
+
+<p>На чемпионате мира 2006 года Португалия в своей группе выиграла все матчи, Роналду забил гол с пенальти в ворота сборной Ирана. В 1/8 финала Португалия встретил
+ась с Нидерландами. В первом тайме Роналду получил травму и был заменён. В 1/4 финала в матче с Англией Криштиану отметился спорным инцидентом. Уэйн Руни в противо
+борстве с Рикарду Карвалью повалил защитника и наступил ему на пах. Роналду подбежал к рефери Орасио Элисондо и, якобы, начал требовать удаления товарища по клубу.
+ В итоге Англия осталась в меньшинстве, а Роналду подмигнул в сторону скамейки запасных своей сборной. После матча арбитр заявил, что Роналду &laquo;никак не повли
+ял на ситуацию&raquo;, несмотря на это СМИ и болельщики резко раскритиковали португальца. Ни в основное время, ни в экстра-таймах голов не было. В послематчевой се
+рии пенальти Криштиану забил решающий гол и помог своей команде пройти дальше. В полуфинале сборная Португалии встретилась со сборной Франции. После реализованного
+ пенальти Зинедина Зидана на 33-й минуте португальцы безуспешно пытались сравнять счёт. В итоге в финал вышла Франция, Португалия же проиграла матч за третье место
+ Германии. Роналду уступил титул лучшего молодого игрока мундиаля немцу Лукасу Подольски, решающим фактором для комиссии стало поведение португальца.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Путь к капитанству и упущенный финал Евро-2012:</strong></p>
+
+<p>6 февраля 2007 года Роналду впервые сыграл в товарищеском матче против сборной Бразилии в качестве капитана команды. Роналду забил восемь голов в квалификации Е
+вро-2008, вследствие чего стал вторым в списке лучших бомбардиров отбора, но отличился лишь одним забитым мячом на самом турнире. Свой единственный мяч португалец
+забил в игре с Чехией, в этой же игре он отличился голевой передачей на Рикарду Куарежму, а также стал &laquo;игроком матча&raquo;. В четвертьфинале Португалия про
+играла сборной Германии со счётом 3:2 и вылетела с турнира.</p>
+
+<p>&nbsp;</p>
+
+<p>В июле 2008 года главный тренер сборной Карлуш Кейрош сделал Роналду капитаном команды на постоянной основе. В ходе квалификации к чемпионату мира 2010 года Кри
+штиану не забил ни одного мяча в рамках отбора, однако сборная Португалии смогла выйти на турнир после победы над боснийцами в стыковых матчах. На групповом этапе
+чемпионата мира Роналду стал &laquo;игроком матча&raquo; во всех трёх встречах: против Кот-д&rsquo;Ивуара, КНДР и Бразилии. Свой первый мяч на данном турнире Кришт
+иану забил в матче против КНДР. В матче 1/8 финала Португалия встретилась с Испанией. Португалия проиграла будущим чемпионам и покинула турнир.</p>
+
+<p>&nbsp;</p>
+
+<p>В квалификации Евро-2012 Криштиану Роналду удалось забить семь мячей, в результате чего Португалия отправилась на турнир, где попала в так называемую &laquo;гру
+ппу смерти&raquo;. В последней игре группового этапа против сборной Нидерландов Роналду забил два гола, что обеспечило победу португальской сборной со счётом 2:1.
+В матче 1/8 финала Роналду забил победный гол сборной Чехии. В обеих играх Криштиану был признан &laquo;игроком матча&raquo;. В полуфинале Португалия встретилась с
+ Испанией. Победителя в основное время и в экстра-таймах выявить не удалось, в серии пенальти победу одержала испанская сборная.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Звание лучшего бомбардира сборной и победный Евро-2016:</strong></p>
+
+<p>В квалификации чемпионата мира 2014 года Роналду забил восемь голов. Матч, сыгранный 17 октября 2012 года вничью против сборной Северной Ирландии, стал для порт
+угальца 100-м в составе сборной. 6 сентября 2013 года, в другом матче против Северной Ирландии, Роналду сделал свой первый хет-трик в составе сборной Португалии. С
+борная Португалии не смогла выйти на турнир по итогам отборочного этапа в группах, в связи с чем провела два стыковых матча против сборной Швеции, где Криштиану Ро
+налду забил все четыре мяча своей команды, что обеспечило португальцам место на турнире. 5 марта 2014 года Роналду сделал дубль в победном товарищеском матче со сб
+орной Камеруна (5:1), став по его итогу лучшим бомбардиром в истории национальной сборной Португалии.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналду (слева) обходит Луку Модрича в товарищеском матче против сборной Хорватии, 10 июня 2013 года</p>
+
+<p>Несмотря на полученную перед турниром травму, Роналду принял участие в чемпионате мира в Бразилии. Он сыграл все 90 минут первого матча на этом турнире против Г
+ермании, однако это не спасло сборную Португалии от поражения со счётом 4:0. В матче против сборной Ганы Роналду забил победный гол, сам матч закончился со счётом
+2:1. В этом матче Криштиану забил свой 50-й гол в составе сборной, а также стал первым португальцем, которому удавалось забить на трёх чемпионатах мира. Однако Пор
+тугалия не смогла выйти в стадию плей-офф: сборная США оказалась выше по разнице забитых и пропущенных мячей.</p>
+
+<p>&nbsp;</p>
+
+<p>В квалификации к Евро-2016 Роналду удалось забить пять голов, в том числе хет-трик против сборной Армении. В начале турнира Роналду не смог реализовать свои гол
+евые моменты в ничейных матчах против сборных Исландии и Австрии, несмотря на то, что в общей сложности нанёс 20 ударов по воротам. Матч против австрийской сборной
+ стал для Криштиану 128-м, он обогнал Луиша Фигу, став рекордсменом сборной Португалии по числу матчей. В последнем матче группового этапа против сборной Венгрии Р
+оналду сделал дубль и отдал голевую передачу. В этой игре он установил два рекорда: первым забил на четырёх чемпионатах Европы, а также принял участие в рекордных
+17 матчах чемпионатов Европы. Несмотря на то, что португальская сборная заняла третье место в своей группе, пропустив вперёд Венгрию и Исландию, ей удалось квалифи
+цироваться в финальную часть турнира, одержав победу в стыковых матчах, ввиду недавних изменений по расширению формата турнира.</p>
+
+<p>&nbsp;</p>
+
+<p>Прыжок Роналду в матче против сборной Польши на Евро-2016</p>
+
+<p>25 июня, в 1/8 финала против сборной Хорватии, после удара Роналду Рикарду Куарежма добил мяч в сетку ворот, принеся тем самым победу своей команде в дополнител
+ьное время. В четвертьфинальном матче со сборной Польши победителя пришлось определять в серии пенальти, Португалии удалось одержать победу, а Криштиану Роналду ре
+ализовал свой удар. Результативным для Роналду стал и полуфинальный матч со сборной Уэльса, в котором капитан португальской команды сумел отдать голевой пас на Нан
+и, а также забить победный гол, благодаря чему Роналду удалось наряду с Мишелем Платини стать лучшим бомбардиром в истории чемпионатов Европы (9 голов). Таким обра
+зом, сборная Португалии впервые с 2004 года вышла в финал чемпионата Европы, где её соперником стала хозяйка турнира &mdash; сборная Франции, а Роналду стал первым
+ игроком, принявшим участие в трёх полуфиналах чемпионата Европы. В финальном матче с французами Роналду в столкновении с Димитри Пайетом получил повреждение колен
+а, попытался продолжить матч, но вскоре попросил заменить его: на 25-й минуте матча он покинул поле на носилках. Португалия без своего капитана одержала победу в д
+ополнительное время со счётом 1:0, а Криштиану Роналду выиграл свой первый титул в составе сборной Португалии. Роналду вошёл в символическую сборную турнира из 11
+футболистов. Также Криштиану Роналду с тремя мячами на турнире получил &laquo;Серебряную бутсу&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Кубок конфедераций и ЧМ-2018:</strong></p>
+
+<p>Летом 2017 года Криштиану Роналду был включён в состав сборной на первый в истории сборной Португалии Кубок конфедераций, который проходил в России. В первом ма
+тче турнира против сборной Мексики (2:2) Криштиану сделал голевую передачу и был признан лучшим игроком матча. Тем не менее, в этом матче прервалась рекордная для
+футболиста серия из шести подряд матчей сборной, в которых он забивал как минимум один мяч. Второй матч был сыгран с хозяйкой турнира &mdash; сборной России. Порту
+галец забил единственный мяч в игре и вновь был признан лучшим футболистом матча. Этот гол стал для Криштиану Роналду 16-м за последний год в составе сборной. В тр
+етьем матче на групповой стадии против новозеландцев Криштиану Роналду открыл счёт с пенальти, этот гол стал победным (4:0), а футболист в третий раз подряд был пр
+изнан лучшим игроком матча. В полуфинале Кубка конфедераций против Чили Криштиану Роналду отыграл все 120 минут, но по итогу этого матча португальцы уступили в сер
+ии пенальти (0:0, 0:3 по пенальти, Роналду пенальти не бил). В матче за третье место 2 июля в Москве Роналду не играл, так как тренерский штаб разрешил ему покинут
+ь расположение сборной, чтобы увидеть своих новорождённых детей, которые появились на свет 10 июня. Тем не менее в отсутствие своего капитана португальцы выиграли
+у мексиканцев в дополнительное время (2:1) и заняли третье место на турнире.</p>
+
+<p>&nbsp;</p>
+
+<p>Криштиану Роналду на Кубке конфедераций 2017 года</p>
+
+<p>31 августа 2017 года Роналду сделал хет-трик в победном матче отборочного турнира чемпионата мира 2018 года со сборной Фарерских островов, в результате чего ему
+ удалось обогнать Пеле, сравняться с Хусейном Саидом и стать пятым в списке лучших бомбардиров среди национальных сборных в мировой истории, имея на своём счету 78
+ голов.</p>
+
+<p>&nbsp;</p>
+
+<p>На самом чемпионате мира в первом матче группового этапа против сборной Испании Криштиану Роналду сделал очередной хет-трик, но для победы этого не хватило &mda
+sh; ничья 3:3. Во втором матче сборная Португалии играла против сборной Марокко. Роналду забил единственный гол в матче, который стал его 85-м голом за сборную. Эт
+о позволило ему побить рекорд Ференца Пушкаша и стать лучшим бомбардиром в истории европейских сборных. Последняя игра сборной Португалии в группе была против сбор
+ной Ирана. Матч окончился вничью со счётом 1:1. По итогам матчей группового этапа сборная Португалии вышла из группы со второго места. Матч 1/8 финала против сборн
+ой Уругвая Португалия проиграла со счётом 1:2. По итогам чемпионата Криштиану Роналду был включён в &laquo;команду турнира&raquo; по версии болельщиков.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Победа в Лиге наций УЕФА и 100-й гол за сборную:</strong></p>
+
+<p>После прошедшего чемпионата мира Роналду пропустил шесть матчей национальной сборной, включая весь групповой этап Лиги наций 2018/19. Впервые выйдя на поле лишь
+ 5 июня, в полуфинале турнира, сделал хет-трик против сборной Швейцарии, что обеспечило португальской сборной проход в финал турнира. Забив первый гол в этом матче
+, Роналду стал первым игроком, который отмечался голом в десяти международных турнирах подряд, он побил рекорд Асамоа Гьяна. Четыре дня спустя Португалия обыграла
+Нидерланды со счётом 1:0, тем самым одержав победу в данном турнире.</p>
+
+<p>&nbsp;</p>
+
+<p>10 сентября 2019 года, в матче отборочного турнира Евро-2020, Роналду забил четыре гола в матче против сборной Литвы (5:1). Таким образом, Роналду обогнал Робби
+ Кина (23 гола) и установил новый рекорд в 25 голов в отборочных матчах к чемпионатам Европы. Одновременно с этим Роналду установил другой рекорд &mdash; он забива
+л в ворота наибольшего количества национальных сборных (40). 14 октября, в матче против сборной Украины (1:2), реализовав удар с пенальти, Роналду забил свой 700-й
+ гол в карьере. 17 ноября, в матче против сборной Люксембурга, Криштиану Роналду забил гол, матч закончился победой Португалии со счётом 2:0, что вывело сборную на
+ Евро-2020.</p>
+
+<p>&nbsp;</p>
+
+<p>8 сентября 2020 года Роналду забил свой 100-й и 101-й голы за сборную, сделав дубль в матче Лиги наций со Швецией (2:0). Он стал вторым футболистом в истории и
+первым в Европе, преодолевшим отметку в сотню голов за сборную.</p>
+
+<p><strong>Характеристика игрока:</strong></p>
+
+<p><strong>Позиция на поле и роль в команде:</strong></p>
+
+<p>Криштиану Роналду в течение своей карьеры играл на всех атакующих позициях: левым и правым вингером, а также в качестве центрфорварда. Многими специалистами счи
+тается самым разносторонним и совершенным футболистом в мире.</p>
+
+<p>&nbsp;</p>
+
+<p>Криштиану Роналду противостоит трём соперникам в матче против &laquo;Эспаньола&raquo;, сезон 2012/13</p>
+
+<p>В связи с возрастными изменениями своего организма, обстановки и партнёров по команде Роналду менял суть своей игры как позиционно, так и тактически. Во время и
+гры в лиссабонском &laquo;Спортинге&raquo; и в своих первых сезонах в &laquo;Манчестер Юнайтед&raquo;, он, как правило, использовался в качестве традиционного винг
+ера на правом фланге полузащиты, где должен был регулярно искать пространство для доставки мяча в штрафную. При смене основной позиции правого полузащитника на лев
+ого результативность Роналду значительно улучшилась, так как ему была предоставлена возможность смещаться в центр для завершения атак.</p>
+
+<p>&nbsp;</p>
+
+<p>В свои заключительные сезоны в &laquo;Юнайтед&raquo; Роналду задействовался в более атакующей и центральной роли, действуя в качестве центрального и оттянутого
+нападающего. Роналду успешно играл в роли бомбардира, способного совершать результативные действия как внутри, так и вне штрафной.</p>
+
+<p>&nbsp;</p>
+
+<p>В мадридском &laquo;Реале&raquo; Роналду гораздо чаще задействовался в роли главного атакующего игрока, нежели в предыдущих клубах, несмотря на ущерб своим обор
+онительным действиям. Первоначально под руководством Мануэля Пеллегрини, а впоследствии и Жозе Моуринью, Криштиану играл на позиции чистого нападающего, однако зат
+ем он был переведён обратно на левый фланг атаки, при этом у Роналду была свободная тактическая роль: он мог сместиться в центр для завершения комбинации или остав
+ить пространство для товарищей по команде. Контратакующий стиль игры мадридской команды позволил Роналду забивать больше мячей, о чём свидетельствует множество уст
+ановленных рекордов результативности. Начиная с 2013 года, под руководством Карло Анчелотти, Роналду адаптировал стиль своей игры к физическим изменениям организма
+: неизбежному старению. Количество попыток дриблинга и резких забеганий заметно уменьшилось, вместо этого Криштиану сосредоточился на создании моментов для партнёр
+ов и реализации собственных шансов. В сезоне 2014/15 специалисты отметили, что почти 2/3 своих голов португалец забил с позиции центрального нападающего, тогда как
+ ранее этот показатель составлял около 50 %, а в сезоне 2011/12 &mdash; всего 33 %. В 2017 году, на момент нахождения Зинедина Зидана на тренерском посту &laquo;сл
+ивочных&raquo;, Роналду ещё раз адаптировал свой стиль игры, став полноценным центральным нападающим, но даже такая позиция не отнимала у Роналду свободы на футбол
+ьном поле, что позволило ему поддерживать высокую результативность. Роналду в данной роли положительно воспринимали различные медиа-ресурсы и эксперты, отмечая выд
+ающуюся позиционную игру португальца, умное движение без мяча, а также способность быстро найти пространство и принять правильное решение.</p>
+
+<p>&nbsp;</p>
+
+<p>В своём первом сезоне в &laquo;Ювентусе&raquo; Роналду продолжил играть в различных атакующих ролях под руководством главного тренера команды Массимилиано Аллег
+ри в зависимости от того, какие партнёры играли рядом с ним. Несмотря на то, что Роналду играл на позиции центрального нападающего в свои последние годы в &laquo;Р
+еале&raquo;, в стане &laquo;старой синьоры&raquo; Роналду играл как нападающего, так и левого вингера в расстановке 4-2-3-1 или 4-3-3, часто меняясь местом на поле
+ с Марио Манджукичем. В роли вингера Роналду вновь стал играть довольно широко, опускаясь вглубь или на противоположный фланг для получения мяча и построения атак
+своей команды; по итогу Криштиану стал создавать шансы для своих партнёров гораздо чаще, нежели в своих последних сезонах за &laquo;Реал Мадрид&raquo;. Иногда Рона
+лду играл в паре вместе с Манджукичем в формациях 4-3-1-2, 4-4-2 или 3-5-2. Под руководством нового тренера &laquo;зебр&raquo; Маурицио Сарри Роналду продолжил игр
+ать аналогичную роль. &nbsp;&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Игровые навыки:</strong></p>
+
+<p>Характерными чертами стиля игры Роналду является высокая скорость, ловкость и технические навыки, частые обходы своих противников в ситуациях один на один. Рона
+лду стал известен благодаря эффектной демонстрации своего дриблинга с частым применением различных финтов, обманных движений и переступов через мяч, что впоследств
+ии стало его отличительным знаком. Обладает мощным ударом с правой ноги, хотя может пробить и нерабочей левой.</p>
+
+<p>&nbsp;</p>
+
+<p>В большинстве случаев именно Роналду пробивает пенальти и штрафные удары вблизи ворот противника, нередко их реализуя. Криштиану обладает особым ударом со штраф
+ных: мяч после удара летит по замысловатой траектории с большой скоростью, сначала вверх, а перед воротами резко падает вниз и поражает ворота соперников, однако е
+го умение пробивать подобные штрафные ухудшилось в дальнейшей карьере. Непосредственно перед ударом Роналду становится в особую стойку: отходит на 4-5 шагов от мяч
+а, широко расставляет ноги, руки &mdash; по сторонам, делает глубокий выдох и разбегается для удара.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Физическая форма:</strong></p>
+
+<p>Криштиану Роналду строго следит за диетой, не употребляет алкоголь и выступает за запрет курения. В неигровых тренировках особое внимание уделяет упражнениям на
+ мышцы брюшного пресса. В ходе медицинского обследования при переходе Роналду в &laquo;Ювентус&raquo; было выявлено, что физическая форма его организма соответству
+ет показателям 20-летнего спортсмена. Доля жировой ткани в его организме составила 7 % при норме для спортсмена его возраста 10-11 %, а мышечная масса &mdash; 50 %
+ (норма 46 %).</p>
+
+<p>С течением времени Роналду подверг своё тело серьёзной физической трансформации, развивая свои мускулы и набирая массу, что позволило ему применять свой корпус
+при борьбе с игроками противоположной команды. В частности, за время пребывания в &laquo;Юнайтед&raquo; он увеличил свой вес с 75 до 85 кг. Возможность играть корп
+усом в сочетании с довольно высоким ростом даёт португальцу преимущество в игре верхом, благодаря чему многие из своих голов Роналду забил именно головой.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Празднование голов:</strong></p>
+
+<p>На протяжении своей карьеры Роналду сменил несколько манер празднования голов. На ранних этапах его карьеры СМИ растиражировали случай, когда он присел на корто
+чки и посмотрел прямо в камеру на поле, держа руку на подбородке. В &laquo;Реале&raquo; после забитого мяча он обычно делал прыжок с поворотом и приземлялся, расст
+авляя и напрягая руки и ноги. Обычно при этом он кричит &laquo;Си!&raquo; (&laquo;да&raquo; в переводе с испанского и итальянского); в СМИ этот возглас зачастую пе
+редаётся как &laquo;Sii!&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Вне футбола:</strong></p>
+
+<p><strong>Реклама:</strong></p>
+
+<p>Роналду является одним из самых востребованных спортсменов в мире рекламы: английский журнал SportsPro (англ.) оценил продукты с символикой футболиста как одни
+из самых продаваемых в мире в 2012 и 2013 годах.</p>
+
+<p>&nbsp;</p>
+
+<p>С самого начала своей карьеры Криштиану Роналду заключал множество рекламных соглашений с различными производителями потребительских товаров, в том числе спорти
+вной экипировки, футбольных бутс (с ноября 2012 года Роналду играет в сделанных на заказ бутсах Nike Mercurial Vapor (англ.)русск. с инициалами &laquo;CR7&raquo;),
+ безалкогольных напитков, одежды, автомобильных смазочных материалов, финансовых услуг, электроники и компьютерных игр.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналду был лицом футбольного симулятора FIFA 18, производимого компанией EA Sports, а также активно участвовал в процессе улучшения геймплея игры. Его фирменно
+е празднование забитых мячей сопровождалось собственной озвучкой. Помимо сотрудничества с EA Sports Роналду сотрудничал и с компанией Konami, выпускающей серию фут
+больных симуляторов Pro Evolution Soccer, он изображён на обложке PES в 2008, 2012 и 2013 годах.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Бизнес и благосостояние:</strong></p>
+
+<p>Помимо футбола, Криштиану Роналду занимается бизнесом. В 2006 году он открыл свой первый бутик одежды под названием &laquo;CR7&raquo; на острове Мадейра в Порту
+галии. В 2008 году Роналду открыл второй бутик в Лиссабоне. В партнёрстве со скандинавским производителем JBS Textile Group и нью-йоркским модельером Ричардом Чаем
+ (англ.)русск. Роналду разработал линейку нижнего белья и носков, выпущенную в ноябре 2013 года. К июлю 2014 года перечень товаров &laquo;CR7&raquo; был расширен:
+в ассортименте появилась линейка премиальных футболок и обуви. В сентябре 2015 года Роналду выпустил собственную линейку парфюмерии.</p>
+
+<p>&nbsp;</p>
+
+<p>С доходом в 800 млн долларов в период с 2010 по 2019 год, по оценкам Forbes, Роналду занял второе место в списке самых высокооплачиваемых спортсменов десятилети
+я по версии журнала, лишь только боксёр Флойд Мейвезер оказался выше Роналду в данном списке. В 2016 году португалец стал первым футболистом, который возглавил спи
+сок самых высокооплачиваемых спортсменов по версии Forbes: общий доход Роналду в сезоне 2015/16 составил 88 млн долларов. С доходом в 93 миллиона долларов в сезоне
+ 2016/17 Криштиану Роналду вновь возглавил этот список. В начале июня 2020 года, по данным Forbes, Криштиану Роналду стал первым в истории футболистом &mdash; долл
+аровым миллиардером.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Благотворительность:</strong></p>
+
+<p>Роналду является одним из крупнейших благотворителей среди спортсменов. В мае 2005 года Португальская футбольная ассоциация пригласила на матч сборной мальчика
+по имени Мартунис, который полгода назад в семь лет пережил цунами в Индонезии и остался без матери. Во время катастрофы он был одет в футболку сборной Португалии
+с номером &laquo;7&raquo;. Роналду встретился с мальчиком и подарил ему футболку, также игроки сборной передали ему чек на 40 тысяч евро. 11 июня Криштиану сам при
+был на Банда-Ачех, где снова встретился с Мартунисом и посетил пострадавшие от цунами территории.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2008 году Роналду выиграл дело о клевете против газеты The Sun и пожертвовал полученную компенсацию благотворительным организациям на Мадейре. В 2009 году Рон
+алду пожертвовал 100 тысяч фунтов стерлингов больнице на Мадейре, спасшей жизнь его матери, чтобы они могли построить новый онкологический центр на острове.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2012 году Криштиану Роналду и его агент оплатили специализированное лечение девятилетнего мальчика из Канады, который боролся с раком. В декабре 2012 года Рон
+алду присоединился к оздоровительной программе ФИФА, чтобы повысить осведомлённость детей о важности борьбы с различными болезнями и зависимостями, такими как нарк
+омания, ВИЧ, малярия и ожирение. В январе 2013 года Роналду стал амбассадором международной организации Save the Children, благодаря чему надеется помочь в борьбе
+с голодом и ожирением детей. В марте этого же года Роналду стал послом на форуме по уходу за мангровыми растениями в Индонезии, целью которого является повышение о
+сведомлённости о важности сохранения мангровых лесов.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2015 году Роналду пожертвовал 5 миллионов фунтов стерлингов на помощь пострадавшим от землетрясений в Непале. В июне 2016 года Роналду пожертвовал на благотво
+рительность всю свою премию за победу в Лиге чемпионов, составлявшую 600 тысяч евро. Призовые за победу на Евро-2016 Роналду также перечислил на благотворительност
+ь. В августе 2016 года португалец запустил мобильное приложение CR7Selfie, предназначенное для съёмки селфи, часть прибыли с которого идёт организации Save the Chi
+ldren.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Популярность и признание:</strong></p>
+
+<p>В 2014 году журнал Time внёс Роналду в ежегодный список ста наиболее влиятельных людей мира. ESPN назвал Роналду самым известным спортсменом в мире в 2016, 2017
+, 2018 и 2019 годах.</p>
+
+<p>&nbsp;</p>
+
+<p>Статуя Роналду на Мадейре изображает стойку при исполнении им штрафных ударов</p>
+
+<p>Криштиану Роналду является одним из самых популярных людей в социальных сетях, к июню 2015 года на его аккаунты в Facebook, Twitter и Instagram было подписано в
+ общей сложности 158 миллионов человек, из которых 103 миллиона &mdash; в Facebook, что стало рекордом в данной социальной сети. К июню 2017 года количество подпис
+чиков Роналду во всех социальных сетях выросло до 277 млн пользователей. Рекламодатели футболиста заработали около миллиарда долларов с помощью рекламы в медиа от
+Роналду в период с июня 2016 года по июнь 2017 года. 29 января 2020 года число подписчиков Криштиану Роналду в Instagram достигло рекордной отметки в 200 миллионов
+. По этому показателю его аккаунт уступает только официальному аккаунту социальной сети, имеющему более 300 миллионов подписчиков. Вдобавок ко всему Роналду выпуст
+ил два мобильных приложения: в декабре 2011 и 2013 годов соответственно были запущены игра под названием Heads Up with Cristiano и специализированный веб-сайт с мо
+бильным приложением Viva Ronaldo. Разработчик антивирусного компьютерного обеспечения McAfee в 2012 году опубликовал список футболистов, запросы относительно котор
+ых в Интернете чаще всего ведут к небезопасному веб-сайту, и Криштиану Роналду возглавил данный список.</p>
+
+<p>&nbsp;</p>
+
+<p>Жизнь и личность Роналду стали темой фильмов и книг. Его автобиография под названием &laquo;Моменты&raquo; (англ. Moments) была опубликована в декабре 2007 года
+. В 2012 году писатель Лука Кайоли выпустил биографическую книгу о португальце под названием &laquo;Роналду. Одержимый совершенством&raquo; (англ. Ronaldo. The Obs
+ession for Perfection). Компания Castrol, являющаяся одним из спонсоров Роналду, спродюсировала документальный фильм &laquo;Роналду: Проверка на прочность&raquo; (
+англ. Ronaldo: Tested to the Limit), в котором он выполнял различные физические упражнения. Другой документальный фильм под названием &laquo;Криштиану Роналду: Мир
+ у его ног&raquo; (англ. Cristiano Ronaldo: The World at His Feet) был выпущен в видеохостинге Vimeo в июне 2014 года. 9 ноября 2015 года Universal Pictures выпуст
+ил документальный фильм о жизни и карьере португальца под названием &laquo;Роналду&raquo; (англ. Ronaldo).</p>
+
+<p>&nbsp;</p>
+
+<p>Премьер-министр Португалии Антониу Кошта дарит премьер-министру Индии Нарендру Моди подписанную игровую футболку Криштиану Роналду, Нью-Дели, январь 2017</p>
+
+<p>Игровая футболка Криштиану Роналду на протяжении всей его карьеры является популярным спортивным товаром. В 2008 году, во время выступления футболиста за &laquo
+;Манчестер Юнайтед&raquo;, его футболка с номером &laquo;7&raquo; стала самым продаваемым предметом экипировки под эгидой Премьер-лиги. В 2015 году футболка мадрид
+ского &laquo;Реала&raquo;, в которой выступал Криштиану, стала второй по популярности в мире после футболки Лионеля Месси. В 2018 году, после перехода Роналду в ит
+альянский &laquo;Ювентус&raquo;, в течение 24 часов после начала продаж было продано более 520 тысяч футболок, что принесло более 62 миллионов долларов.</p>
+
+<p>В 2007 году португальский клуб &laquo;Насьонал&raquo;, в котором Криштиану играл в самом начале своей карьеры, переименовал кампус молодёжного состава в честь Р
+оналду. В декабре 2013 года Роналду открыл собственный музей в своём родном городе Фуншал, где находятся трофеи и памятные вещи из жизни и карьеры португальца. 21
+декабря 2014 года в Фуншале была открыта бронзовая статуя Роналду.</p>
+
+<p>&nbsp;</p>
+
+<p>В июне 2010 года Криштиану Роналду стал четвёртым футболистом, чья восковая фигура была представлена в музее мадам Тюссо. Ранее в музее находились лишь фигуры С
+тивена Джеррарда, Пеле и Дэвида Бекхэма. 17 июня 2015 года астрономы из Лиссабонского университета обнаружили новую галактику, которой присвоили обозначение CR7 (C
+osmos Redshift 7) (англ.)русск..</p>
+
+<p>&nbsp;</p>
+
+<p>22 июля 2016 года, после победы сборной Португалии на Евро-2016, международный аэропорт Мадейры в Фуншале был переименован в международный аэропорт Криштиану Ро
+налду. Открытие переименованного аэропорта состоялось 29 марта 2017 года, в здании аэропорта был также представлен бюст головы самого Криштиану, созданный португал
+ьским скульптором Эмануэлем Сантушем. Однако переименование аэропорта и представленный бюст вызвали противоречивую реакцию. Бюст высмеяли различные комики, в том ч
+исле в юмористической передаче Saturday Night Live, так как он был не похож на самого футболиста. Изменение названия вызвало множество споров на региональном уровн
+е при участии различных политиков и граждан, которые организовали подписание петиции против этого решения. Председатель регионального правительства Мадейры Мигел А
+лбукерке также высказал свою порцию критики. Спустя год спортивный сайт Bleacher Report заказал у Сантуша ещё один бюст Роналду, однако в итоге он был сделан други
+м скульптором.</p>
+
+<p>&nbsp;</p>
+
+<h2><strong>Личная жизнь:</strong></h2>
+
+<p><strong>Семья и отношения:</strong></p>
+
+<p>Отец Криштиану скончался в 2005 году из-за проблем, связанных с алкоголизмом.</p>
+
+<p>У Роналду четверо детей. Первый сын, Криштиану-младший, родился 17 июня 2010 года от неизвестной матери. Роналду заявил, что является единственным попечителем р
+ебёнка и по соглашению с матерью новорождённого не будет публично раскрывать её имя. С 2010 по 2015 год состоял в отношениях с российской супермоделью Ириной Шейк.
+ В июне 2017 года у Роналду появились близнецы от суррогатной матери, детей назвали Ева и Матео. В настоящее время находится в отношениях с испанской моделью Джорд
+жиной Родригес, от которой 12 ноября 2017 года у него появилась дочь Алана Мартина.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Проблемы с законом:</strong></p>
+
+<p>В 2005 году Роналду был обвинён в сексуальном насилии. Предполагаемая жертва, некая француженка, заявила, что 2 октября Криштиану изнасиловал её в номере лондон
+ского отеля. 25 ноября дело закрыли в виду недостаточности доказательств для официального предъявления обвинения. По версии газеты News of The World , обвинение сф
+абриковала проститутка с целью наживы.</p>
+
+<p>&nbsp;</p>
+
+<p>В апреле 2017 года немецкий журнал Der Spiegel опубликовал расследование, связанное с другим предполагаемым изнасилованием, совершённым Роналду. Издание утвержд
+ало, что насилие произошло в 2009 году. По этому поводу началось расследование полицейского департамента Лас-Вегаса (англ.)русск.. В 2019 году полиция Лас-Вегаса о
+тказалась предъявлять обвинения Роналду в связи с недостаточностью доказательств.</p>
+
+<p>&nbsp;</p>
+
+<p>В июле 2017 года Роналду был обвинён в уклонении от уплаты налогов в сумме почти 15 миллионов евро за период с 2011 по 2014 год. Утверждалось, что он скрыл дохо
+д от продажи имиджевых прав через финансовую структуру, которая перевела деньги через Ирландию на Британские Виргинские острова. Сам игрок все обвинения отрицал. В
+ июне 2018 года Роналду признал свою вину, получил двухлетний срок тюремного заключения и штраф на сумму 18,8 миллионов евро, по официальной договорённости с испан
+скими властями приговор был смягчён: условное осуждение и штраф 16,8 млн евро. &nbsp;</p>',
+                    'image' => 'image_14.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-13 13:26:46',
+                ),
+            12 =>
+                array(
+                    'id' => 14,
+                    'category_id' => 17,
+                    'preview_text' => 'Лев Ива́нович Я́шин (22 октября 1929, Москва - 20 марта 1990, Москва) - советский футболист, вратарь, выступавший за московское «Дин
+амо» и сборную СССР. Олимпийский чемпион 1956 года и чемпион Европы 1960 года, 5-кратный чемпион СССР, заслуженный мастер спорта СССР (1957). Герой Социалистическо
+го Труда (1990). Полковник. Член КПСС с 1958 года.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Лев Ива́нович Я́шин (22 октября 1929, Москва &mdash; 20 марта 1990, Москва) &mdash; советский футболист, вратарь, выступавший за московское &laquo;Динамо&raquo;
+ и сборную СССР. Олимпийский чемпион 1956 года и чемпион Европы 1960 года, 5-кратный чемпион СССР, заслуженный мастер спорта СССР (1957). Герой Социалистического Т
+руда (1990). Полковник. Член КПСС с 1958 года.</p>
+
+<p>&nbsp;</p>
+
+<p>Лучший вратарь XX века по версиям ФИФА, МФФИИС, World Soccer, France Football и Placar. Входит в список лучших игроков XX века по версиям Venerd&igrave;, Guerin
+ Sportivo, Plan&egrave;te Foot и Voetbal International. Единственный вратарь в истории, получивший &laquo;Золотой мяч&raquo;. Считается одним из первых вратарей в
+мировом футболе, широко освоивших игру на выходах и по всей штрафной площадке.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Ранние годы:</strong></p>
+
+<p>Лев Иванович Яшин родился 22 октября 1929 года в Москве, в районе Богородское. Отец Льва, Иван Петрович, слесарь высшей квалификации, работал шлифовальщиком на
+оборонном авиационном заводе в Тушине. Мать, Анна Митрофановна (умерла в 1935 году), трудилась на заводе &laquo;Красный богатырь&raquo;. Яшины жили одной большой с
+емьёй вместе с братьями и сёстрами Анны Митрофановны в доме № 15 по Миллионной улице. Во дворе дома местные дети, в том числе и Лев Яшин, постоянно играли в футбол
+, игры продолжались весной, летом и осенью, в любую погоду, дотемна. В этих дворовых играх Лев Иванович получил первый вратарский опыт. Зимой во дворе дети сами за
+ливали каток, на котором играли в хоккей с мячом. Помимо футбола и хоккея, у детей были популярны лапта и прыжки на лыжах с трамплина, в роли которого выступали са
+раи. Яшин так вспоминал об этом детском увлечении: &laquo;Падали, ушибались, набивали огромные синячищи, но зато учились крепко держаться на ногах, не бояться высо
+ты, владеть своим телом&raquo;. Лев Иванович считал, что подобные физические упражнения хорошо подготовили его ко взрослому спорту, а высокий травматизм других игр
+оков высшей лиги он связывал с тем, что &laquo;они мало бегали, прыгали, дрались, играли в футбол, катались на коньках, взбирались на деревья в детстве&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1937 году отец женился во второй раз, на Александре Петровне. В 1939 году родился брат Борис.</p>
+
+<p>&nbsp;</p>
+
+<p>Начало Великой Отечественной войны застало 11-летнего Яшина под Подольском &mdash; у родственников, к которым родители отправили сына для летнего отдыха. В октя
+бре оборонный завод, на котором работал Иван Петрович, был эвакуирован под Ульяновск; туда и перебралась вся семья, так что своё двенадцатилетие Лёва отметил, разг
+ружая эшелон с заводскими станками. На этот завод он и пошёл работать, став весной 1943 года учеником слесаря. Уже в 16 лет Лев Яшин получил первую награду Родины
+&mdash; медаль &laquo;За доблестный труд в Великой Отечественной войне 1941&mdash;1945 гг.&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Спортивная карьера:</strong></p>
+
+<p>Вернулись Яшины в Москву в 1944 году. Лев, продолжая работать на заводе, всё свободное время посвящал любимой игре, выступая вратарём за сборную команду Тушина.
+ В 18 лет его призвали в армию. Служить довелось в Москве, и здесь его заметил тренер футбольного клуба &laquo;Динамо&raquo; (Москва) А. И. Чернышёв, пригласивший
+его в молодёжную команду клуба. А весной 1949 года Яшин стал уже третьим вратарём основной команды &mdash; дублёром Алексея Хомича и Вальтера Саная. С тех пор Лев
+Яшин играл только за этот клуб, вплоть до окончания своей футбольной карьеры в 1971 году.</p>
+
+<p>&nbsp;</p>
+
+<p>Яшин в составе Сборной СССР, 1958 год</p>
+
+<p>В начале своей спортивной карьеры Яшин играл также в хоккей с шайбой (с 1950 по 1953 год). В 1953 году он стал обладателем Кубка СССР по хоккею и бронзовым приз
+ёром чемпионата СССР, также выступая на позиции вратаря. Перед хоккейным чемпионатом мира 1954 года был кандидатом в сборную СССР, но решил сконцентрироваться на ф
+утболе.</p>
+
+<p>&nbsp;</p>
+
+<p>В начале 1950-х основным вратарём &laquo;Динамо&raquo; оставался Алексей Хомич, которого болельщики прозвали &laquo;Тигр&raquo;. Только с 1953 года Яшин прочно
+занял первое место в воротах &laquo;Динамо&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Вместе со своим клубом Лев Яшин 5 раз (1954, 1955, 1957, 1959 и 1963 годы) становился чемпионом СССР и три раза выигрывал Кубок СССР по футболу.</p>
+
+<p>&nbsp;</p>
+
+<p>С 1954 года Яшин &mdash; вратарь сборной СССР, за которую провёл 78 матчей. Вместе со сборной в 1956 году Яшин выиграл Олимпийские игры в Мельбурне, Кубок Европ
+ы 1960 года.</p>
+
+<p>&nbsp;</p>
+
+<p>В 1959 году провёл три товарищеских матча, играя за &laquo;Торпедо&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>В составе сборной он три раза играл в финальной стадии чемпионатов мира по футболу: в 1958 году в Швеции, в 1962 году в Чили и в 1966 году в Англии. Наивысшее д
+остижение в чемпионатах мира &mdash; четвёртое место на чемпионате 1966 года. Яшин был также заявлен третьим вратарём на чемпионате мира 1970 года в Мексике, но не
+посредственно в играх не участвовал.</p>
+
+<p>&nbsp;</p>
+
+<p>Игорь Нетто и Лев Яшин</p>
+
+<p>23 октября 1963 года в Лондоне, на стадионе &laquo;Уэмбли&raquo;, Лев Яшин играл за сборную мира против сборной Англии в знаменитом &laquo;Матче столетия&raquo;
+, посвящённом столетию английского футбола (матч со счётом 2:1 выиграли англичане; хотя Яшин не пропустил ни одного мяча, сменивший его на воротах во втором тайме
+югослав Милутин Шошкич дважды доставал мяч из своих ворот). Во всём мире Яшина называли либо &laquo;Чёрная пантера&raquo; (за его всегда чёрную вратарскую форму, е
+го подвижность и акробатические прыжки), либо &laquo;Чёрный паук&raquo; (за его длинные, всё достающие руки).</p>
+
+<p>&nbsp;</p>
+
+<p>В 1963 году Яшин получил приз лучшего футболиста Европы &mdash; &laquo;Золотой мяч&raquo; от еженедельника &laquo;Франс-Футбол&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>27 мая 1971 года на Центральном стадионе имени В. И. Ленина в Москве, в присутствии 103 тысяч зрителей, состоялся прощальный матч Льва Яшина. В этом матче сборн
+ая клубов Всесоюзного спортобщества &laquo;Динамо&raquo; (в матче приняли участие мастера из Москвы, Киева и Тбилиси) играла против сборной &laquo;звёзд&raquo; мир
+а, за которую играли Эйсебио, Бобби Чарльтон, Герд Мюллер и многие другие. Покидая поле по ходу матча, Яшин передал свои перчатки 23-летнему вратарю Владимиру Пиль
+гую (однако сам Пильгуй в интервью это впоследствии отрицал), символично назначив его своим преемником в &laquo;Динамо&raquo;. Матч закончился со счётом 2:2, а Пил
+ьгуй занял его место в воротах &laquo;Динамо&raquo; на последующие 11 лет.</p>
+
+<p>&nbsp;</p>
+
+<p>31 августа того же года Яшин вновь вышел на поле; на этот раз он защищал ворота сборной &laquo;звёзд&raquo; мира в матче со сборной Италии (которая выиграла мат
+ч со счётом 4:2).</p>
+
+<p>&nbsp;</p>
+
+<p><strong>После завершения игровой карьеры:</strong></p>
+
+<p>Ещё до завершения футбольной карьеры Л. И. Яшин окончил школу тренеров при Государственном центральном институте физической культуры (в 1967 году). Начальник ди
+намовской команды (в 1971 &mdash; апреле 1975 года). После трагедии с молодым талантливым футболистом А. Е. Кожемякиным Льва Ивановича обвинили &laquo;в ослаблении
+ морально-воспитательной работы&raquo;. Он перешёл на работу в Центральный совет общества &laquo;Динамо&raquo;, где был заместителем начальника отдела футбола и хо
+ккея ЦС &laquo;Динамо&raquo; (с мая 1975 года по октябрь 1976 года). Затем заместитель по воспитательной работе начальника Управления футбола Спорткомитета СССР (с
+ октября 1976 по 1984 год), одновременно с этим был заместителем председателя Федерации футбола СССР (с 1981 по 1989 годы). В 1985 году вернулся в родное общество,
+ став старшим тренером по воспитательной работе ЦС общества. Работал тренером второй сборной СССР и некоторое время детских команд.</p>
+
+<p>&nbsp;</p>
+
+<p>После 50 лет у Яшина началась гангрена левой ноги, вызванная облитерирующим эндартериитом вследствие интенсивного курения. В 1984 году ему ампутировали ногу. По
+сле операции продолжал курить. Согласно Марку Зайчику, в 1989 году, во время визита сборной ветеранов в Израиль, Яшину бесплатно сделали &laquo;очень хороший проте
+з&raquo;. За время пребывания Яшина в Израиле его опекал главврач сборной Израиля Марк Росновский.</p>
+
+<p>&nbsp;</p>
+
+<p>18 марта 1990 года Льву Яшину присвоено звание Героя Социалистического Труда. Он пробыл в этом статусе всего лишь два дня и умер во вторник, 20 марта. Причиной
+смерти стал рак желудка, осложнённый последствиями облитерирующего эндартериита. Похоронен на Ваганьковском кладбище.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Игровая манера:</strong></p>
+
+<p>В начале 1950-х среди вратарей стала распространяться новая манера игры на выходах, по всей штрафной площадке, которую перенял и развил Яшин. Одним из первых вр
+атарей, освоивших игру за пределами вратарской, стал Вальтер Саная, считавшийся учителем Яшина в &laquo;Динамо&raquo;, а также игрок сборной Болгарии Апостол Сокол
+ов. В начале 1950-х попытка вратаря играть как защитник считалась в СССР неумелым отвлечением от основной обязанности защищать рамку ворот. Тренеру &laquo;Динамо&r
+aquo; и сборной Михаилу Якушину приходилось выслушивать нотации в Спорткомитете СССР о &laquo;цирке&raquo; в игре Яшина.</p>
+
+<p>&nbsp;</p>
+
+<p>В начале 1960-х новая манера стала постепенно повсеместно распространяться &mdash; вместе с успехами сборной СССР и её вратаря. Специалисты признавали то, что и
+гра по всей штрафной в исполнении Яшина была успешной благодаря его умению читать игру и, отчасти, владению навыками защитника. Он мог одновременно контролировать
+мяч и выбирать партнёра для передачи. Одним из первых он стал практиковать выбивание мяча в острых ситуациях, вместо попытки обязательно зафиксировать его, как это
+ было принято в старой школе.</p>
+
+<p>&nbsp;</p>
+
+<p>Как считалось специалистами, Яшин уступал в реакции и прыгучести Хомичу. Лев Филатов отмечал то, что Яшин был очень удачно сложен для вратаря, имел длинные руки
+ и был хорошо координирован. Тем не менее в основе успеха Яшина были не физические данные, а способность предугадывать действия противника и заранее находиться там
+, где легче всего забрать мяч.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Семья:</strong></p>
+
+<ul>
+<li>Жена &mdash; Валентина Тимофеевна.</li>
+<li>Дочь &mdash; Ирина.</li>
+<li>Дочь &mdash; Елена.</li>
+</ul>
+
+<p>Внук Яшина &mdash; Василий Фролов (род. 22 февраля 1986) также был футбольным вратарём: выступал за дублирующий состав &laquo;Динамо&raquo;, петербургское &laqu
+o;Динамо&raquo; и &laquo;Зеленоград&raquo;, в 2009 году завершил карьеру, работал учителем физкультуры, позже стал тренером детской футбольной команды. Весной 2012
+ года отработал на двух матчах молодёжного первенства России в качестве помощника судьи. Работал тренером вратарей футбольного клуба &laquo;Иртыш&raquo;.</p>',
+                    'image' => 'image_12.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-13 13:28:47',
+                ),
+            13 =>
+                array(
+                    'id' => 15,
+                    'category_id' => 18,
+                    'preview_text' => 'Роналдиньо родился 21 марта 1980 года в больнице Сан-Лукас города Порту-Алегри, столицы штата Риу-Гранди-ду-Сул, будучи третьим
+ребёнком в семье. Его мать Дона Мигуэлина работала продавщицей и училась на медсестру. Его отец Жуан да Силва Морейра был рабочим на верфи и сторожем стоянки клуба
+ «Гремио». Ранее он играл за местную любительскую команду «Крузейро». Именно отец стал первым тренером Роналдиньо, обучая его игре в футбол, который он практиковал
+ на улицах Вила Нова, где жила семья. В 1987 году Роналдиньо начал учиться, пойдя в колледж Алберто Торрес де Вила Нова, однако любовь к футболу брала своё: Роналд
+иньо мог играть в него весь день, и даже когда его друзья не могли из-за усталости продолжать игру, он гонял мяч вместе со своей собакой Бомбон.',
+                    'description' => '<p><strong>Биография:</strong></p>
+
+<p>Роналдиньо родился 21 марта 1980 года в больнице Сан-Лукас города Порту-Алегри, столицы штата Риу-Гранди-ду-Сул, будучи третьим ребёнком в семье. Его мать Дона
+Мигуэлина работала продавщицей и училась на медсестру. Его отец Жуан да Силва Морейра был рабочим на верфи и сторожем стоянки клуба &laquo;Гремио&raquo;. Ранее он
+играл за местную любительскую команду &laquo;Крузейро&raquo;. Именно отец стал первым тренером Роналдиньо, обучая его игре в футбол, который он практиковал на улиц
+ах Вила Нова, где жила семья. В 1987 году Роналдиньо начал учиться, пойдя в колледж Алберто Торрес де Вила Нова, однако любовь к футболу брала своё: Роналдиньо мог
+ играть в него весь день, и даже когда его друзья не могли из-за усталости продолжать игру, он гонял мяч вместе со своей собакой Бомбон.</p>
+
+<p>&nbsp;</p>
+
+<p>В возрасте 7 лет Роналдиньо пошёл в футбольную школу Ланжендонк. Тогда же он получил своё прозвище, &laquo;Роналдиньо&raquo;, что значит &laquo;маленький Роналд
+о&raquo;, будучи самым младшим среди игроков самой юной команды &laquo;Гремио&raquo;, куда он пришёл. В 1988 году, когда Роналдиньо было 8 лет, отец семейства скон
+чался от сердечного приступа во время плавания в семейном бассейне. Когда старший брат Роналдиньо, Роберто де Ассис, подписал контракт с клубом &laquo;Гремио&raquo
+;, семья переехала в более престижный район Порту-Алегри, Гуаруя. Дом в этом месте стал подарком &laquo;Гремио&raquo; семье, для того чтобы Роберто не уходил из ко
+манды. Позже Роналдиньо сказал:</p>
+
+<p>&laquo;Мой брат &mdash; настоящий герой для меня. Именно он стал примером в качестве отца, брата и футболиста&raquo;</p>
+
+<p>В 1991 году он стал играть за команду &laquo;Белу-Оризонти&raquo;. Одновременно с большим футболом Роналдиньо занимался мини-футболом и пляжным футболом, что по
+могало ему в матчах большого футбола. В 1993 году, в возрасте 13 лет, Роналдиньо впервые был упомянут в бразильских СМИ, когда он забил все 23 гола в одном из матч
+ей против местной команды; игра завершилась со счётом 23:0 в пользу &laquo;Белу-Оризонти&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Клубная карьера:</strong></p>
+
+<p>Карьера Роналдиньо в &laquo;Гремио&raquo; началась в 1995 году с молодёжной команды, где он под руководством главного тренера команды Лиама Хиггинса выступал на
+ молодёжном первенстве лиги Гаушу. В феврале 1997 года он подписал свой первый профессиональный контракт с клубом. В том же году, после чемпионата мира для игроков
+ до 16-ти лет в Египте, где он забил два гола с пенальти, Роналдиньо стал считаться восходящей звездой бразильского футбола. На этом же турнире Роналдиньо выступал
+ с именем Роналдо на спине.</p>
+
+<p>&nbsp;</p>
+
+<p>Через год Роналдиньо дебютировал в составе первой команды клуба в матче Кубка Либертадорес. 11 апреля 1998 года Роналдиньо дебютировал в составе команды в матче
+ чемпионата штата Риу-Гранди-ду-Сул с клубом &laquo;Санта-Круз&raquo;, который завершился вничью 1:1. 26 июля того же года Роналдиньо сыграл свою первую игру в чем
+пионате Бразилии в матче с клубом &laquo;Интернасьонал&raquo;, в котором Гремио проиграл 0:1. Спустя ещё год Роналдиньо выиграл свой первый серьёзный турнир &mdash
+; чемпионат штата Риу-Гранди-ду-Сул, в розыгрыше которого забил 15 голов в 14-ти играх, один из которых в финале в ворота &laquo;Интернасьонала&raquo;. Всего за 4
+года в &laquo;Гремио&raquo; Роналдиньо провёл 35 матчей в чемпионате Бразилии и забил 14 голов.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2001 году лондонский &laquo;Арсенал&raquo; заинтересовался Роналдиньо. Однако сделка не состоялась из-за того, что бразилец не смог получить разрешение на раб
+оту, проведя слишком мало матчей за сборную Бразилии. Также сорвалось арендное соглашение с шотландским клубом &laquo;Сент-Миррен&raquo; на 6 млн фунтов из-за прич
+астности Роналдиньо к скандалу с поддельным паспортом, из-за которого Роналдиньо было разрешено перейти в шотландский клуб уже после закрытия трансферного окна. Та
+кже существовали слухи об интересе клуба &laquo;Лидс Юнайтед&raquo; к Роналдиньо с возможностью трансфера от 40 до 80 млн долларов, однако они не подтвердились.</p
+>
+
+<p>&nbsp;</p>
+
+<p>22 декабря 2000 года Роналдиньо втайне подписал предварительный контракт с французским клубом &laquo;Пари Сен-Жермен&raquo;. Через некоторое время президент &la
+quo;Гремио&raquo; опубликовал в газете предложение для парижан в 6,4 млн евро, рассчитанное на 2 года, с заработной платой Роналдиньо 150 000 евро в первый сезон и
+ 213 000 во второй. Несмотря на это предложение, 17 января 2001 года парижский клуб сообщил о трансфере Роналдиньо за 5,1 млн евро, который подписал контракт на 5
+лет, что полностью не устроило бразильский клуб. Последний месяц бразилец провёл в &laquo;Гремио&raquo;, болельщики которого начали кампанию против игрока, надев ч
+ёрные нарукавные повязки, брат Роналдиньо, Роберто Ассис, был объявлен предателем, а все действия Роналдиньо всегда сопровождались свистом.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>&laquo;Пари Сен-Жермен&raquo;</strong></p>
+
+<p>Сезон 2001/02</p>
+
+<p>15 февраля 2001 года Роналдиньо подписал пятилетний контракт с французским клубом &laquo;Пари Сен-Жермен&raquo;. Сам парижский клуб заплатил за трансфер футболи
+ста &euro;5 млн. По прибытии в Париж, Роналдиньо получил футболку с номером 21 и был выставлен в линию атаки вместе с нападающим Алоизио и полузащитниками Микель А
+ртета и Джей-Джей Окоча. Роналдиньо дебютировал за новый клуб в матче французской лиги 4 августа 2001 года против &laquo;Осера&raquo;, закончившийся вничью со счёт
+ом 1:1. Роналдиньо провёл большую часть сезона 2001/2002, чередуя за собою роль скамейника и роль игрока основного состава. Первый гол за клуб Роналдиньо забил 13
+октября в матче против &laquo;Лиона&raquo; (2:2), реализовав пенальти, и выйдя при этом за 10 минут до гола на замену. Возвратившись с зимних каникул Роналдиньо вы
+дал потрясающую серию, забив в четырёх матчах подряд. Он записал на свой счёт потрясающие голы в матчах с &laquo;Монако&raquo;, &laquo;Ренном&raquo;, &laquo;Лансом
+&raquo; и &laquo;Лорьяном&raquo;. 16 марта 2002 года Роналдиньо записал на свой счёт первый дубль в составе клуба, отличившись два раза в матче против &laquo;Труа&
+raquo; (3:1). Он забил свой последний гол в сезоне 27 апреля в матче против &laquo;Меца&raquo; (2:0).</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2002/03</p>
+
+<p>В начале нового сезона Роналдиньо сменил свой 21 игровой номер на 10. Бразильский нападающий стал чаще попадать в стартовый состав. Хотя его выступления в клубе
+ во втором сезоне не привели болельщиков в восторг, Роналдиньо стал лучшим игроком сезона в клубе. 26 октября 2002 года Роналдиньо забил два гола, тем самым поучас
+твовав в победе парижан в Ле Классико над &laquo;Марселем&raquo; (3:1). Первый гол Роналдиньо забил великолепным штрафным ударом поверху, обойдя нескольких игроков
+ &laquo;Марселя&raquo;, на 18 ярдов. В ответном матче он снова забил, и его клуб выиграл 3:0. Роналдиньо так же был похвален за игру в полуфинале Кубка Франции, ко
+гда он забил два гола и помог выиграть своему клубу со счётом 2:0 над &laquo;Бордо&raquo; и дал путёвку &laquo;Пари Сен-Жермен&raquo; в финал. Но в финале Кубка па
+рижане проиграли &laquo;Осеру&raquo; со счётом 1:2, пропустив гол на последней минуте. Несмотря на грандиозные выступления Роналдиньо, &laquo;Пари Сен-Жермен&raquo
+; занял в турнирной таблице чемпионата всего лишь 11 место. После окончания сезона, Роналдиньо заявил, что готов покинуть клуб, потому что он не пробился в еврокуб
+ки.</p>
+
+<p>&nbsp;</p>
+
+<p>Итого за клуб: Два сезона (2001&mdash;2003), 86 матчей, 25 голов, 18 голевых передач.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Барселона&raquo;</p>
+
+<p>Сезон 2003/04</p>
+
+<p>Первоначально президент &laquo;Барселоны&raquo; Жоан Лапорта обещал приобрести в клуб англичанина Дэвида Бекхэма, однако после того, как тот перешёл в &laquo;Ре
+ал Мадрид&raquo;, сосредоточил свои усилия на покупке Роналдиньо. 19 июля 2003 года, после очень трудных переговоров, Роналдиньо стал игроком &laquo;Барселоны&raqu
+o;, заплатившей за трансфер бразильца 32,25 млн евро. Он дебютировал в составе команды в товарищеской игре с &laquo;Миланом&raquo;, забив гол, а его клуб выиграл 2
+:0. В официальной игре он дебютировал в матче с &laquo;Атлетиком Бильбао&raquo;, который &laquo;Барса&raquo; обыграла 1:0. Первый гол в официальной игре он забил в
+ ворота &laquo;Севильи&raquo;. Во втором круге Роналдиньо получил травму и некоторое время не выступал. Всего в своём первом сезоне в составе &laquo;Барселоны&raqu
+o; Роналдиньо провёл 45 матчей и забил 22 гола. Сама &laquo;Барса&raquo; заняла второе место в чемпионате Испании. По окончании сезона Роналдиньо был признан лучши
+м иностранным игроком чемпионата Испании. В том же году он получил титул лучшего футболиста мира по версии ФИФА, который был ему вручён 20 декабря 2004 года. Однак
+о в опросе на &laquo;Золотой мяч&raquo; Роналдиньо занял только третье место, набрав 133 очка, уступив Андрею Шевченко (175 очков) и Деку (139 очков).</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2004/05</p>
+
+<p>Основная статья: ФК &laquo;Барселона&raquo; в сезоне 2004/2005</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо празднует гол</p>
+
+<p>В сезоне 2004/2005 Роналдиньо выиграл титул чемпиона Испании, однако в Лиге чемпионов клуб проиграл на стадии 1/8 финала &laquo;Челси&raquo;, несмотря на то, чт
+о Роналдиньо забил два гола своей команды в гостевой игре (общий счёт 4:5). По окончании сезона Роналдиньо получил титул лучшего игрока мира по версии ФИФПРО, а та
+кже &laquo;Золотой мяч&raquo; (набрав 225 очков, что на 77 очков больше, чем у занявшего 2-е место Фрэнка Лэмпарда), и второй подряд титул лучшего футболиста ФИФА
+(набрав 956 очков, что на 650 очков больше, чем у занявшего 2-е место Лэмпарда). В том же сезоне он продлил свой контракт с клубом до 2010 года, по которому он мог
+ покинуть ряды &laquo;сине-гранатовых&raquo; лишь за 85 млн фунтов, несмотря на то, что клуб предлагал продлить контракт до 2014 года.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2005/06</p>
+
+<p>Основная статья: ФК &laquo;Барселона&raquo; в сезоне 2005/2006</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо подаёт угловой, 2005 год</p>
+
+<p>В сезоне 2005/2006 19 ноября Роналдиньо забил дубль в ворота мадридского &laquo;Реала&raquo; на &laquo;Сантьяго Бернабеу&raquo;, в конце игры, когда бразилец ух
+одил на замену, он был удостоен аплодисментов от поклонников &laquo;Королевского клуба&raquo;. В том же году &laquo;Барса&raquo; вышла в финал Лиги чемпионов, кото
+рый клуб выиграл у &laquo;Арсенала&raquo; со счётом 2:1. За неделю до этого сине-гранатовые, после победы 1:0 над &laquo;Сельтой&raquo;, отпраздновали победу в чем
+пионате Испании. За это Роналдиньо был признан лучшим игроком Лиги чемпионов (забил 7 голов и сделал 4 голевые передачи в матчах турнира) и лучшим иностранным футб
+олистом чемпионата Испании. В этом же сезоне он установил свой рекорд по количеству голов &mdash; 26 мячей.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2006/07</p>
+
+<p>Основная статья: ФК &laquo;Барселона&raquo; в сезоне 2006/2007</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо</p>
+
+<p>В начале следующего сезона Роналдиньо стал часто подвергаться критике, в том числе и от главного тренера &laquo;сине-гранатовых&raquo; Франка Райкарда, считавше
+го, что бразилец не мог набрать хорошую физическую форму. Брат и агент футболиста говорили, что ухудшение формы форварда связано с травлей, организованной в прессе
+. 25 ноября Роналдиньо забил свой 50-й гол в чемпионате Испании, поразив ворота &laquo;Вильярреала&raquo;, в той же игре он забил через себя в падении. Позже Ронал
+диньо сказал журналистам, что мечтал забить такой гол, когда был ещё мальчиком. В ноябре 2006 года Роналдиньо занял 4-е место в голосовании на &laquo;Золотой мяч&r
+aquo;, а месяц спустя занял третье место в опросе на лучшего игрока мира ФИФА. 14 декабря 2006 года Роналдиньо забил гол и сделал две голевые передачи в полуфинале
+ клубного чемпионата мира с &laquo;Америкой&raquo;, но в финале турнира &laquo;Барса&raquo; проиграла бразильскому &laquo;Интернасьоналу&raquo; 0:1. В январе Ронал
+диньо вошёл в команду года УЕФА, набрав наивысшие 292 000 номинаций. В марте Роналдиньо пропустил благотворительный матч из-за травмы, полученной в матче с &laquo;
+Реалом&raquo; (3:3). Весной Райкард начал искать новые тактические схемы игры команды, из-за чего Роналдиньо пришлось сыграть и на месте центрфорварда, и на позици
+и левого полузащитника, на которых он не играл много лет. В 36-м туре, в матче с &laquo;Хетафе&raquo;, Роналдиньо получил красную карточку, после чего покинул поле
+ в истерике, из-за которой он не смог участвовать в &laquo;золотом матче&raquo; &laquo;Барселоны&raquo; с &laquo;Эспаньолом&raquo;. Осенью &laquo;Челси&raquo; пред
+ложил за трансфер Роналдиньо 70 млн евро, однако &laquo;Барса&raquo; отказала.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2007/08</p>
+
+<p>Основная статья: ФК &laquo;Барселона&raquo; в сезоне 2007/2008</p>
+
+<p>Начало сезона 2007/2008 вышло для Роналдиньо неудачным, дошло до того, что болельщики &laquo;Барсы&raquo; стали освистывать бразильца, к тому же подготовке к се
+зону помешала травма икроножной мышцы, из-за которой он пропустил несколько первых игр. 3 февраля 2008 года Роналдиньо провёл свой 200-й матч за &laquo;Барселону&r
+aquo; против &laquo;Осасуны&raquo;. В середине сезона Райкард, недовольный отношением бразильца к тренировкам, вывел Роналдиньо из состава команды. Райкард доверил
+ Роналдиньо место в стартовом составе в домашней игре с &laquo;Реалом&raquo;, однако бразилец чрезвычайно неудачно провёл игру, проигранную &laquo;сине-гранатовыми
+&raquo;, а вину за поражение общественность возложила на него. 3 апреля Роналдиньо получил разрыв мускула на правой ноге, в результате он выбыл на срок 6 недель, в
+следствие чего сезон для него был закончен. 19 мая Лапорта заявил, что &laquo;Роналдиньо нуждается в новом вызове&raquo;, утверждая, что бразильцу нужен новый клуб
+, чтобы восстановить уровень своих выступлений. Владелец &laquo;Манчестер Сити&raquo; Таксин Чиннават сказал 6 июня, что его клуб интересовался Роналдиньо. Последн
+ий матч за &laquo;Барселону&raquo; Роналдиньо провёл 28 июня в Венесуэле в выставочной игре против расизма, в которой он забил 2 гола, а матч завершился со счётом
+7:7. В начале июля 2008 года &laquo;Манчестер Сити&raquo; вновь предпринял попытку купить Роналдиньо за 25,5 млн фунтов, однако футболист не захотел переезжать в А
+нглию.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Милан&raquo;</p>
+
+<p>Сезон 2008/09</p>
+
+<p>Роналдиньо был куплен &laquo;Миланом&raquo; 15 июля 2008 года. Миланский клуб заплатил &laquo;Барселоне&raquo; 21 млн евро + 4 млн при квалификации &laquo;россо
+нери&raquo; в турнир Лиги чемпионов. Годовая зарплата Роналдиньо в новом клубе составила 6,5 млн евро. 17 июля форвард был официально представлен как футболист &la
+quo;Милана&raquo;, подписав контракт до 30 июня 2011 года в прямом телевизионном эфире. Тем же вечером он был представлен тиффози &laquo;россонери&raquo; на &laquo
+;Сан-Сиро&raquo;, куда собралось 40 000 зрителей. В &laquo;Милане&raquo; Роналдиньо взял номер 80, из-за того, что 10-ка принадлежала нидерландцу Кларенсу Зеедорфу
+.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо в составе &laquo;Милана&raquo;</p>
+
+<p>Первый итальянский сезон был очень сложным: новый язык, образ жизни, новые люди. Перед Новым годом я получил травму, а когда вернулся, Анчелотти перестал ставит
+ь меня в основу. Мне оставалось лишь работать и пытаться доказывать, что он не прав</p>
+
+<p>Роналдиньо</p>
+
+<p>Роналдиньо дебютировал в составе &laquo;Милана&raquo; 31 августа 2008 года в матче с &laquo;Болоньей&raquo;, который &laquo;россонери&raquo; проиграли 1:2. 28 с
+ентября он забил первый гол за клуб, поразив головой, после передачи соотечественника Кака, ворота &laquo;Интера&raquo;, и принеся победу своей команде 1:0. 19 окт
+ября 2008 года Роналдиньо сделал первый &laquo;дубль&raquo; за клуб, забив два гола в ворота &laquo;Сампдории&raquo;. 6 ноября Роналдиньо забил гол в матче Кубка У
+ЕФА против &laquo;Браги&raquo;, принеся победу своей команде 1:0. Несмотря на достаточно удачное начало, в середине сезона Роналдиньо перестал выходить в стартовом
+ составе команды, часто появляясь со скамьи запасных. Всего в первом сезоне в &laquo;Милане&raquo; Роналдиньо провёл 36 матчей и забил 10 голов.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2009/10</p>
+
+<p>Начало второго сезона в &laquo;Милане&raquo; для Роналдиньо вышло очень удачным, что нравилось главному тренеру команды, Леонардо:</p>
+
+<p>&laquo;К сожалению, он пока не показывает свои лучшие качества. Если он будет в хорошей форме, действительно соскучится по футболу, то только тогда он сможет пр
+инести пользу команде Дело не в том, нравится мне или нет Роналдиньо, но мы с владельцем клуба по-разному смотрим на ситуацию с бразильцем. Берлускони знает, что в
+ его составе есть бриллиант, и хочет, чтобы тот сверкал как можно ярче. Я же вижу Роналдиньо каждый день и считаю по-другому. По-моему, сейчас ключевой момент в ка
+рьере Роналдиньо. Каждый день он отлично тренируется. Нужно, чтобы это проявлялось и в матчах, чтобы он отрабатывал эти моменты снова и снова. Тогда нас ждёт успех
+. Ему нужно изменить своё отношение к играм и делать всё, чтобы показывать стабильный футбол&raquo;.</p>
+
+<p>Вскоре появилась информация о желании Роналдиньо завершить карьеру игрока, но брат футболиста заявил, что это сообщение является вымышленным. В октябре, перед м
+атчем &laquo;Милана&raquo; в Лиге чемпионов с &laquo;Цюрихом&raquo;, бразилец был замечен в ночном клубе в 2.30, за что его оштрафовали. В начале сезона 2009/2010
+Роналдиньо был вручён приз Golden Foot, присуждаемый лучшему игроку старше 29 лет в Европе. 21 октября в матче Лиги чемпионов с &laquo;Реалом&raquo; Роналдиньо уда
+рил форварда &laquo;Королевского клуба&raquo; Рауля по голове во время стычки игроков команд. Вскоре Роналдиньо набрал хорошую форму, а после матча с &laquo;Сампдо
+рией&raquo;, где Рони был лучшим игроком встречи, президент &laquo;Милана&raquo; Сильвио Берлускони сказал, что Роналдиньо возродился как игрок. Сам Роналдиньо сог
+ласился с такой оценкой: &laquo;Я даже стал лучше, нежели был раньше. Я год потратил на то, чтобы учиться, причём не только на футбольном поле. После этого мне ста
+ло намного проще, всё стало складываться и помимо моей воли. Я хочу стать на чемпионате мира в ЮАР главной звездой. Это мне по плечу. Я и так пропустил отборочную
+кампанию, чего со мной ещё не случалось, нужно навёрстывать&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо в игре &laquo;Милана&raquo;</p>
+
+<p>В январе 2010 года руководство &laquo;Милана&raquo; захотело продлить контракт с Роналдиньо. 10 января Роналдиньо забил два гола в матче с &laquo;Ювентусом&raqu
+o;, после игры он сказал, что доволен своей игрой и счастлив в команде: &laquo;Я счастлив. &bdquo;Милан&ldquo; создал все условия, чтобы хорошо работать. Теперь я
+выхожу на поле с уверенностью и большим желанием сделать то, чего хочу. Я был недоволен, когда не играл. Но с Леонардо я регулярно получаю игровую практику. Нахожу
+сь в хорошей форме, так что всё отлично. Я лишь хочу показать лучшее, на что способен, и помочь &bdquo;Милану&ldquo; что-то выиграть&raquo;. 17 января 2010 года Ро
+налдиньо сделал хет-трик в ворота &laquo;Сиены&raquo; в матче 20-го тура чемпионата Италии. Перед матчем 21 тура с &laquo;Интером&raquo;, который &laquo;Милан&raqu
+o; проиграл 0:2, Роналдиньо три дня подряд развлекался в одном из отелей Милана, за что был оштрафован своим клубом.</p>
+
+<p>&nbsp;</p>
+
+<p>13 апреля 2010 года Роналдиньо продлил контракт с &laquo;Миланом&raquo; до 2014 года. 16 мая, в последнем туре чемпионата, Роналдиньо забил два гола в ворота &l
+aquo;Ювентуса&raquo;, принеся своей команде победу со счётом 3:0. По итогам первенства, &laquo;Милан&raquo; занял 3-е место. Роналдиньо с 15-ю голевыми пасами стал
+ лучшим ассистентом серии А, по системе гол+пас он занял 3-е место &mdash; 12 голов и 15 голевых передач. Всего за сезон Роналдиньо сделал 18 голевых передач.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2010/11</p>
+
+<p>В начале следующего сезона пошли слухи о скором уходе Роналдиньо из &laquo;Милана&raquo;. К тому же он перестал показывать прошлогодний уровень игры и выражал н
+едовольство тактикой нового главного тренера команды, Массимилиано Аллегри. В ноябре Ронни был замечен в одном из баров, что вызвало недовольство главного тренера
+команды, который вывел футболиста из стартового состава &laquo;россонери&raquo;. Сам бразилец сказал, что готов бороться за место в составе команды. Но несмотря на
+ эти слова футболист провёл переговоры по поводу перехода в &laquo;Палмейрас&raquo; или &laquo;Гремио&raquo;. 30 декабря 2010 года вице-президент &laquo;Милана&raq
+uo;, Адриано Галлиани, сказал, что &laquo;Роналдиньо уйдёт из &bdquo;Милана&ldquo; в январе. Сейчас у него нет желания тренироваться с командой, потому что он боль
+ше не чувствует себя её частью&raquo;. 8 января 2011 года в эфире бразильского канала SporTV Галлиани заявил, что Роналдиньо на 99,99 % игрок &laquo;Фламенго&raquo
+;.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Фламенго&raquo;</p>
+
+<p>Сезон 2011</p>
+
+<p>10 января 2011 года Роналдиньо перешёл во &laquo;Фламенго&raquo;, при этом президент клуба Патрисия Аморин поблагодарила совет директоров &laquo;за прозорливост
+ь и мудрость, проявленные в ходе переговоров&raquo;. Контракт подписан на 4 года. 2 февраля 2011 года дебютировал за &laquo;rubro-negro&raquo; в домашнем матче 5-г
+о тура Кубка Гуанабара против &laquo;Нова Игуасу&raquo;. 6 февраля 2011 года в выездном матче 6-го тура Кубка Гуанабара против &laquo;Боависты&raquo; открыл счёт с
+воим голом за &laquo;Фламенго&raquo; (на 23-й минуте реализовал пенальти за снос Дейвида вратарём хозяев Тиаго Шмидтом в пределах штрафной). 16 февраля 2011 года в
+ матче 1-го раунда Кубка Бразилии против &laquo;Муриси&raquo; Роналдиньо забил первый гол &laquo;с игры&raquo; за &laquo;Фламенго&raquo; (на 66-й минуте Ронни откр
+ыл счёт матча, ударом головой в дальний угол) Матч закончился со счётом 3:0 в пользу &laquo;Фламенго&raquo;. 27 февраля забил единственный гол в финале Кубка Гуана
+бара против &laquo;Боависты&raquo; (реализовал штрафной с расстояния 24-х метров за фол против Тиаго Невеса). 28 июля в матче против &laquo;Сантоса&raquo; Роналдин
+ьо забил три гола и сделал голевую передачу, принеся победу своей команде со счётом 5:4.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Атлетико Минейро&raquo;</p>
+
+<p>Сезон 2012</p>
+
+<p>4 июня 2012 года Роналдиньо подписал контракт с &laquo;Атлетико Минейро&raquo; сроком на 6 месяцев. Он взял 49-й номер в связи с тем, что его любимая десятка бы
+ла занята Гусманом Гильерме. Роналдиньо дебютировал за клуб 9 июня в матче против &laquo;Палмейраса&raquo;, который завершился победой Атлетико со счётом 1:0. Перв
+ый гол за клуб Роналдиньо забил 23 июня в матче против &laquo;Наутико Ресифи&raquo;, который он реализовал с пенальти.</p>
+
+<p>&nbsp;</p>
+
+<p>Сезон 2014</p>
+
+<p>9 января 2014 года Роналдиньо подписал новый контракт с бразильским клубом. 28 июля 2014 года игрок расторг контракт с клубом.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Керетаро&raquo;</p>
+
+<p>5 сентября 2014 года Роналдиньо подписал однолетний контракт с мексиканским клубом &laquo;Керетаро&raquo;. 17 сентября он дебютировал в составе команды в матче
+с &laquo;Тигрес&raquo;, в котором &laquo;Керетаро&raquo; проиграл 0:1, а сам бразилец не реализовал пенальти.</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Флуминенсе&raquo;</p>
+
+<p>12 июля 2015 года Роналдиньо перешёл во &laquo;Флуминенсе&raquo;, подписав контракт до конца 2016 года. Однако уже 29 сентября 2015 года после 7 матчей в состав
+е команды расторг контракт с клубом по обоюдному согласию.</p>
+
+<p>&nbsp;</p>
+
+<p>16 января 2018 года Роналдиньо официально завершил игровую карьеру.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Карьера в сборной:</strong></p>
+
+<p>Роналдиньо в матче со Швейцарией, 2006 год</p>
+
+<p>Роналдиньо начал свои международные выступления со сборной до 17 лет, с которой выиграл чемпионат мира, проходивший в 1997 году в Египте. На этом турнире он заб
+ил два гола, первый &mdash; в ворота Австрии в первом матче для бразильцев, завершившимся со счётом 7:0. Кроме того, по итогам розыгрыша получил &laquo;Бронзовый м
+яч&raquo; &mdash; награду третьему игроку турнира.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо 22 июня 2006 года</p>
+
+<p>В 1999 году Роналдиньо принял участие в молодёжном чемпионате мира, где забил гол в последней игре на групповой стадии в ворота Замбии. В 1/8 финала Роналдиньо
+забил два гола в ворота Хорватии, а его команда выиграла 4:0. В 1/4 финала Бразилия проиграла Уругваю.</p>
+
+<p>&nbsp;</p>
+
+<p>26 июня 1999 года, за 3 дня до начала Кубка Америки, Роналдиньо дебютировал в составе первой сборной Бразилии в товарищеской игре с Латвией, которую бразильцы в
+ыиграли 3:0. Во второй своей игре &mdash; с Венесуэлой на Кубке Америки, Роналдиньо забил один из семи безответных мячей своей команды. Тот Кубок Америки Бразилия
+выиграла, а Роналдиньо провёл на турнире 4 матча и забил 1 гол. Через неделю после завершения Кубка Америки, Роналдиньо был вызван на Кубок конфедераций, где он пр
+овёл все матчи, кроме финальной игры (которую Бразилия проиграла 3:4 Мексике), а также сделал хет-трик 1 августа, в игре с Саудовской Аравией, выигранной бразильца
+ми 8:2. Роналдиньо за свои выступления был признан лучшим игроком и лучшим бомбардиром турнира с 6-ю голами (столько же забили Марзук аль-Отаиби и Куаутемок Бланко
+).</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо и президент Бразилии Лула да Силва</p>
+
+<p>В 2000 году Роналдиньо участвовал с молодёжной сборной Бразилии на Олимпиаде в Сиднее. Ранее, в том же году, он помог бразильцам выиграть Предолимпийский турнир
+, забив 9 голов в 7-ми играх. Однако на самом соревновании Бразилия вылетела в 1/4 финала, проиграв Камеруну. Роналдиньо провёл на турнире все 4 игры и забил 1 гол
+ в проигранном матче с Камеруном.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо на Олимпиаде 2008</p>
+
+<p>В 2002 году Роналдиньо участвовал на своём первом чемпионате мира. На турнире он сыграл 5 игр и забил 2 гола. Первый гол он забил на групповой стадии в ворота К
+итая, в игре, где бразильцы победили 4:0. Второй мяч Роналдиньо забил в ворота Англии 21 июня, этот гол принёс бразильцам победу: на 50-й минуте встречи Роналдиньо
+ ударом с 35-ти метров поразил ворота Дэвида Симэна. Через 7 минут Роналдиньо был удалён с поля после фола на защитнике англичан Дэнни Миллзе. Из-за этого он пропу
+стил полуфинальный матч, но вышел в финале и помог своей команде победить Германию и стать чемпионом мира.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2003 году Роналдиньо участвовал в Кубке конфедераций, однако там бразильцы не смогли выйти из группы, а сам Рони провёл все 3 игры, но голов не забивал. В сле
+дующем году Роналдиньо не поехал на Кубок Америки, так как главный тренер команды Карлос Алберто Паррейра решил дать отдохнуть своим &laquo;звёздам&raquo; и привёз
+ на турнир второй состав. В 2005 году Роналдиньо помог своей команде выиграть Кубок конфедераций, а также был назван лучшим игроком финальной игры, где бразильцы п
+обедили Аргентину со счётом 4:1. На турнире Роналдиньо забил 3 гола.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2006 году он участвовал в чемпионате мира, где провёл все 5 матчей бразильцев. Он был частью &laquo;магического квадрата&raquo; нападения команды, составленно
+го из Роналдо, Кака, Адриано и его самого. Однако четвёрка нападения забила на турнире только 5 голов. Сам Роналдиньо голов не забил, более того, он сделал лишь од
+ну голевую передачу (на Жилберто в матче с Японией). В 1/4 финала Бразилия проиграла Франции 0:1, нанеся лишь один удар по воротам французов. Вся команда была раск
+ритикована по возвращении домой. 3 июня, спустя 2 дня после проигрыша Франции, вандалы разрушили 7,5-метровую статую Роналдиньо из стекловолокна и смолы в Шапеко,
+поставленную в 2004 году в честь завоевания игроком звания лучшего игрока мира по версии ФИФА. Тем же днём Роналдиньо, к которому присоединился Адриано, уехали в Б
+арселону и провели вечеринку в доме Роналдиньо, продолженную до утра в ночном клубе. Это привело к увеличению доли сторонников мнения, что бразильские футболисты н
+е полностью выкладывались на поле.</p>
+
+<p>&nbsp;</p>
+
+<p>Роналдиньо 18 ноября 2007 года</p>
+
+<p>24 мая 2007 года Роналдиньо дважды забил в ворота Чили, что стало первым его результативным матчем, начиная с Кубка конфедераций 2005, тем самым, он прервал сво
+ю 2-летнюю безголевую полосу в национальной команде. В том же году он попросил не вызывать его на Кубок Америки, мотивировав это усталостью. 18 октября Роналдиньо
+опоздал на сборы &laquo;Барселоны&raquo; после матча в составе сборной с Эквадором из-за того, что он, вместе с несколькими игроками бразильцев, веселился в одном
+из самых престижных ночных клубов Рио-де-Жанейро, уехав оттуда лишь в 11 часов утра.</p>
+
+<p>&nbsp;</p>
+
+<p>7 июля 2008 года Роналдиньо был назван в числе трёх возрастных игроков, которые поедут на Олимпиаду. &laquo;Барселона&raquo; первоначально запретила Роналдиньо
+ехать на турнир, однако бразилец перешёл в &laquo;Милан&raquo;, который не стал чинить препятствий поездке на турнир своего игрока. Роналдиньо забил на турнире 2 г
+ола, оба &mdash; в ворота Новой Зеландии. Бразильцы дошли до полуфинала турнира, где проиграли Аргентине. В матче за 3-е место Бразилия победила Бельгию 3:0.</p>
+
+<p>&nbsp;</p>
+
+<p>После перехода в &laquo;Милан&raquo; Роналдиньо сначала потерял место в стартовом составе бразильцев, а затем вовсе перестал вызываться в стан национальной кома
+нды. Осенью 2009 года Роналдиньо набрал хорошую форму и выразил желание вернуться в сборную. Несмотря на удачное выступление, Роналдиньо попал только в список запа
+сных игроков сборной. Это решение было раскритиковано председателем оргкомитета чемпионата мира, Дэнни Джорданом.</p>
+
+<p>&nbsp;</p>
+
+<p>6 сентября 2010 года новый тренер сборной Бразилии, Мано Менезес, заявил, что даст Роналдиньо шанс закрепиться в национальной команде. 29 октября Роналдиньо впе
+рвые за полтора года был вызван в сборную Бразилии на товарищеский матч со сборной Аргентины. 17 ноября Роналдиньо впервые за полтора года вышел на поле в футболке
+ сборной страны в матче с Аргентиной, в котором бразильцы проиграли 0:1.</p>
+
+<p>&nbsp;</p>
+
+<p>18 августа 2011 года Мано Менезес вызвал Роналдиньо на товарищеский матч против сборной Ганы, который состоялся 5 сентября и закончился победой бразильцев с мин
+имальным преимуществом &mdash; 1:0. Вскоре Роналдиньо был вызван на 2 матча Кубка Роки против сборной Аргентины, которые состоялись 15 и 29 сентября. На первый мат
+ч он вышел с капитанской повязкой, а встреча в итоге закончилась нулевой ничьей. Также Мано Менезес вызвал Роналдиньо на товарищеские матчи против сборных Коста-Ри
+ки и Мексики, которые состоялись 7 и 11 октября соответственно.</p>
+
+<p>&nbsp;</p>
+
+<p>В заявку на чемпионат мира-2014 Роналдиньо не попал, уступив место более молодым товарищам.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Жизнь и деятельность (с 2015):</strong></p>
+
+<p>Роналдиньо на Web Summit</p>
+
+<p>14 ноября 2015 на &laquo;Олд Траффорд&raquo; Роналдиньо сыграл в команде Зинедина Зидана против команды Дэвида Бекхэма в благотворительном матче ЮНИСЕФ.</p>
+
+<p>&nbsp;</p>
+
+<p>29 января 2016 года принял предложение сыграть в товарищеском матче под названием Noche Amarilla, или &laquo;Жёлтая Ночь&raquo;. В нём эквадорская &laquo;Барсел
+она&raquo; сразилась с перуанским &laquo;Универсидад Сан-Мартин&raquo;. &laquo;Барселона&raquo; победила со счётом 4:3.</p>
+
+<p>&nbsp;</p>
+
+<p>3 апреля 2016 года команда опубликовала видео, на котором Роналдиньо говорит, что будет играть за &laquo;Сьенсиано&raquo;. Соглашение рассчитано на два матча. Н
+е исключается, что он проведёт и несколько матчей в чемпионате второго дивизиона.</p>
+
+<p>&nbsp;</p>
+
+<p>12 мая 2016 года экс-капитан сборной Бразилии принял участие в игре между бывшими звёздами сборной Мексики и &laquo;Легендами ФИФА&raquo;. Матч был приурочен к
+50-летию легендарного стадиона &laquo;Ацтека&raquo;. Игра завершилась со счётом 9:8 в пользу мексиканцев.</p>
+
+<p>&nbsp;</p>
+
+<p>В июле 2016 года принял участие в индийской футзальной Премьер-лиге. 17 июля в матче с &laquo;Бангалором&raquo; забил пять мячей (7:2). За участие в турнире Рон
+алдиньо получил около 500 тысяч долларов.</p>
+
+<p>&nbsp;</p>
+
+<p>13 октября 2016 года состоялся благотворительный матч &mdash; команда Роналдиньо против команды Марадоны. Команда Ронни победила, а все сборы от матча пошли жер
+твам землетрясения в Италии. Участие в матче, кроме легендарных капитанов, приняли Франческо Тотти, Хуан Себастьян Верон, Руи Кошта, Эрнан Креспо, Джанлука Дзамбро
+тта, Кафу, Эрик Абидаль, Робер Пирес и многие другие звезды футбола. Руководили командами Фабио Капелло и Айтор Каранка.</p>
+
+<p>&nbsp;</p>
+
+<p>20 октября 2016 года Роналдиньо объявил об открытии собственной академии &laquo;Ronaldinho Soccer Academy&raquo; в Азербайджане. Аналогичные академии уже функци
+онируют в Порту-Алегри, Абу-Даби и Дубае.</p>
+
+<p>&nbsp;</p>
+
+<p>В 2016 году Роналдиньо принимал участие в съёмках фильма &laquo;Кикбоксер-6&raquo; вместе с Майком Тайсоном и Жан-Клод Ван Даммом. В интервью, продюсер Роб Хикм
+ан заявил:</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Мы смотрим на ценность, которую добавляет та или иная звезда. Кроме харизмы, у Роналдиньо есть 66 миллионов подписчиков в соцсетях, это будет незаменимо
+в раскрутке фильма&raquo;.&nbsp;&nbsp;&nbsp;</p>
+
+<p>3 февраля 2017 года был официально представлен как посол клуба &laquo;Барселона&raquo;. Роналдиньо будет представлять каталонский клуб в официальных мероприятия
+х. Примечательно, что Ронни занимает этот пост, по сути ещё не завершив карьеру футболиста.</p>
+
+<p>&nbsp;</p>
+
+<p>Во время посещения матча всех звёзд НБА футболист дал понять, что рассматривает возможность проведения прощального матча:</p>
+
+<p>&nbsp;</p>
+
+<p>&laquo;Несомненно, начался новый этап в моей жизни. Были варианты провести ещё три месяца в одном клубе или шесть в другом, но это уже не то, чего я хочу. Возмо
+жно, я где-то и поиграю три месяца, но, скорее всего, это будет один или несколько прощальных матчей. В следующем месяце мне исполнится уже 37, возраст берёт своё
+&mdash; пора делать шаг вперёд&raquo;. &raquo;</p>
+
+<p>29 марта 2017 года начал музыкальную карьеру. Футболист выпустил сингл &laquo;Sozinho&raquo;, что можно перевести как &laquo;одинокий&raquo;.</p>
+
+<p>&nbsp;</p>
+
+<p>28 апреля 2017 года принял участие в матче ветеранов &laquo;Барселоны&raquo; и &laquo;Реала&raquo;. Матч завершился со счётом 3:2 в пользу бывших игроков &laquo
+;Барселоны&raquo;, три результативные передачи отдал Роналдиньо.</p>
+
+<p>&nbsp;</p>
+
+<p>20 мая 2017 года Роналдиньо посетил открытие парка Кубка конфедераций в Казани и Санкт-Петербурге. 21 мая в парке состоялся товарищеский матч между легендами ми
+рового футбола и сборной России. За команду мировых легенд выступали Роналдиньо, Витор Байя, Пабло Аймар, Джей-Джей Окоча, Харри Кьюэлл и Марсель Десайи.</p>
+
+<p>&nbsp;</p>
+
+<p>7 октября 2017 года сыграл за команду России в матче, приуроченном к 65-летнему юбилею президента России Владимира Путина. Организовал поединок глава Чеченской
+Республики Рамзан Кадыров. В матче сошлись команда России, которая была названа &laquo;Лидер 65&raquo;, и команда ветеранов сборной Италии. Вместе с бразильцем игр
+али Рамзан Кадыров, Александр Филимонов, Роман Широков, Александр Кержаков, Валерий Карпин и другие. Победу одержал &laquo;Лидер 65&raquo; со счётом 6:3. Гол и асс
+ист на свой счёт записал Роналдиньо, который покинул поле в середине второго тайма.</p>
+
+<p>&nbsp;</p>
+
+<p>18 мая 2018 года Роналдиньо приехал в Краснодар в рамках рекламной акции &laquo;Магнита&raquo;. В магазинах сети были представлены спортивные товары с изображен
+ием силуэта бразильца и его стилизованным автографом. Также он посетил футбольную академию и стадион &laquo;Краснодара&raquo;. Ронни пообщался с молодыми футболист
+ами команды и вышел на газон арены.</p>
+
+<p>&nbsp;</p>
+
+<p>В июне 2018 года Роналдиньо объявил о запуске широкомасштабного криптовалютного проекта Ronaldinho Soccer Coin, в рамках которого будет открыта футбольная акаде
+мия, а также построены стадионы, оснащённые системами виртуальной реальности. В ноябре того же года власти Бразилии запретили Роналдиньо покидать страну из-за долг
+а в размере 2,3 миллионов евро, после чего заблокировали ещё 57 объектов недвижимости и отобрали паспорт. Блокада имущества и изъятие паспорта были связаны с рассл
+едованием, касающегося нанесения экологического вреда (урон лесу и почве) при строительстве недвижимости в Порту-Алегри.</p>
+
+<p>&nbsp;</p>
+
+<p>27 января 2019 года сыграл за сборную Бразилии по пляжному футболу против японцев (11:4) в Рио-де-Жанейро.</p>
+
+<p>&nbsp;</p>
+
+<p>5 марта 2020 года Рональдиньо вместе со своим братом был задержан полицией в аэропорту Парагвая при прохождении паспортного контроля. При проверке документов вы
+яснилось, что Рональдиньо и его родственник пытались попасть в страну по поддельным документам. После допроса в полицейском участке футболист был отпущен в отель,
+однако спустя несколько часов прокурор Парагвая выписал новый ордер на задержание, оставив бразильца под стражей на 6 месяцев. За время нахождения в заключении усп
+ел выиграть тюремный футбольный турнир. В решающем матче команда &laquo;Волшебника&raquo; одержала победу над соперником со счетом 11:2. Бразилец забил 5 голов и с
+делал 6 результативных передач.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Личная жизнь:</strong></p>
+
+<p>Роберто, брат Роналдиньо, на сегодняшний день является его агентом, а сестра, Дейзи, работает координатором по связям со СМИ.</p>
+
+<p>В 2001 году снялся в эпизоде телесериала &laquo;Клон&raquo;.</p>
+
+<p>25 февраля 2005 года Роналдиньо стал отцом, его сына назвали Жуан, в честь скончавшегося отца Роналдиньо. Сын родился от танцовщицы клуба &laquo;Доминган де Фау
+стан&raquo; Жанайны Наттиэнелле Вианы Мендес. 6 апреля 2019 года 14-летний Жуан Мендес, сын Роналдиньо, подписал контракт с футбольным клубом &laquo;Крузейро&raquo
+;.</p>
+
+<p>27 августа 2007 года получил испанское гражданство.</p>',
+                    'image' => 'image_18.webp',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-13 13:32:09',
+                ),
+            14 =>
+                array(
+                    'id' => 16,
+                    'category_id' => 19,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'noImage.png',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+            15 =>
+                array(
+                    'id' => 17,
+                    'category_id' => 20,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'noImage.png',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+            16 =>
+                array(
+                    'id' => 18,
+                    'category_id' => 21,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'noImage.png',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+            17 =>
+                array(
+                    'id' => 19,
+                    'category_id' => 22,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'image_10.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+            18 =>
+                array(
+                    'id' => 20,
+                    'category_id' => 23,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'image_8.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+            19 =>
+                array(
+                    'id' => 21,
+                    'category_id' => 24,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'image_19.webp',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+            20 =>
+                array(
+                    'id' => 22,
+                    'category_id' => 25,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'image_11.png',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+            21 =>
+                array(
+                    'id' => 23,
+                    'category_id' => 26,
+                    'preview_text' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
+ ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but al
+so the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsu
+m passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'description' => NULL,
+                    'image' => 'image_9.jpg',
+                    'created_at' => '2021-02-07 16:44:42',
+                    'updated_at' => '2021-02-07 16:44:42',
+                ),
+        ));
     }
 }
