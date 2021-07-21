@@ -3,20 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Service\CategoryService;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class WelcomeController extends Controller
 {
-    public function index()
-    {
-        $categories = Category::activeCategories(null)->get();
+    private $category_repo;
 
+    public function __construct(CategoryService $category_repo)
+    {
+        $this->category_repo = $category_repo;
+    }
+
+    public function index(): View
+    {
         return view('welcome', [
-            'categories' => $categories,
+            'categories' => $this->category_repo->get(null),
         ]);
     }
 
-    public function renderParentCategoryPage($id)
+    public function renderParentCategoryPage($id): View
     {
         $limit = 5;
         $parentCategory = Category::activeCategories(null)->where('id', $id)->first();
@@ -30,7 +37,7 @@ class WelcomeController extends Controller
         ]);
     }
 
-    public function renderPageInformation($parentId, $childId)
+    public function renderPageInformation($parentId, $childId): View
     {
         $parentCategory = Category::activeCategories(null)->where('id', $parentId)->first();
         $childCategories = Category::activeCategories($parentId)->where('id', $childId)->with('categoryDetails', 'categoryCarouselItems')->first();

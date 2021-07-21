@@ -17,6 +17,10 @@ class Category extends Model
         'background',
     ];
 
+    const RULES = [
+        'name' => 'required',
+    ];
+
     public function categoryDetails()
     {
         return $this->hasOne(CategoryDetail::class, 'category_id');

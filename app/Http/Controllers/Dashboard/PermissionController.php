@@ -6,46 +6,42 @@ use App\Http\Controllers\Controller;
 use App\Models\RBAC\Permission;
 use App\Models\RBAC\Role;
 use App\Models\RBAC\RolePermission;
-use App\User;
 use Illuminate\Http\Request;
+use App\Services\PermissionResponseService;
+use App\Services\RoleService;
+use Illuminate\View\View;
 
 class PermissionController extends Controller
 {
-    public function __construct()
-    {
+    private $permissions_repo;
+    private $role_repo;
+
+    public function __construct(
+        PermissionResponseService $permissions_repo,
+        RoleService $role_repo
+    ){
+        $this->permissions_repo = $permissions_repo;
+        $this->role_repo = $role_repo;
         $this->middleware('auth');
     }
 
-    public function index(Request $request)
+    public function index(): View
     {
         $admin = Role::where('name', Role::ADMIN)->first();
-        $roles = Role::where('name', '!=', Role::SUPER_ADMIN)->get();
-        $permissions = Permission::all();
-
-        foreach ($permissions as $permission) {
-            $permission['actions'] = RolePermission::where('role_id', $admin->id)->where('permission_id', $permission->id)->first();
-        }
 
         return view('dashboard.permissions', [
             'roleId' => $admin->id,
-            'roles' => $roles,
-            'permissions' => $permissions
+            'roles' => $this->role_repo->getWithoutSuperAdmin(),
+            'permissions' => $this->permissions_repo->get($admin->id, Permission::all())
         ]);
     }
 
-    public function getByRole(Request $request, $id)
+    public function getByRole($id): View
     {
-        $roles = Role::where('name', '!=', Role::SUPER_ADMIN)->get();
-        $permissions = Permission::all();
-
-        foreach ($permissions as $permission) {
-            $permission['actions'] = RolePermission::where('role_id', $id)->where('permission_id', $permission->id)->first();
-        }
-
         return view('dashboard.permissions', [
             'roleId' => $id,
-            'roles' => $roles,
-            'permissions' => $permissions
+            'roles' => $this->role_repo->getWithoutSuperAdmin(),
+            'permissions' => $this->permissions_repo->get($id, Permission::all())
         ]);
     }
 
@@ -61,6 +57,6 @@ class PermissionController extends Controller
         $rolePermission->save();
         $rolePermission->refresh();
 
-        return response()->json('ok');
+        return response()->noContent();
     }
 }

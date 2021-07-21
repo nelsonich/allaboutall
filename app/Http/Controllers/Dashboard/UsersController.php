@@ -3,26 +3,28 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Models\RBAC\Role;
+use App\Services\RoleService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
-    public function __construct()
+    private $role_repo;
+
+    public function __construct(RoleService $role_repo)
     {
+        $this->role_repo = $role_repo;
         $this->middleware('auth');
     }
 
     public function index()
     {
         $users = User::where('id', '!=', auth()->id())->with('role')->paginate(15);
-        $roles = Role::where('name', '!=', Role::SUPER_ADMIN)->get();
 
         return view('dashboard.users', [
             'users' => $users,
-            'roles' => $roles,
+            'roles' => $this->role_repo->getWithoutSuperAdmin(),
             'is_add' => isAdd('users'),
             'is_edit' => isEdit('users'),
             'is_delete' => isDelete('users'),

@@ -3,32 +3,38 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CarouselItemModelRequest;
+use App\Http\Requests\CategoryModelRequest;
 use App\Models\CarouselItem;
 use App\Models\Category;
 use App\Models\CategoryDetail;
 use App\Models\SearchTag;
+use App\Service\CategoryService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Http;
+use Illuminate\View\View;
 
 class CategoriesController extends Controller
 {
+
+    private $category_repo;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(CategoryService $category_repo)
     {
+        $this->category_repo = $category_repo;
         $this->middleware('auth');
     }
 
     public function index()
     {
-        $categories = Category::activeCategories(null)->get();
-
         return view('dashboard.category.categories', [
-            'categories' => $categories,
+            'categories' => $this->category_repo->get(null),
             'is_view' => isView('child_categories'),
             'is_add' => isAdd('categories'),
             'is_edit' => isEdit('categories'),
@@ -36,36 +42,19 @@ class CategoriesController extends Controller
         ]);
     }
 
-    public function getChildCategories($id)
+    public function getChildCategories($id): View
     {
-        $category = Category::where('id', $id)->where('is_active', 'true')->first();
-        $categoryChildes = Category::categories($id)->with('categoryDetails', 'categoryCarouselItems', 'searchTags')->paginate(15);
-
-        foreach ($categoryChildes as $item) {
-            $tags = [];
-            if (count($item['searchTags']) > 0) {
-                foreach ($item['searchTags'] as $tag) $tags[] = $tag['value'];
-            }
-
-            $item['tags'] = $tags;
-        }
-
         return view('dashboard.category.childCategories', [
-            'category' => $category,
-            'categoryChildes' => $categoryChildes,
+            'category' => $this->category_repo->firstActive($id),
+            'categoryChildes' => $this->category_repo->childCategoriesWithTags($id, 15),
             'is_add' => isAdd('child_categories'),
             'is_edit' => isEdit('child_categories'),
             'is_delete' => isDelete('child_categories'),
         ]);
     }
 
-    public function createCategory(Request $request)
+    public function createCategory(CategoryModelRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'background' => 'required'
-        ]);
-
         $name = $request->post('name');
         $file = $request->file('background');
 
@@ -82,12 +71,8 @@ class CategoriesController extends Controller
         return redirect()->back();
     }
 
-    public function updateCategory(Request $request)
+    public function updateCategory(CategoryModelRequest $request)
     {
-        $request->validate([
-            'name' => 'required'
-        ]);
-
         $id = $request->post('id');
         $name = $request->post('name');
         $file = $request->file('background');
@@ -116,12 +101,8 @@ class CategoriesController extends Controller
         return redirect()->back();
     }
 
-    public function createCategoryChild(Request $request)
+    public function createCategoryChild(CategoryModelRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-        ]);
-
         $id = $request->post('id');
         $name = $request->post('name');
         $preview = $request->post('preview');
@@ -152,15 +133,17 @@ class CategoriesController extends Controller
             'value' => $name,
         ]);
 
+        Http::post('https://graph.facebook.com/v11.0/104349325019924/feed', [
+            'message' => $preview,
+            'link' => "http://info.loc/info-p/1/27", // single post url
+            'access_token' => 'EAACsTrZAVqY8BAKOJaOGrc5Mbu3X1QWWD6pAm3E0BxEf66cv3Y5MC6WLnbzLFAsQoNRxVJZBD2a0pv98MQcUZA2xcetaQ7aoPpCjH7ZADlMqoRpHzAsQYnRDrZBnNNCANZAQXWa8mD8LLU8hS6eHn8pCEss6u84RBFUcAaav954y9CnDMfKpTUlo5YGgcrO3IBLJa4NcDE8AZDZD',
+        ]);
+
         return redirect()->back();
     }
 
-    public function updateCategoryChild(Request $request)
+    public function updateCategoryChild(CategoryModelRequest $request)
     {
-        $request->validate([
-            'name' => 'required'
-        ]);
-
         $id = $request->post('id');
         $parentId = $request->post('parentId');
         $name = $request->post('name');
@@ -215,12 +198,10 @@ class CategoriesController extends Controller
         return redirect()->back();
     }
 
-    public function addCarouselItem(Request $request)
+    public function addCarouselItem(CarouselItemModelRequest $request)
     {
-        $request->validate([
-            'photos' => 'required'
-        ]);
         $photos = $request->file('photos');
+
         foreach ($photos as $file) {
             $extension = $file->getClientOriginalExtension();
             $name = uniqid() . '.' . $extension;

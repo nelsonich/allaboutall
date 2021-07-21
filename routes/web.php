@@ -2,10 +2,10 @@
 
 use App\User;
 use App\Models\RBAC\Permission;
-use App\Models\RBAC\RolePermission;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
+use App\Services\PermissionResponseService;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,16 +20,13 @@ use Illuminate\Support\Facades\View;
 
 View::composer('layouts.appDashboard', function($view)
 {
+    $permissions = new PermissionResponseService();
     $auth = User::where('id', \auth()->id())->with('role')->first();
-    $permissions = Permission::where('parent_id', null)->get();
-
-    foreach ($permissions as $permission) {
-        $permission['actions'] = RolePermission::where('role_id', $auth->role->id)->where('permission_id', $permission->id)->first();
-    }
+    $array = Permission::where('parent_id', null)->get();
 
     $view->with(
         [
-            'permissions' => $permissions,
+            'permissions' => $permissions->get($auth->role->id, $array),
             'role' => $auth->role,
         ]);
 });
@@ -42,9 +39,7 @@ Route::get('/p/{id?}', 'WelcomeController@renderParentCategoryPage');
 Route::get('/info-p/{parent_id?}/{child_id}', 'WelcomeController@renderPageInformation')->middleware('isActiveInfo');
 Route::get('/add-link-count/{id?}', 'WelcomeController@addLinkCount');
 
-Auth::routes();
-
-Route::get('/register', function ():void {abort(404);});
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -70,7 +65,7 @@ Route::prefix('dashboard')->group(function () {
     Route::prefix('permissions')->group(function () {
         Route::get('/', 'Dashboard\PermissionController@index')->middleware('permission');
         Route::get('/get-by-role/{id?}', 'Dashboard\PermissionController@getByRole');
-        Route::post('/change-permission', 'Dashboard\PermissionController@changePermission')->name('change-permission');
+        Route::put('/change-permission', 'Dashboard\PermissionController@changePermission')->name('change-permission');
     });
 
     Route::prefix('users')->group(function () {

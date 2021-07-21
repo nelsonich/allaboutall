@@ -11,4 +11,8 @@ class CarouselItem extends Model
         'category_id',
         'name',
     ];
+
+    const RULES = [
+        'photos' => 'required',
+    ];
 }
