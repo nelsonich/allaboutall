@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Services\Role as RoleInterface;
+use App\Services\Contracts\Role as RoleInterface;
 use App\Models\RBAC\Role;
 
 class RoleService implements RoleInterface
@@ -11,4 +11,4 @@ class RoleService implements RoleInterface
     {
         return Role::where('name', '!=', Role::SUPER_ADMIN)->get();
     }
-} 
+}

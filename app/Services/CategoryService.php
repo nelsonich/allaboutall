@@ -1,11 +1,12 @@
-<?php 
+<?php
 
-namespace App\Service;
+namespace App\Services;
 
-use App\Services\Category as CategoryInterface;
+use App\Services\Contracts\Category as CategoryInterface;
 use App\Models\Category;
+use Illuminate\Database\Eloquent\Model;
 
-class CategoryService implements CategoryInterface 
+class CategoryService implements CategoryInterface
 {
     public function get(?int $id): iterable
     {
@@ -31,5 +32,19 @@ class CategoryService implements CategoryInterface
         }
 
         return $categoryChildes;
+    }
+
+    public function create(array $data): Model
+    {
+        $velue = Category::create($data);
+
+        return $velue;
+    }
+
+    public function update(array $data, int $id): int
+    {
+        $collection = Category::where('id', $id)->update($data);
+
+        return $collection;
     }
 }

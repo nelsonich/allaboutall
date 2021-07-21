@@ -3,11 +3,11 @@
 namespace App\Services;
 
 use App\Models\RBAC\RolePermission;
-use App\Services\PermissionResponse;
+use App\Services\Contracts\PermissionResponse;
 
 class PermissionResponseService implements PermissionResponse
 {
-    
+
     public function get(int $roleId, iterable $permissions): iterable
     {
         foreach ($permissions as $permission) {

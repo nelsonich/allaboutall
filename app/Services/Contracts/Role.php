@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Contracts;
 
 interface Role {
     public function getWithoutSuperAdmin(): iterable;

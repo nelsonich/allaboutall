@@ -9,7 +9,8 @@ use App\Models\CarouselItem;
 use App\Models\Category;
 use App\Models\CategoryDetail;
 use App\Models\SearchTag;
-use App\Service\CategoryService;
+use App\Services\CategoryService;
+use App\Traits\Controllers\SettingsTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
@@ -17,6 +18,7 @@ use Illuminate\View\View;
 
 class CategoriesController extends Controller
 {
+    use SettingsTrait;
 
     private $category_repo;
 
@@ -58,14 +60,13 @@ class CategoriesController extends Controller
         $name = $request->post('name');
         $file = $request->file('background');
 
-        $fileName = time() . '.' . $file->extension();
-        $file->move(public_path('storage/backgrounds'), $fileName);
+        $fileNames = SettingsTrait::uploadFiles('storage/backgrounds', $file);
 
-        Category::create([
+        $this->category_repo->create([
             'name' => $name,
             'parent_id' => null,
             'is_active' => 'true',
-            'background' => $fileName,
+            'background' => $fileNames[0],
         ]);
 
         return redirect()->back();
@@ -78,16 +79,15 @@ class CategoriesController extends Controller
         $file = $request->file('background');
 
         $cat = Category::find($id);
+        $data = ['name' => $name];
 
         if ($file) {
-            File::delete(public_path('storage/backgrounds/' . $cat->background));
-            $fileName = time() . '.' . $file->extension();
-            $file->move(public_path('storage/backgrounds'), $fileName);
-            $cat->background = $fileName;
+            SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
+            $fileNames = SettingsTrait::uploadFiles('storage/backgrounds', $file);
+            $data['background'] = $fileNames[0];
         }
 
-        $cat->name = $name;
-        $cat->save();
+        $this->category_repo->update($data, $id);
 
         return redirect()->back();
     }
@@ -96,7 +96,7 @@ class CategoriesController extends Controller
     {
         $id = $request->post('id');
         $cat = Category::find($id);
-        File::delete(public_path('storage/backgrounds/' . $cat->background));
+        SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
         $cat->delete();
         return redirect()->back();
     }
@@ -115,7 +115,7 @@ class CategoriesController extends Controller
             $file->move(public_path('storage/category_details/images/'), $fileName);
         }
 
-        $cat = Category::create([
+        $cat = $this->category_repo->create([
             'name' => $name,
             'parent_id' => $id,
             'is_active' => 'true',
