@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Events\MakeNewUser;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserModelRequest;
 use App\Services\RoleService;
+use App\Services\UserService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -11,19 +14,19 @@ use Illuminate\Support\Facades\Hash;
 class UsersController extends Controller
 {
     private $role_repo;
+    private $user_repo;
 
-    public function __construct(RoleService $role_repo)
+    public function __construct(RoleService $role_repo, UserService $user_repo)
     {
         $this->role_repo = $role_repo;
+        $this->user_repo = $user_repo;
         $this->middleware('auth');
     }
 
     public function index()
     {
-        $users = User::where('id', '!=', auth()->id())->with('role')->paginate(15);
-
         return view('dashboard.users', [
-            'users' => $users,
+            'users' => $this->user_repo->getWithoutSuperAdmin(15),
             'roles' => $this->role_repo->getWithoutSuperAdmin(),
             'is_add' => isAdd('users'),
             'is_edit' => isEdit('users'),
@@ -31,14 +34,8 @@ class UsersController extends Controller
         ]);
     }
 
-    public function addUser(Request $request)
+    public function addUser(UserModelRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
-
         $name = $request->post('name');
         $email = $request->post('email');
         $password = $request->post('password');
@@ -51,16 +48,18 @@ class UsersController extends Controller
             'role_id' => $role,
         ]);
 
+        MakeNewUser::dispatch([
+            'name' => $name,
+            'email' => $email,
+            'password' => $password,
+            'role' => $this->role_repo->getById($role),
+        ]);
+
         return redirect()->back();
     }
 
-    public function editUser(Request $request)
+    public function editUser(UserModelRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email'
-        ]);
-
         $id = $request->post('id');
         $name = $request->post('name');
         $email = $request->post('email');

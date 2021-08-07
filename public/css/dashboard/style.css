@@ -74,6 +74,7 @@ div.leftBar ul li a span.listIcon {
     font-size: 15px;
 }
 
+
 /* Right Bar */
 
 div.rightBar {
@@ -122,10 +123,13 @@ main {
     z-index: 99999;
 }
 
+
 /* CkEditor */
+
 .cke_combopanel {
     z-index: 99999 !important;
 }
+
 
 /* Carousel Items Modal */
 
@@ -195,7 +199,9 @@ table span.tableInfo {
     cursor: pointer;
 }
 
-table span.tableInfo:hover > div.tableInfoContent {display: block;}
+table span.tableInfo:hover>div.tableInfoContent {
+    display: block;
+}
 
 table div.tableInfoContent {
     position: absolute;
@@ -206,7 +212,9 @@ table div.tableInfoContent {
     display: none;
 }
 
+
 /* Roles */
+
 ol li.role {
     background-color: #000000;
     border-radius: 5px;
@@ -221,5 +229,10 @@ ol li.role a {
     text-transform: capitalize;
 }
 
-ol li.role.active {background-color: #cccccc}
-ol li.role.active a {color: #000000 !important}
+ol li.role.active {
+    background-color: #cccccc
+}
+
+ol li.role.active a {
+    color: #000000 !important
+}

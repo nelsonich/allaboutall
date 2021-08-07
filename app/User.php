@@ -38,6 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    const RULES = [
+        'name' => 'required',
+        'email' => 'required|email',
+    ];
+
     public function role()
     {
         return $this->hasOne(Role::class, 'id', 'role_id');

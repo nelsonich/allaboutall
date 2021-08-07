@@ -11,4 +11,9 @@ class RoleService implements RoleInterface
     {
         return Role::where('name', '!=', Role::SUPER_ADMIN)->get();
     }
+
+    public function getById(int $id): Role
+    {
+        return Role::find($id);
+    }
 }

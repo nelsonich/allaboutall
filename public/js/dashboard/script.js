@@ -1,7 +1,7 @@
-$(function () {
+$(function() {
     const token = $('meta[name="csrf-token"]').attr('content')
 
-    $('span.leftMenuToggle').on('click', function () {
+    $('span.leftMenuToggle').on('click', function() {
         let leftBar = $('div.leftBar');
         if (leftBar.hasClass('hide')) {
             $('span.listName').removeClass('hide')
@@ -35,7 +35,7 @@ $(function () {
         }
     });
 
-    $('span.rightMenuToggle').on('click', function () {
+    $('span.rightMenuToggle').on('click', function() {
         let rightBar = $('div.rightBar');
         if (rightBar.hasClass('hide')) {
             rightBar.removeClass('hide')
@@ -68,7 +68,7 @@ $(function () {
         }
     });
 
-    $(".changeImage").change(function () {
+    $(".changeImage").change(function() {
         readURL(this, $(this));
     });
 
@@ -77,7 +77,7 @@ $(function () {
         if (input.files && input.files[0]) {
             let reader = new FileReader();
 
-            reader.onload = function (e) {
+            reader.onload = function(e) {
                 that.prev().find('img').attr('src', e.target.result);
             }
 
@@ -90,28 +90,28 @@ $(function () {
 
     /* Carousel Modal */
 
-    $('span.openCarouselModal').on('click', function () {
+    $('span.openCarouselModal').on('click', function() {
         let that = $(this)
         let modal = that.parent().parent().find('div.carouselItemsModal')
         modal.removeClass('hide')
     });
 
-    $('span.closeCarouselModal').on('click', function () {
+    $('span.closeCarouselModal').on('click', function() {
         let that = $(this)
         that.parent().parent().addClass('hide')
     });
 
-    $('span.removeCarouselItem').on('click', function () {
+    $('span.removeCarouselItem').on('click', function() {
         let that = $(this);
         let id = that.data('id');
         $.ajax({
             url: `/dashboard/categories/child/remove-carousel-item/${id}`,
             method: 'get',
             dataType: 'json',
-            success: function (res) {
+            success: function(res) {
                 if (res) that.parent().remove()
             },
-            error: function (error) {
+            error: function(error) {
                 console.log(error)
             }
         });
