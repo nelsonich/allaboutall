@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use App\Services\PermissionResponseService;
+use App\Services\UserService;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +22,13 @@ use App\Services\PermissionResponseService;
 View::composer('layouts.appDashboard', function($view)
 {
     $permissions = new PermissionResponseService();
-    $auth = User::where('id', \auth()->id())->with('role')->first();
+    $auth = new UserService();
     $array = Permission::where('parent_id', null)->get();
 
     $view->with(
         [
-            'permissions' => $permissions->get($auth->role->id, $array),
-            'role' => $auth->role,
+            'permissions' => $permissions->get($auth->getById(\auth()->id())->role->id, $array),
+            'role' => $auth->getById(\auth()->id())->role,
         ]);
 });
 
@@ -49,12 +50,12 @@ Route::prefix('dashboard')->namespace('Dashboard')->group(function () {
         Route::get('/{id?}', 'CategoriesController@getChildCategories');
         Route::post('/add', 'CategoriesController@createCategory')->name('category.add');
         Route::post('/update', 'CategoriesController@updateCategory')->name('category.update');
-        Route::post('/delete', 'CategoriesController@deleteCategory')->name('category.delete');
+        Route::delete('/delete/{id}', 'CategoriesController@deleteCategory');
 
         Route::prefix('child')->group(function () {
             Route::post('/add', 'CategoriesController@createCategoryChild')->name('category-child.add');
             Route::post('/update', 'CategoriesController@updateCategoryChild')->name('category-child.update');
-            Route::post('/delete', 'CategoriesController@deleteCategoryChild')->name('category-child.delete');
+            Route::delete('/delete/{id}', 'CategoriesController@deleteCategoryChild');
             Route::post('/add-search-tags', 'CategoriesController@addSearchTags')->name('category-child.addSearchTags');
             Route::post('/change-active', 'CategoriesController@changeActiveCategoryChild')->name('category-child.changeActive');
             Route::post('/add-carousel-item', 'CategoriesController@addCarouselItem')->name('add-carousel-item');

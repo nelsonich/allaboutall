@@ -15,7 +15,7 @@ class UserService implements UserInterface
     }
 
     public function getById(int $id): User
-    {
-        return User::find($id);
+    {   
+        return User::whereId($id)->with('role')->first();
     }
 }

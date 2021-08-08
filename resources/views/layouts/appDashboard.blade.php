@@ -30,36 +30,38 @@
 </head>
 <body>
 <div id="app">
-    <div class="leftBar hide">
-        <div class="header">
-            <a href="{{ url('home') }}">AllAboutALL</a>
-            <span class="leftMenuToggle">
-                <i class="fas fa-align-justify"></i>
-            </span>
-        </div>
-        <ul>
-            @forelse($permissions as $key => $permission)
-                @if($permission['actions']['is_view'])
-                    <li>
-                        <a href="{{ url('dashboard/' . $permission->slug . '?key=' . $permission->slug) }}">
-                            <span class="listName hide">{{ $permission->name }}</span>
-                            <span class="listIcon">{{ mb_substr($permission->name, 0, 1) }}</span>
-                        </a>
-                    </li>
-                @endif
-            @empty
-                Empty!
-            @endforelse
-        </ul>
-    </div>
-    <main style="width: calc(100vw - 10%);transform: translate(50%, 0px);">
-        <div class="container-fluid p-0">
+    <div id="side_navigation">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        @forelse($permissions as $key => $permission)
+            @if($permission['actions']['is_view'])
+                <li>
+                    <a href="{{ url('dashboard/' . $permission->slug . '?key=' . $permission->slug) }}">
+                        <span class="listName">{{ $permission->name }}</span>
+                    </a>
+                </li>
+            @endif
+        @empty
+            Empty!
+        @endforelse
+      </div>
+    <main>
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header d-flex justify-content-between">
-                            Панель приборов
-                            <ul class="navbar-nav ml-auto">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="open_side_navigation">
+                                    <i class="fas fa-align-left"></i>
+                                </span>
+                            </div>
+
+                            <a href="{{ url('home') }}">
+                                <b style="font-size: 25px;">Все Обо Всем</b>
+                                <sub>Панель приборов</sub>
+                            </a>
+
+                            <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
@@ -86,13 +88,6 @@
         </div>
         @stack('modals')
     </main>
-    <div class="rightBar hide">
-        <div class="header">
-            <span class="rightMenuToggle">
-                <i class="fas fa-align-justify"></i>
-            </span>
-        </div>
-    </div>
 </div>
 </body>
 </html>

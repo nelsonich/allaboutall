@@ -21,6 +21,7 @@ class CreateCategoriesTable extends Migration
             $table->bigInteger('parent_id')->nullable();
             $table->string('is_active')->default('true');
             $table->string('background')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

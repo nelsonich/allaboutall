@@ -1,71 +1,12 @@
 $(function() {
-    const token = $('meta[name="csrf-token"]').attr('content')
+    const token = $('meta[name="csrf-token"]').attr('content');
 
-    $('span.leftMenuToggle').on('click', function() {
-        let leftBar = $('div.leftBar');
-        if (leftBar.hasClass('hide')) {
-            $('span.listName').removeClass('hide')
-            leftBar.removeClass('hide')
-
-            if ($('div.rightBar').hasClass('hide')) {
-                $('main').css({
-                    width: 'calc(100vw - 25%)',
-                    transform: 'translate(60%, 0px)',
-                });
-            } else {
-                $('main').css({
-                    width: 'calc(100vw - 40%)',
-                    transform: 'translate(50%, 0px)',
-                });
-            }
-        } else {
-            leftBar.addClass('hide')
-            $('span.listName').addClass('hide')
-            if ($('div.rightBar').hasClass('hide')) {
-                $('main').css({
-                    width: 'calc(100vw - 10%)',
-                    transform: 'translate(50%, 0px)',
-                });
-            } else {
-                $('main').css({
-                    width: 'calc(100vw - 25%)',
-                    transform: 'translate(40%, 0px)',
-                });
-            }
-        }
+    $("#side_navigation .closebtn").on("click", function() {
+        document.getElementById("side_navigation").style.width = "0";
     });
 
-    $('span.rightMenuToggle').on('click', function() {
-        let rightBar = $('div.rightBar');
-        if (rightBar.hasClass('hide')) {
-            rightBar.removeClass('hide')
-
-            if ($('div.leftBar').hasClass('hide')) {
-                $('main').css({
-                    width: 'calc(100vw - 25%)',
-                    transform: 'translate(40%, 0px)',
-                });
-            } else {
-                $('main').css({
-                    width: 'calc(100vw - 40%)',
-                    transform: 'translate(50%, 0px)',
-                });
-            }
-        } else {
-            rightBar.addClass('hide')
-
-            if ($('div.leftBar').hasClass('hide')) {
-                $('main').css({
-                    width: 'calc(100vw - 10%)',
-                    transform: 'translate(50%, 0px)',
-                });
-            } else {
-                $('main').css({
-                    width: 'calc(100vw - 25%)',
-                    transform: 'translate(60%, 0px)',
-                });
-            }
-        }
+    $("span.open_side_navigation").on("click", function() {
+        document.getElementById("side_navigation").style.width = "100%";
     });
 
     $(".changeImage").change(function() {

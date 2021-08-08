@@ -2,125 +2,55 @@
     display: none !important;
 }
 
-div.leftBar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #cccccc;
-    width: calc(100vw - 80%);
-    height: 100vh;
-    transition: width 45ms;
-}
-
-div.leftBar.hide {
-    width: calc(100vw - 95%);
-    display: block !important;
-}
-
-div.leftBar.hide div.header {
-    display: flex;
-    justify-content: center;
-}
-
-div.leftBar div.header a {
-    font-size: 25px;
-    margin: 10px;
-}
-
-div.leftBar.hide div.header a {
-    display: none;
-}
-
-div.leftBar.hide div.header span.leftMenuToggle {
-    position: relative;
-}
-
-div.leftBar div.header span.leftMenuToggle {
-    position: absolute;
-    right: 0;
-    margin: 5px;
-    top: -5px;
-    font-size: 25px;
+span.open_side_navigation {
+    font-size: 30px;
     cursor: pointer;
-    z-index: 999999;
 }
 
-div.leftBar ul {
-    padding: 0;
-    background-color: black;
+
+/* side navigation */
+
+#side_navigation {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
 }
 
-div.leftBar ul li {
-    display: flex;
-}
-
-div.leftBar ul li a {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    color: #ffffff;
+#side_navigation a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    align-items: center;
-    font-size: 20px;
-    font-weight: bolder;
-}
-
-div.leftBar ul li a:hover {
-    background-color: #444141;
-}
-
-div.leftBar ul li a span.listIcon {
-    font-size: 15px;
-}
-
-
-/* Right Bar */
-
-div.rightBar {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #cccccc;
-    width: calc(100vw - 80%);
-    height: 100vh;
-}
-
-div.rightBar.hide {
-    width: calc(100vw - 95%);
-    display: block !important;
-}
-
-div.rightBar.hide div.header {
-    display: flex;
-    justify-content: center;
-}
-
-div.rightBar.hide div.header h4 {
-    display: none;
-}
-
-div.rightBar.hide div.header span.rightMenuToggle {
-    position: relative;
-}
-
-div.rightBar div.header span.rightMenuToggle {
-    position: absolute;
-    left: 0;
-    margin: 5px;
-    top: -5px;
     font-size: 25px;
-    cursor: pointer;
-    z-index: 99999;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-main {
-    width: calc(100vw - 40%);
-    height: 100vh;
+#side_navigation a:hover {
+    color: #f1f1f1;
+}
+
+#side_navigation .closebtn {
     position: absolute;
-    transform: translate(50%, 0px);
-    right: 50%;
-    z-index: 99999;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* home page */
+
+div.home>div>h2 {
+    background-color: #b3b2b2;
+    padding: 5px;
 }
 
 

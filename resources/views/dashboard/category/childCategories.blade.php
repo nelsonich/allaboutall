@@ -76,10 +76,10 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form method="post" action="{{ route('category-child.delete') }}">
+                                                        <form method="post" action="{{ url('/dashboard/categories/child/delete', ['id' => $item['categoryDetails']->category_id]) }}">
                                                             @csrf
+                                                            @method('delete')
                                                             <p>вы точно хотите удалить ету катекорию?</p>
-                                                            <input type="hidden" value="{{ $item['categoryDetails']->id }}" name="id">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
                                                             <button type="submit" class="btn btn-danger">удалить</button>
                                                         </form>

@@ -92,12 +92,10 @@ class CategoriesController extends Controller
         return redirect()->back();
     }
 
-    public function deleteCategory(Request $request)
+    public function deleteCategory($id)
     {
-        $id = $request->post('id');
-        $cat = Category::find($id);
-        SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
-        $cat->delete();
+        Category::destroy($id);
+        // SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
         return redirect()->back();
     }
 
@@ -173,16 +171,15 @@ class CategoriesController extends Controller
         return redirect()->back();
     }
 
-    public function deleteCategoryChild(Request $request)
+    public function deleteCategoryChild($id)
     {
-        $id = $request->post('id');
-        $cat = CategoryDetail::find($id);
+        // $cat = CategoryDetail::find($id);
 
-        if ($cat->image !== 'noImage.png') {
-            File::delete(public_path('storage/category_details/images/' . $cat->image));
-        }
+        // if ($cat->image !== 'noImage.png') {
+        //     File::delete(public_path('storage/category_details/images/' . $cat->image));
+        // }
 
-        Category::destroy($cat->category_id);
+        Category::destroy($id);
 
         return redirect()->back();
     }
