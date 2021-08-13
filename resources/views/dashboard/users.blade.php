@@ -18,8 +18,12 @@
         <div class="d-flex justify-content-between">
             <h4>Пользователи</h4>
             @if($is_add)
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addUserModal" data-whatever="@mdo">Создать</button>
-                <a href={{ route('export-users-as-excel') }} type="button" class="btn btn-info">Export data</a>
+                <div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addUserModal" data-whatever="@mdo">Создать</button>
+                    <a href={{ route('export-users-as-excel') }} type="button" class="btn btn-warning">
+                        Экспортировать пользователей
+                    </a>
+                </div>
             @endif
         </div>
         <div class="mt-2 p-0">

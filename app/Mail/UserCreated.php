@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class UserCreated extends Mailable
+class UserCreated extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -29,6 +29,7 @@ class UserCreated extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.user.created');
+        return $this->subject('Добро пожаловать')
+                    ->markdown('emails.user.created');
     }
 }
