@@ -18,8 +18,35 @@ class WelcomeController extends Controller
 
     public function index(): View
     {
+        // get 4 oldest child categories
+        $oldestChildCategories = Category::where("is_active", 'true')
+                                        ->whereNotNull("parent_id")
+                                        ->limit(4)
+                                        ->orderBy("created_at", "asc")
+                                        ->with("categoryDetails")
+                                        ->get();
+
+        // get top 9 first news
+        $firstTopChildCategories = Category::where("is_active", 'true')
+                                        ->whereNotNull("parent_id")
+                                        ->limit(9)
+                                        ->orderByDesc("created_at")
+                                        ->with("categoryDetails")
+                                        ->get();
+
+        // get top 4 first news
+        $mostPopularChildCategories = Category::where("is_active", 'true')
+                                        ->whereNotNull("parent_id")
+                                        ->limit(4)
+                                        ->orderByDesc("click_count")
+                                        ->with("categoryDetails")
+                                        ->get();
+
         return view('welcome', [
-            'categories' => $this->category_repo->get(null),
+            "categories" => $this->category_repo->get(null),
+            "firstTopNews" => $firstTopChildCategories,
+            "mostPopularNews" => $mostPopularChildCategories,
+            "oldestNews" => $oldestChildCategories
         ]);
     }
 
