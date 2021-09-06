@@ -75,7 +75,7 @@
         </main>
 
         <footer>
-          <div class="d-flex justify-content-around">
+          <div class="d-flex">
             <div>
               <h1>
                 <i>Все Обо Всем</i>

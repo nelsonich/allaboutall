@@ -48,5 +48,20 @@
                 </li>
             @endforeach
         </ol>
+
+        {{-- Newsletter --}}
+        <div class="newsletter">
+            <h4>Newsletter</h4>
+
+            <form action="">
+                {{-- name --}}
+                <input type="text" placeholder="Имя">
+
+                {{-- email --}}
+                <input type="text" placeholder="Эл. адрес">
+
+                <button type="submit">Подписываться</button>
+            </form>
+        </div>
     </div>
 </div>

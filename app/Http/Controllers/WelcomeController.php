@@ -21,7 +21,7 @@ class WelcomeController extends Controller
         // get 4 oldest child categories
         $oldestChildCategories = Category::where("is_active", 'true')
                                         ->whereNotNull("parent_id")
-                                        ->limit(4)
+                                        ->limit(5)
                                         ->orderBy("created_at", "asc")
                                         ->with("categoryDetails")
                                         ->get();

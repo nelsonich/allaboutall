@@ -5,10 +5,16 @@
     div.rightBanner a:last-child img {
         display: block;
     }
-
     div.childCategories ul li div:first-child,
     div.leftBanner a:first-child img,
     div.rightBanner a:first-child img {
         display: none;
+    }
+    div#app footer div:first-child {
+        flex-direction: column;
+        text-align: center;
+    }
+    div#app footer div:first-child div {
+        margin-bottom: 10px;
     }
 }
