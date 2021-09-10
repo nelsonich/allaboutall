@@ -17,4 +17,30 @@
     div#app footer div:first-child div {
         margin-bottom: 10px;
     }
+    div ul.categories li a,
+    div.singleTopFirstNewsRight div.singleNewsHead div:last-child a.newsDesc,
+    div.singleTopFirstNewsLeft div.singleNewsHead div:last-child a.newsDesc {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    div.singleTopFirstNewsRight div.singleNewsHead div:first-child,
+    div.singleTopFirstNewsLeft div.singleNewsHead div:first-child {
+        display: none;
+    }
+    div.singleTopFirstNewsRight div.singleNewsHead div:last-child,
+    div.singleTopFirstNewsLeft div.singleNewsHead div:last-child {
+        width: 100%;
+    }
+    div.singleTopFirstNewsRight div.singleNewsHead div:last-child a.newsDesc,
+    div.singleTopFirstNewsLeft div.singleNewsHead div:last-child a.newsDesc {
+        font-size: 14px;
+    }
+    div.home_page_section_title h2 {
+        font-size: 20px;
+    }
+    div ul.categories li a {
+        font-size: 13px;
+    }
 }

@@ -48,4 +48,9 @@ class Category extends Model
     {
         return self::where('parent_id', $id)->orderByDesc('created_at');
     }
+
+    public function parent_category()
+    {
+        return $this->hasOne(Category::class, "id", "parent_id");
+    }
 }

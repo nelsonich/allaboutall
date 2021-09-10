@@ -56,5 +56,57 @@ $(function() {
         });
     });
 
+    $("#newsletterform").submit(function(e) {
+        e.preventDefault();
+        const submit = $("#newsletterform button[type=submit]");
+        let name = $("#name").val();
+        let email = $("#email").val();
+
+        $("#newsletterform input").removeClass('noValid');
+        $("#newsletterform p.errorMessage").text('');
+
+        let isValidForm = formValidation([
+            { "field": "name", "required": true, "value": name },
+            { "field": "email", "required": true, "value": email },
+        ]);
+
+        if (isValidForm.length > 0) {
+            isValidForm.forEach(element => {
+                $(`#newsletterform input[name=${element.field}]`).addClass('noValid');
+                $(`#newsletterform input[name=${element.field}] + p.errorMessage`).text(element.error);
+            });
+
+            return false;
+        }
+
+        submit.addClass("disabled");
+        submit.text('Подождите');
+
+        $.ajax({
+            url: "/subscribe",
+            type: 'post',
+            dataType: 'json',
+            data: { _token: token, name: name, email: email },
+            success: function(data) {
+                submit.removeClass("disabled");
+                submit.text('Подписываться');
+                $("#newsletterform input").val('');
+
+                createSuccessMessageWindow(data.title, data.message);
+                removeModal("successMessageWindow", 6000);
+            },
+            error: function(error) {
+                createErrorMessageWindow(error.responseJSON.errors.email[0]);
+                submit.removeClass("disabled");
+                submit.text('Подписываться');
+                removeModal("errorMessageWindow", 6000);
+            }
+        });
+    });
+
+    $(document).on("click", "span.closeModal", function() {
+        $(this).parent().parent().remove();
+    });
+
     // setBackground($('section').data('bg'), $('section').data('path'))
 });

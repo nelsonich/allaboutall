@@ -344,9 +344,20 @@ div.newsletter form input[type="text"] {
     font-size: 14px;
     font-style: italic;
     color: #fff;
-    margin-bottom: 25px;
     border: none;
     padding: 0 25px;
+}
+
+div.newsletter form input.noValid {
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+
+div.newsletter form input.noValid+p.errorMessage {
+    margin-bottom: 25px;
+    color: #f9dfff;
+    width: 100%;
+    text-transform: capitalize;
 }
 
 div.newsletter form button[type="submit"] {
@@ -360,6 +371,11 @@ div.newsletter form button[type="submit"] {
     padding: 0 25px;
     border-radius: 0;
     transition: .4s all ease;
+}
+
+div.newsletter form button[type="submit"].disabled {
+    pointer-events: none;
+    opacity: .5;
 }
 
 div.newsletter form button[type="submit"]:hover {
@@ -480,4 +496,46 @@ div#app footer div:last-child p {
     line-height: 2;
     font-weight: 400;
     text-align: center;
+}
+
+
+/* Success message window */
+
+div.successMessageWindow {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    background-color: rgb(68, 66, 90, .9);
+    margin: 5px;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+div.errorMessageWindow {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    background-color: rgba(211, 20, 20, 0.9);
+    margin: 5px;
+    padding: 5px;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+div.errorMessageWindow div,
+div.successMessageWindow div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.errorMessageWindow div span.closeModal,
+div.successMessageWindow div span.closeModal {
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 20px;
 }

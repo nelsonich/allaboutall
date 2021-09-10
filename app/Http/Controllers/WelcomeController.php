@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\NewsLetterSubscriber;
 use App\Services\CategoryService;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -18,7 +19,7 @@ class WelcomeController extends Controller
 
     public function index(): View
     {
-        // get 4 oldest child categories
+        // get 5 oldest child categories
         $oldestChildCategories = Category::where("is_active", 'true')
                                         ->whereNotNull("parent_id")
                                         ->limit(5)
@@ -31,7 +32,7 @@ class WelcomeController extends Controller
                                         ->whereNotNull("parent_id")
                                         ->limit(9)
                                         ->orderByDesc("created_at")
-                                        ->with("categoryDetails")
+                                        ->with("categoryDetails", "parent_category")
                                         ->get();
 
         // get top 4 first news
@@ -39,7 +40,7 @@ class WelcomeController extends Controller
                                         ->whereNotNull("parent_id")
                                         ->limit(4)
                                         ->orderByDesc("click_count")
-                                        ->with("categoryDetails")
+                                        ->with("categoryDetails", "parent_category")
                                         ->get();
 
         return view('welcome', [
@@ -115,5 +116,26 @@ class WelcomeController extends Controller
         $clickCount = Category::where('id', $id)->increment('click_count', 1);
 
         return response()->json($clickCount);
+    }
+
+    public function subscribe(Request $request)
+    {
+        $name = $request->post("name");
+        $email = $request->post("email");
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|unique:news_letter_subscribers',
+        ]);
+
+        NewsLetterSubscriber::create([
+            "name" => $name,
+            "email" => $email,
+        ]);
+
+        return response()->json([
+            "title" => "Спасибо " . $name . " за подписку.",
+            "message" => "Вы будете получать новости, как вы упомянули ․ по адресу: " . $email,
+        ]);
     }
 }

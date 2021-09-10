@@ -9,7 +9,7 @@
                     <div class="singleMostPopularNewsHead">
                         <div style="background-image: url('{{ asset('storage/category_details/images/' . $item->categoryDetails->image) }}')"></div>
                         <div>
-                            <h6 class="newsCat">Category</h6>
+                            <h6 class="newsCat">{{ $item->parent_category->name }}</h6>
                             <a href="/info-p/{{ $item->parent_id . '/' . $item->id }}" class="newsDesc click">
                                 {{ limit($item->categoryDetails->preview_text, 200) }}
                             </a>
@@ -53,12 +53,13 @@
         <div class="newsletter">
             <h4>Newsletter</h4>
 
-            <form action="">
+            <form id="newsletterform">
                 {{-- name --}}
-                <input type="text" placeholder="Имя">
-
+                <input type="text" name="name" id="name" placeholder="Имя">
+                <p class="errorMessage"></p>
                 {{-- email --}}
-                <input type="text" placeholder="Эл. адрес">
+                <input type="text" name="email" id="email" placeholder="Эл. адрес">
+                <p class="errorMessage"></p>
 
                 <button type="submit">Подписываться</button>
             </form>

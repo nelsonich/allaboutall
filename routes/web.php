@@ -39,6 +39,7 @@ Route::get('/search/{id?}/{text?}', 'WelcomeController@search');
 Route::get('/p/{id?}', 'WelcomeController@renderParentCategoryPage');
 Route::get('/info-p/{parent_id?}/{child_id}', 'WelcomeController@renderPageInformation')->middleware('isActiveInfo');
 Route::get('/add-link-count/{id?}', 'WelcomeController@addLinkCount');
+Route::post('/subscribe', 'WelcomeController@subscribe');
 
 Auth::routes(['register' => false]);
 
