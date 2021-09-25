@@ -1,10 +1,6 @@
 /*  */
 
 @media screen and (max-width: 767px) {
-    div.leftBanner a:last-child img,
-    div.rightBanner a:last-child img {
-        display: block;
-    }
     div.childCategories ul li div:first-child,
     div.leftBanner a:first-child img,
     div.rightBanner a:first-child img {
@@ -21,6 +17,14 @@
     div.singleTopFirstNewsRight div.singleNewsHead div:last-child a.newsDesc,
     div.singleTopFirstNewsLeft div.singleNewsHead div:last-child a.newsDesc {
         font-size: 12px;
+    }
+    div.info div.info-body div.info-image {
+        float: none;
+        margin-right: 0;
+        width: 100%;
+    }
+    div.info div.info-header h1+div>div:first-child {
+        margin-bottom: 10px;
     }
 }
 

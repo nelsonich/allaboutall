@@ -1,6 +1,6 @@
-$(function () {
+$(function() {
     $('div.carousel').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 1,

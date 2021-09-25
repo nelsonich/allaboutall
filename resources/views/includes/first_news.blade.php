@@ -15,7 +15,6 @@
                 </div>
             </div>
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div>
                     <div class="users_watch_count">
                         <i class="far fa-eye"></i>
@@ -39,7 +38,6 @@
                 </div>
             </div>
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div class="users_watch_count">
                     <i class="far fa-eye"></i>
                     {{ $firstTopNews[1]->click_count }}
@@ -61,7 +59,6 @@
                 </div>
             </div>
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div class="users_watch_count">
                     <i class="far fa-eye"></i>
                     {{ $firstTopNews[2]->click_count }}
@@ -83,7 +80,6 @@
                 </div>
             </div>
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div class="users_watch_count">
                     <i class="far fa-eye"></i>
                     {{ $firstTopNews[3]->click_count }}
@@ -103,7 +99,6 @@
                 </div>
             </div>
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div>
                     <div class="users_watch_count">
                         <i class="far fa-eye"></i>
@@ -130,7 +125,6 @@
             </div>
 
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div>
                     <div class="users_watch_count">
                         <i class="far fa-eye"></i>
@@ -155,7 +149,6 @@
             </div>
 
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div>
                     <div class="users_watch_count">
                         <i class="far fa-eye"></i>
@@ -180,7 +173,6 @@
             </div>
 
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div>
                     <div class="users_watch_count">
                         <i class="far fa-eye"></i>
@@ -205,7 +197,6 @@
             </div>
 
             <div class="singleNewsFoot">
-                <div>Created By admin</div>
                 <div>
                     <div class="users_watch_count">
                         <i class="far fa-eye"></i>

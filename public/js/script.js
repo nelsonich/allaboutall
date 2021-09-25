@@ -8,14 +8,17 @@ $(function() {
 
     $('div.childCategories').scroll(function() {
         if ($('div.childCategories').scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight && (globalVariables.ifIssetData === true || globalVariables.ifIssetData === 'true')) {
-            $('img#loader').removeClass('hide')
+            $('p.loader').removeClass('hide')
+            $('div.childCategories ul').addClass("hide")
+
             $.ajax({
                 url: `/get-data`,
                 method: 'post',
                 dataType: 'json',
                 data: { _token: token, offset: page * limit, id: categoryId, q: $('input#search').val() },
                 success: function(res) {
-                    $('img#loader').addClass('hide')
+                    $('p.loader').addClass('hide')
+                    $('div.childCategories ul').removeClass("hide")
                     page++;
                     $('div.childCategories').attr('data-ifIssetData', res['ifIssetData'])
                     setGlobalVariableValue('ifIssetData', res['ifIssetData'])
@@ -26,7 +29,8 @@ $(function() {
                                         <h3><a href="/info-p/${categoryId}/${value.id}" class="click">${value.name}</a></h3>
                                         <p>${textLimit(value['category_details']['preview_text'], 100)}</p>
                                     </div>
-                                </li>`;
+                                </li>
+                                <hr />`;
                         $('div.childCategories > ul').append(li);
                     });
                 },

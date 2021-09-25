@@ -42,7 +42,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
               <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-                <li class="nav-item active">
+                {{-- <li class="nav-item active">
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -61,14 +61,13 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
-                </li>
+                </li> --}}
               </ul>
-              <form class="d-flex">
-                <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+
+              {{-- Social icons --}}
+              @include("includes.social_icons")
             </div>
-          </nav>
+        </nav>
 
         <main class="py-2">
             @yield('content')
@@ -81,10 +80,9 @@
                 <i>Все Обо Всем</i>
               </h1>
 
-              <div>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
+              {{-- Social icons --}}
+              @include("includes.social_icons")
+
             </div>
             <div>
               <h3>Политика</h3>

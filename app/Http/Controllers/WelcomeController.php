@@ -58,21 +58,37 @@ class WelcomeController extends Controller
         $childCategories = Category::activeCategories($id)->with('categoryDetails')->limit($limit)->get();
         $dataCount = Category::activeCategories($id)->count();
 
+        // topic news 
+        $topicNews = Category::activeCategories($parentCategory->id)
+                                ->with("categoryDetails")
+                                ->limit(4)
+                                ->get();
+
         return view('parentCategoryPage', [
             'childCategories' => $childCategories,
             'parentCategory' => $parentCategory,
             'ifIssetData' => $dataCount > $limit ? 'true' : 'false',
+            "topic_news" => $topicNews
         ]);
     }
 
     public function renderPageInformation($parentId, $childId): View
     {
-        $parentCategory = Category::activeCategories(null)->where('id', $parentId)->first();
-        $childCategories = Category::activeCategories($parentId)->where('id', $childId)->with('categoryDetails', 'categoryCarouselItems')->first();
+        // topic news 
+        $topicNews = Category::activeCategories($parentId)
+                                ->where("id", "<>", $childId)
+                                ->with("categoryDetails")
+                                ->limit(10)
+                                ->get();
 
-        return view('info', [
-            'childCategories' => $childCategories,
-            'parentCategory' => $parentCategory,
+        $childCategories = Category::activeCategories($parentId)
+                                    ->where("id", $childId)
+                                    ->with("categoryDetails", "categoryCarouselItems", "parent_category")
+                                    ->first();
+
+        return view("info", [
+            "info" => $childCategories,
+            "topic_news" => $topicNews
         ]);
     }
 

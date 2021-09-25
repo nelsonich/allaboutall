@@ -3,27 +3,19 @@
 @section('description', 'Это страница всех статей. Здесь можно увидеть стати конкретной категории.')
 
 @section('content')
-    <section data-bg="{{ $parentCategory->background }}" data-path="backgrounds">
-        <div class="container">
+    <section>
+        <div class="container-fluid">
             <div class="row">
-                <div class="leftBanner col-md-3 col-sm-12 text-center mb-3">
-                    <a href="http://drycode.loc/" target="_blank">
-                        <img src="{{ asset('storage/drycode_200_500.png') }}" alt="Ad">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('storage/drycode_350_200.png') }}" alt="Ad">
-                    </a>
-                </div>
-                <div class="col-md-6 col-sm-12 centerBar">
-
-                    <ul class="breadcrumb mt-3 mb-0 p-2">
-                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Категории</a></li>
+                <div class="col-md-8 mb-3">
+                    <ul class="breadcrumb p-2">
+                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Главная страница</a></li>
                         <li class="breadcrumb-item" style="color: #000000">{{ limit($parentCategory->name, 15) }}</li>
                     </ul>
 
                     <div class="text-center">
                         <label for="search" class="d-block">
                             <input
+                            class="w-100"
                                 data-parent_id="{{ $parentCategory->id }}"
                                 type="text"
                                 placeholder="Введите поисковый запрос"
@@ -31,9 +23,6 @@
                         </label>
                     </div>
                     <div class="childCategories" data-ifIssetData="{{ $ifIssetData }}">
-                        <h2 class="text-center border-bottom py-2">
-                            {{ $parentCategory->name }}
-                        </h2>
                         <ul class="p-0">
                             @forelse($childCategories as $category)
                                 <li>
@@ -47,22 +36,36 @@
                                         <p>{{ limit($category->categoryDetails->preview_text, 100) }}</p>
                                     </div>
                                 </li>
+                                <hr />
                             @empty
                                 Нечего показать!!!
                             @endforelse
                         </ul>
-                    </div>
-                    <div class="d-flex justify-content-center align-content-center mt-2">
-                        <img src="{{ asset('storage/loader.gif') }}" alt="Loader..." id="loader" class="hide">
+                        <p class='text-center loader hide'>Загрузка...</p>
                     </div>
                 </div>
-                <div class="rightBanner col-md-3 col-sm-12 text-center mt-3">
-                    <a href="http://drycode.loc/" target="_blank">
-                        <img src="{{ asset('storage/drycode_200_500.png') }}" alt="Ad">
-                    </a>
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('storage/drycode_350_200.png') }}" alt="Ad">
-                    </a>
+                <div class="col-md-4">
+                    {{-- topic news --}}
+                    <div class="home_page_section_title">
+                        <h2>{{ $parentCategory->name }}</h2>
+                    </div>
+
+                    <ol class="topic_news">
+                        @foreach($topic_news as $item)
+                            <li class="singleTopicNews">
+                                <a href="/info-p/{{ $item->parent_id . '/' . $item->id }}" class="click">
+                                    {{ limit($item->categoryDetails->preview_text, 150) }}
+                                </a>
+                                <p class="created_date">
+                                    <i class="far fa-clock"></i>
+                                    {{ \Carbon\Carbon::parse($item->created_at)->isoFormat("MMMM DD, YYYY") }}
+                                </p>
+                            </li>
+                        @endforeach
+                    </ol>
+
+                    {{-- most popular news --}}
+                    @include('includes.news_letter')
                 </div>
             </div>
         </div>

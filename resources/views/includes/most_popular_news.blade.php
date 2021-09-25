@@ -17,7 +17,6 @@
                     </div>
         
                     <div class="singleMostPopularNewsFoot">
-                        <div>Created By admin</div>
                         <div>
                             <div class="users_watch_count">
                                 <i class="far fa-eye"></i>
@@ -50,19 +49,6 @@
         </ol>
 
         {{-- Newsletter --}}
-        <div class="newsletter">
-            <h4>Newsletter</h4>
-
-            <form id="newsletterform">
-                {{-- name --}}
-                <input type="text" name="name" id="name" placeholder="Имя">
-                <p class="errorMessage"></p>
-                {{-- email --}}
-                <input type="text" name="email" id="email" placeholder="Эл. адрес">
-                <p class="errorMessage"></p>
-
-                <button type="submit">Подписываться</button>
-            </form>
-        </div>
+        @include("includes.news_letter")
     </div>
 </div>

@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@font-face {
+    font-family: UbuntuMedium;
+    src: url('../fonts/ubuntu/Ubuntu-Medium.ttf');
+}
+
+@font-face {
+    font-family: LoraMedium;
+    src: url('../fonts/lora/Lora-Medium.ttf');
+}
+
+@font-face {
+    font-family: RalewayMedium;
+    src: url('../fonts/raleway/Raleway-Medium.ttf');
+}
+
 .hide {
     display: none !important;
 }
@@ -51,7 +65,7 @@ div ul.categories li a {
     padding: 10px;
     display: block;
     transition: .4s all ease;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: UbuntuMedium;
 }
 
 
@@ -75,7 +89,7 @@ div.singleTopFirstNewsLeft div.singleNewsHead {
 }
 
 div.singleTopFirstNewsLeft div.singleNewsFoot {
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 div.singleTopFirstNewsLeft div.singleNewsHead div:first-child {
@@ -179,7 +193,7 @@ div.singleTopFirstNewsRight div.singleNewsHead {
 }
 
 div.singleTopFirstNewsRight div.singleNewsFoot {
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 div.singleTopFirstNewsRight div.singleNewsHead div:first-child {
@@ -263,7 +277,7 @@ div.mostPopularNews div.singleMostPopularNews div.singleMostPopularNewsHead div:
 
 div.mostPopularNews div.singleMostPopularNews div.singleMostPopularNewsFoot {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 
@@ -272,26 +286,34 @@ div.mostPopularNews div.singleMostPopularNews div.singleMostPopularNewsFoot {
 
 /* oldest news */
 
+
+/* topic news */
+
+ol.topic_news,
 ol.oldestNews {
     margin: 0;
     padding: 0 15px;
 }
 
+ol.topic_news li.singleTopicNews,
 ol.oldestNews li.singleOldestNews {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: UbuntuMedium;
     color: #FF3C36;
     margin-bottom: 20px;
 }
 
+ol.topic_news li.singleTopicNews a,
 ol.oldestNews li.singleOldestNews a {
     color: #000000;
     text-decoration: none;
 }
 
+ol.topic_news li.singleTopicNews a:hover,
 ol.oldestNews li.singleOldestNews a:hover {
     color: #FF3C36;
 }
 
+ol.topic_news li.singleTopicNews p.created_date,
 ol.oldestNews li.singleOldestNews p.created_date {
     font-size: 11px;
     text-transform: uppercase;
@@ -384,8 +406,8 @@ div.newsletter form button[type="submit"]:hover {
 }
 
 div.childCategories {
-    border: 1px solid #fff;
-    box-shadow: inset 3px 3px 15px 0;
+    border: 1px solid;
+    /* box-shadow: inset 3px 3px 15px 0; */
 }
 
 div.childCategories {
@@ -395,7 +417,7 @@ div.childCategories {
 
 div.childCategories ul li {
     display: flex;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     padding: 15px;
 }
 
@@ -427,8 +449,9 @@ div.childCategories ul li div:first-child {
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
+    /* background: #888;  */
+    /* border-radius: 5px; */
+    background-color: #02031c;
 }
 
 
@@ -436,6 +459,27 @@ div.childCategories ul li div:first-child {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+
+/* Single Info page */
+
+div.info div.info-header h1 {
+    font-family: LoraMedium;
+}
+
+div.info div.info-body p {
+    font-family: RalewayMedium;
+}
+
+div.info div.info-body div.info-image {
+    float: left;
+    margin-right: 10px;
+    width: 50%;
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -486,8 +530,21 @@ div#app footer div:first-child h1+div a {
     transition: .4s all ease;
 }
 
-div#app footer div:first-child h1+div a:hover {
-    color: #FF3C36;
+div#app nav div div a {
+    color: #000000;
+    font-size: 25px;
+    margin-right: 5px;
+    transition: .4s all ease;
+}
+
+div#app nav div div a:nth-child(1):hover,
+div#app footer div:first-child h1+div a:nth-child(1):hover {
+    color: #4267B2;
+}
+
+div#app nav div div a:nth-child(2):hover,
+div#app footer div:first-child h1+div a:nth-child(2):hover {
+    color: #bc2a8d;
 }
 
 div#app footer div:last-child p {

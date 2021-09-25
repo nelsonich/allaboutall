@@ -1,12 +1,11 @@
 <?php
 
-use App\User;
+use App\Services\UserService;
 use App\Models\RBAC\Permission;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Route;
 use App\Services\PermissionResponseService;
-use App\Services\UserService;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,14 +31,13 @@ View::composer('layouts.appDashboard', function($view)
         ]);
 });
 
-
 Route::get('/', 'WelcomeController@index');
+Route::post('/subscribe', 'WelcomeController@subscribe');
 Route::post('/get-data', 'WelcomeController@getChildData');
 Route::get('/search/{id?}/{text?}', 'WelcomeController@search');
 Route::get('/p/{id?}', 'WelcomeController@renderParentCategoryPage');
-Route::get('/info-p/{parent_id?}/{child_id}', 'WelcomeController@renderPageInformation')->middleware('isActiveInfo');
 Route::get('/add-link-count/{id?}', 'WelcomeController@addLinkCount');
-Route::post('/subscribe', 'WelcomeController@subscribe');
+Route::get('/info-p/{parent_id?}/{child_id}', 'WelcomeController@renderPageInformation')->middleware('isActiveInfo');
 
 Auth::routes(['register' => false]);
 
