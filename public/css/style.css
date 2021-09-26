@@ -169,7 +169,7 @@ div.singleTopFirstNewsCenter div.singleNewsHead div:last-child a.newsDesc:hover 
 
 div.singleTopFirstNewsCenter div.singleNewsFoot {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 
