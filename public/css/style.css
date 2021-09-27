@@ -544,8 +544,14 @@ div#app footer div:first-child h1+div a:nth-child(1):hover {
 
 div#app nav div div a:nth-child(2):hover,
 div#app footer div:first-child h1+div a:nth-child(2):hover {
-    color: #bc2a8d;
+    color: #0088cc;
 }
+
+
+/* div#app nav div div a:nth-child(3):hover,
+div#app footer div:first-child h1+div a:nth-child(3):hover {
+    color: #bc2a8d;
+} */
 
 div#app footer div:last-child p {
     color: rgba(255, 255, 255, .5);
