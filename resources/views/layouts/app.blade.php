@@ -30,12 +30,22 @@
     <link href="{{ asset('css/slick/slick.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slick/slick-theme.css') }}" rel="stylesheet">
     <link href="{{ asset('css/fontawesome/all.min.css') }}" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208760170-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-208760170-1');
+    </script>
 </head>
 <body>
     <div id="app" class="p-2">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/">
-                Все <span style="color: #FF3C36">Обо</span> Всем
+                AllAboutAll.media
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -77,7 +87,7 @@
           <div class="d-flex">
             <div>
               <h1>
-                <i>Все Обо Всем</i>
+                <i>AllAboutAll.media</i>
               </h1>
 
               {{-- Social icons --}}
@@ -126,7 +136,7 @@
             </div>
           </div>
           <div>
-            <p class="m-0">ВсеОбоВсем &copy; Все права защищены {{ date('Y') }}</p>
+            <p class="m-0">AllAboutAll.media &copy; Все права защищены {{ date('Y') }}</p>
           </div>
         </footer>
     </div>

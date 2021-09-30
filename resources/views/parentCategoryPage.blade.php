@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', $parentCategory->name)
+@section('title',  "AllAboutAll.media" . ' | ' . $parentCategory->name)
 @section('description', 'Это страница всех статей. Здесь можно увидеть стати конкретной категории.')
 
 @section('content')

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Все Обо Всем')
+@section('title', 'AllAboutAll.media')
 @section('description', 'Это главная страница. Здесь можно увидеть все категории статей.')
 
 @section('content')
