@@ -9,6 +9,7 @@
     div#app footer div:first-child {
         flex-direction: column;
         text-align: center;
+        align-items: center !important;
     }
     div#app footer div:first-child div {
         margin-bottom: 10px;
@@ -28,7 +29,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
     div.singleTopFirstNewsRight div.singleNewsHead div:first-child,
     div.singleTopFirstNewsLeft div.singleNewsHead div:first-child {
         display: none;

@@ -7,13 +7,13 @@ $(function() {
             let container = $('div.childCategories > ul');
             container.empty();
 
-            $('img#loader').removeClass('hide')
+            $('p.loader').removeClass('hide')
             $.ajax({
                 url: `/search/${parentId}/${that.val()}`,
                 method: 'GET',
                 dataType: 'json',
                 success: function(res) {
-                    $('img#loader').addClass('hide')
+                    $('p.loader').addClass('hide')
                     setGlobalVariableValue('ifIssetData', res['ifIssetData'])
 
                     if (res['childCategories'].length > 0) {

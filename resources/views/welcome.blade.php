@@ -7,7 +7,7 @@
     <section>
         <div class="container-fluid">
             <div class="row mb-4">
-                <ul class="categories">
+                <ul class="categories carousel">
                     @foreach($categories as $category)
                         <li><a href="p/{{ $category->id }}">{{ $category->name }}</a></li>
                     @endforeach
@@ -22,3 +22,7 @@
         </div>
     </section>
 @endsection
+{{-- 
+@push('scripts')
+    <script src="{{ asset('js/slick/createCarousel.js') }}" defer></script>
+@endpush --}}

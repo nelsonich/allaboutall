@@ -38,12 +38,17 @@ div.centerBar div input {
 
 /* Home page categories section */
 
+div ul.categories .slick-prev:before,
+div ul.categories .slick-next:before {
+    color: #2e1f1f !important;
+}
+
 div ul.categories {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     border: 1px solid;
     padding: 5px;
 }
@@ -413,6 +418,20 @@ div.childCategories {
 div.childCategories {
     height: 450px;
     overflow: auto;
+    position: relative;
+}
+
+div.childCategories p.loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 0; */
+    bottom: 0;
+    margin: auto;
+    background-color: #ee002d;
+    width: 50%;
+    color: #ffffff;
+    height: fit-content;
 }
 
 div.childCategories ul li {
@@ -494,6 +513,9 @@ div.info div.info-body div.info-image {
     color: #FFFFFF !important;
 }
 
+
+/* Footer section */
+
 div#app footer {
     background-color: #02031C;
     width: 100%;
@@ -504,24 +526,27 @@ div#app footer {
     position: absolute;
 }
 
-div#app footer div:first-child {
+
+/* div#app footer div:first-child {
     justify-content: space-around;
-}
+} */
 
 div#app footer div:first-child h1,
 div#app footer div:first-child h3 {
     color: #FFFFFF;
 }
 
-div#app footer div:first-child h3+ul {
+
+/* div#app footer div:first-child h3+ul {
     padding: 0;
     margin: 0;
-}
+} */
 
-div#app footer div:first-child h3+ul li {
+
+/* div#app footer div:first-child h3+ul li {
     list-style: none;
     color: #FFFFFF;
-}
+} */
 
 div#app footer div:first-child h1+div a {
     color: #FFFFFF;

@@ -84,7 +84,7 @@
         </main>
 
         <footer>
-          <div class="d-flex">
+          <div class="d-flex justify-content-around align-items-end">
             <div>
               <h1>
                 <i>AllAboutAll.media</i>
@@ -94,48 +94,7 @@
               @include("includes.social_icons")
 
             </div>
-            <div>
-              <h3>Политика</h3>
-              <ul>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Рекомендуемые</h3>
-              <ul>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-              </ul>
-            </div>
-            <div>
-              <h3>FAQ</h3>
-              <ul>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-              </ul>
-            </div>
-            <div>
-              <h3>+Больше</h3>
-              <ul>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-                <li>Lorem</li>
-              </ul>
-            </div>
-          </div>
-          <div>
+            
             <p class="m-0">AllAboutAll.media &copy; Все права защищены {{ date('Y') }}</p>
           </div>
         </footer>

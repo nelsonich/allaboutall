@@ -9,7 +9,7 @@ $(function() {
     $('div.childCategories').scroll(function() {
         if ($('div.childCategories').scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight && (globalVariables.ifIssetData === true || globalVariables.ifIssetData === 'true')) {
             $('p.loader').removeClass('hide')
-            $('div.childCategories ul').addClass("hide")
+                // $('div.childCategories ul').addClass("hide")
 
             $.ajax({
                 url: `/get-data`,
@@ -18,7 +18,7 @@ $(function() {
                 data: { _token: token, offset: page * limit, id: categoryId, q: $('input#search').val() },
                 success: function(res) {
                     $('p.loader').addClass('hide')
-                    $('div.childCategories ul').removeClass("hide")
+                        // $('div.childCategories ul').removeClass("hide")
                     page++;
                     $('div.childCategories').attr('data-ifIssetData', res['ifIssetData'])
                     setGlobalVariableValue('ifIssetData', res['ifIssetData'])
