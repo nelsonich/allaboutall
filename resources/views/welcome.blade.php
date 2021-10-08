@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'AllAboutAll.media')
-@section('description', 'Это главная страница. Здесь можно увидеть все категории статей.')
+@section('description', 'AllAboutAll.media главная страница. Это сайт где можно найти биографии, цитаты, статьи знаменитых людей, (актеров, футболистов, бизнесменов, певцов).')
 
 @section('content')
 

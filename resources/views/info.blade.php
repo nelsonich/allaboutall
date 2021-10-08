@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', $info->parent_category->name . ' | ' . $info->name)
-@section('description', $info->categoryDetails->preview_text)
+@section('description', "AllAboutAll.media | " . $info->categoryDetails->preview_text)
 
 @section('content')
     <section>
