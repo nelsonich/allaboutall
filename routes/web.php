@@ -49,6 +49,7 @@ Route::prefix('dashboard')->namespace('Dashboard')->group(function () {
         Route::get('/{id?}', 'CategoriesController@getChildCategories');
         Route::post('/add', 'CategoriesController@createCategory')->name('category.add');
         Route::post('/update', 'CategoriesController@updateCategory')->name('category.update');
+        Route::get('/restore/{id}', 'CategoriesController@restoreCategory');
         Route::delete('/delete/{id}', 'CategoriesController@deleteCategory');
 
         Route::prefix('child')->group(function () {

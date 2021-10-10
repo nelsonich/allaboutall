@@ -32,7 +32,10 @@ class WelcomeController extends Controller
                                         ->whereNotNull("parent_id")
                                         ->limit(9)
                                         ->orderByDesc("created_at")
-                                        ->with("categoryDetails", "parent_category")
+                                        ->with("categoryDetails")
+                                        ->whereHas("parent_category", function($query) {
+                                            $query->whereNull('deleted_at');
+                                        })
                                         ->get();
 
         // get top 4 first news
@@ -40,7 +43,10 @@ class WelcomeController extends Controller
                                         ->whereNotNull("parent_id")
                                         ->limit(4)
                                         ->orderByDesc("click_count")
-                                        ->with("categoryDetails", "parent_category")
+                                        ->with("categoryDetails")
+                                        ->whereHas("parent_category", function($query) {
+                                            $query->whereNull('deleted_at');
+                                        })
                                         ->get();
 
         return view('welcome', [

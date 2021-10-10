@@ -1,9 +1,9 @@
 @extends('layouts.app')
-@section('title', 'Авторизоваться')
+@section('title', 'AllAboutAll.media | Авторизоваться')
 
 @section('content')
-    <section data-bg="background.png" data-path="">
-        <div class="container">
+    <section data-bg="background.png" data-path="" style="margin: 7rem 0">
+        <div class="container pb-3 pt-3">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">

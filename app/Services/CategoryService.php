@@ -13,9 +13,14 @@ class CategoryService implements CategoryInterface
         return Category::activeCategories($id)->get();
     }
 
+    public function getWithTrashed(?int $id): iterable
+    {
+        return Category::activeCategories($id)->withTrashed()->get();
+    }
+
     public function firstActive(int $id): object
     {
-        return Category::where('id', $id)->where('is_active', 'true')->first();
+        return Category::where('id', $id)->where('is_active', 'true')->withTrashed()->first();
     }
 
     public function childCategoriesWithTags(int $id, int $limit): iterable

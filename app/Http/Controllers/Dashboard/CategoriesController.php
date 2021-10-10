@@ -36,7 +36,7 @@ class CategoriesController extends Controller
     public function index()
     {
         return view('dashboard.category.categories', [
-            'categories' => $this->category_repo->get(null),
+            'categories' => $this->category_repo->getWithTrashed(null),
             'is_view' => isView('child_categories'),
             'is_add' => isAdd('categories'),
             'is_edit' => isEdit('categories'),
@@ -95,6 +95,13 @@ class CategoriesController extends Controller
     public function deleteCategory($id)
     {
         Category::destroy($id);
+        // SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
+        return redirect()->back();
+    }
+
+    public function restoreCategory($id)
+    {
+        Category::withTrashed()->restore($id);
         // SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
         return redirect()->back();
     }

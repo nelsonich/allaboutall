@@ -30,32 +30,60 @@
                         {{ $category->name }}
                     @endif
                     @if($is_delete)
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteCategoryModal{{ $category->id }}" data-whatever="@mdo" style="padding: 0 5px">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
+                        @if(!$category->trashed())
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteCategoryModal{{ $category->id }}" data-whatever="@mdo" style="padding: 0 5px">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
 
-                        {{-- Delete Modal --}}
-                        <div class="modal fade" id="deleteCategoryModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteCategoryModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="deleteCategoryModalLabel">Удалить Категорию ({{ $category->name }})</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form method="post" action="{{ url('/dashboard/categories/delete', ['id' => $category->id]) }}">
-                                            @csrf
-                                            @method('delete')
-                                            <p>вы точно хотите удалить ету катекорию?</p>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
-                                            <button type="submit" class="btn btn-danger">удалить</button>
-                                        </form>
+                            {{-- Delete Modal --}}
+                            <div class="modal fade" id="deleteCategoryModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteCategoryModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="deleteCategoryModalLabel">Удалить Категорию ({{ $category->name }})</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="post" action="{{ url('/dashboard/categories/delete', ['id' => $category->id]) }}">
+                                                @csrf
+                                                @method('delete')
+                                                <p>вы точно хотите <strong>удалить</strong> ету катекорию?</p>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
+                                                <button type="submit" class="btn btn-danger">удалить</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @else
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#truashRestoreCategoryModal{{ $category->id }}" data-whatever="@mdo" style="padding: 0 5px">
+                                <i class="fas fa-trash-restore"></i>
+                            </button>
+
+                            {{-- Trash restore Modal --}}
+                            <div class="modal fade" id="truashRestoreCategoryModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="trsashRestoreCategoryModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="trsashRestoreCategoryModalLabel">Восстановить Категорию ({{ $category->name }})</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="get" action="{{ url('/dashboard/categories/restore', ['id' => $category->id]) }}">
+                                                @csrf
+                                                <p>вы точно хотите <strong>восстановить</strong> ету катекорию?</p>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
+                                                <button type="submit" class="btn btn-warning">восстановить</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     @endif
 
                     @if($is_edit)
