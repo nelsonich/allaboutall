@@ -2,6 +2,12 @@
 @section('title', $info->parent_category->name . ' | ' . $info->name)
 @section('description', "AllAboutAll.media | " . $info->categoryDetails->preview_text)
 
+<meta property="og:url"                content={{ \Request::url() }} />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content={{ $info->name }} />
+<meta property="og:description"        content={{ $info->categoryDetails->preview_text }} />
+<meta property="og:image"              content={{ asset('storage//category_details/images/' . $info->categoryDetails->image) }} />
+
 @section('content')
     <section>
         <div class="container-fluid info">
