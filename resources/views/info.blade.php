@@ -7,6 +7,7 @@
 <meta property="og:title"              content="{{ $info->name }}" />
 <meta property="og:description"        content="{{ $info->categoryDetails->preview_text }}" />
 <meta property="og:image"              content={{ asset('storage//category_details/images/' . $info->categoryDetails->image) }} />
+<meta property="fb:app_id"             content="189454066493839" />
 
 @section('content')
     <section>
@@ -36,7 +37,7 @@
                             </div>
                             <div>
                                 <div class="shareButtons">
-                                    <iframe src="https://www.facebook.com/plugins/share_button.php?href={{ \Request::url() }}&layout=button_count&size=large&width=168&height=28&appId=189454066493839" width="168" height="28" style="border:none;overflow:hidden; text-align: center;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                    <iframe src="https://www.facebook.com/plugins/share_button.php?href={{ \Request::url() }}&layout=button_count&size=large&width=168&height=28&appId" width="168" height="28" style="border:none;overflow:hidden; text-align: center;" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                 </div>
                             </div>
                         </div>
