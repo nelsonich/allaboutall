@@ -40,6 +40,10 @@
 
       gtag('config', 'UA-208760170-1');
     </script>
+
+    {{-- google ads --}}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2733772803388565"
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app" class="p-2">
