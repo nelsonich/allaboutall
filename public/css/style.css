@@ -501,6 +501,10 @@ div.info div.info-body div.info-image {
     background-position: center;
 }
 
+div.carousel {
+    height: 183px;
+}
+
 
 /* Slick css */
 
