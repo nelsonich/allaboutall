@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PermissionModelRequest;
 use App\Models\RBAC\Permission;
 use App\Models\RBAC\Role;
 use App\Models\RBAC\RolePermission;
@@ -32,7 +33,11 @@ class PermissionController extends Controller
         return view('dashboard.permissions', [
             'roleId' => $admin->id,
             'roles' => $this->role_repo->getWithoutSuperAdmin(),
-            'permissions' => $this->permissions_repo->get($admin->id, Permission::all())
+            'permissions' => $this->permissions_repo->get($admin->id, Permission::all()),
+            'is_view' => isView('permissions'),
+            'is_add' => isAdd('permissions'),
+            'is_edit' => isEdit('permissions'),
+            'is_delete' => isDelete('permissions'),
         ]);
     }
 
@@ -58,5 +63,31 @@ class PermissionController extends Controller
         $rolePermission->refresh();
 
         return response()->noContent();
+    }
+
+    public function add(PermissionModelRequest $request)
+    {
+        $roles = Role::all();
+
+        $name = $request->post('name');
+        $slug = $request->post('slug');
+
+        $permission = Permission::create([
+            'name' => $name,
+            'slug' => $slug,
+        ]);
+
+        foreach ($roles as $role) {
+            RolePermission::create([
+                'role_id' => $role->id,
+                'permission_id' => $permission->id,
+                'is_view' => $role->name === Role::SUPER_ADMIN,
+                'is_add' => $role->name === Role::SUPER_ADMIN,
+                'is_edit' => $role->name === Role::SUPER_ADMIN,
+                'is_delete' => $role->name === Role::SUPER_ADMIN,
+            ]);
+        }
+
+        return redirect()->back();
     }
 }

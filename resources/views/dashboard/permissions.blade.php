@@ -4,11 +4,24 @@
 @section('content')
     <div class="card-body">
         <div class="d-flex justify-content-between">
-            <h4>Разрешения</h4>
+            <div>
+                <h4>Разрешения</h4>
+                @if($is_add)
+                    <button type="button" 
+                            class="btn btn-primary"
+                            data-toggle="modal"
+                            data-target="#addPermissionModal"
+                            data-whatever="@mdo">
+                        Создать
+                    </button>
+                @endif
+            </div>
             <ol>
                 @foreach($roles as $role)
                     <li class="role {{ $roleId == $role->id ? 'active' : '' }}">
-                        <a href="/dashboard/permissions/get-by-role/{{ $role->id }}">{{ $role->name }}</a>
+                        <a href="/dashboard/permissions/get-by-role/{{ $role->id }}">
+                            {{ $role->name }}
+                        </a>
                     </li>
                 @endforeach
             </ol>
@@ -82,6 +95,39 @@
             </table>
         </div>
     </div>
+
+    @if($is_add)
+        @push('modals')
+            <div class="modal fade" id="addPermissionModal" tabindex="-1" role="dialog" aria-labelledby="addPermissionModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addPermissionModalLabel">Новый Разрешения</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="{{ route('permission.add') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="name" class="col-form-label">Названия:</label>
+                                    <input type="text" class="form-control" id="name" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="slug" class="col-form-label">Slug</label>
+                                    <input type="text" class="form-control" id="slug" name="slug">
+                                </div>
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endpush
+    @endif
 @endsection
 
 @push('script')

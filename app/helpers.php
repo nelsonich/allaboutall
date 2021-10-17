@@ -1,9 +1,9 @@
 <?php
 
+use App\User;
 use App\Models\Category;
 use App\Models\RBAC\Permission;
 use App\Models\RBAC\RolePermission;
-use App\User;
 
 if (! function_exists('limit')) {
     function limit($text, $limit)
@@ -35,42 +35,50 @@ if (! function_exists('childCategories')) {
     }
 }
 
-function isView($slug)
-{
-    $permission = Permission::where('slug', $slug)->first();
-    $auth = User::where('id', auth()->id())->with('role')->first();
+if (! function_exists('isView')) {
+    function isView($slug)
+    {
+        $permission = Permission::where('slug', $slug)->first();
+        $auth = User::whereId(auth()->id())->with('role')->first();
 
-    $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
+        $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
 
-    return $rolePermission->is_view;
+        return $rolePermission->is_view;
+    }
 }
 
-function isAdd($slug)
-{
-    $permission = Permission::where('slug', $slug)->first();
-    $auth = User::where('id', auth()->id())->with('role')->first();
+if (! function_exists('isAdd')) {
+    function isAdd($slug)
+    {
+        $permission = Permission::where('slug', $slug)->first();
+        $auth = User::whereId(auth()->id())->with('role')->first();
 
-    $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
+        $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
 
-    return $rolePermission->is_add;
+        return $rolePermission->is_add;
+    }
 }
 
-function isEdit($slug)
-{
-    $permission = Permission::where('slug', $slug)->first();
-    $auth = User::where('id', auth()->id())->with('role')->first();
+if (! function_exists('isEdit')) {
+    function isEdit($slug)
+    {
+        $permission = Permission::where('slug', $slug)->first();
+        $auth = User::whereId(auth()->id())->with('role')->first();
 
-    $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
+        $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
 
-    return $rolePermission->is_edit;
+        return $rolePermission->is_edit;
+    }
 }
 
-function isDelete($slug)
-{
-    $permission = Permission::where('slug', $slug)->first();
-    $auth = User::where('id', auth()->id())->with('role')->first();
+if (! function_exists('isDelete')) {
+    function isDelete($slug)
+    {
+        $permission = Permission::where('slug', $slug)->first();
+        $auth = User::whereId(auth()->id())->with('role')->first();
 
-    $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
+        $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
 
-    return $rolePermission->is_delete;
+        return $rolePermission->is_delete;
+    }
 }

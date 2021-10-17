@@ -101,7 +101,7 @@ class CategoriesController extends Controller
 
     public function restoreCategory($id)
     {
-        Category::withTrashed()->restore($id);
+        Category::whereId($id)->withTrashed()->restore();
         // SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
         return redirect()->back();
     }

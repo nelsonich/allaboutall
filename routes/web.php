@@ -67,6 +67,7 @@ Route::prefix('dashboard')->namespace('Dashboard')->group(function () {
         Route::get('/', 'PermissionController@index')->middleware('permission');
         Route::get('/get-by-role/{id?}', 'PermissionController@getByRole');
         Route::put('/change-permission', 'PermissionController@changePermission')->name('change-permission');
+        Route::post('/add', 'PermissionController@add')->name('permission.add');
     });
 
     Route::prefix('users')->group(function () {
@@ -75,5 +76,12 @@ Route::prefix('dashboard')->namespace('Dashboard')->group(function () {
         Route::post('/delete', 'UsersController@deleteUser')->name('users.delete');
         Route::post('/update', 'UsersController@editUser')->name('users.update');
         Route::get('/export-as-excel', 'UsersImportExportController@exportAsExcel')->name('export-users-as-excel');
+    });
+
+    Route::prefix('subscribers')->group(function () {
+        Route::get('/', 'NewsLetterSubscribersController@index')->middleware('permission');
+        Route::post('/add', 'NewsLetterSubscribersController@addUser')->name('users.add');
+        Route::post('/delete', 'NewsLetterSubscribersController@delete')->name('subscribers.delete');
+        Route::post('/update', 'NewsLetterSubscribersController@editUser')->name('users.update');
     });
 });

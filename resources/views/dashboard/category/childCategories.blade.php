@@ -244,7 +244,11 @@
                             </td>
                         </tr>
                     @empty
-
+                        <tr>
+                            <td colspan="7" class="text-center">
+                                <strong>Пусто!</strong>
+                            </td>
+                        </tr>
                     @endforelse
                 </tbody>
             </table>
@@ -256,45 +260,45 @@
 
     @if($is_add)
         @push('modals')
-        <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addCategoryModalLabel">Новый Подкатегория</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post" action="{{ route('category-child.add') }}" enctype="multipart/form-data">
-                            @csrf
-                            <input type="hidden" name="id" value="{{ $category->id }}">
-                            <div class="form-group">
-                                <label for="name" class="col-form-label">Названия:</label>
-                                <input type="text" class="form-control" id="name" name="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="preview-description" class="col-form-label">Предварительный просмотр:</label>
-                                <textarea class="form-control" id="preview-description" name="preview"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="description" class="col-form-label">Описание:</label>
-                                <textarea class="form-control description" id="description" name="description"></textarea>
-                            </div>
-                            <div class="form-group d-flex justify-content-center">
-                                <label for="background" class="col-form-label">
-                                    <img src="{{ asset('storage/noImage.png') }}" alt="Image" class="w-100" >
-                                </label>
-                                <input type="file" id="background" name="image" class="d-none changeImage">
-                            </div>
+            <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addCategoryModalLabel">Новый Подкатегория</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="{{ route('category-child.add') }}" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $category->id }}">
+                                <div class="form-group">
+                                    <label for="name" class="col-form-label">Названия:</label>
+                                    <input type="text" class="form-control" id="name" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="preview-description" class="col-form-label">Предварительный просмотр:</label>
+                                    <textarea class="form-control" id="preview-description" name="preview"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description" class="col-form-label">Описание:</label>
+                                    <textarea class="form-control description" id="description" name="description"></textarea>
+                                </div>
+                                <div class="form-group d-flex justify-content-center">
+                                    <label for="background" class="col-form-label">
+                                        <img src="{{ asset('storage/noImage.png') }}" alt="Image" class="w-100" >
+                                    </label>
+                                    <input type="file" id="background" name="image" class="d-none changeImage">
+                                </div>
 
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
-                            <button type="submit" class="btn btn-primary">Сохранить</button>
-                        </form>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
+                                <button type="submit" class="btn btn-primary">Сохранить</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    @endpush
+        @endpush
     @endif
 @endsection

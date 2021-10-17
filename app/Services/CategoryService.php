@@ -48,7 +48,7 @@ class CategoryService implements CategoryInterface
 
     public function update(array $data, int $id): int
     {
-        $collection = Category::where('id', $id)->update($data);
+        $collection = Category::whereId($id)->withTrashed()->update($data);
 
         return $collection;
     }
