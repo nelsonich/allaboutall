@@ -46,7 +46,11 @@ class PermissionController extends Controller
         return view('dashboard.permissions', [
             'roleId' => $id,
             'roles' => $this->role_repo->getWithoutSuperAdmin(),
-            'permissions' => $this->permissions_repo->get($id, Permission::all())
+            'permissions' => $this->permissions_repo->get($id, Permission::all()),
+            'is_view' => isView('permissions'),
+            'is_add' => isAdd('permissions'),
+            'is_edit' => isEdit('permissions'),
+            'is_delete' => isDelete('permissions'),
         ]);
     }
 
