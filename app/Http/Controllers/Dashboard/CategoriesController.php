@@ -78,9 +78,9 @@ class CategoriesController extends Controller
         $name = $request->post('name');
         $file = $request->file('background');
 
-        $cat = Category::find($id);
+        $cat = Category::whereId($id)->withTrashed()->first();
         $data = ['name' => $name];
-
+        
         if ($file) {
             SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
             $fileNames = SettingsTrait::uploadFiles('storage/backgrounds', $file);
