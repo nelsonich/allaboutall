@@ -3,6 +3,7 @@
 use App\User;
 use App\Models\Category;
 use App\Models\RBAC\Permission;
+use App\Models\RBAC\Role;
 use App\Models\RBAC\RolePermission;
 
 if (! function_exists('limit')) {
@@ -80,5 +81,15 @@ if (! function_exists('isDelete')) {
         $rolePermission = RolePermission::where('permission_id', $permission->id)->where('role_id', $auth->role->id)->first();
 
         return $rolePermission->is_delete;
+    }
+}
+
+if (! function_exists('chacke_auth_user_role')) {
+    function chacke_auth_user_role($role)
+    {
+        $role_id = Role::where('name', $role)->first()->id;
+        $auth_role_id = User::whereId(auth()->id())->first()->role_id;
+
+        return $auth_role_id === $role_id;
     }
 }

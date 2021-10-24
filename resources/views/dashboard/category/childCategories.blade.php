@@ -28,29 +28,47 @@
                         <th scope="col">#</th>
                         <th scope="col">Клики</th>
                         <th scope="col">Название</th>
+                        <th scope="col">Дата создания</th>
                         @if($is_delete)<th scope="col">Удалить</th>@endif
                         @if($is_edit)<th scope="col">Изменить</th>@endif
-                        <th scope="col">
-                            Показать на сайте
-                            <span class="tableInfo">
-                                <i class="far fa-plus-circle"></i>
+                        @if(!chacke_auth_user_role(App\Models\RBAC\Role::WRITER))
+                            <th scope="col">
+                                Показать на сайте
+                                <span class="tableInfo">
+                                    <i class="far fa-plus-circle"></i>
 
-                                <div class="tableInfoContent">
-                                    Статьи могут быть активными и неактивными. <br/>
-                                    Если статья деактивирован, то не буден показан на сайте.
-                                </div>
-                            </span>
-                        </th>
-                        <th scope="col">
-                            Добавить тег
-                            <span class="tableInfo">
-                                <i class="far fa-plus-circle"></i>
+                                    <div class="tableInfoContent">
+                                        Статьи могут быть активными и неактивными. <br/>
+                                        Если статья деактивирован, то не буден показан на сайте.
+                                    </div>
+                                </span>
+                            </th>
+                        @endif
+                        @if(chacke_auth_user_role(App\Models\RBAC\Role::WRITER))
+                            <th scope="col">
+                                Status
+                                <span class="tableInfo">
+                                    <i class="far fa-plus-circle"></i>
 
-                                <div class="tableInfoContent">
-                                    Тег нужен для того, чтобы пользователи могли найти статью.
-                                </div>
-                            </span>
-                        </th>
+                                    <div class="tableInfoContent">
+                                        Статьи могут быть активными и неактивными. <br/>
+                                        Если статья деактивирован, то не буден показан на сайте.
+                                    </div>
+                                </span>
+                            </th>
+                        @endif
+                        @if(!chacke_auth_user_role(App\Models\RBAC\Role::WRITER))
+                            <th scope="col">
+                                Добавить тег
+                                <span class="tableInfo">
+                                    <i class="far fa-plus-circle"></i>
+
+                                    <div class="tableInfoContent">
+                                        Тег нужен для того, чтобы пользователи могли найти статью.
+                                    </div>
+                                </span>
+                            </th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -59,6 +77,7 @@
                             <th scope="row">{{ $key+1 }}</th>
                             <td>{{ $item->click_count }}</td>
                             <td>{{ $item->name }}</td>
+                            <td>{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('MM-DD-YYYY, h:mm A') }}</td>
                             @if($is_delete)
                                 <td>
                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteCategoryModal{{ $item->id }}" data-whatever="@mdo" style="padding: 0 5px">
@@ -174,74 +193,89 @@
                                     @endpush
                                 </td>
                             @endif
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#isActiveCategoryModal{{ $item->id }}" data-whatever="@mdo" style="padding: 0 5px">
+                            @if(!chacke_auth_user_role(App\Models\RBAC\Role::WRITER))
+                                <td>
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#isActiveCategoryModal{{ $item->id }}" data-whatever="@mdo" style="padding: 0 5px">
+                                        @if($item->is_active === 'true')
+                                            <i class="far fa-eye"></i>
+                                        @else
+                                            <i class="far fa-eye-slash"></i>
+                                        @endif
+                                    </button>
+                                    {{-- Is Active Modal --}}
+                                    @push('modals')
+                                        <div class="modal fade" id="isActiveCategoryModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="isActiveCategoryModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="isActiveCategoryModalLabel">Изменить активность ({{ $item->name }})</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form method="post" action="{{ route('category-child.changeActive') }}">
+                                                            @csrf
+                                                            @if($item->is_active === 'true')
+                                                                <p>вы точно хотите <strong>деактивировать</strong> ету катекорию?</p>
+                                                            @else
+                                                                <p>вы точно хотите <strong>активировать</strong> ету катекорию?</p>
+                                                            @endif
+                                                            <input type="hidden" value="{{ $item->id }}" name="id">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
+                                                            <button type="submit" class="btn btn-warning">Сахранить</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endpush
+                                </td>
+                            @endif
+                            @if(chacke_auth_user_role(App\Models\RBAC\Role::WRITER))
+                                <td>
                                     @if($item->is_active === 'true')
-                                        <i class="far fa-eye"></i>
+                                        Активный
                                     @else
-                                        <i class="far fa-eye-slash"></i>
+                                        <div title="Проверяется">
+                                            Неактивный
+                                        </div>
                                     @endif
-                                </button>
-                                {{-- Is Active Modal --}}
-                                @push('modals')
-                                    <div class="modal fade" id="isActiveCategoryModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="isActiveCategoryModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="isActiveCategoryModalLabel">Изменить активность ({{ $item->name }})</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form method="post" action="{{ route('category-child.changeActive') }}">
-                                                        @csrf
-                                                        @if($item->is_active === 'true')
-                                                            <p>вы точно хотите <strong>деактивировать</strong> ету катекорию?</p>
-                                                        @else
-                                                            <p>вы точно хотите <strong>активировать</strong> ету катекорию?</p>
-                                                        @endif
-                                                        <input type="hidden" value="{{ $item->id }}" name="id">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
-                                                        <button type="submit" class="btn btn-warning">Сахранить</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endpush
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addSearchTagsModal{{ $item->id }}" data-whatever="@mdo" style="padding: 0 5px">
-                                    <i class="far fa-plus-square"></i>
-                                </button>
-                                {{-- Add Search Tags Modal --}}
-                                @push('modals')
-                                    <div class="modal fade" id="addSearchTagsModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="addSearchTagsModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="addSearchTagsModalLabel">Добавить тег ({{ $item->name }})</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form method="post" action="{{ route('category-child.addSearchTags') }}">
-                                                        @csrf
-                                                        <label for="tags{{ $item->id }}"></label>
-                                                        <input type="text" data-role="tagsinput" name="tags" id="tags{{ $item->id }}" value="{{ implode(',', $item['tags']) }}" />
+                                </td>
+                            @endif
+                            @if(!chacke_auth_user_role(App\Models\RBAC\Role::WRITER))
+                                <td>
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addSearchTagsModal{{ $item->id }}" data-whatever="@mdo" style="padding: 0 5px">
+                                        <i class="far fa-plus-square"></i>
+                                    </button>
+                                    {{-- Add Search Tags Modal --}}
+                                    @push('modals')
+                                        <div class="modal fade" id="addSearchTagsModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="addSearchTagsModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="addSearchTagsModalLabel">Добавить тег ({{ $item->name }})</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form method="post" action="{{ route('category-child.addSearchTags') }}">
+                                                            @csrf
+                                                            <label for="tags{{ $item->id }}"></label>
+                                                            <input type="text" data-role="tagsinput" name="tags" id="tags{{ $item->id }}" value="{{ implode(',', $item['tags']) }}" />
 
-                                                        <input type="hidden" value="{{ $item->id }}" name="id">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
-                                                        <button type="submit" class="btn btn-warning">Сахранить</button>
-                                                    </form>
+                                                            <input type="hidden" value="{{ $item->id }}" name="id">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрить</button>
+                                                            <button type="submit" class="btn btn-warning">Сахранить</button>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @endpush
-                            </td>
+                                    @endpush
+                                </td>
+                            @endif
                         </tr>
                     @empty
                         <tr>

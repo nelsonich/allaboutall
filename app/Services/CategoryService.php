@@ -4,7 +4,9 @@ namespace App\Services;
 
 use App\Services\Contracts\Category as CategoryInterface;
 use App\Models\Category;
+use App\Models\RBAC\Role;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryService implements CategoryInterface
 {
@@ -25,7 +27,18 @@ class CategoryService implements CategoryInterface
 
     public function childCategoriesWithTags(int $id, int $limit): iterable
     {
-        $categoryChildes = Category::categories($id)->with('categoryDetails', 'categoryCarouselItems', 'searchTags')->paginate($limit);
+        $categoryChildes = Category::categories($id)
+                                    ->with(
+                                        'categoryDetails',
+                                        'categoryCarouselItems',
+                                        'searchTags'
+                                    );
+        
+        if (chacke_auth_user_role(Role::WRITER)) {
+            $categoryChildes = $categoryChildes->where('user_id', Auth::id());
+        }
+        
+        $categoryChildes = $categoryChildes->paginate($limit);
 
         foreach ($categoryChildes as $item) {
             $tags = [];

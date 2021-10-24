@@ -11,4 +11,9 @@ class NewsLetterSubscriber extends Model
         'name',
         'email',
     ];
+
+    const RULES = [
+        'name' => 'required',
+        'email' => 'required|email',
+    ];
 }

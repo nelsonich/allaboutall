@@ -2,17 +2,30 @@
 @section('title', 'Разрешения')
 
 @section('content')
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                
+                {{ $error }}
+                
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endforeach
+    @endif
     <div class="card-body">
         <div class="d-flex justify-content-between">
-            <div>
+            <div class="d-flex align-items-start">
                 <h4>Разрешения</h4>
                 @if($is_add)
                     <button type="button" 
-                            class="btn btn-primary"
+                            class="btn btn-primary btn-sm ml-2"
                             data-toggle="modal"
                             data-target="#addPermissionModal"
+                            title="Создать"
                             data-whatever="@mdo">
-                        Создать
+                        <i class="fas fa-plus-square"></i>
                     </button>
                 @endif
             </div>

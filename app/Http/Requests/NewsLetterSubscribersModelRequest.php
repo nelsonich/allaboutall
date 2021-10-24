@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\Models\RBAC\Permission;
+use App\Models\NewsLetterSubscriber;
 use Illuminate\Foundation\Http\FormRequest;
 
-class PermissionModelRequest extends FormRequest
+class NewsLetterSubscribersModelRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,14 +24,16 @@ class PermissionModelRequest extends FormRequest
      */
     public function rules()
     {
-        return Permission::RULES;
+        return NewsLetterSubscriber::RULES;
     }
 
     public function messages()
     {
         return [
             'name.required' => 'Поле имени обязательно для заполнения',
-            'slug.required' => 'Поле slug обязательно для заполнения'
+            'email.required' => 'Электронная почта обязательна',
+            'email.email' => 'Неверное поле электронной почты',
+            'password.required' => 'Поле пароля обязательно для заполнения'
         ];
     }
 }

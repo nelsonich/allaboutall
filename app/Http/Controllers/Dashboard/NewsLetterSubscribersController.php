@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\NewsLetterSubscribersModelRequest;
 use App\Models\NewsLetterSubscriber;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,19 @@ class NewsLetterSubscribersController extends Controller
         NewsLetterSubscriber::destroy($id);
 
         return redirect()->back();
+    }
+
+    public function editUser(NewsLetterSubscribersModelRequest $request)
+    {
+        $id = $request->post('id');
+        $name = $request->post('name');
+        $email = $request->post('email');
+        
+        $data = NewsLetterSubscriber::find($id);
+        $data->name = $name;
+        $data->email = $email;
+        $data->save();
+
+        return back();
     }
 }

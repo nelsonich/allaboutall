@@ -8,10 +8,12 @@ use App\Http\Requests\CategoryModelRequest;
 use App\Models\CarouselItem;
 use App\Models\Category;
 use App\Models\CategoryDetail;
+use App\Models\RBAC\Role;
 use App\Models\SearchTag;
 use App\Services\CategoryService;
 use App\Traits\Controllers\SettingsTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\View\View;
@@ -63,6 +65,7 @@ class CategoriesController extends Controller
         $fileNames = SettingsTrait::uploadFiles('storage/backgrounds', $file);
 
         $this->category_repo->create([
+            'user_id' => Auth::id(),
             'name' => $name,
             'parent_id' => null,
             'is_active' => 'true',
@@ -108,6 +111,7 @@ class CategoriesController extends Controller
 
     public function createCategoryChild(CategoryModelRequest $request)
     {
+        $auth_user = Auth::user();
         $id = $request->post('id');
         $name = $request->post('name');
         $preview = $request->post('preview');
@@ -121,9 +125,10 @@ class CategoriesController extends Controller
         }
 
         $cat = $this->category_repo->create([
+            'user_id' => $auth_user->id,
             'name' => $name,
             'parent_id' => $id,
-            'is_active' => 'true',
+            'is_active' => chacke_auth_user_role(Role::WRITER) ? 'false' :'true',
         ]);
 
         CategoryDetail::create([
@@ -138,11 +143,11 @@ class CategoriesController extends Controller
             'value' => $name,
         ]);
 
-        Http::post('https://graph.facebook.com/v11.0/104349325019924/feed', [
-            'message' => $preview,
-            'link' => "http://info.loc/info-p/1/27", // single post url
-            'access_token' => 'EAACsTrZAVqY8BAKOJaOGrc5Mbu3X1QWWD6pAm3E0BxEf66cv3Y5MC6WLnbzLFAsQoNRxVJZBD2a0pv98MQcUZA2xcetaQ7aoPpCjH7ZADlMqoRpHzAsQYnRDrZBnNNCANZAQXWa8mD8LLU8hS6eHn8pCEss6u84RBFUcAaav954y9CnDMfKpTUlo5YGgcrO3IBLJa4NcDE8AZDZD',
-        ]);
+        // Http::post('https://graph.facebook.com/v11.0/104349325019924/feed', [
+        //     'message' => $preview,
+        //     'link' => "http://info.loc/info-p/1/27", // single post url
+        //     'access_token' => 'EAACsTrZAVqY8BAKOJaOGrc5Mbu3X1QWWD6pAm3E0BxEf66cv3Y5MC6WLnbzLFAsQoNRxVJZBD2a0pv98MQcUZA2xcetaQ7aoPpCjH7ZADlMqoRpHzAsQYnRDrZBnNNCANZAQXWa8mD8LLU8hS6eHn8pCEss6u84RBFUcAaav954y9CnDMfKpTUlo5YGgcrO3IBLJa4NcDE8AZDZD',
+        // ]);
 
         return redirect()->back();
     }
@@ -158,6 +163,11 @@ class CategoriesController extends Controller
 
         $parentCat = Category::find($parentId);
         $parentCat->name = $name;
+        
+        if (chacke_auth_user_role(Role::WRITER)) {
+            $parentCat->is_active = "false";
+        }
+
         $parentCat->save();
 
         $cat = CategoryDetail::find($id);
