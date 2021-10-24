@@ -46,7 +46,7 @@
                         @endif
                         @if(chacke_auth_user_role(App\Models\RBAC\Role::WRITER))
                             <th scope="col">
-                                Status
+                                Статус
                                 <span class="tableInfo">
                                     <i class="far fa-plus-circle"></i>
 
