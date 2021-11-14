@@ -130,7 +130,7 @@
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $category->id }}">
                                                     <div class="form-group">
-                                                        <label for="name{{ $category->id }}" class="col-form-label">Названия:</label>
+                                                        <label for="name{{ $category->id }}" class="col-form-label text-dark">Названия:</label>
                                                         <input type="text" class="form-control" id="name{{ $category->id }}" name="name" value="{{ $category->name }}">
                                                     </div>
                                                     <div class="form-group d-flex justify-content-center">
