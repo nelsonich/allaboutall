@@ -15,7 +15,7 @@
         @endforeach
     @endif
     <div class="card-body">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between mb-1">
             <h4>Категории</h4>
             @if($is_add)
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCategoryModal" data-whatever="@mdo">Создать</button>
