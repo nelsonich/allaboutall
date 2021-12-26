@@ -15,7 +15,7 @@
 @section('content')
     <section>
         <div class="container-fluid info">
-            <div class="row mb-3">
+            <div class="row">
                 <div class="col-md-8">
                     <div class="info-header">
                         <ul class="breadcrumb mb-1 p-2">
@@ -51,7 +51,15 @@
                         <div class="info-image" style="background-image: url('{{ asset('storage//category_details/images/' . $info->categoryDetails->image) }}')"></div>
                         {!! $info->categoryDetails->description !!}
                     </div>
-                    <div class="info-footer"></div>
+                    <div class="info-footer">
+                        <div 
+                            class="fb-comments" 
+                            data-href={{ \Request::url() }}
+                            data-width=""
+                            data-mobile="true"
+                            data-numposts="5">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     {{-- carousel --}}
@@ -84,17 +92,6 @@
 
                     {{-- most popular news --}}
                     @include('includes.news_letter')
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div 
-                        class="fb-comments" 
-                        data-href={{ \Request::url() }}
-                        data-width=""
-                        data-mobile="true"
-                        data-numposts="5">
-                    </div>
                 </div>
             </div>
         </div>
