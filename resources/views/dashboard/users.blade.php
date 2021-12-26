@@ -125,7 +125,11 @@
                             @endif
                         </tr>
                     @empty
-
+                        <tr>
+                            <td colspan="6" class="text-center">
+                                <strong>Пусто!</strong>
+                            </td>
+                        </tr>
                     @endforelse
                 </tbody>
             </table>

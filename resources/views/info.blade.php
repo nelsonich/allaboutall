@@ -9,10 +9,13 @@
 <meta property="og:image"              content={{ asset('storage//category_details/images/' . $info->categoryDetails->image) }} />
 <meta property="fb:app_id"             content="189454066493839" />
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v12.0&appId=189454066493839&autoLogAppEvents=1" nonce="L0KbveYT"></script>
+
 @section('content')
     <section>
         <div class="container-fluid info">
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-md-8">
                     <div class="info-header">
                         <ul class="breadcrumb mb-1 p-2">
@@ -81,6 +84,17 @@
 
                     {{-- most popular news --}}
                     @include('includes.news_letter')
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div 
+                        class="fb-comments" 
+                        data-href={{ \Request::url() }}
+                        data-width=""
+                        data-mobile="true"
+                        data-numposts="5">
+                    </div>
                 </div>
             </div>
         </div>
