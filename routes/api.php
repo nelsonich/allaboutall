@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::namespace("Api")->group(function() {
+    Route::get('/get-welcome-page-info', "SiteController@index");
+    Route::post('/subscribe', 'SiteController@subscribe');
+    Route::post('/get-data', 'SiteController@getChildData');
+    Route::get('/search/{id?}/{text?}', 'SiteController@search');
+    Route::get('/p/{id?}', 'SiteController@renderParentCategoryPage');
+    Route::get('/add-link-count/{id?}', 'SiteController@addLinkCount');
+    Route::get('/info-p/{parent_id?}/{child_id}', 'SiteController@renderPageInformation')->middleware('isActiveInfo');
 });

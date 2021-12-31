@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\NewsLetterSubscriber;
 use App\Services\CategoryService;
-use Illuminate\Http\Request;
+use App\Traits\Controllers\CategoryTrait;
 use Illuminate\View\View;
 
 class WelcomeController extends Controller
 {
+    use CategoryTrait;
+
     private $category_repo;
 
     public function __construct(CategoryService $category_repo)
@@ -19,35 +19,8 @@ class WelcomeController extends Controller
 
     public function index(): View
     {
-        // get 5 oldest child categories
-        $oldestChildCategories = Category::where("is_active", 'true')
-                                        ->whereNotNull("parent_id")
-                                        ->limit(5)
-                                        ->orderBy("created_at", "asc")
-                                        ->with("categoryDetails")
-                                        ->get();
-
-        // get top 9 first news
-        $firstTopChildCategories = Category::where("is_active", 'true')
-                                        ->whereNotNull("parent_id")
-                                        ->limit(9)
-                                        ->orderByDesc("created_at")
-                                        ->with("categoryDetails")
-                                        ->whereHas("parent_category", function($query) {
-                                            $query->whereNull('deleted_at');
-                                        })
-                                        ->get();
-
-        // get top 4 first news
-        $mostPopularChildCategories = Category::where("is_active", 'true')
-                                        ->whereNotNull("parent_id")
-                                        ->limit(4)
-                                        ->orderByDesc("click_count")
-                                        ->with("categoryDetails")
-                                        ->whereHas("parent_category", function($query) {
-                                            $query->whereNull('deleted_at');
-                                        })
-                                        ->get();
+        // get 5 oldest child categories, get top 9 first news, get top 4 first news
+        [$oldestChildCategories, $firstTopChildCategories, $mostPopularChildCategories] = $this->getCategoriesWelcomePage();
 
         return view('welcome', [
             "categories" => $this->category_repo->get(null),
@@ -60,15 +33,7 @@ class WelcomeController extends Controller
     public function renderParentCategoryPage($id): View
     {
         $limit = 5;
-        $parentCategory = Category::activeCategories(null)->where('id', $id)->first();
-        $childCategories = Category::activeCategories($id)->with('categoryDetails')->limit($limit)->get();
-        $dataCount = Category::activeCategories($id)->count();
-
-        // topic news 
-        $topicNews = Category::activeCategories($parentCategory->id)
-                                ->with("categoryDetails")
-                                ->limit(4)
-                                ->get();
+        [$childCategories, $parentCategory, $topicNews, $dataCount] = $this->getParentCategoryPageInfo($id, $limit);
 
         return view('parentCategoryPage', [
             'childCategories' => $childCategories,
@@ -80,84 +45,12 @@ class WelcomeController extends Controller
 
     public function renderPageInformation($parentId, $childId): View
     {
-        // topic news 
-        $topicNews = Category::activeCategories($parentId)
-                                ->where("id", "<>", $childId)
-                                ->with("categoryDetails")
-                                ->limit(10)
-                                ->get();
-
-        $childCategories = Category::activeCategories($parentId)
-                                    ->where("id", $childId)
-                                    ->with("categoryDetails", "categoryCarouselItems", "parent_category")
-                                    ->first();
+        // topic news
+        [$topicNews, $childCategories] = $this->getPageInformation($parentId, $childId);
 
         return view("info", [
             "info" => $childCategories,
             "topic_news" => $topicNews
-        ]);
-    }
-
-    public function getChildData(Request $request)
-    {
-        $id = $request->post('id');
-        $offset = $request->post('offset');
-        $q = $request->post('q');
-
-        $dataCount = Category::activeCategories($id)->count();
-        $childCategories = Category::activeCategories($id)->with('categoryDetails')->offset($offset)->limit(5)->get();
-
-        if ($q != "") {
-            $dataCount = dataCount($id, $q);
-
-            $childCategories = childCategories($id, $q);
-        }
-
-        return response()->json([
-            'childCategories' => $childCategories,
-            'ifIssetData' => $dataCount > $offset + 5 ? 'true' : 'false',
-        ]);
-    }
-
-    public function search(Request $request, $parentId, $search)
-    {
-        if ($search == "") return response()->json('empty input');
-
-        $dataCount = dataCount($parentId, $search);
-
-        $childCategories = childCategories($parentId, $search);
-
-        return response()->json([
-            'childCategories' => $childCategories,
-            'ifIssetData' => $dataCount > 5 ? 'true' : 'false',
-        ]);
-    }
-
-    public function addLinkCount(Request $request, $id)
-    {
-        $clickCount = Category::where('id', $id)->increment('click_count', 1);
-
-        return response()->json($clickCount);
-    }
-
-    public function subscribe(Request $request)
-    {
-        $name = $request->post("name");
-        $email = $request->post("email");
-
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|unique:news_letter_subscribers',
-        ]);
-
-        NewsLetterSubscriber::create([
-            "name" => $name,
-            "email" => $email,
-        ]);
-
-        return response()->json([
-            "title" => "Спасибо " . $name . " за подписку.",
-            "message" => "Вы будете получать новости, как вы упомянули ․ по адресу: " . $email,
         ]);
     }
 }

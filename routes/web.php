@@ -32,11 +32,11 @@ View::composer('layouts.appDashboard', function($view)
 });
 
 Route::get('/', 'WelcomeController@index');
-Route::post('/subscribe', 'WelcomeController@subscribe');
-Route::post('/get-data', 'WelcomeController@getChildData');
-Route::get('/search/{id?}/{text?}', 'WelcomeController@search');
+// Route::post('/subscribe', 'WelcomeController@subscribe');
+// Route::post('/get-data', 'WelcomeController@getChildData');
+// Route::get('/search/{id?}/{text?}', 'WelcomeController@search');
 Route::get('/p/{id?}', 'WelcomeController@renderParentCategoryPage');
-Route::get('/add-link-count/{id?}', 'WelcomeController@addLinkCount');
+// Route::get('/add-link-count/{id?}', 'WelcomeController@addLinkCount');
 Route::get('/info-p/{parent_id?}/{child_id}', 'WelcomeController@renderPageInformation')->middleware('isActiveInfo');
 
 Auth::routes(['register' => false]);

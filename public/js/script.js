@@ -12,7 +12,7 @@ $(function() {
                 // $('div.childCategories ul').addClass("hide")
 
             $.ajax({
-                url: `/get-data`,
+                url: `/api/get-data`,
                 method: 'post',
                 dataType: 'json',
                 data: { _token: token, offset: page * limit, id: categoryId, q: $('input#search').val() },
@@ -48,7 +48,7 @@ $(function() {
         const categoryId = url[url.length - 1];
 
         $.ajax({
-            url: `/add-link-count/${categoryId}`,
+            url: `/api/add-link-count/${categoryId}`,
             method: 'GET',
             dataType: 'json',
             success: function(res) {
@@ -87,7 +87,7 @@ $(function() {
         submit.text('Подождите');
 
         $.ajax({
-            url: "/subscribe",
+            url: "/api/subscribe",
             type: 'post',
             dataType: 'json',
             data: { _token: token, name: name, email: email },

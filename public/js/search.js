@@ -9,7 +9,7 @@ $(function() {
 
             $('p.loader').removeClass('hide')
             $.ajax({
-                url: `/search/${parentId}/${that.val()}`,
+                url: `/api/search/${parentId}/${that.val()}`,
                 method: 'GET',
                 dataType: 'json',
                 success: function(res) {
