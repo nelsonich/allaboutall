@@ -1,5 +1,6 @@
 const globalVariables = {
     ifIssetData: false,
+    perPage: 1,
 };
 
 const textLimit = (text, limit) => {

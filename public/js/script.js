@@ -1,6 +1,5 @@
 $(function () {
     const limit = 5;
-    let page = 1;
     let url = window.location.pathname.split("/");
     const categoryId = url[url.length - 1];
     const token = $('meta[name="csrf-token"]').attr("content");
@@ -21,14 +20,17 @@ $(function () {
 
             getChildData({
                 _token: token,
-                offset: page * limit,
+                offset: globalVariables.perPage * limit,
                 id: categoryId,
                 q: $("input#search").val(),
             }).then((res) => {
                 if (res) {
                     $("p.loader").addClass("hide");
                     // $('div.childCategories ul').removeClass("hide")
-                    page++;
+                    setGlobalVariableValue(
+                        "perPage",
+                        globalVariables.perPage++
+                    );
                     $("div.childCategories").attr(
                         "data-ifIssetData",
                         res["ifIssetData"]

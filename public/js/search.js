@@ -57,6 +57,7 @@ $(function () {
                         q: $("input#search").val(),
                     }).then((res) => {
                         if (res) {
+                            setGlobalVariableValue("perPage", 1);
                             $("p.loader").addClass("hide");
                             let container = $("div.childCategories > ul");
                             container.empty();
