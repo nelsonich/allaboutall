@@ -2,18 +2,20 @@
 @section('title', $info->parent_category->name . ' | ' . $info->name)
 @section('description', "AllAboutAll.media | " . $info->categoryDetails->preview_text)
 
-<meta property="og:url"                content={{ \Request::url() }} />
-<meta property="og:type"               content="article" />
-<meta property="og:title"              content="{{ $info->name }}" />
-<meta property="og:description"        content="{{ $info->categoryDetails->preview_text }}" />
-<meta property="og:image"              content={{ asset('storage//category_details/images/' . $info->categoryDetails->image) }} />
-<meta property="fb:app_id"             content="189454066493839" />
+@push('meta')
+    <meta property="og:url"                content={{ \Request::url() }} />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="{{ $info->name }}" />
+    <meta property="og:description"        content="{{ $info->categoryDetails->preview_text }}" />
+    <meta property="og:image"              content={{ asset('storage//category_details/images/' . $info->categoryDetails->image) }} />
+    <meta property="fb:app_id"             content="189454066493839" />
+@endpush
 
-<div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v12.0&appId=189454066493839&autoLogAppEvents=1" nonce="L0KbveYT"></script>
 
 @section('content')
     <section>
+        <div id="fb-root"></div>
         <div class="container-fluid info">
             <div class="row">
                 <div class="col-md-8">
@@ -23,7 +25,7 @@
                             <li class="breadcrumb-item"><a href="{{ url('/p/' . $info->parent_category->id) }}">{{ $info->parent_category->name }}</a></li>
                             <li class="breadcrumb-item" style="color: #000000">{{ limit($info->name, 50) }}</li>
                         </ul>
-    
+
                         <h1>{{ $info->name }}</h1>
                         <div class="d-flex align-items-center justify-content-between flex-wrap">
                             <div>
@@ -44,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <hr />
                     </div>
                     <div class="info-body">
@@ -52,8 +54,8 @@
                         {!! $info->categoryDetails->description !!}
                     </div>
                     <div class="info-footer">
-                        <div 
-                            class="fb-comments" 
+                        <div
+                            class="fb-comments"
                             data-href={{ \Request::url() }}
                             data-width=""
                             data-mobile="true"

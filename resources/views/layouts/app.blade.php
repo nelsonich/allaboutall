@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset('/storage/icon.png') }}">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
+
+    @stack('meta')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -98,7 +101,7 @@
               @include("includes.social_icons")
 
             </div>
-            
+
             <p class="m-0">AllAboutAll.media &copy; Все права защищены {{ date('Y') }}</p>
           </div>
         </footer>
