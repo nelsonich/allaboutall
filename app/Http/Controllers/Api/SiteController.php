@@ -288,7 +288,7 @@ class SiteController extends Controller
 
     public function search($parentId, $search)
     {
-        if ($search == "") return response()->json('empty input');
+        // if ($search == "") return response()->json('empty input');
 
         $dataCount = dataCount($parentId, $search);
 

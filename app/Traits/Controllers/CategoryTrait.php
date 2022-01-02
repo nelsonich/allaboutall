@@ -59,7 +59,7 @@ trait CategoryTrait {
         // topic news
         $topicNews = Category::activeCategories($parentCategory->id)
             ->with("categoryDetails")
-            ->limit(4)
+            ->limit(5)
             ->get();
 
         return [$childCategories, $parentCategory, $topicNews, $dataCount];
