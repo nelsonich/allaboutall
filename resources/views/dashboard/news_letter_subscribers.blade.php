@@ -5,9 +5,9 @@
     @if ($errors->any())
         @foreach ($errors->all() as $error)
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                
+
                 {{ $error }}
-                
+
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -93,7 +93,7 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form method="post" action="{{ route('users.update') }}">
+                                                        <form method="post" action="{{ route('subscriber.update') }}">
                                                             @csrf
                                                             <input type="hidden" name="id" value="{{ $user->id }}">
                                                             <div class="form-group">
@@ -142,7 +142,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" action="{{ route('users.add') }}">
+                            <form method="post" action="{{ route('subscriber.add') }}">
                                 @csrf
                                 <div class="form-group">
                                     <label for="name" class="col-form-label">Названия:</label>

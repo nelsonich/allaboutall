@@ -80,8 +80,8 @@ Route::prefix('dashboard')->namespace('Dashboard')->group(function () {
 
     Route::prefix('subscribers')->group(function () {
         Route::get('/', 'NewsLetterSubscribersController@index')->middleware('permission');
-        Route::post('/add', 'NewsLetterSubscribersController@addUser')->name('users.add');
+        Route::post('/add', 'NewsLetterSubscribersController@addUser')->name('subscriber.add');
         Route::post('/delete', 'NewsLetterSubscribersController@delete')->name('subscribers.delete');
-        Route::post('/update', 'NewsLetterSubscribersController@editUser')->name('users.update');
+        Route::post('/update', 'NewsLetterSubscribersController@editUser')->name('subscriber.update');
     });
 });
