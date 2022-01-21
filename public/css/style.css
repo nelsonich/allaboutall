@@ -307,6 +307,13 @@ ol.oldestNews li.singleOldestNews {
     margin-bottom: 20px;
 }
 
+ol.topic_news li.singleTopicNews a span.title,
+ol.oldestNews li.singleOldestNews a span.title {
+    color: #3490dc;
+    font-size: 17px;
+    font-weight: 600;
+}
+
 ol.topic_news li.singleTopicNews a,
 ol.oldestNews li.singleOldestNews a {
     color: #000000;

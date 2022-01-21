@@ -56,11 +56,21 @@ trait CategoryTrait {
         $childCategories = Category::activeCategories($id)->with('categoryDetails')->limit($limit)->get();
         $dataCount = Category::activeCategories($id)->count();
 
-        // topic news
-        $topicNews = Category::activeCategories($parentCategory->id)
-            ->with("categoryDetails")
-            ->limit(5)
-            ->get();
+        $topicNews = [];
+        $parentCategoriesIds = Category::query()
+            ->where("id", "!=", $id)
+            ->whereNull("parent_id")
+            ->pluck("id")
+            ->toArray();
+
+        foreach ($parentCategoriesIds as $id) {
+            $query = Category::query()
+                ->where("parent_id", $id)
+                ->with("categoryDetails");
+            if ($query->exists()) {
+                $topicNews[] = $query->first();
+            }
+        }
 
         return [$childCategories, $parentCategory, $topicNews, $dataCount];
     }

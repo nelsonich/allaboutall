@@ -94,7 +94,7 @@
                 <div>
                     <h6 class="newsCat">{{ $firstTopNews[4]->parent_category->name }}</h6>
                     <a href="/info-p/{{ $firstTopNews[4]->parent_id . '/' . $firstTopNews[4]->id }}" class="newsDesc click">
-                        {{ limit($firstTopNews[4]->categoryDetails->preview_text, 300) }}
+                        {{ limit($firstTopNews[4]->categoryDetails->preview_text, 550) }}
                     </a>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Services\CategoryService;
 use App\Traits\Controllers\CategoryTrait;
 use Illuminate\View\View;

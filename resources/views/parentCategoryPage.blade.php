@@ -47,13 +47,14 @@
                 <div class="col-md-4">
                     {{-- topic news --}}
                     <div class="home_page_section_title">
-                        <h2>{{ $parentCategory->name }}</h2>
+                        <h2>Может заинтересовать</h2>
                     </div>
 
                     <ol class="topic_news">
                         @foreach($topic_news as $item)
                             <li class="singleTopicNews">
                                 <a href="/info-p/{{ $item->parent_id . '/' . $item->id }}" class="click">
+                                    <span class="title">{{ $item->name }}</span> <br />
                                     {{ limit($item->categoryDetails->preview_text, 150) }}
                                 </a>
                                 <p class="created_date">
