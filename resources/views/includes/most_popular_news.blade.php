@@ -7,7 +7,12 @@
             @forelse($mostPopularNews as $item)
                 <div class="col-md-6 singleMostPopularNews">
                     <div class="singleMostPopularNewsHead">
-                        <div style="background-image: url('{{ asset('storage/category_details/images/' . $item->categoryDetails->image) }}')"></div>
+                        <div>
+                            <a href="/info-p/{{ $item->parent_id . '/' . $item->id }}" class="click">
+                                <img src="{{ asset('storage/category_details/images/' . $item->categoryDetails->image) }}"
+                                    alt="{{ $item->name }}" />
+                            </a>
+                        </div>
                         <div>
                             <h6 class="newsCat">{{ $item->parent_category->name }}</h6>
                             <a href="/info-p/{{ $item->parent_id . '/' . $item->id }}" class="newsDesc click">
@@ -15,7 +20,7 @@
                             </a>
                         </div>
                     </div>
-        
+
                     <div class="singleMostPopularNewsFoot">
                         <div>
                             <div class="users_watch_count">
@@ -35,14 +40,14 @@
             <h2>{{ count($oldestNews) }} старые новости</h2>
         </div>
         <ol class="oldestNews">
-            @foreach($oldestNews as $item)
+            @foreach ($oldestNews as $item)
                 <li class="singleOldestNews">
                     <a href="/info-p/{{ $item->parent_id . '/' . $item->id }}" class="click">
                         {{ limit($item->categoryDetails->preview_text, 150) }}
                     </a>
                     <p class="created_date">
                         <i class="far fa-clock"></i>
-                        {{ \Carbon\Carbon::parse($item->created_at)->isoFormat("MMMM DD, YYYY") }}
+                        {{ \Carbon\Carbon::parse($item->created_at)->isoFormat('MMMM DD, YYYY') }}
                     </p>
                 </li>
             @endforeach
