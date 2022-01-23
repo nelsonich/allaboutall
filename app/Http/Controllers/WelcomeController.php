@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\JobReaction;
 use App\Services\CategoryService;
 use App\Traits\Controllers\CategoryTrait;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class WelcomeController extends Controller
@@ -53,5 +54,31 @@ class WelcomeController extends Controller
             "info" => $childCategories,
             "topic_news" => $topicNews
         ]);
+    }
+
+    public function renderNeedWorkersPage()
+    {
+        return view("needWorkers");
+    }
+
+    public function applyToWork(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|unique:job_reactions',
+            'role' => 'required',
+        ]);
+
+        $name = $request->post("name");
+        $email = $request->post("email");
+        $role = $request->post("role");
+
+        JobReaction::create([
+            "name" => $name,
+            "email" => $email,
+            "role" => $role,
+        ]);
+
+        return redirect()->back()->with('message', 'Заявка была создана успешно, мы обязательно свяжемся с вами.');
     }
 }

@@ -27,6 +27,9 @@
     div.info div.info-header h1+div>div:first-child {
         margin-bottom: 10px;
     }
+    section.need-workers {
+        padding: 3rem 0;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -47,5 +50,8 @@
     }
     div ul.categories li a {
         font-size: 13px;
+    }
+    section.need-workers {
+        padding: 0;
     }
 }

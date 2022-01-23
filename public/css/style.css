@@ -621,6 +621,12 @@ div#app footer div:last-child p {
     text-align: center;
 }
 
+/* Need workers section */
+
+section.need-workers {
+    padding: 6rem 0;
+}
+
 
 /* Success message window */
 

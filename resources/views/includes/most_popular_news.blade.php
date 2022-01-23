@@ -7,7 +7,7 @@
             @forelse($mostPopularNews as $item)
                 <div class="col-md-6 singleMostPopularNews">
                     <div class="singleMostPopularNewsHead">
-                        <div>
+                        <div title="{{ $item->name }}">
                             <a href="/info-p/{{ $item->parent_id . '/' . $item->id }}" class="click">
                                 <img src="{{ asset('storage/category_details/images/' . $item->categoryDetails->image) }}"
                                     alt="{{ $item->name }}" />

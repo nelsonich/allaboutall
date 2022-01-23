@@ -2,7 +2,7 @@
     <div class="col-md-4">
         <div class="singleTopFirstNewsLeft">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[0]->name }}">
                     <a href="/info-p/{{ $firstTopNews[0]->parent_id . '/' . $firstTopNews[0]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[0]->categoryDetails->image) }}"
@@ -32,7 +32,7 @@
         </div>
         <div class="singleTopFirstNewsLeft">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[1]->name }}">
                     <a href="/info-p/{{ $firstTopNews[1]->parent_id . '/' . $firstTopNews[1]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[1]->categoryDetails->image) }}"
@@ -60,7 +60,7 @@
         </div>
         <div class="singleTopFirstNewsLeft">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[2]->name }}">
                     <a href="/info-p/{{ $firstTopNews[2]->parent_id . '/' . $firstTopNews[2]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[2]->categoryDetails->image) }}"
@@ -88,7 +88,7 @@
         </div>
         <div class="singleTopFirstNewsLeft">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[3]->name }}">
                     <a href="/info-p/{{ $firstTopNews[3]->parent_id . '/' . $firstTopNews[3]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[3]->categoryDetails->image) }}"
@@ -118,7 +118,7 @@
     <div class="col-md-4">
         <div class="singleTopFirstNewsCenter mb-3">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[4]->name }}">
                     <a href="/info-p/{{ $firstTopNews[4]->parent_id . '/' . $firstTopNews[4]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[4]->categoryDetails->image) }}"
@@ -146,7 +146,7 @@
     <div class="col-md-4">
         <div class="singleTopFirstNewsRight">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[5]->name }}">
                     <a href="/info-p/{{ $firstTopNews[5]->parent_id . '/' . $firstTopNews[5]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[5]->categoryDetails->image) }}"
@@ -177,7 +177,7 @@
         </div>
         <div class="singleTopFirstNewsRight">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[6]->name }}">
                     <a href="/info-p/{{ $firstTopNews[6]->parent_id . '/' . $firstTopNews[6]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[6]->categoryDetails->image) }}"
@@ -208,7 +208,7 @@
         </div>
         <div class="singleTopFirstNewsRight">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[7]->name }}">
                     <a href="/info-p/{{ $firstTopNews[7]->parent_id . '/' . $firstTopNews[7]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[7]->categoryDetails->image) }}"
@@ -239,7 +239,7 @@
         </div>
         <div class="singleTopFirstNewsRight">
             <div class="singleNewsHead">
-                <div>
+                <div title="{{ $firstTopNews[8]->name }}">
                     <a href="/info-p/{{ $firstTopNews[8]->parent_id . '/' . $firstTopNews[8]->id }}"
                         class="click">
                         <img src="{{ asset('storage/category_details/images/' . $firstTopNews[8]->categoryDetails->image) }}"

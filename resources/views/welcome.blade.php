@@ -3,7 +3,6 @@
 @section('description', 'AllAboutAll.media главная страница. Это сайт где можно найти биографии, цитаты, статьи знаменитых людей, (актеров, футболистов, бизнесменов, певцов).')
 
 @section('content')
-
     <section>
         <div class="container-fluid">
             <div class="row mb-4">
@@ -22,7 +21,7 @@
         </div>
     </section>
 @endsection
-{{-- 
+{{--
 @push('scripts')
     <script src="{{ asset('js/slick/createCarousel.js') }}" defer></script>
 @endpush --}}
