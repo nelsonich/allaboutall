@@ -15,7 +15,6 @@ use App\Traits\Controllers\SettingsTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Http;
 use Illuminate\View\View;
 
 class CategoriesController extends Controller
@@ -83,7 +82,7 @@ class CategoriesController extends Controller
 
         $cat = Category::whereId($id)->withTrashed()->first();
         $data = ['name' => $name];
-        
+
         if ($file) {
             SettingsTrait::removeFiles('storage/backgrounds', $cat->background);
             $fileNames = SettingsTrait::uploadFiles('storage/backgrounds', $file);
@@ -163,7 +162,7 @@ class CategoriesController extends Controller
 
         $parentCat = Category::find($parentId);
         $parentCat->name = $name;
-        
+
         if (chacke_auth_user_role(Role::WRITER)) {
             $parentCat->is_active = "false";
         }

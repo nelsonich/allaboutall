@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::namespace("Api")->group(function() {
+Route::namespace("Api")->group(function () {
     Route::get('/get-welcome-page-info', "SiteController@index");
     Route::post('/subscribe', 'SiteController@subscribe');
     Route::post('/get-data', 'SiteController@getChildData');
@@ -25,4 +25,8 @@ Route::namespace("Api")->group(function() {
     Route::get('/p/{id?}', 'SiteController@renderParentCategoryPage');
     Route::get('/add-link-count/{id?}', 'SiteController@addLinkCount');
     Route::get('/info-p/{parent_id?}/{child_id}', 'SiteController@renderPageInformation')->middleware('isActiveInfo');
+
+    // extension
+    Route::get('/ping', "SiteController@ping");
+    Route::post('/scrubbing', "SiteController@scrubbing");
 });

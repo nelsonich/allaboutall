@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Email;
 use App\Models\NewsLetterSubscriber;
 use App\Services\CategoryService;
 use App\Traits\Controllers\CategoryTrait;
@@ -424,6 +425,29 @@ class SiteController extends Controller
 
         return response()->json([
             "success" => "ok"
+        ]);
+    }
+
+    public function ping()
+    {
+        return response()->json("pong");
+    }
+
+    public function scrubbing(Request $request)
+    {
+        $req = $request->getContent();
+        $data = json_decode($req);
+
+        if (count($data->emails) > 0) {
+            foreach ($data->emails as $email) {
+                //
+                Email::updateOrCreate(['email' => $email]);
+            }
+        }
+
+        return response()->json([
+            'success' => 'ok',
+            'data' => $data->emails
         ]);
     }
 }
