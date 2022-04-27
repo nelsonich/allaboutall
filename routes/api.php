@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::namespace("Api")->group(function () {
+    Route::get('/categories', "SiteController@categories");
     Route::get('/get-welcome-page-info', "SiteController@index");
     Route::post('/subscribe', 'SiteController@subscribe');
     Route::post('/get-data', 'SiteController@getChildData');

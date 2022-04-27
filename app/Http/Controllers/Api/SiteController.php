@@ -428,6 +428,25 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * @response  {
+     * "id": "bigint",
+     *      "user_id": "bigint",
+     *      "click_count": "bigint",
+     *      "name": "string",
+     *      "parent_id": "bigint",
+     *      "is_active": "string",
+     *      "background": "string",
+     *      "deleted_at": "timestamp",
+     *      "created_at": "timestamp",
+     *      "updated_at": "timestamp"
+     * }
+     */
+    public function categories()
+    {
+        return response()->json($this->category_repo->get(null));
+    }
+
     public function ping()
     {
         return response()->json("pong");
