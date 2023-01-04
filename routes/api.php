@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,16 +19,16 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::namespace("Api")->group(function () {
-    Route::get('/categories', "SiteController@categories");
-    Route::get('/get-welcome-page-info', "SiteController@index");
-    Route::post('/subscribe', 'SiteController@subscribe');
-    Route::post('/get-data', 'SiteController@getChildData');
-    Route::get('/search/{id?}/{text?}', 'SiteController@search');
-    Route::get('/p/{id?}', 'SiteController@renderParentCategoryPage');
-    Route::get('/add-link-count/{id?}', 'SiteController@addLinkCount');
-    Route::get('/info-p/{parent_id?}/{child_id}', 'SiteController@renderPageInformation')->middleware('isActiveInfo');
+    Route::get('/get-welcome-page-info', [SiteController::class, 'index']);
+    Route::get('/categories', [SiteController::class, 'categories']);
+    Route::post('/subscribe', [SiteController::class, 'subscribe']);
+    Route::post('/get-data', [SiteController::class, 'getChildData']);
+    Route::get('/search/{id?}/{text?}', [SiteController::class, 'search']);
+    Route::get('/p/{id?}', [SiteController::class, 'renderParentCategoryPage']);
+    Route::get('/add-link-count/{id?}', [SiteController::class, 'addLinkCount']);
+    Route::get('/info-p/{parent_id?}/{child_id}', [SiteController::class, 'renderPageInformation'])->middleware('isActiveInfo');
 
     // extension
-    Route::get('/ping', "SiteController@ping");
-    Route::post('/scrubbing', "SiteController@scrubbing");
+    Route::get('/ping', [SiteController::class, 'ping']);
+    Route::post('/scrubbing', [SiteController::class, 'scrubbing']);
 });

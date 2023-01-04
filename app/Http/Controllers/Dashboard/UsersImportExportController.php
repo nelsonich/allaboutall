@@ -12,9 +12,11 @@ class UsersImportExportController extends Controller
 {
     public function exportAsExcel()
     {
-        $users = User::where('id', '!=', auth()->id())->with('role')->get();
+        $users = User::query()
+            ->where('id', '!=', auth()->id())
+            ->with('role')
+            ->get();
 
         return Excel::download(new UserExport($users), 'users.xlsx');
-        
     }
 }

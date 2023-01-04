@@ -465,8 +465,8 @@ class SiteController extends Controller
         }
 
         return response()->json([
-            'success' => 'ok',
-            'data' => $data->emails
+            'data' => $data->emails,
+            'success' => 'ok'
         ]);
     }
 }
